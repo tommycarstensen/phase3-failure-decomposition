@@ -271,7 +271,7 @@ def claims(numbers):
             all(abs(s['eff'] - s['op']) < 5 for s in enrolled.values()),
         ),
         (
-            'their intervals overlap in the main window ("level")',
+            'their intervals overlap in the main window',
             v('decomp.enrolled.era.all.eff.lo')
             < v('decomp.enrolled.era.all.op.hi'),
         ),
@@ -521,7 +521,7 @@ def claims(numbers):
             and len(variants) == 1 + 5 + 2,
         ),
         (
-            'second-pass efficacy labels: none big pharma; as unknown, level',
+            'second-pass efficacy labels: none big pharma; as unknown, closer',
             v('audit.eff.monitoring')
             + v('audit.eff.interim')
             + v('audit.eff.other')
@@ -532,7 +532,7 @@ def claims(numbers):
             and 0
             < tax['all', 'modelEfficacyToUnknown']['eff']
             - tax['all', 'modelEfficacyToUnknown']['op']
-            < 0.5,
+            < tax['all', 'asAnalysed']['eff'] - tax['all', 'asAnalysed']['op'],
         ),
         (
             'sponsor decisions as safety: below theirs; with business, above',
