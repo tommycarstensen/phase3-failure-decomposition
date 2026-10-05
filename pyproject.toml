@@ -1,0 +1,7 @@
+[tool.ruff]
+line-length = 79
+src = ["scripts"]
+target-version = "py312"
+
+[tool.ruff.format]
+quote-style = "preserve"

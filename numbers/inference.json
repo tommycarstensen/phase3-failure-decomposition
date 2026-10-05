@@ -1,0 +1,1697 @@
+{
+ "trend.firstYear": {
+  "value": 2005,
+  "tex": "2005",
+  "txt": "2005"
+ },
+ "trend.lastYear": {
+  "value": 2021,
+  "tex": "2021",
+  "txt": "2021"
+ },
+ "trend.ca.z": {
+  "value": -0.611856,
+  "tex": "-0.61",
+  "txt": "-0.61"
+ },
+ "trend.ca.p": {
+  "value": 0.5406329391276408,
+  "tex": "0.54",
+  "txt": "0.54"
+ },
+ "trend.or": {
+  "value": 0.996329,
+  "tex": "1.00",
+  "txt": "1.00"
+ },
+ "trend.or.lo": {
+  "value": 0.976803,
+  "tex": "0.98",
+  "txt": "0.98"
+ },
+ "trend.or.hi": {
+  "value": 1.016246,
+  "tex": "1.02",
+  "txt": "1.02"
+ },
+ "trend.or.p": {
+  "value": 0.7157540409448189,
+  "tex": "0.72",
+  "txt": "0.72"
+ },
+ "trend.het.chi2": {
+  "value": 23.722934,
+  "tex": "23.7",
+  "txt": "23.7"
+ },
+ "trend.het.dof": {
+  "value": 16,
+  "tex": "16",
+  "txt": "16"
+ },
+ "trend.het.p": {
+  "value": 0.09573300167777735,
+  "tex": "0.096",
+  "txt": "0.096"
+ },
+ "trend.min.pct": {
+  "value": 25.8398,
+  "tex": "25.8",
+  "txt": "25.8"
+ },
+ "trend.min.pct.int": {
+  "value": 25.8398,
+  "tex": "26",
+  "txt": "26"
+ },
+ "trend.min.year": {
+  "value": 2013,
+  "tex": "2013",
+  "txt": "2013"
+ },
+ "trend.max.pct": {
+  "value": 37.8109,
+  "tex": "37.8",
+  "txt": "37.8"
+ },
+ "trend.max.pct.int": {
+  "value": 37.8109,
+  "tex": "38",
+  "txt": "38"
+ },
+ "trend.max.year": {
+  "value": 2005,
+  "tex": "2005",
+  "txt": "2005"
+ },
+ "trend.overall.trials": {
+  "value": 6059,
+  "tex": "6{,}059",
+  "txt": "6,059"
+ },
+ "trend.overall.n": {
+  "value": 1891,
+  "tex": "1{,}891",
+  "txt": "1,891"
+ },
+ "trend.overall.pct": {
+  "value": 31.2098,
+  "tex": "31.2",
+  "txt": "31.2"
+ },
+ "trend.overall.pct.int": {
+  "value": 31.2098,
+  "tex": "31",
+  "txt": "31"
+ },
+ "trend.first.pct": {
+  "value": 37.8109,
+  "tex": "37.8",
+  "txt": "37.8"
+ },
+ "trend.first.pct.int": {
+  "value": 37.8109,
+  "tex": "38",
+  "txt": "38"
+ },
+ "trend.last.pct": {
+  "value": 34.0,
+  "tex": "34.0",
+  "txt": "34.0"
+ },
+ "trend.last.pct.int": {
+  "value": 34.0,
+  "tex": "34",
+  "txt": "34"
+ },
+ "trend.naive.z": {
+  "value": -2.05377,
+  "tex": "-2.05",
+  "txt": "-2.05"
+ },
+ "trend.naive.p": {
+  "value": 0.03999800337204236,
+  "tex": "0.040",
+  "txt": "0.040"
+ },
+ "trend.year.2005.trials": {
+  "value": 201,
+  "tex": "201",
+  "txt": "201"
+ },
+ "trend.year.2005.miss.n": {
+  "value": 76,
+  "tex": "76",
+  "txt": "76"
+ },
+ "trend.year.2005.miss.pct": {
+  "value": 37.8109,
+  "tex": "37.8",
+  "txt": "37.8"
+ },
+ "trend.year.2005.miss.pct.int": {
+  "value": 37.8109,
+  "tex": "38",
+  "txt": "38"
+ },
+ "trend.year.2005.miss.lo": {
+  "value": 31.3949,
+  "tex": "31.4",
+  "txt": "31.4"
+ },
+ "trend.year.2005.miss.lo.int": {
+  "value": 31.3949,
+  "tex": "31",
+  "txt": "31"
+ },
+ "trend.year.2005.miss.hi": {
+  "value": 44.6842,
+  "tex": "44.7",
+  "txt": "44.7"
+ },
+ "trend.year.2005.miss.hi.int": {
+  "value": 44.6842,
+  "tex": "45",
+  "txt": "45"
+ },
+ "trend.year.2006.trials": {
+  "value": 342,
+  "tex": "342",
+  "txt": "342"
+ },
+ "trend.year.2006.miss.n": {
+  "value": 117,
+  "tex": "117",
+  "txt": "117"
+ },
+ "trend.year.2006.miss.pct": {
+  "value": 34.2105,
+  "tex": "34.2",
+  "txt": "34.2"
+ },
+ "trend.year.2006.miss.pct.int": {
+  "value": 34.2105,
+  "tex": "34",
+  "txt": "34"
+ },
+ "trend.year.2006.miss.lo": {
+  "value": 29.3828,
+  "tex": "29.4",
+  "txt": "29.4"
+ },
+ "trend.year.2006.miss.lo.int": {
+  "value": 29.3828,
+  "tex": "29",
+  "txt": "29"
+ },
+ "trend.year.2006.miss.hi": {
+  "value": 39.3891,
+  "tex": "39.4",
+  "txt": "39.4"
+ },
+ "trend.year.2006.miss.hi.int": {
+  "value": 39.3891,
+  "tex": "39",
+  "txt": "39"
+ },
+ "trend.year.2007.trials": {
+  "value": 388,
+  "tex": "388",
+  "txt": "388"
+ },
+ "trend.year.2007.miss.n": {
+  "value": 127,
+  "tex": "127",
+  "txt": "127"
+ },
+ "trend.year.2007.miss.pct": {
+  "value": 32.732,
+  "tex": "32.7",
+  "txt": "32.7"
+ },
+ "trend.year.2007.miss.pct.int": {
+  "value": 32.732,
+  "tex": "33",
+  "txt": "33"
+ },
+ "trend.year.2007.miss.lo": {
+  "value": 28.252,
+  "tex": "28.3",
+  "txt": "28.3"
+ },
+ "trend.year.2007.miss.lo.int": {
+  "value": 28.252,
+  "tex": "28",
+  "txt": "28"
+ },
+ "trend.year.2007.miss.hi": {
+  "value": 37.5505,
+  "tex": "37.6",
+  "txt": "37.6"
+ },
+ "trend.year.2007.miss.hi.int": {
+  "value": 37.5505,
+  "tex": "38",
+  "txt": "38"
+ },
+ "trend.year.2008.trials": {
+  "value": 423,
+  "tex": "423",
+  "txt": "423"
+ },
+ "trend.year.2008.miss.n": {
+  "value": 124,
+  "tex": "124",
+  "txt": "124"
+ },
+ "trend.year.2008.miss.pct": {
+  "value": 29.3144,
+  "tex": "29.3",
+  "txt": "29.3"
+ },
+ "trend.year.2008.miss.pct.int": {
+  "value": 29.3144,
+  "tex": "29",
+  "txt": "29"
+ },
+ "trend.year.2008.miss.lo": {
+  "value": 25.1781,
+  "tex": "25.2",
+  "txt": "25.2"
+ },
+ "trend.year.2008.miss.lo.int": {
+  "value": 25.1781,
+  "tex": "25",
+  "txt": "25"
+ },
+ "trend.year.2008.miss.hi": {
+  "value": 33.8231,
+  "tex": "33.8",
+  "txt": "33.8"
+ },
+ "trend.year.2008.miss.hi.int": {
+  "value": 33.8231,
+  "tex": "34",
+  "txt": "34"
+ },
+ "trend.year.2009.trials": {
+  "value": 391,
+  "tex": "391",
+  "txt": "391"
+ },
+ "trend.year.2009.miss.n": {
+  "value": 126,
+  "tex": "126",
+  "txt": "126"
+ },
+ "trend.year.2009.miss.pct": {
+  "value": 32.2251,
+  "tex": "32.2",
+  "txt": "32.2"
+ },
+ "trend.year.2009.miss.pct.int": {
+  "value": 32.2251,
+  "tex": "32",
+  "txt": "32"
+ },
+ "trend.year.2009.miss.lo": {
+  "value": 27.785,
+  "tex": "27.8",
+  "txt": "27.8"
+ },
+ "trend.year.2009.miss.lo.int": {
+  "value": 27.785,
+  "tex": "28",
+  "txt": "28"
+ },
+ "trend.year.2009.miss.hi": {
+  "value": 37.011,
+  "tex": "37.0",
+  "txt": "37.0"
+ },
+ "trend.year.2009.miss.hi.int": {
+  "value": 37.011,
+  "tex": "37",
+  "txt": "37"
+ },
+ "trend.year.2010.trials": {
+  "value": 383,
+  "tex": "383",
+  "txt": "383"
+ },
+ "trend.year.2010.miss.n": {
+  "value": 124,
+  "tex": "124",
+  "txt": "124"
+ },
+ "trend.year.2010.miss.pct": {
+  "value": 32.376,
+  "tex": "32.4",
+  "txt": "32.4"
+ },
+ "trend.year.2010.miss.pct.int": {
+  "value": 32.376,
+  "tex": "32",
+  "txt": "32"
+ },
+ "trend.year.2010.miss.lo": {
+  "value": 27.8849,
+  "tex": "27.9",
+  "txt": "27.9"
+ },
+ "trend.year.2010.miss.lo.int": {
+  "value": 27.8849,
+  "tex": "28",
+  "txt": "28"
+ },
+ "trend.year.2010.miss.hi": {
+  "value": 37.2171,
+  "tex": "37.2",
+  "txt": "37.2"
+ },
+ "trend.year.2010.miss.hi.int": {
+  "value": 37.2171,
+  "tex": "37",
+  "txt": "37"
+ },
+ "trend.year.2011.trials": {
+  "value": 374,
+  "tex": "374",
+  "txt": "374"
+ },
+ "trend.year.2011.miss.n": {
+  "value": 118,
+  "tex": "118",
+  "txt": "118"
+ },
+ "trend.year.2011.miss.pct": {
+  "value": 31.5508,
+  "tex": "31.6",
+  "txt": "31.6"
+ },
+ "trend.year.2011.miss.pct.int": {
+  "value": 31.5508,
+  "tex": "32",
+  "txt": "32"
+ },
+ "trend.year.2011.miss.lo": {
+  "value": 27.0488,
+  "tex": "27.0",
+  "txt": "27.0"
+ },
+ "trend.year.2011.miss.lo.int": {
+  "value": 27.0488,
+  "tex": "27",
+  "txt": "27"
+ },
+ "trend.year.2011.miss.hi": {
+  "value": 36.428,
+  "tex": "36.4",
+  "txt": "36.4"
+ },
+ "trend.year.2011.miss.hi.int": {
+  "value": 36.428,
+  "tex": "36",
+  "txt": "36"
+ },
+ "trend.year.2012.trials": {
+  "value": 364,
+  "tex": "364",
+  "txt": "364"
+ },
+ "trend.year.2012.miss.n": {
+  "value": 96,
+  "tex": "96",
+  "txt": "96"
+ },
+ "trend.year.2012.miss.pct": {
+  "value": 26.3736,
+  "tex": "26.4",
+  "txt": "26.4"
+ },
+ "trend.year.2012.miss.pct.int": {
+  "value": 26.3736,
+  "tex": "26",
+  "txt": "26"
+ },
+ "trend.year.2012.miss.lo": {
+  "value": 22.1104,
+  "tex": "22.1",
+  "txt": "22.1"
+ },
+ "trend.year.2012.miss.lo.int": {
+  "value": 22.1104,
+  "tex": "22",
+  "txt": "22"
+ },
+ "trend.year.2012.miss.hi": {
+  "value": 31.1304,
+  "tex": "31.1",
+  "txt": "31.1"
+ },
+ "trend.year.2012.miss.hi.int": {
+  "value": 31.1304,
+  "tex": "31",
+  "txt": "31"
+ },
+ "trend.year.2013.trials": {
+  "value": 387,
+  "tex": "387",
+  "txt": "387"
+ },
+ "trend.year.2013.miss.n": {
+  "value": 100,
+  "tex": "100",
+  "txt": "100"
+ },
+ "trend.year.2013.miss.pct": {
+  "value": 25.8398,
+  "tex": "25.8",
+  "txt": "25.8"
+ },
+ "trend.year.2013.miss.pct.int": {
+  "value": 25.8398,
+  "tex": "26",
+  "txt": "26"
+ },
+ "trend.year.2013.miss.lo": {
+  "value": 21.7308,
+  "tex": "21.7",
+  "txt": "21.7"
+ },
+ "trend.year.2013.miss.lo.int": {
+  "value": 21.7308,
+  "tex": "22",
+  "txt": "22"
+ },
+ "trend.year.2013.miss.hi": {
+  "value": 30.4237,
+  "tex": "30.4",
+  "txt": "30.4"
+ },
+ "trend.year.2013.miss.hi.int": {
+  "value": 30.4237,
+  "tex": "30",
+  "txt": "30"
+ },
+ "trend.year.2014.trials": {
+  "value": 382,
+  "tex": "382",
+  "txt": "382"
+ },
+ "trend.year.2014.miss.n": {
+  "value": 114,
+  "tex": "114",
+  "txt": "114"
+ },
+ "trend.year.2014.miss.pct": {
+  "value": 29.8429,
+  "tex": "29.8",
+  "txt": "29.8"
+ },
+ "trend.year.2014.miss.pct.int": {
+  "value": 29.8429,
+  "tex": "30",
+  "txt": "30"
+ },
+ "trend.year.2014.miss.lo": {
+  "value": 25.4735,
+  "tex": "25.5",
+  "txt": "25.5"
+ },
+ "trend.year.2014.miss.lo.int": {
+  "value": 25.4735,
+  "tex": "25",
+  "txt": "25"
+ },
+ "trend.year.2014.miss.hi": {
+  "value": 34.6137,
+  "tex": "34.6",
+  "txt": "34.6"
+ },
+ "trend.year.2014.miss.hi.int": {
+  "value": 34.6137,
+  "tex": "35",
+  "txt": "35"
+ },
+ "trend.year.2015.trials": {
+  "value": 437,
+  "tex": "437",
+  "txt": "437"
+ },
+ "trend.year.2015.miss.n": {
+  "value": 150,
+  "tex": "150",
+  "txt": "150"
+ },
+ "trend.year.2015.miss.pct": {
+  "value": 34.3249,
+  "tex": "34.3",
+  "txt": "34.3"
+ },
+ "trend.year.2015.miss.pct.int": {
+  "value": 34.3249,
+  "tex": "34",
+  "txt": "34"
+ },
+ "trend.year.2015.miss.lo": {
+  "value": 30.0272,
+  "tex": "30.0",
+  "txt": "30.0"
+ },
+ "trend.year.2015.miss.lo.int": {
+  "value": 30.0272,
+  "tex": "30",
+  "txt": "30"
+ },
+ "trend.year.2015.miss.hi": {
+  "value": 38.8958,
+  "tex": "38.9",
+  "txt": "38.9"
+ },
+ "trend.year.2015.miss.hi.int": {
+  "value": 38.8958,
+  "tex": "39",
+  "txt": "39"
+ },
+ "trend.year.2016.trials": {
+  "value": 364,
+  "tex": "364",
+  "txt": "364"
+ },
+ "trend.year.2016.miss.n": {
+  "value": 107,
+  "tex": "107",
+  "txt": "107"
+ },
+ "trend.year.2016.miss.pct": {
+  "value": 29.3956,
+  "tex": "29.4",
+  "txt": "29.4"
+ },
+ "trend.year.2016.miss.pct.int": {
+  "value": 29.3956,
+  "tex": "29",
+  "txt": "29"
+ },
+ "trend.year.2016.miss.lo": {
+  "value": 24.9501,
+  "tex": "25.0",
+  "txt": "25.0"
+ },
+ "trend.year.2016.miss.lo.int": {
+  "value": 24.9501,
+  "tex": "25",
+  "txt": "25"
+ },
+ "trend.year.2016.miss.hi": {
+  "value": 34.2714,
+  "tex": "34.3",
+  "txt": "34.3"
+ },
+ "trend.year.2016.miss.hi.int": {
+  "value": 34.2714,
+  "tex": "34",
+  "txt": "34"
+ },
+ "trend.year.2017.trials": {
+  "value": 380,
+  "tex": "380",
+  "txt": "380"
+ },
+ "trend.year.2017.miss.n": {
+  "value": 105,
+  "tex": "105",
+  "txt": "105"
+ },
+ "trend.year.2017.miss.pct": {
+  "value": 27.6316,
+  "tex": "27.6",
+  "txt": "27.6"
+ },
+ "trend.year.2017.miss.pct.int": {
+  "value": 27.6316,
+  "tex": "28",
+  "txt": "28"
+ },
+ "trend.year.2017.miss.lo": {
+  "value": 23.3762,
+  "tex": "23.4",
+  "txt": "23.4"
+ },
+ "trend.year.2017.miss.lo.int": {
+  "value": 23.3762,
+  "tex": "23",
+  "txt": "23"
+ },
+ "trend.year.2017.miss.hi": {
+  "value": 32.3346,
+  "tex": "32.3",
+  "txt": "32.3"
+ },
+ "trend.year.2017.miss.hi.int": {
+  "value": 32.3346,
+  "tex": "32",
+  "txt": "32"
+ },
+ "trend.year.2018.trials": {
+  "value": 363,
+  "tex": "363",
+  "txt": "363"
+ },
+ "trend.year.2018.miss.n": {
+  "value": 113,
+  "tex": "113",
+  "txt": "113"
+ },
+ "trend.year.2018.miss.pct": {
+  "value": 31.1295,
+  "tex": "31.1",
+  "txt": "31.1"
+ },
+ "trend.year.2018.miss.pct.int": {
+  "value": 31.1295,
+  "tex": "31",
+  "txt": "31"
+ },
+ "trend.year.2018.miss.lo": {
+  "value": 26.5847,
+  "tex": "26.6",
+  "txt": "26.6"
+ },
+ "trend.year.2018.miss.lo.int": {
+  "value": 26.5847,
+  "tex": "27",
+  "txt": "27"
+ },
+ "trend.year.2018.miss.hi": {
+  "value": 36.0695,
+  "tex": "36.1",
+  "txt": "36.1"
+ },
+ "trend.year.2018.miss.hi.int": {
+  "value": 36.0695,
+  "tex": "36",
+  "txt": "36"
+ },
+ "trend.year.2019.trials": {
+  "value": 317,
+  "tex": "317",
+  "txt": "317"
+ },
+ "trend.year.2019.miss.n": {
+  "value": 102,
+  "tex": "102",
+  "txt": "102"
+ },
+ "trend.year.2019.miss.pct": {
+  "value": 32.1767,
+  "tex": "32.2",
+  "txt": "32.2"
+ },
+ "trend.year.2019.miss.pct.int": {
+  "value": 32.1767,
+  "tex": "32",
+  "txt": "32"
+ },
+ "trend.year.2019.miss.lo": {
+  "value": 27.2738,
+  "tex": "27.3",
+  "txt": "27.3"
+ },
+ "trend.year.2019.miss.lo.int": {
+  "value": 27.2738,
+  "tex": "27",
+  "txt": "27"
+ },
+ "trend.year.2019.miss.hi": {
+  "value": 37.5063,
+  "tex": "37.5",
+  "txt": "37.5"
+ },
+ "trend.year.2019.miss.hi.int": {
+  "value": 37.5063,
+  "tex": "38",
+  "txt": "38"
+ },
+ "trend.year.2020.trials": {
+  "value": 313,
+  "tex": "313",
+  "txt": "313"
+ },
+ "trend.year.2020.miss.n": {
+  "value": 107,
+  "tex": "107",
+  "txt": "107"
+ },
+ "trend.year.2020.miss.pct": {
+  "value": 34.1853,
+  "tex": "34.2",
+  "txt": "34.2"
+ },
+ "trend.year.2020.miss.pct.int": {
+  "value": 34.1853,
+  "tex": "34",
+  "txt": "34"
+ },
+ "trend.year.2020.miss.lo": {
+  "value": 29.1506,
+  "tex": "29.2",
+  "txt": "29.2"
+ },
+ "trend.year.2020.miss.lo.int": {
+  "value": 29.1506,
+  "tex": "29",
+  "txt": "29"
+ },
+ "trend.year.2020.miss.hi": {
+  "value": 39.6035,
+  "tex": "39.6",
+  "txt": "39.6"
+ },
+ "trend.year.2020.miss.hi.int": {
+  "value": 39.6035,
+  "tex": "40",
+  "txt": "40"
+ },
+ "trend.year.2021.trials": {
+  "value": 250,
+  "tex": "250",
+  "txt": "250"
+ },
+ "trend.year.2021.miss.n": {
+  "value": 85,
+  "tex": "85",
+  "txt": "85"
+ },
+ "trend.year.2021.miss.pct": {
+  "value": 34.0,
+  "tex": "34.0",
+  "txt": "34.0"
+ },
+ "trend.year.2021.miss.pct.int": {
+  "value": 34.0,
+  "tex": "34",
+  "txt": "34"
+ },
+ "trend.year.2021.miss.lo": {
+  "value": 28.4096,
+  "tex": "28.4",
+  "txt": "28.4"
+ },
+ "trend.year.2021.miss.lo.int": {
+  "value": 28.4096,
+  "tex": "28",
+  "txt": "28"
+ },
+ "trend.year.2021.miss.hi": {
+  "value": 40.0747,
+  "tex": "40.1",
+  "txt": "40.1"
+ },
+ "trend.year.2021.miss.hi.int": {
+  "value": 40.0747,
+  "tex": "40",
+  "txt": "40"
+ },
+ "sponsor.big.trials": {
+  "value": 842,
+  "tex": "842",
+  "txt": "842"
+ },
+ "sponsor.big.miss.n": {
+  "value": 214,
+  "tex": "214",
+  "txt": "214"
+ },
+ "sponsor.big.miss.pct": {
+  "value": 25.4157,
+  "tex": "25.4",
+  "txt": "25.4"
+ },
+ "sponsor.big.miss.pct.int": {
+  "value": 25.4157,
+  "tex": "25",
+  "txt": "25"
+ },
+ "sponsor.rest.trials": {
+  "value": 962,
+  "tex": "962",
+  "txt": "962"
+ },
+ "sponsor.rest.miss.n": {
+  "value": 336,
+  "tex": "336",
+  "txt": "336"
+ },
+ "sponsor.rest.miss.pct": {
+  "value": 34.9272,
+  "tex": "34.9",
+  "txt": "34.9"
+ },
+ "sponsor.rest.miss.pct.int": {
+  "value": 34.9272,
+  "tex": "35",
+  "txt": "35"
+ },
+ "sponsor.z": {
+  "value": -4.378077,
+  "tex": "-4.4",
+  "txt": "-4.4"
+ },
+ "sponsor.p": {
+  "value": 1.1973105843314926e-05,
+  "tex": "1\\times10^{-5}",
+  "txt": "1e-5"
+ },
+ "sponsor.or": {
+  "value": 0.634876,
+  "tex": "0.63",
+  "txt": "0.63"
+ },
+ "sponsor.or.p": {
+  "value": 0.0005946308906929291,
+  "tex": "6\\times10^{-4}",
+  "txt": "6e-4"
+ },
+ "hwang.programs": {
+  "value": 640,
+  "tex": "640",
+  "txt": "640"
+ },
+ "hwang.failed": {
+  "value": 344,
+  "tex": "344",
+  "txt": "344"
+ },
+ "hwang.eff.n": {
+  "value": 195,
+  "tex": "195",
+  "txt": "195"
+ },
+ "hwang.eff.pct": {
+  "value": 56.686,
+  "tex": "56.7",
+  "txt": "56.7"
+ },
+ "hwang.eff.pct.int": {
+  "value": 56.686,
+  "tex": "57",
+  "txt": "57"
+ },
+ "hwang.eff.lo": {
+  "value": 51.4043,
+  "tex": "51.4",
+  "txt": "51.4"
+ },
+ "hwang.eff.lo.int": {
+  "value": 51.4043,
+  "tex": "51",
+  "txt": "51"
+ },
+ "hwang.eff.hi": {
+  "value": 61.8201,
+  "tex": "61.8",
+  "txt": "61.8"
+ },
+ "hwang.eff.hi.int": {
+  "value": 61.8201,
+  "tex": "62",
+  "txt": "62"
+ },
+ "hwang.saf.n": {
+  "value": 59,
+  "tex": "59",
+  "txt": "59"
+ },
+ "hwang.saf.pct": {
+  "value": 17.1512,
+  "tex": "17.2",
+  "txt": "17.2"
+ },
+ "hwang.saf.pct.int": {
+  "value": 17.1512,
+  "tex": "17",
+  "txt": "17"
+ },
+ "hwang.saf.lo": {
+  "value": 13.5359,
+  "tex": "13.5",
+  "txt": "13.5"
+ },
+ "hwang.saf.lo.int": {
+  "value": 13.5359,
+  "tex": "14",
+  "txt": "14"
+ },
+ "hwang.saf.hi": {
+  "value": 21.492,
+  "tex": "21.5",
+  "txt": "21.5"
+ },
+ "hwang.saf.hi.int": {
+  "value": 21.492,
+  "tex": "21",
+  "txt": "21"
+ },
+ "hwang.com.n": {
+  "value": 74,
+  "tex": "74",
+  "txt": "74"
+ },
+ "hwang.com.pct": {
+  "value": 21.5116,
+  "tex": "21.5",
+  "txt": "21.5"
+ },
+ "hwang.com.pct.int": {
+  "value": 21.5116,
+  "tex": "22",
+  "txt": "22"
+ },
+ "hwang.com.lo": {
+  "value": 17.4966,
+  "tex": "17.5",
+  "txt": "17.5"
+ },
+ "hwang.com.lo.int": {
+  "value": 17.4966,
+  "tex": "17",
+  "txt": "17"
+ },
+ "hwang.com.hi": {
+  "value": 26.1559,
+  "tex": "26.2",
+  "txt": "26.2"
+ },
+ "hwang.com.hi.int": {
+  "value": 26.1559,
+  "tex": "26",
+  "txt": "26"
+ },
+ "hwang.other.n": {
+  "value": 16,
+  "tex": "16",
+  "txt": "16"
+ },
+ "hwang.other.pct": {
+  "value": 4.6512,
+  "tex": "4.7",
+  "txt": "4.7"
+ },
+ "hwang.other.pct.int": {
+  "value": 4.6512,
+  "tex": "5",
+  "txt": "5"
+ },
+ "hwang.other.lo": {
+  "value": 2.8829,
+  "tex": "2.9",
+  "txt": "2.9"
+ },
+ "hwang.other.lo.int": {
+  "value": 2.8829,
+  "tex": "3",
+  "txt": "3"
+ },
+ "hwang.other.hi": {
+  "value": 7.4211,
+  "tex": "7.4",
+  "txt": "7.4"
+ },
+ "hwang.other.hi.int": {
+  "value": 7.4211,
+  "tex": "7",
+  "txt": "7"
+ },
+ "hwang.safetyFold.all": {
+  "value": 6.872431,
+  "tex": "7",
+  "txt": "7"
+ },
+ "hwang.safetyFold.big": {
+  "value": 5.459787,
+  "tex": "5",
+  "txt": "5"
+ },
+ "hwang.enrolled.n": {
+  "value": 382,
+  "tex": "382",
+  "txt": "382"
+ },
+ "hwang.enrolled.eff.n": {
+  "value": 205,
+  "tex": "205",
+  "txt": "205"
+ },
+ "hwang.enrolled.eff.pct": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "hwang.enrolled.eff.pct.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "hwang.enrolled.clusters": {
+  "value": 256,
+  "tex": "256",
+  "txt": "256"
+ },
+ "hwang.enrolled.clustered.lo": {
+  "value": 47.6229,
+  "tex": "47.6",
+  "txt": "47.6"
+ },
+ "hwang.enrolled.clustered.lo.int": {
+  "value": 47.6229,
+  "tex": "48",
+  "txt": "48"
+ },
+ "hwang.enrolled.clustered.hi": {
+  "value": 59.6012,
+  "tex": "59.6",
+  "txt": "59.6"
+ },
+ "hwang.enrolled.clustered.hi.int": {
+  "value": 59.6012,
+  "tex": "60",
+  "txt": "60"
+ },
+ "hwang.enrolled.diff": {
+  "value": 3.021125,
+  "tex": "3.0",
+  "txt": "3.0"
+ },
+ "hwang.enrolled.diff.lo": {
+  "value": -10.998214,
+  "tex": "-11.0",
+  "txt": "-11.0"
+ },
+ "hwang.enrolled.diff.hi": {
+  "value": 4.955964,
+  "tex": "5.0",
+  "txt": "5.0"
+ },
+ "hwang.enrolled.p": {
+  "value": 0.41383482753432876,
+  "tex": "0.41",
+  "txt": "0.41"
+ },
+ "hwang.enrolled.clustered.p": {
+  "value": 0.4579046739865116,
+  "tex": "0.46",
+  "txt": "0.46"
+ },
+ "hwang.complete.n": {
+  "value": 356,
+  "tex": "356",
+  "txt": "356"
+ },
+ "hwang.complete.eff.n": {
+  "value": 199,
+  "tex": "199",
+  "txt": "199"
+ },
+ "hwang.complete.eff.pct": {
+  "value": 55.8989,
+  "tex": "55.9",
+  "txt": "55.9"
+ },
+ "hwang.complete.eff.pct.int": {
+  "value": 55.8989,
+  "tex": "56",
+  "txt": "56"
+ },
+ "hwang.complete.clusters": {
+  "value": 242,
+  "tex": "242",
+  "txt": "242"
+ },
+ "hwang.complete.clustered.lo": {
+  "value": 49.5381,
+  "tex": "49.5",
+  "txt": "49.5"
+ },
+ "hwang.complete.clustered.lo.int": {
+  "value": 49.5381,
+  "tex": "50",
+  "txt": "50"
+ },
+ "hwang.complete.clustered.hi": {
+  "value": 62.0718,
+  "tex": "62.1",
+  "txt": "62.1"
+ },
+ "hwang.complete.clustered.hi.int": {
+  "value": 62.0718,
+  "tex": "62",
+  "txt": "62"
+ },
+ "hwang.complete.diff": {
+  "value": 0.78717,
+  "tex": "0.8",
+  "txt": "0.8"
+ },
+ "hwang.complete.diff.lo": {
+  "value": -8.978819,
+  "tex": "-9.0",
+  "txt": "-9.0"
+ },
+ "hwang.complete.diff.hi": {
+  "value": 7.404479,
+  "tex": "7.4",
+  "txt": "7.4"
+ },
+ "hwang.complete.p": {
+  "value": 0.833745506871133,
+  "tex": "0.83",
+  "txt": "0.83"
+ },
+ "hwang.complete.clustered.p": {
+  "value": 0.8506064760932951,
+  "tex": "0.85",
+  "txt": "0.85"
+ },
+ "hwang.registered.n": {
+  "value": 452,
+  "tex": "452",
+  "txt": "452"
+ },
+ "hwang.registered.eff.n": {
+  "value": 207,
+  "tex": "207",
+  "txt": "207"
+ },
+ "hwang.registered.eff.pct": {
+  "value": 45.7965,
+  "tex": "45.8",
+  "txt": "45.8"
+ },
+ "hwang.registered.eff.pct.int": {
+  "value": 45.7965,
+  "tex": "46",
+  "txt": "46"
+ },
+ "hwang.registered.clusters": {
+  "value": 306,
+  "tex": "306",
+  "txt": "306"
+ },
+ "hwang.registered.clustered.lo": {
+  "value": 40.3026,
+  "tex": "40.3",
+  "txt": "40.3"
+ },
+ "hwang.registered.clustered.lo.int": {
+  "value": 40.3026,
+  "tex": "40",
+  "txt": "40"
+ },
+ "hwang.registered.clustered.hi": {
+  "value": 51.3945,
+  "tex": "51.4",
+  "txt": "51.4"
+ },
+ "hwang.registered.clustered.hi.int": {
+  "value": 51.3945,
+  "tex": "51",
+  "txt": "51"
+ },
+ "hwang.registered.diff": {
+  "value": 10.889586,
+  "tex": "10.9",
+  "txt": "10.9"
+ },
+ "hwang.registered.diff.lo": {
+  "value": -18.533497,
+  "tex": "-18.5",
+  "txt": "-18.5"
+ },
+ "hwang.registered.diff.hi": {
+  "value": -3.245676,
+  "tex": "-3.2",
+  "txt": "-3.2"
+ },
+ "hwang.registered.p": {
+  "value": 0.0023339765793963024,
+  "tex": "0.0023",
+  "txt": "0.0023"
+ },
+ "hwang.registered.clustered.p": {
+  "value": 0.005234545240881155,
+  "tex": "0.0052",
+  "txt": "0.0052"
+ },
+ "hwang.wide.n": {
+  "value": 483,
+  "tex": "483",
+  "txt": "483"
+ },
+ "hwang.wide.eff.n": {
+  "value": 247,
+  "tex": "247",
+  "txt": "247"
+ },
+ "hwang.wide.eff.pct": {
+  "value": 51.1387,
+  "tex": "51.1",
+  "txt": "51.1"
+ },
+ "hwang.wide.eff.pct.int": {
+  "value": 51.1387,
+  "tex": "51",
+  "txt": "51"
+ },
+ "hwang.wide.clusters": {
+  "value": 331,
+  "tex": "331",
+  "txt": "331"
+ },
+ "hwang.wide.clustered.lo": {
+  "value": 45.8745,
+  "tex": "45.9",
+  "txt": "45.9"
+ },
+ "hwang.wide.clustered.lo.int": {
+  "value": 45.8745,
+  "tex": "46",
+  "txt": "46"
+ },
+ "hwang.wide.clustered.hi": {
+  "value": 56.3778,
+  "tex": "56.4",
+  "txt": "56.4"
+ },
+ "hwang.wide.clustered.hi.int": {
+  "value": 56.3778,
+  "tex": "56",
+  "txt": "56"
+ },
+ "hwang.wide.diff": {
+  "value": 5.54733,
+  "tex": "5.5",
+  "txt": "5.5"
+ },
+ "hwang.wide.diff.lo": {
+  "value": -12.97723,
+  "tex": "-13.0",
+  "txt": "-13.0"
+ },
+ "hwang.wide.diff.hi": {
+  "value": 1.88257,
+  "tex": "1.9",
+  "txt": "1.9"
+ },
+ "hwang.wide.p": {
+  "value": 0.11494900610305317,
+  "tex": "0.11",
+  "txt": "0.11"
+ },
+ "hwang.wide.clustered.p": {
+  "value": 0.14336341857319312,
+  "tex": "0.14",
+  "txt": "0.14"
+ },
+ "area.Oncology.trials": {
+  "value": 330,
+  "tex": "330",
+  "txt": "330"
+ },
+ "area.Oncology.miss.n": {
+  "value": 119,
+  "tex": "119",
+  "txt": "119"
+ },
+ "area.Oncology.miss.pct": {
+  "value": 36.0606,
+  "tex": "36.1",
+  "txt": "36.1"
+ },
+ "area.Oncology.miss.pct.int": {
+  "value": 36.0606,
+  "tex": "36",
+  "txt": "36"
+ },
+ "area.Cardiometabolic.trials": {
+  "value": 230,
+  "tex": "230",
+  "txt": "230"
+ },
+ "area.Cardiometabolic.miss.n": {
+  "value": 48,
+  "tex": "48",
+  "txt": "48"
+ },
+ "area.Cardiometabolic.miss.pct": {
+  "value": 20.8696,
+  "tex": "20.9",
+  "txt": "20.9"
+ },
+ "area.Cardiometabolic.miss.pct.int": {
+  "value": 20.8696,
+  "tex": "21",
+  "txt": "21"
+ },
+ "area.NeuroPsych.trials": {
+  "value": 227,
+  "tex": "227",
+  "txt": "227"
+ },
+ "area.NeuroPsych.miss.n": {
+  "value": 82,
+  "tex": "82",
+  "txt": "82"
+ },
+ "area.NeuroPsych.miss.pct": {
+  "value": 36.1233,
+  "tex": "36.1",
+  "txt": "36.1"
+ },
+ "area.NeuroPsych.miss.pct.int": {
+  "value": 36.1233,
+  "tex": "36",
+  "txt": "36"
+ },
+ "area.ImmunologyInflammation.trials": {
+  "value": 322,
+  "tex": "322",
+  "txt": "322"
+ },
+ "area.ImmunologyInflammation.miss.n": {
+  "value": 56,
+  "tex": "56",
+  "txt": "56"
+ },
+ "area.ImmunologyInflammation.miss.pct": {
+  "value": 17.3913,
+  "tex": "17.4",
+  "txt": "17.4"
+ },
+ "area.ImmunologyInflammation.miss.pct.int": {
+  "value": 17.3913,
+  "tex": "17",
+  "txt": "17"
+ },
+ "area.InfectiousVaccine.trials": {
+  "value": 190,
+  "tex": "190",
+  "txt": "190"
+ },
+ "area.InfectiousVaccine.miss.n": {
+  "value": 82,
+  "tex": "82",
+  "txt": "82"
+ },
+ "area.InfectiousVaccine.miss.pct": {
+  "value": 43.1579,
+  "tex": "43.2",
+  "txt": "43.2"
+ },
+ "area.InfectiousVaccine.miss.pct.int": {
+  "value": 43.1579,
+  "tex": "43",
+  "txt": "43"
+ },
+ "area.Otherrare.trials": {
+  "value": 505,
+  "tex": "505",
+  "txt": "505"
+ },
+ "area.Otherrare.miss.n": {
+  "value": 163,
+  "tex": "163",
+  "txt": "163"
+ },
+ "area.Otherrare.miss.pct": {
+  "value": 32.2772,
+  "tex": "32.3",
+  "txt": "32.3"
+ },
+ "area.Otherrare.miss.pct.int": {
+  "value": 32.2772,
+  "tex": "32",
+  "txt": "32"
+ },
+ "area.het.chi2": {
+  "value": 59.493086,
+  "tex": "59.5",
+  "txt": "59.5"
+ },
+ "area.het.dof": {
+  "value": 5,
+  "tex": "5",
+  "txt": "5"
+ },
+ "area.het.p": {
+  "value": 1.5469252474084503e-11,
+  "tex": "2\\times10^{-11}",
+  "txt": "2e-11"
+ },
+ "area.infectious.split": {
+  "value": 2020,
+  "tex": "2020",
+  "txt": "2020"
+ },
+ "area.infectious.before.trials": {
+  "value": 59,
+  "tex": "59",
+  "txt": "59"
+ },
+ "area.infectious.before.miss.n": {
+  "value": 17,
+  "tex": "17",
+  "txt": "17"
+ },
+ "area.infectious.before.miss.pct": {
+  "value": 28.8136,
+  "tex": "28.8",
+  "txt": "28.8"
+ },
+ "area.infectious.before.miss.pct.int": {
+  "value": 28.8136,
+  "tex": "29",
+  "txt": "29"
+ },
+ "area.infectious.from.trials": {
+  "value": 131,
+  "tex": "131",
+  "txt": "131"
+ },
+ "area.infectious.from.miss.n": {
+  "value": 65,
+  "tex": "65",
+  "txt": "65"
+ },
+ "area.infectious.from.miss.pct": {
+  "value": 49.6183,
+  "tex": "49.6",
+  "txt": "49.6"
+ },
+ "area.infectious.from.miss.pct.int": {
+  "value": 49.6183,
+  "tex": "50",
+  "txt": "50"
+ },
+ "area.infectious.z": {
+  "value": 2.67906,
+  "tex": "2.7",
+  "txt": "2.7"
+ },
+ "area.infectious.p": {
+  "value": 0.007382923505769215,
+  "tex": "0.0074",
+  "txt": "0.0074"
+ },
+ "covmodel.reference": {
+  "value": "Cardiometabolic",
+  "tex": "Cardiometabolic",
+  "txt": "Cardiometabolic"
+ },
+ "covmodel.trials": {
+  "value": 3002,
+  "tex": "3{,}002",
+  "txt": "3,002"
+ },
+ "covmodel.bigPharma.or": {
+  "value": 2.316742,
+  "tex": "2.32",
+  "txt": "2.32"
+ },
+ "covmodel.bigPharma.lo": {
+  "value": 1.707806,
+  "tex": "1.71",
+  "txt": "1.71"
+ },
+ "covmodel.bigPharma.hi": {
+  "value": 3.1428,
+  "tex": "3.14",
+  "txt": "3.14"
+ },
+ "covmodel.bigPharma.p": {
+  "value": 6.667074294718216e-08,
+  "tex": "7\\times10^{-8}",
+  "txt": "7e-8"
+ },
+ "covmodel.year.or": {
+  "value": 0.928329,
+  "tex": "0.93",
+  "txt": "0.93"
+ },
+ "covmodel.year.lo": {
+  "value": 0.878503,
+  "tex": "0.88",
+  "txt": "0.88"
+ },
+ "covmodel.year.hi": {
+  "value": 0.980981,
+  "tex": "0.98",
+  "txt": "0.98"
+ },
+ "covmodel.year.p": {
+  "value": 0.008236307600430221,
+  "tex": "0.0082",
+  "txt": "0.0082"
+ },
+ "covmodel.logPrimaries.or": {
+  "value": 0.740702,
+  "tex": "0.74",
+  "txt": "0.74"
+ },
+ "covmodel.logPrimaries.lo": {
+  "value": 0.593502,
+  "tex": "0.59",
+  "txt": "0.59"
+ },
+ "covmodel.logPrimaries.hi": {
+  "value": 0.92441,
+  "tex": "0.92",
+  "txt": "0.92"
+ },
+ "covmodel.logPrimaries.p": {
+  "value": 0.0079231220761784,
+  "tex": "0.0079",
+  "txt": "0.0079"
+ },
+ "covmodel.singleArm.or": {
+  "value": 0.063643,
+  "tex": "0.06",
+  "txt": "0.06"
+ },
+ "covmodel.singleArm.lo": {
+  "value": 0.040723,
+  "tex": "0.04",
+  "txt": "0.04"
+ },
+ "covmodel.singleArm.hi": {
+  "value": 0.099464,
+  "tex": "0.10",
+  "txt": "0.10"
+ },
+ "covmodel.singleArm.p": {
+  "value": 1.1766087207704717e-33,
+  "tex": "1\\times10^{-33}",
+  "txt": "1e-33"
+ },
+ "covmodel.areaImmunologyInflammation.or": {
+  "value": 1.09156,
+  "tex": "1.09",
+  "txt": "1.09"
+ },
+ "covmodel.areaImmunologyInflammation.lo": {
+  "value": 0.641374,
+  "tex": "0.64",
+  "txt": "0.64"
+ },
+ "covmodel.areaImmunologyInflammation.hi": {
+  "value": 1.857736,
+  "tex": "1.86",
+  "txt": "1.86"
+ },
+ "covmodel.areaImmunologyInflammation.p": {
+  "value": 0.7467574994434726,
+  "tex": "0.75",
+  "txt": "0.75"
+ },
+ "covmodel.areaInfectiousVaccine.or": {
+  "value": 0.280186,
+  "tex": "0.28",
+  "txt": "0.28"
+ },
+ "covmodel.areaInfectiousVaccine.lo": {
+  "value": 0.154394,
+  "tex": "0.15",
+  "txt": "0.15"
+ },
+ "covmodel.areaInfectiousVaccine.hi": {
+  "value": 0.508468,
+  "tex": "0.51",
+  "txt": "0.51"
+ },
+ "covmodel.areaInfectiousVaccine.p": {
+  "value": 2.8586332429811167e-05,
+  "tex": "3\\times10^{-5}",
+  "txt": "3e-5"
+ },
+ "covmodel.areaNeuroPsych.or": {
+  "value": 1.000158,
+  "tex": "1.00",
+  "txt": "1.00"
+ },
+ "covmodel.areaNeuroPsych.lo": {
+  "value": 0.580281,
+  "tex": "0.58",
+  "txt": "0.58"
+ },
+ "covmodel.areaNeuroPsych.hi": {
+  "value": 1.723848,
+  "tex": "1.72",
+  "txt": "1.72"
+ },
+ "covmodel.areaNeuroPsych.p": {
+  "value": 0.9995471662674431,
+  "tex": "1.00",
+  "txt": "1.00"
+ },
+ "covmodel.areaOncology.or": {
+  "value": 0.763941,
+  "tex": "0.76",
+  "txt": "0.76"
+ },
+ "covmodel.areaOncology.lo": {
+  "value": 0.415233,
+  "tex": "0.42",
+  "txt": "0.42"
+ },
+ "covmodel.areaOncology.hi": {
+  "value": 1.405489,
+  "tex": "1.41",
+  "txt": "1.41"
+ },
+ "covmodel.areaOncology.p": {
+  "value": 0.38666787020897486,
+  "tex": "0.39",
+  "txt": "0.39"
+ },
+ "covmodel.areaOtherrare.or": {
+  "value": 0.621027,
+  "tex": "0.62",
+  "txt": "0.62"
+ },
+ "covmodel.areaOtherrare.lo": {
+  "value": 0.372122,
+  "tex": "0.37",
+  "txt": "0.37"
+ },
+ "covmodel.areaOtherrare.hi": {
+  "value": 1.03642,
+  "tex": "1.04",
+  "txt": "1.04"
+ },
+ "covmodel.areaOtherrare.p": {
+  "value": 0.06828852810421007,
+  "tex": "0.068",
+  "txt": "0.068"
+ }
+}

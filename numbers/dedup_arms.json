@@ -1,0 +1,87 @@
+{
+ "dedup.withArms.n": {
+  "value": 14561,
+  "tex": "14{,}561",
+  "txt": "14,561"
+ },
+ "dedup.withArms.pct": {
+  "value": 99.508,
+  "tex": "99.5",
+  "txt": "99.5"
+ },
+ "dedup.withArms.pct.int": {
+  "value": 99.508,
+  "tex": "100",
+  "txt": "100"
+ },
+ "dedup.withExperimental.n": {
+  "value": 13007,
+  "tex": "13{,}007",
+  "txt": "13,007"
+ },
+ "dedup.withExperimental.pct": {
+  "value": 88.8881,
+  "tex": "88.9",
+  "txt": "88.9"
+ },
+ "dedup.withExperimental.pct.int": {
+  "value": 88.8881,
+  "tex": "89",
+  "txt": "89"
+ },
+ "dedup.withSubject": {
+  "value": 12220,
+  "tex": "12{,}220",
+  "txt": "12,220"
+ },
+ "dedup.backbones": {
+  "value": 97,
+  "tex": "97",
+  "txt": "97"
+ },
+ "dedup.backboneMinTrials": {
+  "value": 8,
+  "tex": "8",
+  "txt": "8"
+ },
+ "dedup.subjects": {
+  "value": 6213,
+  "tex": "6{,}213",
+  "txt": "6,213"
+ },
+ "dedup.programs.judged": {
+  "value": 3117,
+  "tex": "3{,}117",
+  "txt": "3,117"
+ },
+ "dedup.programs.win.n": {
+  "value": 2323,
+  "tex": "2{,}323",
+  "txt": "2,323"
+ },
+ "dedup.programs.win.pct": {
+  "value": 74.5268,
+  "tex": "74.5",
+  "txt": "74.5"
+ },
+ "dedup.programs.win.pct.int": {
+  "value": 74.5268,
+  "tex": "75",
+  "txt": "75"
+ },
+ "dedup.programs.noWin.n": {
+  "value": 794,
+  "tex": "794",
+  "txt": "794"
+ },
+ "dedup.programs.noWin.pct": {
+  "value": 25.4732,
+  "tex": "25.5",
+  "txt": "25.5"
+ },
+ "dedup.programs.noWin.pct.int": {
+  "value": 25.4732,
+  "tex": "25",
+  "txt": "25"
+ }
+}

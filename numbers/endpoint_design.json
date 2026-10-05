@@ -1,0 +1,472 @@
+{
+ "ni.all.n": {
+  "value": 779,
+  "tex": "779",
+  "txt": "779"
+ },
+ "ni.all.pct": {
+  "value": 11.8066,
+  "tex": "11.8",
+  "txt": "11.8"
+ },
+ "ni.all.pct.int": {
+  "value": 11.8066,
+  "tex": "12",
+  "txt": "12"
+ },
+ "ni.all.superiority.trials": {
+  "value": 5819,
+  "tex": "5{,}819",
+  "txt": "5,819"
+ },
+ "ni.all.superiority.miss.n": {
+  "value": 1855,
+  "tex": "1{,}855",
+  "txt": "1,855"
+ },
+ "ni.all.superiority.miss.pct": {
+  "value": 31.8783,
+  "tex": "31.9",
+  "txt": "31.9"
+ },
+ "ni.all.superiority.miss.pct.int": {
+  "value": 31.8783,
+  "tex": "32",
+  "txt": "32"
+ },
+ "ni.era.n": {
+  "value": 196,
+  "tex": "196",
+  "txt": "196"
+ },
+ "ni.era.pct": {
+  "value": 10.8647,
+  "tex": "10.9",
+  "txt": "10.9"
+ },
+ "ni.era.pct.int": {
+  "value": 10.8647,
+  "tex": "11",
+  "txt": "11"
+ },
+ "ni.era.superiority.trials": {
+  "value": 1608,
+  "tex": "1{,}608",
+  "txt": "1,608"
+ },
+ "ni.era.superiority.miss.n": {
+  "value": 500,
+  "tex": "500",
+  "txt": "500"
+ },
+ "ni.era.superiority.miss.pct": {
+  "value": 31.0945,
+  "tex": "31.1",
+  "txt": "31.1"
+ },
+ "ni.era.superiority.miss.pct.int": {
+  "value": 31.0945,
+  "tex": "31",
+  "txt": "31"
+ },
+ "direction.wins": {
+  "value": 1254,
+  "tex": "1{,}254",
+  "txt": "1,254"
+ },
+ "direction.ratioOnly.n": {
+  "value": 124,
+  "tex": "124",
+  "txt": "124"
+ },
+ "direction.ratioOnly.pct": {
+  "value": 9.8884,
+  "tex": "9.9",
+  "txt": "9.9"
+ },
+ "direction.ratioOnly.pct.int": {
+  "value": 9.8884,
+  "tex": "10",
+  "txt": "10"
+ },
+ "direction.hazardOnly.n": {
+  "value": 4,
+  "tex": "4",
+  "txt": "4"
+ },
+ "direction.hazardOnly.pct": {
+  "value": 0.318979,
+  "tex": "0.3",
+  "txt": "0.3"
+ },
+ "combine.all.trials": {
+  "value": 6598,
+  "tex": "6{,}598",
+  "txt": "6,598"
+ },
+ "combine.all.any.n": {
+  "value": 2079,
+  "tex": "2{,}079",
+  "txt": "2,079"
+ },
+ "combine.all.any.pct": {
+  "value": 31.5095,
+  "tex": "31.5",
+  "txt": "31.5"
+ },
+ "combine.all.any.pct.int": {
+  "value": 31.5095,
+  "tex": "32",
+  "txt": "32"
+ },
+ "combine.all.and.n": {
+  "value": 2432,
+  "tex": "2{,}432",
+  "txt": "2,432"
+ },
+ "combine.all.and.pct": {
+  "value": 36.8597,
+  "tex": "36.9",
+  "txt": "36.9"
+ },
+ "combine.all.and.pct.int": {
+  "value": 36.8597,
+  "tex": "37",
+  "txt": "37"
+ },
+ "combine.all.strict.n": {
+  "value": 2906,
+  "tex": "2{,}906",
+  "txt": "2,906"
+ },
+ "combine.all.strict.pct": {
+  "value": 44.0436,
+  "tex": "44.0",
+  "txt": "44.0"
+ },
+ "combine.all.strict.pct.int": {
+  "value": 44.0436,
+  "tex": "44",
+  "txt": "44"
+ },
+ "combine.all.incomplete.n": {
+  "value": 756,
+  "tex": "756",
+  "txt": "756"
+ },
+ "combine.all.incomplete.pct": {
+  "value": 11.458,
+  "tex": "11.5",
+  "txt": "11.5"
+ },
+ "combine.all.incomplete.pct.int": {
+  "value": 11.458,
+  "tex": "11",
+  "txt": "11"
+ },
+ "combine.era.trials": {
+  "value": 1804,
+  "tex": "1{,}804",
+  "txt": "1,804"
+ },
+ "combine.era.any.n": {
+  "value": 550,
+  "tex": "550",
+  "txt": "550"
+ },
+ "combine.era.any.pct": {
+  "value": 30.4878,
+  "tex": "30.5",
+  "txt": "30.5"
+ },
+ "combine.era.any.pct.int": {
+  "value": 30.4878,
+  "tex": "30",
+  "txt": "30"
+ },
+ "combine.era.and.n": {
+  "value": 643,
+  "tex": "643",
+  "txt": "643"
+ },
+ "combine.era.and.pct": {
+  "value": 35.643,
+  "tex": "35.6",
+  "txt": "35.6"
+ },
+ "combine.era.and.pct.int": {
+  "value": 35.643,
+  "tex": "36",
+  "txt": "36"
+ },
+ "combine.era.strict.n": {
+  "value": 778,
+  "tex": "778",
+  "txt": "778"
+ },
+ "combine.era.strict.pct": {
+  "value": 43.1264,
+  "tex": "43.1",
+  "txt": "43.1"
+ },
+ "combine.era.strict.pct.int": {
+  "value": 43.1264,
+  "tex": "43",
+  "txt": "43"
+ },
+ "combine.era.incomplete.n": {
+  "value": 218,
+  "tex": "218",
+  "txt": "218"
+ },
+ "combine.era.incomplete.pct": {
+  "value": 12.0843,
+  "tex": "12.1",
+  "txt": "12.1"
+ },
+ "combine.era.incomplete.pct.int": {
+  "value": 12.0843,
+  "tex": "12",
+  "txt": "12"
+ },
+ "winrule.any.all.n": {
+  "value": 1723,
+  "tex": "1{,}723",
+  "txt": "1,723"
+ },
+ "winrule.any.all.eff.n": {
+  "value": 640,
+  "tex": "640",
+  "txt": "640"
+ },
+ "winrule.any.all.eff.pct": {
+  "value": 37.1445,
+  "tex": "37.1",
+  "txt": "37.1"
+ },
+ "winrule.any.all.eff.pct.int": {
+  "value": 37.1445,
+  "tex": "37",
+  "txt": "37"
+ },
+ "winrule.any.all.op.n": {
+  "value": 629,
+  "tex": "629",
+  "txt": "629"
+ },
+ "winrule.any.all.op.pct": {
+  "value": 36.5061,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "winrule.any.all.op.pct.int": {
+  "value": 36.5061,
+  "tex": "37",
+  "txt": "37"
+ },
+ "winrule.any.big.n": {
+  "value": 382,
+  "tex": "382",
+  "txt": "382"
+ },
+ "winrule.any.big.eff.n": {
+  "value": 205,
+  "tex": "205",
+  "txt": "205"
+ },
+ "winrule.any.big.eff.pct": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "winrule.any.big.eff.pct.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "winrule.any.big.op.n": {
+  "value": 54,
+  "tex": "54",
+  "txt": "54"
+ },
+ "winrule.any.big.op.pct": {
+  "value": 14.1361,
+  "tex": "14.1",
+  "txt": "14.1"
+ },
+ "winrule.any.big.op.pct.int": {
+  "value": 14.1361,
+  "tex": "14",
+  "txt": "14"
+ },
+ "winrule.and.all.n": {
+  "value": 1801,
+  "tex": "1{,}801",
+  "txt": "1,801"
+ },
+ "winrule.and.all.eff.n": {
+  "value": 718,
+  "tex": "718",
+  "txt": "718"
+ },
+ "winrule.and.all.eff.pct": {
+  "value": 39.8667,
+  "tex": "39.9",
+  "txt": "39.9"
+ },
+ "winrule.and.all.eff.pct.int": {
+  "value": 39.8667,
+  "tex": "40",
+  "txt": "40"
+ },
+ "winrule.and.all.op.n": {
+  "value": 629,
+  "tex": "629",
+  "txt": "629"
+ },
+ "winrule.and.all.op.pct": {
+  "value": 34.925,
+  "tex": "34.9",
+  "txt": "34.9"
+ },
+ "winrule.and.all.op.pct.int": {
+  "value": 34.925,
+  "tex": "35",
+  "txt": "35"
+ },
+ "winrule.and.big.n": {
+  "value": 412,
+  "tex": "412",
+  "txt": "412"
+ },
+ "winrule.and.big.eff.n": {
+  "value": 235,
+  "tex": "235",
+  "txt": "235"
+ },
+ "winrule.and.big.eff.pct": {
+  "value": 57.0388,
+  "tex": "57.0",
+  "txt": "57.0"
+ },
+ "winrule.and.big.eff.pct.int": {
+  "value": 57.0388,
+  "tex": "57",
+  "txt": "57"
+ },
+ "winrule.and.big.op.n": {
+  "value": 54,
+  "tex": "54",
+  "txt": "54"
+ },
+ "winrule.and.big.op.pct": {
+  "value": 13.1068,
+  "tex": "13.1",
+  "txt": "13.1"
+ },
+ "winrule.and.big.op.pct.int": {
+  "value": 13.1068,
+  "tex": "13",
+  "txt": "13"
+ },
+ "winrule.strict.all.n": {
+  "value": 1910,
+  "tex": "1{,}910",
+  "txt": "1,910"
+ },
+ "winrule.strict.all.eff.n": {
+  "value": 827,
+  "tex": "827",
+  "txt": "827"
+ },
+ "winrule.strict.all.eff.pct": {
+  "value": 43.2984,
+  "tex": "43.3",
+  "txt": "43.3"
+ },
+ "winrule.strict.all.eff.pct.int": {
+  "value": 43.2984,
+  "tex": "43",
+  "txt": "43"
+ },
+ "winrule.strict.all.op.n": {
+  "value": 629,
+  "tex": "629",
+  "txt": "629"
+ },
+ "winrule.strict.all.op.pct": {
+  "value": 32.9319,
+  "tex": "32.9",
+  "txt": "32.9"
+ },
+ "winrule.strict.all.op.pct.int": {
+  "value": 32.9319,
+  "tex": "33",
+  "txt": "33"
+ },
+ "winrule.strict.big.n": {
+  "value": 480,
+  "tex": "480",
+  "txt": "480"
+ },
+ "winrule.strict.big.eff.n": {
+  "value": 303,
+  "tex": "303",
+  "txt": "303"
+ },
+ "winrule.strict.big.eff.pct": {
+  "value": 63.125,
+  "tex": "63.1",
+  "txt": "63.1"
+ },
+ "winrule.strict.big.eff.pct.int": {
+  "value": 63.125,
+  "tex": "63",
+  "txt": "63"
+ },
+ "winrule.strict.big.op.n": {
+  "value": 54,
+  "tex": "54",
+  "txt": "54"
+ },
+ "winrule.strict.big.op.pct": {
+  "value": 11.25,
+  "tex": "11.2",
+  "txt": "11.2"
+ },
+ "winrule.strict.big.op.pct.int": {
+  "value": 11.25,
+  "tex": "11",
+  "txt": "11"
+ },
+ "stability.both": {
+  "value": 14632,
+  "tex": "14{,}632",
+  "txt": "14,632"
+ },
+ "stability.sameCount": {
+  "value": 14625,
+  "tex": "14{,}625",
+  "txt": "14,625"
+ },
+ "stability.sameCount.pct": {
+  "value": 99.95216,
+  "tex": "99.95",
+  "txt": "99.95"
+ },
+ "stability.compared": {
+  "value": 6602,
+  "tex": "6{,}602",
+  "txt": "6,602"
+ },
+ "stability.sameP": {
+  "value": 6602,
+  "tex": "6{,}602",
+  "txt": "6,602"
+ },
+ "stability.invalidMinP": {
+  "value": 2,
+  "tex": "2",
+  "txt": "2"
+ }
+}

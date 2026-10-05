@@ -1,0 +1,437 @@
+{
+ "novelty.all.n": {
+  "value": 382,
+  "tex": "382",
+  "txt": "382"
+ },
+ "novelty.all.miss.trials": {
+  "value": 842,
+  "tex": "842",
+  "txt": "842"
+ },
+ "novelty.all.miss.n": {
+  "value": 214,
+  "tex": "214",
+  "txt": "214"
+ },
+ "novelty.all.miss.pct": {
+  "value": 25.4157,
+  "tex": "25.4",
+  "txt": "25.4"
+ },
+ "novelty.all.miss.pct.int": {
+  "value": 25.4157,
+  "tex": "25",
+  "txt": "25"
+ },
+ "novelty.all.eff.n": {
+  "value": 205,
+  "tex": "205",
+  "txt": "205"
+ },
+ "novelty.all.eff.pct": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "novelty.all.eff.pct.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "novelty.all.op.n": {
+  "value": 54,
+  "tex": "54",
+  "txt": "54"
+ },
+ "novelty.all.op.pct": {
+  "value": 14.1361,
+  "tex": "14.1",
+  "txt": "14.1"
+ },
+ "novelty.all.op.pct.int": {
+  "value": 14.1361,
+  "tex": "14",
+  "txt": "14"
+ },
+ "novelty.all.com.n": {
+  "value": 105,
+  "tex": "105",
+  "txt": "105"
+ },
+ "novelty.all.com.pct": {
+  "value": 27.4869,
+  "tex": "27.5",
+  "txt": "27.5"
+ },
+ "novelty.all.com.pct.int": {
+  "value": 27.4869,
+  "tex": "27",
+  "txt": "27"
+ },
+ "novelty.all.saf.n": {
+  "value": 12,
+  "tex": "12",
+  "txt": "12"
+ },
+ "novelty.all.saf.pct": {
+  "value": 3.1414,
+  "tex": "3.1",
+  "txt": "3.1"
+ },
+ "novelty.all.saf.pct.int": {
+  "value": 3.1414,
+  "tex": "3",
+  "txt": "3"
+ },
+ "novelty.all.unk.n": {
+  "value": 6,
+  "tex": "6",
+  "txt": "6"
+ },
+ "novelty.all.unk.pct": {
+  "value": 1.5707,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "novelty.all.unk.pct.int": {
+  "value": 1.5707,
+  "tex": "2",
+  "txt": "2"
+ },
+ "novelty.novel.n": {
+  "value": 203,
+  "tex": "203",
+  "txt": "203"
+ },
+ "novelty.novel.miss.trials": {
+  "value": 402,
+  "tex": "402",
+  "txt": "402"
+ },
+ "novelty.novel.miss.n": {
+  "value": 100,
+  "tex": "100",
+  "txt": "100"
+ },
+ "novelty.novel.miss.pct": {
+  "value": 24.8756,
+  "tex": "24.9",
+  "txt": "24.9"
+ },
+ "novelty.novel.miss.pct.int": {
+  "value": 24.8756,
+  "tex": "25",
+  "txt": "25"
+ },
+ "novelty.novel.eff.n": {
+  "value": 98,
+  "tex": "98",
+  "txt": "98"
+ },
+ "novelty.novel.eff.pct": {
+  "value": 48.2759,
+  "tex": "48.3",
+  "txt": "48.3"
+ },
+ "novelty.novel.eff.pct.int": {
+  "value": 48.2759,
+  "tex": "48",
+  "txt": "48"
+ },
+ "novelty.novel.op.n": {
+  "value": 29,
+  "tex": "29",
+  "txt": "29"
+ },
+ "novelty.novel.op.pct": {
+  "value": 14.2857,
+  "tex": "14.3",
+  "txt": "14.3"
+ },
+ "novelty.novel.op.pct.int": {
+  "value": 14.2857,
+  "tex": "14",
+  "txt": "14"
+ },
+ "novelty.novel.com.n": {
+  "value": 66,
+  "tex": "66",
+  "txt": "66"
+ },
+ "novelty.novel.com.pct": {
+  "value": 32.5123,
+  "tex": "32.5",
+  "txt": "32.5"
+ },
+ "novelty.novel.com.pct.int": {
+  "value": 32.5123,
+  "tex": "33",
+  "txt": "33"
+ },
+ "novelty.novel.saf.n": {
+  "value": 6,
+  "tex": "6",
+  "txt": "6"
+ },
+ "novelty.novel.saf.pct": {
+  "value": 2.9557,
+  "tex": "3.0",
+  "txt": "3.0"
+ },
+ "novelty.novel.saf.pct.int": {
+  "value": 2.9557,
+  "tex": "3",
+  "txt": "3"
+ },
+ "novelty.novel.unk.n": {
+  "value": 4,
+  "tex": "4",
+  "txt": "4"
+ },
+ "novelty.novel.unk.pct": {
+  "value": 1.9704,
+  "tex": "2.0",
+  "txt": "2.0"
+ },
+ "novelty.novel.unk.pct.int": {
+  "value": 1.9704,
+  "tex": "2",
+  "txt": "2"
+ },
+ "novelty.lifecycle.n": {
+  "value": 160,
+  "tex": "160",
+  "txt": "160"
+ },
+ "novelty.lifecycle.miss.trials": {
+  "value": 410,
+  "tex": "410",
+  "txt": "410"
+ },
+ "novelty.lifecycle.miss.n": {
+  "value": 102,
+  "tex": "102",
+  "txt": "102"
+ },
+ "novelty.lifecycle.miss.pct": {
+  "value": 24.878,
+  "tex": "24.9",
+  "txt": "24.9"
+ },
+ "novelty.lifecycle.miss.pct.int": {
+  "value": 24.878,
+  "tex": "25",
+  "txt": "25"
+ },
+ "novelty.lifecycle.eff.n": {
+  "value": 95,
+  "tex": "95",
+  "txt": "95"
+ },
+ "novelty.lifecycle.eff.pct": {
+  "value": 59.375,
+  "tex": "59.4",
+  "txt": "59.4"
+ },
+ "novelty.lifecycle.eff.pct.int": {
+  "value": 59.375,
+  "tex": "59",
+  "txt": "59"
+ },
+ "novelty.lifecycle.op.n": {
+  "value": 22,
+  "tex": "22",
+  "txt": "22"
+ },
+ "novelty.lifecycle.op.pct": {
+  "value": 13.75,
+  "tex": "13.8",
+  "txt": "13.8"
+ },
+ "novelty.lifecycle.op.pct.int": {
+  "value": 13.75,
+  "tex": "14",
+  "txt": "14"
+ },
+ "novelty.lifecycle.com.n": {
+  "value": 36,
+  "tex": "36",
+  "txt": "36"
+ },
+ "novelty.lifecycle.com.pct": {
+  "value": 22.5,
+  "tex": "22.5",
+  "txt": "22.5"
+ },
+ "novelty.lifecycle.com.pct.int": {
+  "value": 22.5,
+  "tex": "22",
+  "txt": "22"
+ },
+ "novelty.lifecycle.saf.n": {
+  "value": 5,
+  "tex": "5",
+  "txt": "5"
+ },
+ "novelty.lifecycle.saf.pct": {
+  "value": 3.125,
+  "tex": "3.1",
+  "txt": "3.1"
+ },
+ "novelty.lifecycle.saf.pct.int": {
+  "value": 3.125,
+  "tex": "3",
+  "txt": "3"
+ },
+ "novelty.lifecycle.unk.n": {
+  "value": 2,
+  "tex": "2",
+  "txt": "2"
+ },
+ "novelty.lifecycle.unk.pct": {
+  "value": 1.25,
+  "tex": "1.2",
+  "txt": "1.2"
+ },
+ "novelty.lifecycle.unk.pct.int": {
+  "value": 1.25,
+  "tex": "1",
+  "txt": "1"
+ },
+ "novelty.unflagged.n": {
+  "value": 19,
+  "tex": "19",
+  "txt": "19"
+ },
+ "novelty.unflagged.miss.trials": {
+  "value": 30,
+  "tex": "30",
+  "txt": "30"
+ },
+ "novelty.unflagged.miss.n": {
+  "value": 12,
+  "tex": "12",
+  "txt": "12"
+ },
+ "novelty.unflagged.miss.pct": {
+  "value": 40.0,
+  "tex": "40.0",
+  "txt": "40.0"
+ },
+ "novelty.unflagged.miss.pct.int": {
+  "value": 40.0,
+  "tex": "40",
+  "txt": "40"
+ },
+ "novelty.unflagged.eff.n": {
+  "value": 12,
+  "tex": "12",
+  "txt": "12"
+ },
+ "novelty.unflagged.eff.pct": {
+  "value": 63.1579,
+  "tex": "63.2",
+  "txt": "63.2"
+ },
+ "novelty.unflagged.eff.pct.int": {
+  "value": 63.1579,
+  "tex": "63",
+  "txt": "63"
+ },
+ "novelty.unflagged.op.n": {
+  "value": 3,
+  "tex": "3",
+  "txt": "3"
+ },
+ "novelty.unflagged.op.pct": {
+  "value": 15.7895,
+  "tex": "15.8",
+  "txt": "15.8"
+ },
+ "novelty.unflagged.op.pct.int": {
+  "value": 15.7895,
+  "tex": "16",
+  "txt": "16"
+ },
+ "novelty.unflagged.com.n": {
+  "value": 3,
+  "tex": "3",
+  "txt": "3"
+ },
+ "novelty.unflagged.com.pct": {
+  "value": 15.7895,
+  "tex": "15.8",
+  "txt": "15.8"
+ },
+ "novelty.unflagged.com.pct.int": {
+  "value": 15.7895,
+  "tex": "16",
+  "txt": "16"
+ },
+ "novelty.unflagged.saf.n": {
+  "value": 1,
+  "tex": "1",
+  "txt": "1"
+ },
+ "novelty.unflagged.saf.pct": {
+  "value": 5.2632,
+  "tex": "5.3",
+  "txt": "5.3"
+ },
+ "novelty.unflagged.saf.pct.int": {
+  "value": 5.2632,
+  "tex": "5",
+  "txt": "5"
+ },
+ "novelty.unflagged.unk.n": {
+  "value": 0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "novelty.unflagged.unk.pct": {
+  "value": 0.0,
+  "tex": "0.0",
+  "txt": "0.0"
+ },
+ "novelty.unflagged.unk.pct.int": {
+  "value": 0.0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "novelty.novel.eff.lo": {
+  "value": 41.4978,
+  "tex": "41.5",
+  "txt": "41.5"
+ },
+ "novelty.novel.eff.lo.int": {
+  "value": 41.4978,
+  "tex": "41",
+  "txt": "41"
+ },
+ "novelty.novel.eff.hi": {
+  "value": 55.118,
+  "tex": "55.1",
+  "txt": "55.1"
+ },
+ "novelty.novel.eff.hi.int": {
+  "value": 55.118,
+  "tex": "55",
+  "txt": "55"
+ },
+ "novelty.novel.hwang.diff.lo": {
+  "value": -17.051566,
+  "tex": "-17.1",
+  "txt": "-17.1"
+ },
+ "novelty.novel.hwang.diff.hi": {
+  "value": 0.231197,
+  "tex": "0.2",
+  "txt": "0.2"
+ },
+ "novelty.novel.hwang.p": {
+  "value": 0.05673402528692464,
+  "tex": "0.057",
+  "txt": "0.057"
+ }
+}

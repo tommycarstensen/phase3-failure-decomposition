@@ -1,0 +1,332 @@
+{
+ "valid.bucket.agree.n": {
+  "value": 146,
+  "tex": "146",
+  "txt": "146"
+ },
+ "valid.bucket.agree.pct": {
+  "value": 86.9048,
+  "tex": "86.9",
+  "txt": "86.9"
+ },
+ "valid.bucket.agree.pct.int": {
+  "value": 86.9048,
+  "tex": "87",
+  "txt": "87"
+ },
+ "valid.bucket.agree.lo": {
+  "value": 80.9688,
+  "tex": "81.0",
+  "txt": "81.0"
+ },
+ "valid.bucket.agree.lo.int": {
+  "value": 80.9688,
+  "tex": "81",
+  "txt": "81"
+ },
+ "valid.bucket.agree.hi": {
+  "value": 91.1907,
+  "tex": "91.2",
+  "txt": "91.2"
+ },
+ "valid.bucket.agree.hi.int": {
+  "value": 91.1907,
+  "tex": "91",
+  "txt": "91"
+ },
+ "valid.bucket.weighted.pct": {
+  "value": 89.6331,
+  "tex": "89.6",
+  "txt": "89.6"
+ },
+ "valid.bucket.weighted.pct.int": {
+  "value": 89.6331,
+  "tex": "90",
+  "txt": "90"
+ },
+ "valid.bucket.weighted.lo": {
+  "value": 84.981,
+  "tex": "85.0",
+  "txt": "85.0"
+ },
+ "valid.bucket.weighted.lo.int": {
+  "value": 84.981,
+  "tex": "85",
+  "txt": "85"
+ },
+ "valid.bucket.weighted.hi": {
+  "value": 93.8343,
+  "tex": "93.8",
+  "txt": "93.8"
+ },
+ "valid.bucket.weighted.hi.int": {
+  "value": 93.8343,
+  "tex": "94",
+  "txt": "94"
+ },
+ "valid.sample": {
+  "value": 168,
+  "tex": "168",
+  "txt": "168"
+ },
+ "valid.perCategory": {
+  "value": 14,
+  "tex": "14",
+  "txt": "14"
+ },
+ "valid.categories": {
+  "value": 12,
+  "tex": "12",
+  "txt": "12"
+ },
+ "valid.agree.n": {
+  "value": 140,
+  "tex": "140",
+  "txt": "140"
+ },
+ "valid.agree.pct": {
+  "value": 83.3333,
+  "tex": "83.3",
+  "txt": "83.3"
+ },
+ "valid.agree.pct.int": {
+  "value": 83.3333,
+  "tex": "83",
+  "txt": "83"
+ },
+ "valid.agree.lo": {
+  "value": 76.9664,
+  "tex": "77.0",
+  "txt": "77.0"
+ },
+ "valid.agree.lo.int": {
+  "value": 76.9664,
+  "tex": "77",
+  "txt": "77"
+ },
+ "valid.agree.hi": {
+  "value": 88.2099,
+  "tex": "88.2",
+  "txt": "88.2"
+ },
+ "valid.agree.hi.int": {
+  "value": 88.2099,
+  "tex": "88",
+  "txt": "88"
+ },
+ "valid.kappa": {
+  "value": 0.818182,
+  "tex": "0.82",
+  "txt": "0.82"
+ },
+ "valid.firstPass.labels": {
+  "value": 4832,
+  "tex": "4{,}832",
+  "txt": "4,832"
+ },
+ "valid.weighted.pct": {
+  "value": 86.1578,
+  "tex": "86.2",
+  "txt": "86.2"
+ },
+ "valid.weighted.pct.int": {
+  "value": 86.1578,
+  "tex": "86",
+  "txt": "86"
+ },
+ "valid.weighted.lo": {
+  "value": 79.7213,
+  "tex": "79.7",
+  "txt": "79.7"
+ },
+ "valid.weighted.lo.int": {
+  "value": 79.7213,
+  "tex": "80",
+  "txt": "80"
+ },
+ "valid.weighted.hi": {
+  "value": 91.8047,
+  "tex": "91.8",
+  "txt": "91.8"
+ },
+ "valid.weighted.hi.int": {
+  "value": 91.8047,
+  "tex": "92",
+  "txt": "92"
+ },
+ "valid.weighted.kappa": {
+  "value": 0.836863,
+  "tex": "0.84",
+  "txt": "0.84"
+ },
+ "valid.weightedEra.pct": {
+  "value": 85.1544,
+  "tex": "85.2",
+  "txt": "85.2"
+ },
+ "valid.weightedEra.pct.int": {
+  "value": 85.1544,
+  "tex": "85",
+  "txt": "85"
+ },
+ "valid.weightedEra.lo": {
+  "value": 78.6287,
+  "tex": "78.6",
+  "txt": "78.6"
+ },
+ "valid.weightedEra.lo.int": {
+  "value": 78.6287,
+  "tex": "79",
+  "txt": "79"
+ },
+ "valid.weightedEra.hi": {
+  "value": 91.0623,
+  "tex": "91.1",
+  "txt": "91.1"
+ },
+ "valid.weightedEra.hi.int": {
+  "value": 91.0623,
+  "tex": "91",
+  "txt": "91"
+ },
+ "valid.era.stopped": {
+  "value": 1371,
+  "tex": "1{,}371",
+  "txt": "1,371"
+ },
+ "valid.era.laterPass.n": {
+  "value": 172,
+  "tex": "172",
+  "txt": "172"
+ },
+ "valid.era.laterPass.pct": {
+  "value": 12.5456,
+  "tex": "12.5",
+  "txt": "12.5"
+ },
+ "valid.era.laterPass.pct.int": {
+  "value": 12.5456,
+  "tex": "13",
+  "txt": "13"
+ },
+ "valid.cat.enrollment.agree": {
+  "value": 13,
+  "tex": "13",
+  "txt": "13"
+ },
+ "valid.cat.enrollment.rate": {
+  "value": 0.928571,
+  "tex": "0.93",
+  "txt": "0.93"
+ },
+ "valid.cat.efficacyfutility.agree": {
+  "value": 13,
+  "tex": "13",
+  "txt": "13"
+ },
+ "valid.cat.efficacyfutility.rate": {
+  "value": 0.928571,
+  "tex": "0.93",
+  "txt": "0.93"
+ },
+ "valid.cat.unclear.agree": {
+  "value": 13,
+  "tex": "13",
+  "txt": "13"
+ },
+ "valid.cat.unclear.rate": {
+  "value": 0.928571,
+  "tex": "0.93",
+  "txt": "0.93"
+ },
+ "valid.cat.businessstrategic.agree": {
+  "value": 9,
+  "tex": "9",
+  "txt": "9"
+ },
+ "valid.cat.businessstrategic.rate": {
+  "value": 0.642857,
+  "tex": "0.64",
+  "txt": "0.64"
+ },
+ "valid.cat.otheroperational.agree": {
+  "value": 12,
+  "tex": "12",
+  "txt": "12"
+ },
+ "valid.cat.otheroperational.rate": {
+  "value": 0.857143,
+  "tex": "0.86",
+  "txt": "0.86"
+ },
+ "valid.cat.funding.agree": {
+  "value": 14,
+  "tex": "14",
+  "txt": "14"
+ },
+ "valid.cat.funding.rate": {
+  "value": 1.0,
+  "tex": "1.00",
+  "txt": "1.00"
+ },
+ "valid.cat.externalevidence.agree": {
+  "value": 6,
+  "tex": "6",
+  "txt": "6"
+ },
+ "valid.cat.externalevidence.rate": {
+  "value": 0.428571,
+  "tex": "0.43",
+  "txt": "0.43"
+ },
+ "valid.cat.safety.agree": {
+  "value": 12,
+  "tex": "12",
+  "txt": "12"
+ },
+ "valid.cat.safety.rate": {
+  "value": 0.857143,
+  "tex": "0.86",
+  "txt": "0.86"
+ },
+ "valid.cat.regulatory.agree": {
+  "value": 12,
+  "tex": "12",
+  "txt": "12"
+ },
+ "valid.cat.regulatory.rate": {
+  "value": 0.857143,
+  "tex": "0.86",
+  "txt": "0.86"
+ },
+ "valid.cat.covid.agree": {
+  "value": 14,
+  "tex": "14",
+  "txt": "14"
+ },
+ "valid.cat.covid.rate": {
+  "value": 1.0,
+  "tex": "1.00",
+  "txt": "1.00"
+ },
+ "valid.cat.efficacypositive.agree": {
+  "value": 11,
+  "tex": "11",
+  "txt": "11"
+ },
+ "valid.cat.efficacypositive.rate": {
+  "value": 0.785714,
+  "tex": "0.79",
+  "txt": "0.79"
+ },
+ "valid.cat.supplymanufacturing.agree": {
+  "value": 11,
+  "tex": "11",
+  "txt": "11"
+ },
+ "valid.cat.supplymanufacturing.rate": {
+  "value": 0.785714,
+  "tex": "0.79",
+  "txt": "0.79"
+ }
+}

@@ -1,0 +1,14 @@
+__pycache__/
+.ruff_cache/
+.DS_Store
+
+# LaTeX build products; the PDFs are rebuilt by build_pdf.sh
+*.aux
+*.log
+*.out
+*.pdf
+# the figures are PDF as well, and they are committed
+!paper/figures/*.pdf
+
+# third-party abstracts: re-fetch by PMID with fetch_pubmed.py
+pubmed_abstracts.json

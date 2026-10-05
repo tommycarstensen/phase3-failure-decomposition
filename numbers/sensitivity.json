@@ -1,0 +1,982 @@
+{
+ "diag.all.naive.trials": {
+  "value": 6595,
+  "tex": "6{,}595",
+  "txt": "6,595"
+ },
+ "diag.all.naive.n": {
+  "value": 2185,
+  "tex": "2{,}185",
+  "txt": "2,185"
+ },
+ "diag.all.naive.pct": {
+  "value": 33.1312,
+  "tex": "33.1",
+  "txt": "33.1"
+ },
+ "diag.all.naive.pct.int": {
+  "value": 33.1312,
+  "tex": "33",
+  "txt": "33"
+ },
+ "diag.all.single.trials": {
+  "value": 4542,
+  "tex": "4{,}542",
+  "txt": "4,542"
+ },
+ "diag.all.single.n": {
+  "value": 1651,
+  "tex": "1{,}651",
+  "txt": "1,651"
+ },
+ "diag.all.single.pct": {
+  "value": 36.3496,
+  "tex": "36.3",
+  "txt": "36.3"
+ },
+ "diag.all.single.pct.int": {
+  "value": 36.3496,
+  "tex": "36",
+  "txt": "36"
+ },
+ "diag.all.sidak.trials": {
+  "value": 6595,
+  "tex": "6{,}595",
+  "txt": "6,595"
+ },
+ "diag.all.sidak.n": {
+  "value": 2298,
+  "tex": "2{,}298",
+  "txt": "2,298"
+ },
+ "diag.all.sidak.pct": {
+  "value": 34.8446,
+  "tex": "34.8",
+  "txt": "34.8"
+ },
+ "diag.all.sidak.pct.int": {
+  "value": 34.8446,
+  "tex": "35",
+  "txt": "35"
+ },
+ "diag.era.naive.trials": {
+  "value": 1802,
+  "tex": "1{,}802",
+  "txt": "1,802"
+ },
+ "diag.era.naive.n": {
+  "value": 563,
+  "tex": "563",
+  "txt": "563"
+ },
+ "diag.era.naive.pct": {
+  "value": 31.2431,
+  "tex": "31.2",
+  "txt": "31.2"
+ },
+ "diag.era.naive.pct.int": {
+  "value": 31.2431,
+  "tex": "31",
+  "txt": "31"
+ },
+ "diag.era.single.trials": {
+  "value": 1186,
+  "tex": "1{,}186",
+  "txt": "1,186"
+ },
+ "diag.era.single.n": {
+  "value": 412,
+  "tex": "412",
+  "txt": "412"
+ },
+ "diag.era.single.pct": {
+  "value": 34.7386,
+  "tex": "34.7",
+  "txt": "34.7"
+ },
+ "diag.era.single.pct.int": {
+  "value": 34.7386,
+  "tex": "35",
+  "txt": "35"
+ },
+ "diag.era.sidak.trials": {
+  "value": 1802,
+  "tex": "1{,}802",
+  "txt": "1,802"
+ },
+ "diag.era.sidak.n": {
+  "value": 591,
+  "tex": "591",
+  "txt": "591"
+ },
+ "diag.era.sidak.pct": {
+  "value": 32.7969,
+  "tex": "32.8",
+  "txt": "32.8"
+ },
+ "diag.era.sidak.pct.int": {
+  "value": 32.7969,
+  "tex": "33",
+  "txt": "33"
+ },
+ "tax.external.k": {
+  "value": 5,
+  "tex": "5",
+  "txt": "5"
+ },
+ "tax.external.n": {
+  "value": 14,
+  "tex": "14",
+  "txt": "14"
+ },
+ "tax.business.k": {
+  "value": 5,
+  "tex": "5",
+  "txt": "5"
+ },
+ "tax.business.n": {
+  "value": 14,
+  "tex": "14",
+  "txt": "14"
+ },
+ "audit.model.n": {
+  "value": 25,
+  "tex": "25",
+  "txt": "25"
+ },
+ "audit.eff.n": {
+  "value": 10,
+  "tex": "10",
+  "txt": "10"
+ },
+ "audit.eff.monitoring": {
+  "value": 7,
+  "tex": "7",
+  "txt": "7"
+ },
+ "audit.eff.interim": {
+  "value": 2,
+  "tex": "2",
+  "txt": "2"
+ },
+ "audit.eff.other": {
+  "value": 1,
+  "tex": "1",
+  "txt": "1"
+ },
+ "audit.eff.ncts": {
+  "value": "NCT03847090, NCT03988023, NCT04084678, NCT04539275, NCT04581915, NCT04901676, NCT04901689, NCT05008926, NCT05288855, NCT05962788",
+  "tex": "NCT03847090, NCT03988023, NCT04084678, NCT04539275, NCT04581915, NCT04901676, NCT04901689, NCT05008926, NCT05288855, NCT05962788",
+  "txt": "NCT03847090, NCT03988023, NCT04084678, NCT04539275, NCT04581915, NCT04901676, NCT04901689, NCT05008926, NCT05288855, NCT05962788"
+ },
+ "tax.assignments": {
+  "value": 5,
+  "tex": "5",
+  "txt": "5"
+ },
+ "tax.scenarios": {
+  "value": 2,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.all.asAnalysed.eff": {
+  "value": 37.1445,
+  "tex": "37.1",
+  "txt": "37.1"
+ },
+ "tax.all.asAnalysed.eff.int": {
+  "value": 37.1445,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.asAnalysed.op": {
+  "value": 36.5061,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "tax.all.asAnalysed.op.int": {
+  "value": 36.5061,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.asAnalysed.com": {
+  "value": 22.4608,
+  "tex": "22.5",
+  "txt": "22.5"
+ },
+ "tax.all.asAnalysed.com.int": {
+  "value": 22.4608,
+  "tex": "22",
+  "txt": "22"
+ },
+ "tax.all.asAnalysed.saf": {
+  "value": 2.4956,
+  "tex": "2.5",
+  "txt": "2.5"
+ },
+ "tax.all.asAnalysed.saf.int": {
+  "value": 2.4956,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.all.asAnalysed.unk": {
+  "value": 1.3929,
+  "tex": "1.4",
+  "txt": "1.4"
+ },
+ "tax.all.asAnalysed.unk.int": {
+  "value": 1.3929,
+  "tex": "1",
+  "txt": "1"
+ },
+ "tax.all.regToSafety.eff": {
+  "value": 37.1445,
+  "tex": "37.1",
+  "txt": "37.1"
+ },
+ "tax.all.regToSafety.eff.int": {
+  "value": 37.1445,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.regToSafety.op": {
+  "value": 35.4614,
+  "tex": "35.5",
+  "txt": "35.5"
+ },
+ "tax.all.regToSafety.op.int": {
+  "value": 35.4614,
+  "tex": "35",
+  "txt": "35"
+ },
+ "tax.all.regToSafety.com": {
+  "value": 22.4608,
+  "tex": "22.5",
+  "txt": "22.5"
+ },
+ "tax.all.regToSafety.com.int": {
+  "value": 22.4608,
+  "tex": "22",
+  "txt": "22"
+ },
+ "tax.all.regToSafety.saf": {
+  "value": 3.5403,
+  "tex": "3.5",
+  "txt": "3.5"
+ },
+ "tax.all.regToSafety.saf.int": {
+  "value": 3.5403,
+  "tex": "4",
+  "txt": "4"
+ },
+ "tax.all.regToSafety.unk": {
+  "value": 1.3929,
+  "tex": "1.4",
+  "txt": "1.4"
+ },
+ "tax.all.regToSafety.unk.int": {
+  "value": 1.3929,
+  "tex": "1",
+  "txt": "1"
+ },
+ "tax.all.extToEfficacy.eff": {
+  "value": 38.5126,
+  "tex": "38.5",
+  "txt": "38.5"
+ },
+ "tax.all.extToEfficacy.eff.int": {
+  "value": 38.5126,
+  "tex": "39",
+  "txt": "39"
+ },
+ "tax.all.extToEfficacy.op": {
+  "value": 35.138,
+  "tex": "35.1",
+  "txt": "35.1"
+ },
+ "tax.all.extToEfficacy.op.int": {
+  "value": 35.138,
+  "tex": "35",
+  "txt": "35"
+ },
+ "tax.all.extToEfficacy.com": {
+  "value": 22.4608,
+  "tex": "22.5",
+  "txt": "22.5"
+ },
+ "tax.all.extToEfficacy.com.int": {
+  "value": 22.4608,
+  "tex": "22",
+  "txt": "22"
+ },
+ "tax.all.extToEfficacy.saf": {
+  "value": 2.4956,
+  "tex": "2.5",
+  "txt": "2.5"
+ },
+ "tax.all.extToEfficacy.saf.int": {
+  "value": 2.4956,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.all.extToEfficacy.unk": {
+  "value": 1.3929,
+  "tex": "1.4",
+  "txt": "1.4"
+ },
+ "tax.all.extToEfficacy.unk.int": {
+  "value": 1.3929,
+  "tex": "1",
+  "txt": "1"
+ },
+ "tax.all.busToUnknown.eff": {
+  "value": 37.1445,
+  "tex": "37.1",
+  "txt": "37.1"
+ },
+ "tax.all.busToUnknown.eff.int": {
+  "value": 37.1445,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.busToUnknown.op": {
+  "value": 36.5061,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "tax.all.busToUnknown.op.int": {
+  "value": 36.5061,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.busToUnknown.com": {
+  "value": 17.8799,
+  "tex": "17.9",
+  "txt": "17.9"
+ },
+ "tax.all.busToUnknown.com.int": {
+  "value": 17.8799,
+  "tex": "18",
+  "txt": "18"
+ },
+ "tax.all.busToUnknown.saf": {
+  "value": 2.4956,
+  "tex": "2.5",
+  "txt": "2.5"
+ },
+ "tax.all.busToUnknown.saf.int": {
+  "value": 2.4956,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.all.busToUnknown.unk": {
+  "value": 5.9738,
+  "tex": "6.0",
+  "txt": "6.0"
+ },
+ "tax.all.busToUnknown.unk.int": {
+  "value": 5.9738,
+  "tex": "6",
+  "txt": "6"
+ },
+ "tax.all.sponsorToUnknown.eff": {
+  "value": 37.1445,
+  "tex": "37.1",
+  "txt": "37.1"
+ },
+ "tax.all.sponsorToUnknown.eff.int": {
+  "value": 37.1445,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.sponsorToUnknown.op": {
+  "value": 36.5061,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "tax.all.sponsorToUnknown.op.int": {
+  "value": 36.5061,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.sponsorToUnknown.com": {
+  "value": 15.6123,
+  "tex": "15.6",
+  "txt": "15.6"
+ },
+ "tax.all.sponsorToUnknown.com.int": {
+  "value": 15.6123,
+  "tex": "16",
+  "txt": "16"
+ },
+ "tax.all.sponsorToUnknown.saf": {
+  "value": 2.4956,
+  "tex": "2.5",
+  "txt": "2.5"
+ },
+ "tax.all.sponsorToUnknown.saf.int": {
+  "value": 2.4956,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.all.sponsorToUnknown.unk": {
+  "value": 8.2414,
+  "tex": "8.2",
+  "txt": "8.2"
+ },
+ "tax.all.sponsorToUnknown.unk.int": {
+  "value": 8.2414,
+  "tex": "8",
+  "txt": "8"
+ },
+ "tax.all.modelEfficacyToUnknown.eff": {
+  "value": 36.5641,
+  "tex": "36.6",
+  "txt": "36.6"
+ },
+ "tax.all.modelEfficacyToUnknown.eff.int": {
+  "value": 36.5641,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.modelEfficacyToUnknown.op": {
+  "value": 36.5061,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "tax.all.modelEfficacyToUnknown.op.int": {
+  "value": 36.5061,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.modelEfficacyToUnknown.com": {
+  "value": 22.4608,
+  "tex": "22.5",
+  "txt": "22.5"
+ },
+ "tax.all.modelEfficacyToUnknown.com.int": {
+  "value": 22.4608,
+  "tex": "22",
+  "txt": "22"
+ },
+ "tax.all.modelEfficacyToUnknown.saf": {
+  "value": 2.4956,
+  "tex": "2.5",
+  "txt": "2.5"
+ },
+ "tax.all.modelEfficacyToUnknown.saf.int": {
+  "value": 2.4956,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.all.modelEfficacyToUnknown.unk": {
+  "value": 1.9733,
+  "tex": "2.0",
+  "txt": "2.0"
+ },
+ "tax.all.modelEfficacyToUnknown.unk.int": {
+  "value": 1.9733,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.all.sponsorToSafety.eff": {
+  "value": 37.1445,
+  "tex": "37.1",
+  "txt": "37.1"
+ },
+ "tax.all.sponsorToSafety.eff.int": {
+  "value": 37.1445,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.sponsorToSafety.op": {
+  "value": 36.5061,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "tax.all.sponsorToSafety.op.int": {
+  "value": 36.5061,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.sponsorToSafety.com": {
+  "value": 15.6123,
+  "tex": "15.6",
+  "txt": "15.6"
+ },
+ "tax.all.sponsorToSafety.com.int": {
+  "value": 15.6123,
+  "tex": "16",
+  "txt": "16"
+ },
+ "tax.all.sponsorToSafety.saf": {
+  "value": 9.3442,
+  "tex": "9.3",
+  "txt": "9.3"
+ },
+ "tax.all.sponsorToSafety.saf.int": {
+  "value": 9.3442,
+  "tex": "9",
+  "txt": "9"
+ },
+ "tax.all.sponsorToSafety.unk": {
+  "value": 1.3929,
+  "tex": "1.4",
+  "txt": "1.4"
+ },
+ "tax.all.sponsorToSafety.unk.int": {
+  "value": 1.3929,
+  "tex": "1",
+  "txt": "1"
+ },
+ "tax.all.decisionsToSafety.eff": {
+  "value": 37.1445,
+  "tex": "37.1",
+  "txt": "37.1"
+ },
+ "tax.all.decisionsToSafety.eff.int": {
+  "value": 37.1445,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.decisionsToSafety.op": {
+  "value": 36.5061,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "tax.all.decisionsToSafety.op.int": {
+  "value": 36.5061,
+  "tex": "37",
+  "txt": "37"
+ },
+ "tax.all.decisionsToSafety.com": {
+  "value": 2.7858,
+  "tex": "2.8",
+  "txt": "2.8"
+ },
+ "tax.all.decisionsToSafety.com.int": {
+  "value": 2.7858,
+  "tex": "3",
+  "txt": "3"
+ },
+ "tax.all.decisionsToSafety.saf": {
+  "value": 22.1706,
+  "tex": "22.2",
+  "txt": "22.2"
+ },
+ "tax.all.decisionsToSafety.saf.int": {
+  "value": 22.1706,
+  "tex": "22",
+  "txt": "22"
+ },
+ "tax.all.decisionsToSafety.unk": {
+  "value": 1.3929,
+  "tex": "1.4",
+  "txt": "1.4"
+ },
+ "tax.all.decisionsToSafety.unk.int": {
+  "value": 1.3929,
+  "tex": "1",
+  "txt": "1"
+ },
+ "tax.big.asAnalysed.eff": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "tax.big.asAnalysed.eff.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "tax.big.asAnalysed.op": {
+  "value": 14.1361,
+  "tex": "14.1",
+  "txt": "14.1"
+ },
+ "tax.big.asAnalysed.op.int": {
+  "value": 14.1361,
+  "tex": "14",
+  "txt": "14"
+ },
+ "tax.big.asAnalysed.com": {
+  "value": 27.4869,
+  "tex": "27.5",
+  "txt": "27.5"
+ },
+ "tax.big.asAnalysed.com.int": {
+  "value": 27.4869,
+  "tex": "27",
+  "txt": "27"
+ },
+ "tax.big.asAnalysed.saf": {
+  "value": 3.1414,
+  "tex": "3.1",
+  "txt": "3.1"
+ },
+ "tax.big.asAnalysed.saf.int": {
+  "value": 3.1414,
+  "tex": "3",
+  "txt": "3"
+ },
+ "tax.big.asAnalysed.unk": {
+  "value": 1.5707,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "tax.big.asAnalysed.unk.int": {
+  "value": 1.5707,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.big.regToSafety.eff": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "tax.big.regToSafety.eff.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "tax.big.regToSafety.op": {
+  "value": 13.7435,
+  "tex": "13.7",
+  "txt": "13.7"
+ },
+ "tax.big.regToSafety.op.int": {
+  "value": 13.7435,
+  "tex": "14",
+  "txt": "14"
+ },
+ "tax.big.regToSafety.com": {
+  "value": 27.4869,
+  "tex": "27.5",
+  "txt": "27.5"
+ },
+ "tax.big.regToSafety.com.int": {
+  "value": 27.4869,
+  "tex": "27",
+  "txt": "27"
+ },
+ "tax.big.regToSafety.saf": {
+  "value": 3.534,
+  "tex": "3.5",
+  "txt": "3.5"
+ },
+ "tax.big.regToSafety.saf.int": {
+  "value": 3.534,
+  "tex": "4",
+  "txt": "4"
+ },
+ "tax.big.regToSafety.unk": {
+  "value": 1.5707,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "tax.big.regToSafety.unk.int": {
+  "value": 1.5707,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.big.extToEfficacy.eff": {
+  "value": 54.5999,
+  "tex": "54.6",
+  "txt": "54.6"
+ },
+ "tax.big.extToEfficacy.eff.int": {
+  "value": 54.5999,
+  "tex": "55",
+  "txt": "55"
+ },
+ "tax.big.extToEfficacy.op": {
+  "value": 13.2012,
+  "tex": "13.2",
+  "txt": "13.2"
+ },
+ "tax.big.extToEfficacy.op.int": {
+  "value": 13.2012,
+  "tex": "13",
+  "txt": "13"
+ },
+ "tax.big.extToEfficacy.com": {
+  "value": 27.4869,
+  "tex": "27.5",
+  "txt": "27.5"
+ },
+ "tax.big.extToEfficacy.com.int": {
+  "value": 27.4869,
+  "tex": "27",
+  "txt": "27"
+ },
+ "tax.big.extToEfficacy.saf": {
+  "value": 3.1414,
+  "tex": "3.1",
+  "txt": "3.1"
+ },
+ "tax.big.extToEfficacy.saf.int": {
+  "value": 3.1414,
+  "tex": "3",
+  "txt": "3"
+ },
+ "tax.big.extToEfficacy.unk": {
+  "value": 1.5707,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "tax.big.extToEfficacy.unk.int": {
+  "value": 1.5707,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.big.busToUnknown.eff": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "tax.big.busToUnknown.eff.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "tax.big.busToUnknown.op": {
+  "value": 14.1361,
+  "tex": "14.1",
+  "txt": "14.1"
+ },
+ "tax.big.busToUnknown.op.int": {
+  "value": 14.1361,
+  "tex": "14",
+  "txt": "14"
+ },
+ "tax.big.busToUnknown.com": {
+  "value": 20.6619,
+  "tex": "20.7",
+  "txt": "20.7"
+ },
+ "tax.big.busToUnknown.com.int": {
+  "value": 20.6619,
+  "tex": "21",
+  "txt": "21"
+ },
+ "tax.big.busToUnknown.saf": {
+  "value": 3.1414,
+  "tex": "3.1",
+  "txt": "3.1"
+ },
+ "tax.big.busToUnknown.saf.int": {
+  "value": 3.1414,
+  "tex": "3",
+  "txt": "3"
+ },
+ "tax.big.busToUnknown.unk": {
+  "value": 8.3957,
+  "tex": "8.4",
+  "txt": "8.4"
+ },
+ "tax.big.busToUnknown.unk.int": {
+  "value": 8.3957,
+  "tex": "8",
+  "txt": "8"
+ },
+ "tax.big.sponsorToUnknown.eff": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "tax.big.sponsorToUnknown.eff.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "tax.big.sponsorToUnknown.op": {
+  "value": 14.1361,
+  "tex": "14.1",
+  "txt": "14.1"
+ },
+ "tax.big.sponsorToUnknown.op.int": {
+  "value": 14.1361,
+  "tex": "14",
+  "txt": "14"
+ },
+ "tax.big.sponsorToUnknown.com": {
+  "value": 19.1099,
+  "tex": "19.1",
+  "txt": "19.1"
+ },
+ "tax.big.sponsorToUnknown.com.int": {
+  "value": 19.1099,
+  "tex": "19",
+  "txt": "19"
+ },
+ "tax.big.sponsorToUnknown.saf": {
+  "value": 3.1414,
+  "tex": "3.1",
+  "txt": "3.1"
+ },
+ "tax.big.sponsorToUnknown.saf.int": {
+  "value": 3.1414,
+  "tex": "3",
+  "txt": "3"
+ },
+ "tax.big.sponsorToUnknown.unk": {
+  "value": 9.9476,
+  "tex": "9.9",
+  "txt": "9.9"
+ },
+ "tax.big.sponsorToUnknown.unk.int": {
+  "value": 9.9476,
+  "tex": "10",
+  "txt": "10"
+ },
+ "tax.big.modelEfficacyToUnknown.eff": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "tax.big.modelEfficacyToUnknown.eff.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "tax.big.modelEfficacyToUnknown.op": {
+  "value": 14.1361,
+  "tex": "14.1",
+  "txt": "14.1"
+ },
+ "tax.big.modelEfficacyToUnknown.op.int": {
+  "value": 14.1361,
+  "tex": "14",
+  "txt": "14"
+ },
+ "tax.big.modelEfficacyToUnknown.com": {
+  "value": 27.4869,
+  "tex": "27.5",
+  "txt": "27.5"
+ },
+ "tax.big.modelEfficacyToUnknown.com.int": {
+  "value": 27.4869,
+  "tex": "27",
+  "txt": "27"
+ },
+ "tax.big.modelEfficacyToUnknown.saf": {
+  "value": 3.1414,
+  "tex": "3.1",
+  "txt": "3.1"
+ },
+ "tax.big.modelEfficacyToUnknown.saf.int": {
+  "value": 3.1414,
+  "tex": "3",
+  "txt": "3"
+ },
+ "tax.big.modelEfficacyToUnknown.unk": {
+  "value": 1.5707,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "tax.big.modelEfficacyToUnknown.unk.int": {
+  "value": 1.5707,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.big.sponsorToSafety.eff": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "tax.big.sponsorToSafety.eff.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "tax.big.sponsorToSafety.op": {
+  "value": 14.1361,
+  "tex": "14.1",
+  "txt": "14.1"
+ },
+ "tax.big.sponsorToSafety.op.int": {
+  "value": 14.1361,
+  "tex": "14",
+  "txt": "14"
+ },
+ "tax.big.sponsorToSafety.com": {
+  "value": 19.1099,
+  "tex": "19.1",
+  "txt": "19.1"
+ },
+ "tax.big.sponsorToSafety.com.int": {
+  "value": 19.1099,
+  "tex": "19",
+  "txt": "19"
+ },
+ "tax.big.sponsorToSafety.saf": {
+  "value": 11.5183,
+  "tex": "11.5",
+  "txt": "11.5"
+ },
+ "tax.big.sponsorToSafety.saf.int": {
+  "value": 11.5183,
+  "tex": "12",
+  "txt": "12"
+ },
+ "tax.big.sponsorToSafety.unk": {
+  "value": 1.5707,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "tax.big.sponsorToSafety.unk.int": {
+  "value": 1.5707,
+  "tex": "2",
+  "txt": "2"
+ },
+ "tax.big.decisionsToSafety.eff": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "tax.big.decisionsToSafety.eff.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "tax.big.decisionsToSafety.op": {
+  "value": 14.1361,
+  "tex": "14.1",
+  "txt": "14.1"
+ },
+ "tax.big.decisionsToSafety.op.int": {
+  "value": 14.1361,
+  "tex": "14",
+  "txt": "14"
+ },
+ "tax.big.decisionsToSafety.com": {
+  "value": 0.0,
+  "tex": "0.0",
+  "txt": "0.0"
+ },
+ "tax.big.decisionsToSafety.com.int": {
+  "value": 0.0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "tax.big.decisionsToSafety.saf": {
+  "value": 30.6283,
+  "tex": "30.6",
+  "txt": "30.6"
+ },
+ "tax.big.decisionsToSafety.saf.int": {
+  "value": 30.6283,
+  "tex": "31",
+  "txt": "31"
+ },
+ "tax.big.decisionsToSafety.unk": {
+  "value": 1.5707,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "tax.big.decisionsToSafety.unk.int": {
+  "value": 1.5707,
+  "tex": "2",
+  "txt": "2"
+ }
+}

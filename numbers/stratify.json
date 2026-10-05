@@ -1,0 +1,482 @@
+{
+ "strat.Oncology.n": {
+  "value": 325,
+  "tex": "325",
+  "txt": "325"
+ },
+ "strat.Oncology.miss.trials": {
+  "value": 330,
+  "tex": "330",
+  "txt": "330"
+ },
+ "strat.Oncology.miss.n": {
+  "value": 119,
+  "tex": "119",
+  "txt": "119"
+ },
+ "strat.Oncology.miss.pct": {
+  "value": 36.0606,
+  "tex": "36.1",
+  "txt": "36.1"
+ },
+ "strat.Oncology.miss.pct.int": {
+  "value": 36.0606,
+  "tex": "36",
+  "txt": "36"
+ },
+ "strat.Oncology.eff": {
+  "value": 32.9231,
+  "tex": "32.9",
+  "txt": "32.9"
+ },
+ "strat.Oncology.eff.int": {
+  "value": 32.9231,
+  "tex": "33",
+  "txt": "33"
+ },
+ "strat.Oncology.op": {
+  "value": 38.1538,
+  "tex": "38.2",
+  "txt": "38.2"
+ },
+ "strat.Oncology.op.int": {
+  "value": 38.1538,
+  "tex": "38",
+  "txt": "38"
+ },
+ "strat.Oncology.com": {
+  "value": 25.5385,
+  "tex": "25.5",
+  "txt": "25.5"
+ },
+ "strat.Oncology.com.int": {
+  "value": 25.5385,
+  "tex": "26",
+  "txt": "26"
+ },
+ "strat.Oncology.saf": {
+  "value": 1.2308,
+  "tex": "1.2",
+  "txt": "1.2"
+ },
+ "strat.Oncology.saf.int": {
+  "value": 1.2308,
+  "tex": "1",
+  "txt": "1"
+ },
+ "strat.Oncology.unk": {
+  "value": 2.1538,
+  "tex": "2.2",
+  "txt": "2.2"
+ },
+ "strat.Oncology.unk.int": {
+  "value": 2.1538,
+  "tex": "2",
+  "txt": "2"
+ },
+ "strat.Cardiometabolic.n": {
+  "value": 169,
+  "tex": "169",
+  "txt": "169"
+ },
+ "strat.Cardiometabolic.miss.trials": {
+  "value": 230,
+  "tex": "230",
+  "txt": "230"
+ },
+ "strat.Cardiometabolic.miss.n": {
+  "value": 48,
+  "tex": "48",
+  "txt": "48"
+ },
+ "strat.Cardiometabolic.miss.pct": {
+  "value": 20.8696,
+  "tex": "20.9",
+  "txt": "20.9"
+ },
+ "strat.Cardiometabolic.miss.pct.int": {
+  "value": 20.8696,
+  "tex": "21",
+  "txt": "21"
+ },
+ "strat.Cardiometabolic.eff": {
+  "value": 36.0947,
+  "tex": "36.1",
+  "txt": "36.1"
+ },
+ "strat.Cardiometabolic.eff.int": {
+  "value": 36.0947,
+  "tex": "36",
+  "txt": "36"
+ },
+ "strat.Cardiometabolic.op": {
+  "value": 36.0947,
+  "tex": "36.1",
+  "txt": "36.1"
+ },
+ "strat.Cardiometabolic.op.int": {
+  "value": 36.0947,
+  "tex": "36",
+  "txt": "36"
+ },
+ "strat.Cardiometabolic.com": {
+  "value": 23.0769,
+  "tex": "23.1",
+  "txt": "23.1"
+ },
+ "strat.Cardiometabolic.com.int": {
+  "value": 23.0769,
+  "tex": "23",
+  "txt": "23"
+ },
+ "strat.Cardiometabolic.saf": {
+  "value": 2.9586,
+  "tex": "3.0",
+  "txt": "3.0"
+ },
+ "strat.Cardiometabolic.saf.int": {
+  "value": 2.9586,
+  "tex": "3",
+  "txt": "3"
+ },
+ "strat.Cardiometabolic.unk": {
+  "value": 1.7751,
+  "tex": "1.8",
+  "txt": "1.8"
+ },
+ "strat.Cardiometabolic.unk.int": {
+  "value": 1.7751,
+  "tex": "2",
+  "txt": "2"
+ },
+ "strat.NeuroPsych.n": {
+  "value": 255,
+  "tex": "255",
+  "txt": "255"
+ },
+ "strat.NeuroPsych.miss.trials": {
+  "value": 227,
+  "tex": "227",
+  "txt": "227"
+ },
+ "strat.NeuroPsych.miss.n": {
+  "value": 82,
+  "tex": "82",
+  "txt": "82"
+ },
+ "strat.NeuroPsych.miss.pct": {
+  "value": 36.1233,
+  "tex": "36.1",
+  "txt": "36.1"
+ },
+ "strat.NeuroPsych.miss.pct.int": {
+  "value": 36.1233,
+  "tex": "36",
+  "txt": "36"
+ },
+ "strat.NeuroPsych.eff": {
+  "value": 38.4314,
+  "tex": "38.4",
+  "txt": "38.4"
+ },
+ "strat.NeuroPsych.eff.int": {
+  "value": 38.4314,
+  "tex": "38",
+  "txt": "38"
+ },
+ "strat.NeuroPsych.op": {
+  "value": 30.1961,
+  "tex": "30.2",
+  "txt": "30.2"
+ },
+ "strat.NeuroPsych.op.int": {
+  "value": 30.1961,
+  "tex": "30",
+  "txt": "30"
+ },
+ "strat.NeuroPsych.com": {
+  "value": 28.6275,
+  "tex": "28.6",
+  "txt": "28.6"
+ },
+ "strat.NeuroPsych.com.int": {
+  "value": 28.6275,
+  "tex": "29",
+  "txt": "29"
+ },
+ "strat.NeuroPsych.saf": {
+  "value": 0.7843,
+  "tex": "0.8",
+  "txt": "0.8"
+ },
+ "strat.NeuroPsych.saf.int": {
+  "value": 0.7843,
+  "tex": "1",
+  "txt": "1"
+ },
+ "strat.NeuroPsych.unk": {
+  "value": 1.9608,
+  "tex": "2.0",
+  "txt": "2.0"
+ },
+ "strat.NeuroPsych.unk.int": {
+  "value": 1.9608,
+  "tex": "2",
+  "txt": "2"
+ },
+ "strat.ImmunologyInflammation.n": {
+  "value": 161,
+  "tex": "161",
+  "txt": "161"
+ },
+ "strat.ImmunologyInflammation.miss.trials": {
+  "value": 322,
+  "tex": "322",
+  "txt": "322"
+ },
+ "strat.ImmunologyInflammation.miss.n": {
+  "value": 56,
+  "tex": "56",
+  "txt": "56"
+ },
+ "strat.ImmunologyInflammation.miss.pct": {
+  "value": 17.3913,
+  "tex": "17.4",
+  "txt": "17.4"
+ },
+ "strat.ImmunologyInflammation.miss.pct.int": {
+  "value": 17.3913,
+  "tex": "17",
+  "txt": "17"
+ },
+ "strat.ImmunologyInflammation.eff": {
+  "value": 43.4783,
+  "tex": "43.5",
+  "txt": "43.5"
+ },
+ "strat.ImmunologyInflammation.eff.int": {
+  "value": 43.4783,
+  "tex": "43",
+  "txt": "43"
+ },
+ "strat.ImmunologyInflammation.op": {
+  "value": 22.3602,
+  "tex": "22.4",
+  "txt": "22.4"
+ },
+ "strat.ImmunologyInflammation.op.int": {
+  "value": 22.3602,
+  "tex": "22",
+  "txt": "22"
+ },
+ "strat.ImmunologyInflammation.com": {
+  "value": 30.4348,
+  "tex": "30.4",
+  "txt": "30.4"
+ },
+ "strat.ImmunologyInflammation.com.int": {
+  "value": 30.4348,
+  "tex": "30",
+  "txt": "30"
+ },
+ "strat.ImmunologyInflammation.saf": {
+  "value": 2.4845,
+  "tex": "2.5",
+  "txt": "2.5"
+ },
+ "strat.ImmunologyInflammation.saf.int": {
+  "value": 2.4845,
+  "tex": "2",
+  "txt": "2"
+ },
+ "strat.ImmunologyInflammation.unk": {
+  "value": 1.2422,
+  "tex": "1.2",
+  "txt": "1.2"
+ },
+ "strat.ImmunologyInflammation.unk.int": {
+  "value": 1.2422,
+  "tex": "1",
+  "txt": "1"
+ },
+ "strat.InfectiousVaccine.n": {
+  "value": 316,
+  "tex": "316",
+  "txt": "316"
+ },
+ "strat.InfectiousVaccine.miss.trials": {
+  "value": 190,
+  "tex": "190",
+  "txt": "190"
+ },
+ "strat.InfectiousVaccine.miss.n": {
+  "value": 82,
+  "tex": "82",
+  "txt": "82"
+ },
+ "strat.InfectiousVaccine.miss.pct": {
+  "value": 43.1579,
+  "tex": "43.2",
+  "txt": "43.2"
+ },
+ "strat.InfectiousVaccine.miss.pct.int": {
+  "value": 43.1579,
+  "tex": "43",
+  "txt": "43"
+ },
+ "strat.InfectiousVaccine.eff": {
+  "value": 34.8101,
+  "tex": "34.8",
+  "txt": "34.8"
+ },
+ "strat.InfectiousVaccine.eff.int": {
+  "value": 34.8101,
+  "tex": "35",
+  "txt": "35"
+ },
+ "strat.InfectiousVaccine.op": {
+  "value": 46.8354,
+  "tex": "46.8",
+  "txt": "46.8"
+ },
+ "strat.InfectiousVaccine.op.int": {
+  "value": 46.8354,
+  "tex": "47",
+  "txt": "47"
+ },
+ "strat.InfectiousVaccine.com": {
+  "value": 14.2405,
+  "tex": "14.2",
+  "txt": "14.2"
+ },
+ "strat.InfectiousVaccine.com.int": {
+  "value": 14.2405,
+  "tex": "14",
+  "txt": "14"
+ },
+ "strat.InfectiousVaccine.saf": {
+  "value": 4.1139,
+  "tex": "4.1",
+  "txt": "4.1"
+ },
+ "strat.InfectiousVaccine.saf.int": {
+  "value": 4.1139,
+  "tex": "4",
+  "txt": "4"
+ },
+ "strat.InfectiousVaccine.unk": {
+  "value": 0.0,
+  "tex": "0.0",
+  "txt": "0.0"
+ },
+ "strat.InfectiousVaccine.unk.int": {
+  "value": 0.0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "strat.Otherrare.n": {
+  "value": 497,
+  "tex": "497",
+  "txt": "497"
+ },
+ "strat.Otherrare.miss.trials": {
+  "value": 505,
+  "tex": "505",
+  "txt": "505"
+ },
+ "strat.Otherrare.miss.n": {
+  "value": 163,
+  "tex": "163",
+  "txt": "163"
+ },
+ "strat.Otherrare.miss.pct": {
+  "value": 32.2772,
+  "tex": "32.3",
+  "txt": "32.3"
+ },
+ "strat.Otherrare.miss.pct.int": {
+  "value": 32.2772,
+  "tex": "32",
+  "txt": "32"
+ },
+ "strat.Otherrare.eff": {
+  "value": 39.0342,
+  "tex": "39.0",
+  "txt": "39.0"
+ },
+ "strat.Otherrare.eff.int": {
+  "value": 39.0342,
+  "tex": "39",
+  "txt": "39"
+ },
+ "strat.Otherrare.op": {
+  "value": 36.8209,
+  "tex": "36.8",
+  "txt": "36.8"
+ },
+ "strat.Otherrare.op.int": {
+  "value": 36.8209,
+  "tex": "37",
+  "txt": "37"
+ },
+ "strat.Otherrare.com": {
+  "value": 19.7183,
+  "tex": "19.7",
+  "txt": "19.7"
+ },
+ "strat.Otherrare.com.int": {
+  "value": 19.7183,
+  "tex": "20",
+  "txt": "20"
+ },
+ "strat.Otherrare.saf": {
+  "value": 3.0181,
+  "tex": "3.0",
+  "txt": "3.0"
+ },
+ "strat.Otherrare.saf.int": {
+  "value": 3.0181,
+  "tex": "3",
+  "txt": "3"
+ },
+ "strat.Otherrare.unk": {
+  "value": 1.4085,
+  "tex": "1.4",
+  "txt": "1.4"
+ },
+ "strat.Otherrare.unk.int": {
+  "value": 1.4085,
+  "tex": "1",
+  "txt": "1"
+ },
+ "strat.miss.min": {
+  "value": 17.3913,
+  "tex": "17.4",
+  "txt": "17.4"
+ },
+ "strat.miss.min.int": {
+  "value": 17.3913,
+  "tex": "17",
+  "txt": "17"
+ },
+ "strat.miss.min.area": {
+  "value": "Immunology/Inflammation",
+  "tex": "Immunology/Inflammation",
+  "txt": "Immunology/Inflammation"
+ },
+ "strat.miss.max": {
+  "value": 43.1579,
+  "tex": "43.2",
+  "txt": "43.2"
+ },
+ "strat.miss.max.int": {
+  "value": 43.1579,
+  "tex": "43",
+  "txt": "43"
+ },
+ "strat.miss.max.area": {
+  "value": "Infectious/Vaccine",
+  "tex": "Infectious/Vaccine",
+  "txt": "Infectious/Vaccine"
+ }
+}

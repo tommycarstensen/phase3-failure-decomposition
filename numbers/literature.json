@@ -1,0 +1,162 @@
+{
+ "lit.hwang.year": {
+  "value": 2016,
+  "tex": "2016",
+  "txt": "2016"
+ },
+ "lit.hwang.firstYear": {
+  "value": 1998,
+  "tex": "1998",
+  "txt": "1998"
+ },
+ "lit.hwang.lastYear": {
+  "value": 2008,
+  "tex": "2008",
+  "txt": "2008"
+ },
+ "lit.finalRule.effective": {
+  "value": "18 January 2017",
+  "tex": "18 January 2017",
+  "txt": "18 January 2017"
+ },
+ "lit.razuv.trials": {
+  "value": 28561,
+  "tex": "28{,}561",
+  "txt": "28,561"
+ },
+ "lit.razuv.classified.pct": {
+  "value": 99,
+  "tex": "99",
+  "txt": "99"
+ },
+ "lit.razuv.safety.n": {
+  "value": 977,
+  "tex": "977",
+  "txt": "977"
+ },
+ "lit.razuv.safety.pct": {
+  "value": 3.4207,
+  "tex": "3.4",
+  "txt": "3.4"
+ },
+ "lit.razuv.safety.pct.int": {
+  "value": 3.4207,
+  "tex": "3",
+  "txt": "3"
+ },
+ "lit.jovanovic.studies": {
+  "value": 81,
+  "tex": "81",
+  "txt": "81"
+ },
+ "lit.jovanovic.ctgov.n": {
+  "value": 73,
+  "tex": "73",
+  "txt": "73"
+ },
+ "lit.jovanovic.ctgov.pct": {
+  "value": 90.1235,
+  "tex": "90.1",
+  "txt": "90.1"
+ },
+ "lit.jovanovic.ctgov.pct.int": {
+  "value": 90.1235,
+  "tex": "90",
+  "txt": "90"
+ },
+ "lit.jovanovic.min.pct": {
+  "value": 3,
+  "tex": "3",
+  "txt": "3"
+ },
+ "lit.jovanovic.max.pct": {
+  "value": 51.8,
+  "tex": "51.8",
+  "txt": "51.8"
+ },
+ "lit.jovanovic.max.pct.int": {
+  "value": 51.8,
+  "tex": "52",
+  "txt": "52"
+ },
+ "lit.jovanovic.deviance.pct": {
+  "value": 27.5,
+  "tex": "27.5",
+  "txt": "27.5"
+ },
+ "lit.jovanovic.deviance.pct.int": {
+  "value": 27.5,
+  "tex": "28",
+  "txt": "28"
+ },
+ "lit.dechartres.trials": {
+  "value": 2823,
+  "tex": "2{,}823",
+  "txt": "2,823"
+ },
+ "lit.dechartres.reported.n": {
+  "value": 1400,
+  "tex": "1{,}400",
+  "txt": "1,400"
+ },
+ "lit.dechartres.reported.pct": {
+  "value": 49.5926,
+  "tex": "49.6",
+  "txt": "49.6"
+ },
+ "lit.dechartres.reported.pct.int": {
+  "value": 49.5926,
+  "tex": "50",
+  "txt": "50"
+ },
+ "lit.dechartres.reported.significant.n": {
+  "value": 844,
+  "tex": "844",
+  "txt": "844"
+ },
+ "lit.dechartres.reported.significant.pct": {
+  "value": 60.2857,
+  "tex": "60.3",
+  "txt": "60.3"
+ },
+ "lit.dechartres.reported.significant.pct.int": {
+  "value": 60.2857,
+  "tex": "60",
+  "txt": "60"
+ },
+ "lit.dechartres.calculated.significant.n": {
+  "value": 342,
+  "tex": "342",
+  "txt": "342"
+ },
+ "lit.dechartres.calculated.significant.pct": {
+  "value": 36.8138,
+  "tex": "36.8",
+  "txt": "36.8"
+ },
+ "lit.dechartres.calculated.significant.pct.int": {
+  "value": 36.8138,
+  "tex": "37",
+  "txt": "37"
+ },
+ "lit.devito.due": {
+  "value": 4209,
+  "tex": "4{,}209",
+  "txt": "4,209"
+ },
+ "lit.devito.submitted.n": {
+  "value": 2686,
+  "tex": "2{,}686",
+  "txt": "2,686"
+ },
+ "lit.devito.submitted.pct": {
+  "value": 63.8156,
+  "tex": "63.8",
+  "txt": "63.8"
+ },
+ "lit.devito.submitted.pct.int": {
+  "value": 63.8156,
+  "tex": "64",
+  "txt": "64"
+ }
+}

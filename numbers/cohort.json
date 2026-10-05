@@ -1,0 +1,287 @@
+{
+ "era.first": {
+  "value": 2017,
+  "tex": "2017",
+  "txt": "2017"
+ },
+ "era.last": {
+  "value": 2026,
+  "tex": "2026",
+  "txt": "2026"
+ },
+ "era.completeLast": {
+  "value": 2022,
+  "tex": "2022",
+  "txt": "2022"
+ },
+ "allYears.last": {
+  "value": 2026,
+  "tex": "2026",
+  "txt": "2026"
+ },
+ "alpha": {
+  "value": 0.05,
+  "tex": "0.05",
+  "txt": "0.05"
+ },
+ "retrieval.cohort": {
+  "value": "9 July 2026",
+  "tex": "9 July 2026",
+  "txt": "9 July 2026"
+ },
+ "retrieval.analyses": {
+  "value": "20 August 2026",
+  "tex": "20 August 2026",
+  "txt": "20 August 2026"
+ },
+ "classification.month": {
+  "value": "July 2026",
+  "tex": "July 2026",
+  "txt": "July 2026"
+ },
+ "cohort.results": {
+  "value": 14633,
+  "tex": "14{,}633",
+  "txt": "14,633"
+ },
+ "cohort.stopped": {
+  "value": 5687,
+  "tex": "5{,}687",
+  "txt": "5,687"
+ },
+ "cohort.both": {
+  "value": 1854,
+  "tex": "1{,}854",
+  "txt": "1,854"
+ },
+ "cohort.unique": {
+  "value": 18466,
+  "tex": "18{,}466",
+  "txt": "18,466"
+ },
+ "cohort.terminated": {
+  "value": 4123,
+  "tex": "4{,}123",
+  "txt": "4,123"
+ },
+ "cohort.withdrawn": {
+  "value": 1412,
+  "tex": "1{,}412",
+  "txt": "1,412"
+ },
+ "cohort.suspended": {
+  "value": 152,
+  "tex": "152",
+  "txt": "152"
+ },
+ "cohort.analysed": {
+  "value": 17054,
+  "tex": "17{,}054",
+  "txt": "17,054"
+ },
+ "cohort.stoppedEnrolled": {
+  "value": 4275,
+  "tex": "4{,}275",
+  "txt": "4,275"
+ },
+ "cohort.noDrug.n": {
+  "value": 1253,
+  "tex": "1{,}253",
+  "txt": "1,253"
+ },
+ "cohort.noDrug.pct": {
+  "value": 6.7854,
+  "tex": "6.8",
+  "txt": "6.8"
+ },
+ "cohort.noDrug.pct.int": {
+  "value": 6.7854,
+  "tex": "7",
+  "txt": "7"
+ },
+ "cohort.era.stopped": {
+  "value": 2023,
+  "tex": "2{,}023",
+  "txt": "2,023"
+ },
+ "cohort.era.withdrawn.n": {
+  "value": 652,
+  "tex": "652",
+  "txt": "652"
+ },
+ "cohort.era.withdrawn.pct": {
+  "value": 32.2294,
+  "tex": "32.2",
+  "txt": "32.2"
+ },
+ "cohort.era.withdrawn.pct.int": {
+  "value": 32.2294,
+  "tex": "32",
+  "txt": "32"
+ },
+ "cohort.results.completed": {
+  "value": 12430,
+  "tex": "12{,}430",
+  "txt": "12,430"
+ },
+ "cohort.results.terminated": {
+  "value": 1852,
+  "tex": "1{,}852",
+  "txt": "1,852"
+ },
+ "cohort.results.other": {
+  "value": 351,
+  "tex": "351",
+  "txt": "351"
+ },
+ "cohort.noStartYear": {
+  "value": 113,
+  "tex": "113",
+  "txt": "113"
+ },
+ "cohort.startAfterWindow": {
+  "value": 3,
+  "tex": "3",
+  "txt": "3"
+ },
+ "bigpharma.companies": {
+  "value": 17,
+  "tex": "17",
+  "txt": "17"
+ },
+ "bigpharma.mid": {
+  "value": 18,
+  "tex": "18",
+  "txt": "18"
+ },
+ "bigpharma.patterns": {
+  "value": 93,
+  "tex": "93",
+  "txt": "93"
+ },
+ "bigpharma.sponsorNames": {
+  "value": 144,
+  "tex": "144",
+  "txt": "144"
+ },
+ "bigpharma.wide.sponsorNames": {
+  "value": 232,
+  "tex": "232",
+  "txt": "232"
+ },
+ "cohort.sponsorNames": {
+  "value": 3170,
+  "tex": "3{,}170",
+  "txt": "3,170"
+ },
+ "analyses.absent": {
+  "value": 1,
+  "tex": "1",
+  "txt": "1"
+ },
+ "analyses.absent.withVerdict": {
+  "value": 0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "analyses.notInCohort": {
+  "value": 82,
+  "tex": "82",
+  "txt": "82"
+ },
+ "pvalue.records": {
+  "value": 20464,
+  "tex": "20{,}464",
+  "txt": "20,464"
+ },
+ "pvalue.strings": {
+  "value": 14882,
+  "tex": "14{,}882",
+  "txt": "14,882"
+ },
+ "pvalue.distinct": {
+  "value": 3749,
+  "tex": "3{,}749",
+  "txt": "3,749"
+ },
+ "pvalue.invalid.records": {
+  "value": 6,
+  "tex": "6",
+  "txt": "6"
+ },
+ "pvalue.invalid.trials": {
+  "value": 5,
+  "tex": "5",
+  "txt": "5"
+ },
+ "verdict.trials": {
+  "value": 6603,
+  "tex": "6{,}603",
+  "txt": "6,603"
+ },
+ "verdict.noStartYear": {
+  "value": 5,
+  "tex": "5",
+  "txt": "5"
+ },
+ "verdict.flips.n": {
+  "value": 108,
+  "tex": "108",
+  "txt": "108"
+ },
+ "verdict.flips.pct": {
+  "value": 1.6356,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "verdict.flips.pct.int": {
+  "value": 1.6356,
+  "tex": "2",
+  "txt": "2"
+ },
+ "verdict.flips.reverse": {
+  "value": 0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "verdict.ambiguous": {
+  "value": 13,
+  "tex": "13",
+  "txt": "13"
+ },
+ "verdict.coverage.pct": {
+  "value": 45.124,
+  "tex": "45.1",
+  "txt": "45.1"
+ },
+ "verdict.coverage.pct.int": {
+  "value": 45.124,
+  "tex": "45",
+  "txt": "45"
+ },
+ "flow.outsideWindow": {
+  "value": 12444,
+  "tex": "12{,}444",
+  "txt": "12,444"
+ },
+ "flow.era.enrolled": {
+  "value": 4610,
+  "tex": "4{,}610",
+  "txt": "4,610"
+ },
+ "flow.era.stopped": {
+  "value": 1371,
+  "tex": "1{,}371",
+  "txt": "1,371"
+ },
+ "flow.era.completed.win": {
+  "value": 1037,
+  "tex": "1{,}037",
+  "txt": "1,037"
+ },
+ "flow.era.other": {
+  "value": 237,
+  "tex": "237",
+  "txt": "237"
+ }
+}

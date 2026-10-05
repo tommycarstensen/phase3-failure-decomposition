@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use the code, labels or data in this repository, please cite the paper below."
+title: "Code, labels and data for: Structured-data reporting shapes the apparent causes of phase-3 trial failure"
+type: software
+authors:
+  - family-names: Carstensen
+    given-names: Tommy
+    email: medrxiv@tommycarstensen.com
+    orcid: "https://orcid.org/0000-0002-3672-9931"
+repository-code: "https://github.com/tommycarstensen/phase3-failure-decomposition"
+abstract: "Code, labels, data and manuscript of the medRxiv preprint. The paper classifies why phase-3 trials fail, using only ClinicalTrials.gov and linked PubMed abstracts, and asks where a registry-only answer is misleading. Every number in the manuscript and the supplement is written by a script in this repository; bash reproduce.sh regenerates them from the archived retrievals (9 July 2026 and 20 August 2026) and bash build_pdf.sh builds the two PDFs."
+keywords:
+  - clinical trials
+  - ClinicalTrials.gov
+  - phase 3
+  - trial failure
+  - drug development
+  - meta-research
+  - trial registries
+  - large language models
+license: MIT
+preferred-citation:
+  type: article
+  title: "Structured-data reporting shapes the apparent causes of phase-3 trial failure: an automated decomposition of ClinicalTrials.gov records"
+  authors:
+    - family-names: Carstensen
+      given-names: Tommy
+      email: medrxiv@tommycarstensen.com
+      orcid: "https://orcid.org/0000-0002-3672-9931"
+  year: 2026
+  journal: medRxiv
+  status: preprint
+  notes: "Preprint, not peer reviewed. A DOI will be minted on posting."

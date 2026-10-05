@@ -1,0 +1,1772 @@
+{
+ "coverage.enrolled.all.completed": {
+  "value": 3002,
+  "tex": "3{,}002",
+  "txt": "3,002"
+ },
+ "coverage.enrolled.all.reported.n": {
+  "value": 1419,
+  "tex": "1{,}419",
+  "txt": "1,419"
+ },
+ "coverage.enrolled.all.reported.pct": {
+  "value": 47.2685,
+  "tex": "47.3",
+  "txt": "47.3"
+ },
+ "coverage.enrolled.all.reported.pct.int": {
+  "value": 47.2685,
+  "tex": "47",
+  "txt": "47"
+ },
+ "coverage.enrolled.all.unreported.n": {
+  "value": 1583,
+  "tex": "1{,}583",
+  "txt": "1,583"
+ },
+ "coverage.enrolled.all.unreported.pct": {
+  "value": 52.7315,
+  "tex": "52.7",
+  "txt": "52.7"
+ },
+ "coverage.enrolled.all.unreported.pct.int": {
+  "value": 52.7315,
+  "tex": "53",
+  "txt": "53"
+ },
+ "coverage.enrolled.all.singleArm.reported.n": {
+  "value": 40,
+  "tex": "40",
+  "txt": "40"
+ },
+ "coverage.enrolled.all.singleArm.reported.pct": {
+  "value": 2.8189,
+  "tex": "2.8",
+  "txt": "2.8"
+ },
+ "coverage.enrolled.all.singleArm.reported.pct.int": {
+  "value": 2.8189,
+  "tex": "3",
+  "txt": "3"
+ },
+ "coverage.enrolled.all.singleArm.unreported.n": {
+  "value": 432,
+  "tex": "432",
+  "txt": "432"
+ },
+ "coverage.enrolled.all.singleArm.unreported.pct": {
+  "value": 27.29,
+  "tex": "27.3",
+  "txt": "27.3"
+ },
+ "coverage.enrolled.all.singleArm.unreported.pct.int": {
+  "value": 27.29,
+  "tex": "27",
+  "txt": "27"
+ },
+ "coverage.enrolled.all.comparator.reported": {
+  "value": 1379,
+  "tex": "1{,}379",
+  "txt": "1,379"
+ },
+ "coverage.enrolled.all.comparator.unreported": {
+  "value": 1151,
+  "tex": "1{,}151",
+  "txt": "1,151"
+ },
+ "coverage.enrolled.all.comparator.noArmGroups": {
+  "value": 1,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.all.comparator.coverage.pct": {
+  "value": 54.5059,
+  "tex": "54.5",
+  "txt": "54.5"
+ },
+ "coverage.enrolled.all.comparator.coverage.pct.int": {
+  "value": 54.5059,
+  "tex": "55",
+  "txt": "55"
+ },
+ "coverage.enrolled.all.comparator.miss.n": {
+  "value": 376,
+  "tex": "376",
+  "txt": "376"
+ },
+ "coverage.enrolled.all.comparator.miss.pct": {
+  "value": 27.2661,
+  "tex": "27.3",
+  "txt": "27.3"
+ },
+ "coverage.enrolled.all.comparator.miss.pct.int": {
+  "value": 27.2661,
+  "tex": "27",
+  "txt": "27"
+ },
+ "coverage.enrolled.all.all.miss.n": {
+  "value": 382,
+  "tex": "382",
+  "txt": "382"
+ },
+ "coverage.enrolled.all.all.miss.pct": {
+  "value": 26.9204,
+  "tex": "26.9",
+  "txt": "26.9"
+ },
+ "coverage.enrolled.all.all.miss.pct.int": {
+  "value": 26.9204,
+  "tex": "27",
+  "txt": "27"
+ },
+ "coverage.enrolled.all.raw.extra": {
+  "value": 0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "coverage.enrolled.all.raw.eff": {
+  "value": 37.1445,
+  "tex": "37.1",
+  "txt": "37.1"
+ },
+ "coverage.enrolled.all.raw.eff.int": {
+  "value": 37.1445,
+  "tex": "37",
+  "txt": "37"
+ },
+ "coverage.enrolled.all.raw.op": {
+  "value": 36.5061,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "coverage.enrolled.all.raw.op.int": {
+  "value": 36.5061,
+  "tex": "37",
+  "txt": "37"
+ },
+ "coverage.enrolled.all.raw.com": {
+  "value": 22.4608,
+  "tex": "22.5",
+  "txt": "22.5"
+ },
+ "coverage.enrolled.all.raw.com.int": {
+  "value": 22.4608,
+  "tex": "22",
+  "txt": "22"
+ },
+ "coverage.enrolled.all.raw.saf": {
+  "value": 2.4956,
+  "tex": "2.5",
+  "txt": "2.5"
+ },
+ "coverage.enrolled.all.raw.saf.int": {
+  "value": 2.4956,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.enrolled.all.raw.unk": {
+  "value": 1.3929,
+  "tex": "1.4",
+  "txt": "1.4"
+ },
+ "coverage.enrolled.all.raw.unk.int": {
+  "value": 1.3929,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.all.pooled.eff.lo": {
+  "value": 46.1227,
+  "tex": "46.1",
+  "txt": "46.1"
+ },
+ "coverage.enrolled.all.pooled.eff.lo.int": {
+  "value": 46.1227,
+  "tex": "46",
+  "txt": "46"
+ },
+ "coverage.enrolled.all.pooled.eff.hi": {
+  "value": 47.5387,
+  "tex": "47.5",
+  "txt": "47.5"
+ },
+ "coverage.enrolled.all.pooled.eff.hi.int": {
+  "value": 47.5387,
+  "tex": "48",
+  "txt": "48"
+ },
+ "coverage.enrolled.all.pooled.op.lo": {
+  "value": 30.4692,
+  "tex": "30.5",
+  "txt": "30.5"
+ },
+ "coverage.enrolled.all.pooled.op.lo.int": {
+  "value": 30.4692,
+  "tex": "30",
+  "txt": "30"
+ },
+ "coverage.enrolled.all.pooled.op.hi": {
+  "value": 31.2916,
+  "tex": "31.3",
+  "txt": "31.3"
+ },
+ "coverage.enrolled.all.pooled.op.hi.int": {
+  "value": 31.2916,
+  "tex": "31",
+  "txt": "31"
+ },
+ "coverage.enrolled.all.pooled.extra": {
+  "value": 314,
+  "tex": "314",
+  "txt": "314"
+ },
+ "coverage.enrolled.all.pooled.eff": {
+  "value": 46.8292,
+  "tex": "46.8",
+  "txt": "46.8"
+ },
+ "coverage.enrolled.all.pooled.eff.int": {
+  "value": 46.8292,
+  "tex": "47",
+  "txt": "47"
+ },
+ "coverage.enrolled.all.pooled.op": {
+  "value": 30.8813,
+  "tex": "30.9",
+  "txt": "30.9"
+ },
+ "coverage.enrolled.all.pooled.op.int": {
+  "value": 30.8813,
+  "tex": "31",
+  "txt": "31"
+ },
+ "coverage.enrolled.all.pooled.com": {
+  "value": 19.0001,
+  "tex": "19.0",
+  "txt": "19.0"
+ },
+ "coverage.enrolled.all.pooled.com.int": {
+  "value": 19.0001,
+  "tex": "19",
+  "txt": "19"
+ },
+ "coverage.enrolled.all.pooled.saf": {
+  "value": 2.1111,
+  "tex": "2.1",
+  "txt": "2.1"
+ },
+ "coverage.enrolled.all.pooled.saf.int": {
+  "value": 2.1111,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.enrolled.all.pooled.unk": {
+  "value": 1.1783,
+  "tex": "1.2",
+  "txt": "1.2"
+ },
+ "coverage.enrolled.all.pooled.unk.int": {
+  "value": 1.1783,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.all.adjusted.extra": {
+  "value": 351,
+  "tex": "351",
+  "txt": "351"
+ },
+ "coverage.enrolled.all.adjusted.eff": {
+  "value": 47.7936,
+  "tex": "47.8",
+  "txt": "47.8"
+ },
+ "coverage.enrolled.all.adjusted.eff.int": {
+  "value": 47.7936,
+  "tex": "48",
+  "txt": "48"
+ },
+ "coverage.enrolled.all.adjusted.op": {
+  "value": 30.3212,
+  "tex": "30.3",
+  "txt": "30.3"
+ },
+ "coverage.enrolled.all.adjusted.op.int": {
+  "value": 30.3212,
+  "tex": "30",
+  "txt": "30"
+ },
+ "coverage.enrolled.all.adjusted.com": {
+  "value": 18.6555,
+  "tex": "18.7",
+  "txt": "18.7"
+ },
+ "coverage.enrolled.all.adjusted.com.int": {
+  "value": 18.6555,
+  "tex": "19",
+  "txt": "19"
+ },
+ "coverage.enrolled.all.adjusted.saf": {
+  "value": 2.0728,
+  "tex": "2.1",
+  "txt": "2.1"
+ },
+ "coverage.enrolled.all.adjusted.saf.int": {
+  "value": 2.0728,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.enrolled.all.adjusted.unk": {
+  "value": 1.1569,
+  "tex": "1.2",
+  "txt": "1.2"
+ },
+ "coverage.enrolled.all.adjusted.unk.int": {
+  "value": 1.1569,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.all.upper.extra": {
+  "value": 1151,
+  "tex": "1{,}151",
+  "txt": "1,151"
+ },
+ "coverage.enrolled.all.upper.eff": {
+  "value": 62.3173,
+  "tex": "62.3",
+  "txt": "62.3"
+ },
+ "coverage.enrolled.all.upper.eff.int": {
+  "value": 62.3173,
+  "tex": "62",
+  "txt": "62"
+ },
+ "coverage.enrolled.all.upper.op": {
+  "value": 21.8859,
+  "tex": "21.9",
+  "txt": "21.9"
+ },
+ "coverage.enrolled.all.upper.op.int": {
+  "value": 21.8859,
+  "tex": "22",
+  "txt": "22"
+ },
+ "coverage.enrolled.all.upper.com": {
+  "value": 13.4656,
+  "tex": "13.5",
+  "txt": "13.5"
+ },
+ "coverage.enrolled.all.upper.com.int": {
+  "value": 13.4656,
+  "tex": "13",
+  "txt": "13"
+ },
+ "coverage.enrolled.all.upper.saf": {
+  "value": 1.4962,
+  "tex": "1.5",
+  "txt": "1.5"
+ },
+ "coverage.enrolled.all.upper.saf.int": {
+  "value": 1.4962,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.all.upper.unk": {
+  "value": 0.8351,
+  "tex": "0.8",
+  "txt": "0.8"
+ },
+ "coverage.enrolled.all.upper.unk.int": {
+  "value": 0.8351,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.all.withSingleArm.extra": {
+  "value": 426,
+  "tex": "426",
+  "txt": "426"
+ },
+ "coverage.enrolled.all.withSingleArm.eff": {
+  "value": 49.608,
+  "tex": "49.6",
+  "txt": "49.6"
+ },
+ "coverage.enrolled.all.withSingleArm.eff.int": {
+  "value": 49.608,
+  "tex": "50",
+  "txt": "50"
+ },
+ "coverage.enrolled.all.withSingleArm.op": {
+  "value": 29.2674,
+  "tex": "29.3",
+  "txt": "29.3"
+ },
+ "coverage.enrolled.all.withSingleArm.op.int": {
+  "value": 29.2674,
+  "tex": "29",
+  "txt": "29"
+ },
+ "coverage.enrolled.all.withSingleArm.com": {
+  "value": 18.0071,
+  "tex": "18.0",
+  "txt": "18.0"
+ },
+ "coverage.enrolled.all.withSingleArm.com.int": {
+  "value": 18.0071,
+  "tex": "18",
+  "txt": "18"
+ },
+ "coverage.enrolled.all.withSingleArm.saf": {
+  "value": 2.0008,
+  "tex": "2.0",
+  "txt": "2.0"
+ },
+ "coverage.enrolled.all.withSingleArm.saf.int": {
+  "value": 2.0008,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.enrolled.all.withSingleArm.unk": {
+  "value": 1.1167,
+  "tex": "1.1",
+  "txt": "1.1"
+ },
+ "coverage.enrolled.all.withSingleArm.unk.int": {
+  "value": 1.1167,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.big.completed": {
+  "value": 1112,
+  "tex": "1{,}112",
+  "txt": "1,112"
+ },
+ "coverage.enrolled.big.reported.n": {
+  "value": 627,
+  "tex": "627",
+  "txt": "627"
+ },
+ "coverage.enrolled.big.reported.pct": {
+  "value": 56.3849,
+  "tex": "56.4",
+  "txt": "56.4"
+ },
+ "coverage.enrolled.big.reported.pct.int": {
+  "value": 56.3849,
+  "tex": "56",
+  "txt": "56"
+ },
+ "coverage.enrolled.big.unreported.n": {
+  "value": 485,
+  "tex": "485",
+  "txt": "485"
+ },
+ "coverage.enrolled.big.unreported.pct": {
+  "value": 43.6151,
+  "tex": "43.6",
+  "txt": "43.6"
+ },
+ "coverage.enrolled.big.unreported.pct.int": {
+  "value": 43.6151,
+  "tex": "44",
+  "txt": "44"
+ },
+ "coverage.enrolled.big.singleArm.reported.n": {
+  "value": 16,
+  "tex": "16",
+  "txt": "16"
+ },
+ "coverage.enrolled.big.singleArm.reported.pct": {
+  "value": 2.5518,
+  "tex": "2.6",
+  "txt": "2.6"
+ },
+ "coverage.enrolled.big.singleArm.reported.pct.int": {
+  "value": 2.5518,
+  "tex": "3",
+  "txt": "3"
+ },
+ "coverage.enrolled.big.singleArm.unreported.n": {
+  "value": 184,
+  "tex": "184",
+  "txt": "184"
+ },
+ "coverage.enrolled.big.singleArm.unreported.pct": {
+  "value": 37.9381,
+  "tex": "37.9",
+  "txt": "37.9"
+ },
+ "coverage.enrolled.big.singleArm.unreported.pct.int": {
+  "value": 37.9381,
+  "tex": "38",
+  "txt": "38"
+ },
+ "coverage.enrolled.big.comparator.reported": {
+  "value": 611,
+  "tex": "611",
+  "txt": "611"
+ },
+ "coverage.enrolled.big.comparator.unreported": {
+  "value": 301,
+  "tex": "301",
+  "txt": "301"
+ },
+ "coverage.enrolled.big.comparator.noArmGroups": {
+  "value": 0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "coverage.enrolled.big.comparator.coverage.pct": {
+  "value": 66.9956,
+  "tex": "67.0",
+  "txt": "67.0"
+ },
+ "coverage.enrolled.big.comparator.coverage.pct.int": {
+  "value": 66.9956,
+  "tex": "67",
+  "txt": "67"
+ },
+ "coverage.enrolled.big.comparator.miss.n": {
+  "value": 138,
+  "tex": "138",
+  "txt": "138"
+ },
+ "coverage.enrolled.big.comparator.miss.pct": {
+  "value": 22.5859,
+  "tex": "22.6",
+  "txt": "22.6"
+ },
+ "coverage.enrolled.big.comparator.miss.pct.int": {
+  "value": 22.5859,
+  "tex": "23",
+  "txt": "23"
+ },
+ "coverage.enrolled.big.all.miss.n": {
+  "value": 138,
+  "tex": "138",
+  "txt": "138"
+ },
+ "coverage.enrolled.big.all.miss.pct": {
+  "value": 22.0096,
+  "tex": "22.0",
+  "txt": "22.0"
+ },
+ "coverage.enrolled.big.all.miss.pct.int": {
+  "value": 22.0096,
+  "tex": "22",
+  "txt": "22"
+ },
+ "coverage.enrolled.big.raw.extra": {
+  "value": 0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "coverage.enrolled.big.raw.eff": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "coverage.enrolled.big.raw.eff.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "coverage.enrolled.big.raw.op": {
+  "value": 14.1361,
+  "tex": "14.1",
+  "txt": "14.1"
+ },
+ "coverage.enrolled.big.raw.op.int": {
+  "value": 14.1361,
+  "tex": "14",
+  "txt": "14"
+ },
+ "coverage.enrolled.big.raw.com": {
+  "value": 27.4869,
+  "tex": "27.5",
+  "txt": "27.5"
+ },
+ "coverage.enrolled.big.raw.com.int": {
+  "value": 27.4869,
+  "tex": "27",
+  "txt": "27"
+ },
+ "coverage.enrolled.big.raw.saf": {
+  "value": 3.1414,
+  "tex": "3.1",
+  "txt": "3.1"
+ },
+ "coverage.enrolled.big.raw.saf.int": {
+  "value": 3.1414,
+  "tex": "3",
+  "txt": "3"
+ },
+ "coverage.enrolled.big.raw.unk": {
+  "value": 1.5707,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "coverage.enrolled.big.raw.unk.int": {
+  "value": 1.5707,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.enrolled.big.pooled.eff.lo": {
+  "value": 59.7847,
+  "tex": "59.8",
+  "txt": "59.8"
+ },
+ "coverage.enrolled.big.pooled.eff.lo.int": {
+  "value": 59.7847,
+  "tex": "60",
+  "txt": "60"
+ },
+ "coverage.enrolled.big.pooled.eff.hi": {
+  "value": 61.508,
+  "tex": "61.5",
+  "txt": "61.5"
+ },
+ "coverage.enrolled.big.pooled.eff.hi.int": {
+  "value": 61.508,
+  "tex": "62",
+  "txt": "62"
+ },
+ "coverage.enrolled.big.pooled.op.lo": {
+  "value": 11.7433,
+  "tex": "11.7",
+  "txt": "11.7"
+ },
+ "coverage.enrolled.big.pooled.op.lo.int": {
+  "value": 11.7433,
+  "tex": "12",
+  "txt": "12"
+ },
+ "coverage.enrolled.big.pooled.op.hi": {
+  "value": 12.2691,
+  "tex": "12.3",
+  "txt": "12.3"
+ },
+ "coverage.enrolled.big.pooled.op.hi.int": {
+  "value": 12.2691,
+  "tex": "12",
+  "txt": "12"
+ },
+ "coverage.enrolled.big.pooled.extra": {
+  "value": 68,
+  "tex": "68",
+  "txt": "68"
+ },
+ "coverage.enrolled.big.pooled.eff": {
+  "value": 60.6652,
+  "tex": "60.7",
+  "txt": "60.7"
+ },
+ "coverage.enrolled.big.pooled.eff.int": {
+  "value": 60.6652,
+  "tex": "61",
+  "txt": "61"
+ },
+ "coverage.enrolled.big.pooled.op": {
+  "value": 12.0004,
+  "tex": "12.0",
+  "txt": "12.0"
+ },
+ "coverage.enrolled.big.pooled.op.int": {
+  "value": 12.0004,
+  "tex": "12",
+  "txt": "12"
+ },
+ "coverage.enrolled.big.pooled.com": {
+  "value": 23.3342,
+  "tex": "23.3",
+  "txt": "23.3"
+ },
+ "coverage.enrolled.big.pooled.com.int": {
+  "value": 23.3342,
+  "tex": "23",
+  "txt": "23"
+ },
+ "coverage.enrolled.big.pooled.saf": {
+  "value": 2.6668,
+  "tex": "2.7",
+  "txt": "2.7"
+ },
+ "coverage.enrolled.big.pooled.saf.int": {
+  "value": 2.6668,
+  "tex": "3",
+  "txt": "3"
+ },
+ "coverage.enrolled.big.pooled.unk": {
+  "value": 1.3334,
+  "tex": "1.3",
+  "txt": "1.3"
+ },
+ "coverage.enrolled.big.pooled.unk.int": {
+  "value": 1.3334,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.big.adjusted.extra": {
+  "value": 66,
+  "tex": "66",
+  "txt": "66"
+ },
+ "coverage.enrolled.big.adjusted.eff": {
+  "value": 60.4761,
+  "tex": "60.5",
+  "txt": "60.5"
+ },
+ "coverage.enrolled.big.adjusted.eff.int": {
+  "value": 60.4761,
+  "tex": "60",
+  "txt": "60"
+ },
+ "coverage.enrolled.big.adjusted.op": {
+  "value": 12.0581,
+  "tex": "12.1",
+  "txt": "12.1"
+ },
+ "coverage.enrolled.big.adjusted.op.int": {
+  "value": 12.0581,
+  "tex": "12",
+  "txt": "12"
+ },
+ "coverage.enrolled.big.adjusted.com": {
+  "value": 23.4464,
+  "tex": "23.4",
+  "txt": "23.4"
+ },
+ "coverage.enrolled.big.adjusted.com.int": {
+  "value": 23.4464,
+  "tex": "23",
+  "txt": "23"
+ },
+ "coverage.enrolled.big.adjusted.saf": {
+  "value": 2.6796,
+  "tex": "2.7",
+  "txt": "2.7"
+ },
+ "coverage.enrolled.big.adjusted.saf.int": {
+  "value": 2.6796,
+  "tex": "3",
+  "txt": "3"
+ },
+ "coverage.enrolled.big.adjusted.unk": {
+  "value": 1.3398,
+  "tex": "1.3",
+  "txt": "1.3"
+ },
+ "coverage.enrolled.big.adjusted.unk.int": {
+  "value": 1.3398,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.big.upper.extra": {
+  "value": 301,
+  "tex": "301",
+  "txt": "301"
+ },
+ "coverage.enrolled.big.upper.eff": {
+  "value": 74.0849,
+  "tex": "74.1",
+  "txt": "74.1"
+ },
+ "coverage.enrolled.big.upper.eff.int": {
+  "value": 74.0849,
+  "tex": "74",
+  "txt": "74"
+ },
+ "coverage.enrolled.big.upper.op": {
+  "value": 7.9063,
+  "tex": "7.9",
+  "txt": "7.9"
+ },
+ "coverage.enrolled.big.upper.op.int": {
+  "value": 7.9063,
+  "tex": "8",
+  "txt": "8"
+ },
+ "coverage.enrolled.big.upper.com": {
+  "value": 15.3734,
+  "tex": "15.4",
+  "txt": "15.4"
+ },
+ "coverage.enrolled.big.upper.com.int": {
+  "value": 15.3734,
+  "tex": "15",
+  "txt": "15"
+ },
+ "coverage.enrolled.big.upper.saf": {
+  "value": 1.757,
+  "tex": "1.8",
+  "txt": "1.8"
+ },
+ "coverage.enrolled.big.upper.saf.int": {
+  "value": 1.757,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.enrolled.big.upper.unk": {
+  "value": 0.8785,
+  "tex": "0.9",
+  "txt": "0.9"
+ },
+ "coverage.enrolled.big.upper.unk.int": {
+  "value": 0.8785,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.big.withSingleArm.extra": {
+  "value": 107,
+  "tex": "107",
+  "txt": "107"
+ },
+ "coverage.enrolled.big.withSingleArm.eff": {
+  "value": 63.7849,
+  "tex": "63.8",
+  "txt": "63.8"
+ },
+ "coverage.enrolled.big.withSingleArm.eff.int": {
+  "value": 63.7849,
+  "tex": "64",
+  "txt": "64"
+ },
+ "coverage.enrolled.big.withSingleArm.op": {
+  "value": 11.0487,
+  "tex": "11.0",
+  "txt": "11.0"
+ },
+ "coverage.enrolled.big.withSingleArm.op.int": {
+  "value": 11.0487,
+  "tex": "11",
+  "txt": "11"
+ },
+ "coverage.enrolled.big.withSingleArm.com": {
+  "value": 21.4835,
+  "tex": "21.5",
+  "txt": "21.5"
+ },
+ "coverage.enrolled.big.withSingleArm.com.int": {
+  "value": 21.4835,
+  "tex": "21",
+  "txt": "21"
+ },
+ "coverage.enrolled.big.withSingleArm.saf": {
+  "value": 2.4553,
+  "tex": "2.5",
+  "txt": "2.5"
+ },
+ "coverage.enrolled.big.withSingleArm.saf.int": {
+  "value": 2.4553,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.enrolled.big.withSingleArm.unk": {
+  "value": 1.2276,
+  "tex": "1.2",
+  "txt": "1.2"
+ },
+ "coverage.enrolled.big.withSingleArm.unk.int": {
+  "value": 1.2276,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.rest.completed": {
+  "value": 1890,
+  "tex": "1{,}890",
+  "txt": "1,890"
+ },
+ "coverage.enrolled.rest.reported.n": {
+  "value": 792,
+  "tex": "792",
+  "txt": "792"
+ },
+ "coverage.enrolled.rest.reported.pct": {
+  "value": 41.9048,
+  "tex": "41.9",
+  "txt": "41.9"
+ },
+ "coverage.enrolled.rest.reported.pct.int": {
+  "value": 41.9048,
+  "tex": "42",
+  "txt": "42"
+ },
+ "coverage.enrolled.rest.unreported.n": {
+  "value": 1098,
+  "tex": "1{,}098",
+  "txt": "1,098"
+ },
+ "coverage.enrolled.rest.unreported.pct": {
+  "value": 58.0952,
+  "tex": "58.1",
+  "txt": "58.1"
+ },
+ "coverage.enrolled.rest.unreported.pct.int": {
+  "value": 58.0952,
+  "tex": "58",
+  "txt": "58"
+ },
+ "coverage.enrolled.rest.singleArm.reported.n": {
+  "value": 24,
+  "tex": "24",
+  "txt": "24"
+ },
+ "coverage.enrolled.rest.singleArm.reported.pct": {
+  "value": 3.0303,
+  "tex": "3.0",
+  "txt": "3.0"
+ },
+ "coverage.enrolled.rest.singleArm.reported.pct.int": {
+  "value": 3.0303,
+  "tex": "3",
+  "txt": "3"
+ },
+ "coverage.enrolled.rest.singleArm.unreported.n": {
+  "value": 248,
+  "tex": "248",
+  "txt": "248"
+ },
+ "coverage.enrolled.rest.singleArm.unreported.pct": {
+  "value": 22.5865,
+  "tex": "22.6",
+  "txt": "22.6"
+ },
+ "coverage.enrolled.rest.singleArm.unreported.pct.int": {
+  "value": 22.5865,
+  "tex": "23",
+  "txt": "23"
+ },
+ "coverage.enrolled.rest.comparator.reported": {
+  "value": 768,
+  "tex": "768",
+  "txt": "768"
+ },
+ "coverage.enrolled.rest.comparator.unreported": {
+  "value": 850,
+  "tex": "850",
+  "txt": "850"
+ },
+ "coverage.enrolled.rest.comparator.noArmGroups": {
+  "value": 1,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.rest.comparator.coverage.pct": {
+  "value": 47.466,
+  "tex": "47.5",
+  "txt": "47.5"
+ },
+ "coverage.enrolled.rest.comparator.coverage.pct.int": {
+  "value": 47.466,
+  "tex": "47",
+  "txt": "47"
+ },
+ "coverage.enrolled.rest.comparator.miss.n": {
+  "value": 238,
+  "tex": "238",
+  "txt": "238"
+ },
+ "coverage.enrolled.rest.comparator.miss.pct": {
+  "value": 30.9896,
+  "tex": "31.0",
+  "txt": "31.0"
+ },
+ "coverage.enrolled.rest.comparator.miss.pct.int": {
+  "value": 30.9896,
+  "tex": "31",
+  "txt": "31"
+ },
+ "coverage.enrolled.rest.all.miss.n": {
+  "value": 244,
+  "tex": "244",
+  "txt": "244"
+ },
+ "coverage.enrolled.rest.all.miss.pct": {
+  "value": 30.8081,
+  "tex": "30.8",
+  "txt": "30.8"
+ },
+ "coverage.enrolled.rest.all.miss.pct.int": {
+  "value": 30.8081,
+  "tex": "31",
+  "txt": "31"
+ },
+ "coverage.enrolled.rest.raw.extra": {
+  "value": 0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "coverage.enrolled.rest.raw.eff": {
+  "value": 32.4385,
+  "tex": "32.4",
+  "txt": "32.4"
+ },
+ "coverage.enrolled.rest.raw.eff.int": {
+  "value": 32.4385,
+  "tex": "32",
+  "txt": "32"
+ },
+ "coverage.enrolled.rest.raw.op": {
+  "value": 42.8784,
+  "tex": "42.9",
+  "txt": "42.9"
+ },
+ "coverage.enrolled.rest.raw.op.int": {
+  "value": 42.8784,
+  "tex": "43",
+  "txt": "43"
+ },
+ "coverage.enrolled.rest.raw.com": {
+  "value": 21.0291,
+  "tex": "21.0",
+  "txt": "21.0"
+ },
+ "coverage.enrolled.rest.raw.com.int": {
+  "value": 21.0291,
+  "tex": "21",
+  "txt": "21"
+ },
+ "coverage.enrolled.rest.raw.saf": {
+  "value": 2.3117,
+  "tex": "2.3",
+  "txt": "2.3"
+ },
+ "coverage.enrolled.rest.raw.saf.int": {
+  "value": 2.3117,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.enrolled.rest.raw.unk": {
+  "value": 1.3423,
+  "tex": "1.3",
+  "txt": "1.3"
+ },
+ "coverage.enrolled.rest.raw.unk.int": {
+  "value": 1.3423,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.rest.pooled.eff.lo": {
+  "value": 42.5398,
+  "tex": "42.5",
+  "txt": "42.5"
+ },
+ "coverage.enrolled.rest.pooled.eff.lo.int": {
+  "value": 42.5398,
+  "tex": "43",
+  "txt": "43"
+ },
+ "coverage.enrolled.rest.pooled.eff.hi": {
+  "value": 44.488,
+  "tex": "44.5",
+  "txt": "44.5"
+ },
+ "coverage.enrolled.rest.pooled.eff.hi.int": {
+  "value": 44.488,
+  "tex": "44",
+  "txt": "44"
+ },
+ "coverage.enrolled.rest.pooled.op.lo": {
+  "value": 35.2311,
+  "tex": "35.2",
+  "txt": "35.2"
+ },
+ "coverage.enrolled.rest.pooled.op.lo.int": {
+  "value": 35.2311,
+  "tex": "35",
+  "txt": "35"
+ },
+ "coverage.enrolled.rest.pooled.op.hi": {
+  "value": 36.4676,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "coverage.enrolled.rest.pooled.op.hi.int": {
+  "value": 36.4676,
+  "tex": "36",
+  "txt": "36"
+ },
+ "coverage.enrolled.rest.pooled.extra": {
+  "value": 263,
+  "tex": "263",
+  "txt": "263"
+ },
+ "coverage.enrolled.rest.pooled.eff": {
+  "value": 43.5307,
+  "tex": "43.5",
+  "txt": "43.5"
+ },
+ "coverage.enrolled.rest.pooled.eff.int": {
+  "value": 43.5307,
+  "tex": "44",
+  "txt": "44"
+ },
+ "coverage.enrolled.rest.pooled.op": {
+  "value": 35.8387,
+  "tex": "35.8",
+  "txt": "35.8"
+ },
+ "coverage.enrolled.rest.pooled.op.int": {
+  "value": 35.8387,
+  "tex": "36",
+  "txt": "36"
+ },
+ "coverage.enrolled.rest.pooled.com": {
+  "value": 17.5765,
+  "tex": "17.6",
+  "txt": "17.6"
+ },
+ "coverage.enrolled.rest.pooled.com.int": {
+  "value": 17.5765,
+  "tex": "18",
+  "txt": "18"
+ },
+ "coverage.enrolled.rest.pooled.saf": {
+  "value": 1.9322,
+  "tex": "1.9",
+  "txt": "1.9"
+ },
+ "coverage.enrolled.rest.pooled.saf.int": {
+  "value": 1.9322,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.enrolled.rest.pooled.unk": {
+  "value": 1.1219,
+  "tex": "1.1",
+  "txt": "1.1"
+ },
+ "coverage.enrolled.rest.pooled.unk.int": {
+  "value": 1.1219,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.rest.adjusted.extra": {
+  "value": 282,
+  "tex": "282",
+  "txt": "282"
+ },
+ "coverage.enrolled.rest.adjusted.eff": {
+  "value": 44.1772,
+  "tex": "44.2",
+  "txt": "44.2"
+ },
+ "coverage.enrolled.rest.adjusted.eff.int": {
+  "value": 44.1772,
+  "tex": "44",
+  "txt": "44"
+ },
+ "coverage.enrolled.rest.adjusted.op": {
+  "value": 35.4284,
+  "tex": "35.4",
+  "txt": "35.4"
+ },
+ "coverage.enrolled.rest.adjusted.op.int": {
+  "value": 35.4284,
+  "tex": "35",
+  "txt": "35"
+ },
+ "coverage.enrolled.rest.adjusted.com": {
+  "value": 17.3753,
+  "tex": "17.4",
+  "txt": "17.4"
+ },
+ "coverage.enrolled.rest.adjusted.com.int": {
+  "value": 17.3753,
+  "tex": "17",
+  "txt": "17"
+ },
+ "coverage.enrolled.rest.adjusted.saf": {
+  "value": 1.9101,
+  "tex": "1.9",
+  "txt": "1.9"
+ },
+ "coverage.enrolled.rest.adjusted.saf.int": {
+  "value": 1.9101,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.enrolled.rest.adjusted.unk": {
+  "value": 1.1091,
+  "tex": "1.1",
+  "txt": "1.1"
+ },
+ "coverage.enrolled.rest.adjusted.unk.int": {
+  "value": 1.1091,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.rest.upper.extra": {
+  "value": 850,
+  "tex": "850",
+  "txt": "850"
+ },
+ "coverage.enrolled.rest.upper.eff": {
+  "value": 58.649,
+  "tex": "58.6",
+  "txt": "58.6"
+ },
+ "coverage.enrolled.rest.upper.eff.int": {
+  "value": 58.649,
+  "tex": "59",
+  "txt": "59"
+ },
+ "coverage.enrolled.rest.upper.op": {
+  "value": 26.2437,
+  "tex": "26.2",
+  "txt": "26.2"
+ },
+ "coverage.enrolled.rest.upper.op.int": {
+  "value": 26.2437,
+  "tex": "26",
+  "txt": "26"
+ },
+ "coverage.enrolled.rest.upper.com": {
+  "value": 12.8708,
+  "tex": "12.9",
+  "txt": "12.9"
+ },
+ "coverage.enrolled.rest.upper.com.int": {
+  "value": 12.8708,
+  "tex": "13",
+  "txt": "13"
+ },
+ "coverage.enrolled.rest.upper.saf": {
+  "value": 1.4149,
+  "tex": "1.4",
+  "txt": "1.4"
+ },
+ "coverage.enrolled.rest.upper.saf.int": {
+  "value": 1.4149,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.rest.upper.unk": {
+  "value": 0.8215,
+  "tex": "0.8",
+  "txt": "0.8"
+ },
+ "coverage.enrolled.rest.upper.unk.int": {
+  "value": 0.8215,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.rest.withSingleArm.extra": {
+  "value": 338,
+  "tex": "338",
+  "txt": "338"
+ },
+ "coverage.enrolled.rest.withSingleArm.eff": {
+  "value": 46.0481,
+  "tex": "46.0",
+  "txt": "46.0"
+ },
+ "coverage.enrolled.rest.withSingleArm.eff.int": {
+  "value": 46.0481,
+  "tex": "46",
+  "txt": "46"
+ },
+ "coverage.enrolled.rest.withSingleArm.op": {
+  "value": 34.241,
+  "tex": "34.2",
+  "txt": "34.2"
+ },
+ "coverage.enrolled.rest.withSingleArm.op.int": {
+  "value": 34.241,
+  "tex": "34",
+  "txt": "34"
+ },
+ "coverage.enrolled.rest.withSingleArm.com": {
+  "value": 16.793,
+  "tex": "16.8",
+  "txt": "16.8"
+ },
+ "coverage.enrolled.rest.withSingleArm.com.int": {
+  "value": 16.793,
+  "tex": "17",
+  "txt": "17"
+ },
+ "coverage.enrolled.rest.withSingleArm.saf": {
+  "value": 1.846,
+  "tex": "1.8",
+  "txt": "1.8"
+ },
+ "coverage.enrolled.rest.withSingleArm.saf.int": {
+  "value": 1.846,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.enrolled.rest.withSingleArm.unk": {
+  "value": 1.0719,
+  "tex": "1.1",
+  "txt": "1.1"
+ },
+ "coverage.enrolled.rest.withSingleArm.unk.int": {
+  "value": 1.0719,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.enrolled.rest.needed.n": {
+  "value": 140,
+  "tex": "140",
+  "txt": "140"
+ },
+ "coverage.enrolled.rest.needed.pct": {
+  "value": 16.4706,
+  "tex": "16.5",
+  "txt": "16.5"
+ },
+ "coverage.enrolled.rest.needed.pct.int": {
+  "value": 16.4706,
+  "tex": "16",
+  "txt": "16"
+ },
+ "coverage.registered.all.completed": {
+  "value": 3002,
+  "tex": "3{,}002",
+  "txt": "3,002"
+ },
+ "coverage.registered.all.reported.n": {
+  "value": 1419,
+  "tex": "1{,}419",
+  "txt": "1,419"
+ },
+ "coverage.registered.all.reported.pct": {
+  "value": 47.2685,
+  "tex": "47.3",
+  "txt": "47.3"
+ },
+ "coverage.registered.all.reported.pct.int": {
+  "value": 47.2685,
+  "tex": "47",
+  "txt": "47"
+ },
+ "coverage.registered.all.unreported.n": {
+  "value": 1583,
+  "tex": "1{,}583",
+  "txt": "1,583"
+ },
+ "coverage.registered.all.unreported.pct": {
+  "value": 52.7315,
+  "tex": "52.7",
+  "txt": "52.7"
+ },
+ "coverage.registered.all.unreported.pct.int": {
+  "value": 52.7315,
+  "tex": "53",
+  "txt": "53"
+ },
+ "coverage.registered.all.singleArm.reported.n": {
+  "value": 40,
+  "tex": "40",
+  "txt": "40"
+ },
+ "coverage.registered.all.singleArm.reported.pct": {
+  "value": 2.8189,
+  "tex": "2.8",
+  "txt": "2.8"
+ },
+ "coverage.registered.all.singleArm.reported.pct.int": {
+  "value": 2.8189,
+  "tex": "3",
+  "txt": "3"
+ },
+ "coverage.registered.all.singleArm.unreported.n": {
+  "value": 432,
+  "tex": "432",
+  "txt": "432"
+ },
+ "coverage.registered.all.singleArm.unreported.pct": {
+  "value": 27.29,
+  "tex": "27.3",
+  "txt": "27.3"
+ },
+ "coverage.registered.all.singleArm.unreported.pct.int": {
+  "value": 27.29,
+  "tex": "27",
+  "txt": "27"
+ },
+ "coverage.registered.all.comparator.reported": {
+  "value": 1379,
+  "tex": "1{,}379",
+  "txt": "1,379"
+ },
+ "coverage.registered.all.comparator.unreported": {
+  "value": 1151,
+  "tex": "1{,}151",
+  "txt": "1,151"
+ },
+ "coverage.registered.all.comparator.noArmGroups": {
+  "value": 1,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.registered.all.comparator.coverage.pct": {
+  "value": 54.5059,
+  "tex": "54.5",
+  "txt": "54.5"
+ },
+ "coverage.registered.all.comparator.coverage.pct.int": {
+  "value": 54.5059,
+  "tex": "55",
+  "txt": "55"
+ },
+ "coverage.registered.all.comparator.miss.n": {
+  "value": 376,
+  "tex": "376",
+  "txt": "376"
+ },
+ "coverage.registered.all.comparator.miss.pct": {
+  "value": 27.2661,
+  "tex": "27.3",
+  "txt": "27.3"
+ },
+ "coverage.registered.all.comparator.miss.pct.int": {
+  "value": 27.2661,
+  "tex": "27",
+  "txt": "27"
+ },
+ "coverage.registered.all.all.miss.n": {
+  "value": 382,
+  "tex": "382",
+  "txt": "382"
+ },
+ "coverage.registered.all.all.miss.pct": {
+  "value": 26.9204,
+  "tex": "26.9",
+  "txt": "26.9"
+ },
+ "coverage.registered.all.all.miss.pct.int": {
+  "value": 26.9204,
+  "tex": "27",
+  "txt": "27"
+ },
+ "coverage.registered.all.raw.extra": {
+  "value": 0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "coverage.registered.all.raw.eff": {
+  "value": 27.2344,
+  "tex": "27.2",
+  "txt": "27.2"
+ },
+ "coverage.registered.all.raw.eff.int": {
+  "value": 27.2344,
+  "tex": "27",
+  "txt": "27"
+ },
+ "coverage.registered.all.raw.op": {
+  "value": 40.2192,
+  "tex": "40.2",
+  "txt": "40.2"
+ },
+ "coverage.registered.all.raw.op.int": {
+  "value": 40.2192,
+  "tex": "40",
+  "txt": "40"
+ },
+ "coverage.registered.all.raw.com": {
+  "value": 29.5953,
+  "tex": "29.6",
+  "txt": "29.6"
+ },
+ "coverage.registered.all.raw.com.int": {
+  "value": 29.5953,
+  "tex": "30",
+  "txt": "30"
+ },
+ "coverage.registered.all.raw.saf": {
+  "value": 1.9393,
+  "tex": "1.9",
+  "txt": "1.9"
+ },
+ "coverage.registered.all.raw.saf.int": {
+  "value": 1.9393,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.registered.all.raw.unk": {
+  "value": 1.0118,
+  "tex": "1.0",
+  "txt": "1.0"
+ },
+ "coverage.registered.all.raw.unk.int": {
+  "value": 1.0118,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.registered.all.pooled.eff.lo": {
+  "value": 35.0914,
+  "tex": "35.1",
+  "txt": "35.1"
+ },
+ "coverage.registered.all.pooled.eff.lo.int": {
+  "value": 35.0914,
+  "tex": "35",
+  "txt": "35"
+ },
+ "coverage.registered.all.pooled.eff.hi": {
+  "value": 36.3892,
+  "tex": "36.4",
+  "txt": "36.4"
+ },
+ "coverage.registered.all.pooled.eff.hi.int": {
+  "value": 36.3892,
+  "tex": "36",
+  "txt": "36"
+ },
+ "coverage.registered.all.pooled.op.lo": {
+  "value": 35.1591,
+  "tex": "35.2",
+  "txt": "35.2"
+ },
+ "coverage.registered.all.pooled.op.lo.int": {
+  "value": 35.1591,
+  "tex": "35",
+  "txt": "35"
+ },
+ "coverage.registered.all.pooled.op.hi": {
+  "value": 35.8765,
+  "tex": "35.9",
+  "txt": "35.9"
+ },
+ "coverage.registered.all.pooled.op.hi.int": {
+  "value": 35.8765,
+  "tex": "36",
+  "txt": "36"
+ },
+ "coverage.registered.all.pooled.extra": {
+  "value": 314,
+  "tex": "314",
+  "txt": "314"
+ },
+ "coverage.registered.all.pooled.eff": {
+  "value": 35.7369,
+  "tex": "35.7",
+  "txt": "35.7"
+ },
+ "coverage.registered.all.pooled.eff.int": {
+  "value": 35.7369,
+  "tex": "36",
+  "txt": "36"
+ },
+ "coverage.registered.all.pooled.op": {
+  "value": 35.5197,
+  "tex": "35.5",
+  "txt": "35.5"
+ },
+ "coverage.registered.all.pooled.op.int": {
+  "value": 35.5197,
+  "tex": "36",
+  "txt": "36"
+ },
+ "coverage.registered.all.pooled.com": {
+  "value": 26.1371,
+  "tex": "26.1",
+  "txt": "26.1"
+ },
+ "coverage.registered.all.pooled.com.int": {
+  "value": 26.1371,
+  "tex": "26",
+  "txt": "26"
+ },
+ "coverage.registered.all.pooled.saf": {
+  "value": 1.7127,
+  "tex": "1.7",
+  "txt": "1.7"
+ },
+ "coverage.registered.all.pooled.saf.int": {
+  "value": 1.7127,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.registered.all.pooled.unk": {
+  "value": 0.8936,
+  "tex": "0.9",
+  "txt": "0.9"
+ },
+ "coverage.registered.all.pooled.unk.int": {
+  "value": 0.8936,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.registered.all.adjusted.extra": {
+  "value": 351,
+  "tex": "351",
+  "txt": "351"
+ },
+ "coverage.registered.all.adjusted.eff": {
+  "value": 36.6247,
+  "tex": "36.6",
+  "txt": "36.6"
+ },
+ "coverage.registered.all.adjusted.eff.int": {
+  "value": 36.6247,
+  "tex": "37",
+  "txt": "37"
+ },
+ "coverage.registered.all.adjusted.op": {
+  "value": 35.029,
+  "tex": "35.0",
+  "txt": "35.0"
+ },
+ "coverage.registered.all.adjusted.op.int": {
+  "value": 35.029,
+  "tex": "35",
+  "txt": "35"
+ },
+ "coverage.registered.all.adjusted.com": {
+  "value": 25.7761,
+  "tex": "25.8",
+  "txt": "25.8"
+ },
+ "coverage.registered.all.adjusted.com.int": {
+  "value": 25.7761,
+  "tex": "26",
+  "txt": "26"
+ },
+ "coverage.registered.all.adjusted.saf": {
+  "value": 1.689,
+  "tex": "1.7",
+  "txt": "1.7"
+ },
+ "coverage.registered.all.adjusted.saf.int": {
+  "value": 1.689,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.registered.all.adjusted.unk": {
+  "value": 0.8812,
+  "tex": "0.9",
+  "txt": "0.9"
+ },
+ "coverage.registered.all.adjusted.unk.int": {
+  "value": 0.8812,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.registered.all.upper.extra": {
+  "value": 1151,
+  "tex": "1{,}151",
+  "txt": "1,151"
+ },
+ "coverage.registered.all.upper.eff": {
+  "value": 51.0077,
+  "tex": "51.0",
+  "txt": "51.0"
+ },
+ "coverage.registered.all.upper.eff.int": {
+  "value": 51.0077,
+  "tex": "51",
+  "txt": "51"
+ },
+ "coverage.registered.all.upper.op": {
+  "value": 27.0792,
+  "tex": "27.1",
+  "txt": "27.1"
+ },
+ "coverage.registered.all.upper.op.int": {
+  "value": 27.0792,
+  "tex": "27",
+  "txt": "27"
+ },
+ "coverage.registered.all.upper.com": {
+  "value": 19.9262,
+  "tex": "19.9",
+  "txt": "19.9"
+ },
+ "coverage.registered.all.upper.com.int": {
+  "value": 19.9262,
+  "tex": "20",
+  "txt": "20"
+ },
+ "coverage.registered.all.upper.saf": {
+  "value": 1.3057,
+  "tex": "1.3",
+  "txt": "1.3"
+ },
+ "coverage.registered.all.upper.saf.int": {
+  "value": 1.3057,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.registered.all.upper.unk": {
+  "value": 0.6812,
+  "tex": "0.7",
+  "txt": "0.7"
+ },
+ "coverage.registered.all.upper.unk.int": {
+  "value": 0.6812,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.registered.all.withSingleArm.extra": {
+  "value": 426,
+  "tex": "426",
+  "txt": "426"
+ },
+ "coverage.registered.all.withSingleArm.eff": {
+  "value": 38.3164,
+  "tex": "38.3",
+  "txt": "38.3"
+ },
+ "coverage.registered.all.withSingleArm.eff.int": {
+  "value": 38.3164,
+  "tex": "38",
+  "txt": "38"
+ },
+ "coverage.registered.all.withSingleArm.op": {
+  "value": 34.094,
+  "tex": "34.1",
+  "txt": "34.1"
+ },
+ "coverage.registered.all.withSingleArm.op.int": {
+  "value": 34.094,
+  "tex": "34",
+  "txt": "34"
+ },
+ "coverage.registered.all.withSingleArm.com": {
+  "value": 25.088,
+  "tex": "25.1",
+  "txt": "25.1"
+ },
+ "coverage.registered.all.withSingleArm.com.int": {
+  "value": 25.088,
+  "tex": "25",
+  "txt": "25"
+ },
+ "coverage.registered.all.withSingleArm.saf": {
+  "value": 1.6439,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "coverage.registered.all.withSingleArm.saf.int": {
+  "value": 1.6439,
+  "tex": "2",
+  "txt": "2"
+ },
+ "coverage.registered.all.withSingleArm.unk": {
+  "value": 0.8577,
+  "tex": "0.9",
+  "txt": "0.9"
+ },
+ "coverage.registered.all.withSingleArm.unk.int": {
+  "value": 0.8577,
+  "tex": "1",
+  "txt": "1"
+ },
+ "coverage.registered.all.needed.n": {
+  "value": 308,
+  "tex": "308",
+  "txt": "308"
+ },
+ "coverage.registered.all.needed.pct": {
+  "value": 26.7593,
+  "tex": "26.8",
+  "txt": "26.8"
+ },
+ "coverage.registered.all.needed.pct.int": {
+  "value": 26.7593,
+  "tex": "27",
+  "txt": "27"
+ }
+}

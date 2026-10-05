@@ -1,0 +1,67 @@
+{
+ "pass2.input": {
+  "value": 1433,
+  "tex": "1{,}433",
+  "txt": "1,433"
+ },
+ "pass2.blank": {
+  "value": 855,
+  "tex": "855",
+  "txt": "855"
+ },
+ "pass2.modelRead": {
+  "value": 762,
+  "tex": "762",
+  "txt": "762"
+ },
+ "pass2.byModel": {
+  "value": 189,
+  "tex": "189",
+  "txt": "189"
+ },
+ "pass2.byRule": {
+  "value": 647,
+  "tex": "647",
+  "txt": "647"
+ },
+ "pass2.rule.sponsor": {
+  "value": 270,
+  "tex": "270",
+  "txt": "270"
+ },
+ "pass2.rule.sponsor.wide": {
+  "value": 12,
+  "tex": "12",
+  "txt": "12"
+ },
+ "pass2.rule.sponsor.overModel": {
+  "value": 126,
+  "tex": "126",
+  "txt": "126"
+ },
+ "pass2.rule.notStarted": {
+  "value": 299,
+  "tex": "299",
+  "txt": "299"
+ },
+ "pass2.rule.enrollment": {
+  "value": 78,
+  "tex": "78",
+  "txt": "78"
+ },
+ "pass2.rule.enrollmentMax": {
+  "value": 14,
+  "tex": "14",
+  "txt": "14"
+ },
+ "pass2.model.notStarted": {
+  "value": 23,
+  "tex": "23",
+  "txt": "23"
+ },
+ "pass2.unclear": {
+  "value": 597,
+  "tex": "597",
+  "txt": "597"
+ }
+}

@@ -1,0 +1,3957 @@
+{
+ "decomp.enrolled.era.all.n": {
+  "value": 1723,
+  "tex": "1{,}723",
+  "txt": "1,723"
+ },
+ "decomp.enrolled.era.all.completedMiss": {
+  "value": 382,
+  "tex": "382",
+  "txt": "382"
+ },
+ "decomp.enrolled.era.all.futility": {
+  "value": 258,
+  "tex": "258",
+  "txt": "258"
+ },
+ "decomp.enrolled.era.all.completedMissOfEff.pct": {
+  "value": 59.6875,
+  "tex": "59.7",
+  "txt": "59.7"
+ },
+ "decomp.enrolled.era.all.completedMissOfEff.pct.int": {
+  "value": 59.6875,
+  "tex": "60",
+  "txt": "60"
+ },
+ "decomp.enrolled.era.all.benefit": {
+  "value": 30,
+  "tex": "30",
+  "txt": "30"
+ },
+ "decomp.enrolled.era.all.eff.n": {
+  "value": 640,
+  "tex": "640",
+  "txt": "640"
+ },
+ "decomp.enrolled.era.all.eff.pct": {
+  "value": 37.1445,
+  "tex": "37.1",
+  "txt": "37.1"
+ },
+ "decomp.enrolled.era.all.eff.pct.int": {
+  "value": 37.1445,
+  "tex": "37",
+  "txt": "37"
+ },
+ "decomp.enrolled.era.all.eff.lo": {
+  "value": 34.8939,
+  "tex": "34.9",
+  "txt": "34.9"
+ },
+ "decomp.enrolled.era.all.eff.lo.int": {
+  "value": 34.8939,
+  "tex": "35",
+  "txt": "35"
+ },
+ "decomp.enrolled.era.all.eff.hi": {
+  "value": 39.4523,
+  "tex": "39.5",
+  "txt": "39.5"
+ },
+ "decomp.enrolled.era.all.eff.hi.int": {
+  "value": 39.4523,
+  "tex": "39",
+  "txt": "39"
+ },
+ "decomp.enrolled.era.all.op.n": {
+  "value": 629,
+  "tex": "629",
+  "txt": "629"
+ },
+ "decomp.enrolled.era.all.op.pct": {
+  "value": 36.5061,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "decomp.enrolled.era.all.op.pct.int": {
+  "value": 36.5061,
+  "tex": "37",
+  "txt": "37"
+ },
+ "decomp.enrolled.era.all.op.lo": {
+  "value": 34.2651,
+  "tex": "34.3",
+  "txt": "34.3"
+ },
+ "decomp.enrolled.era.all.op.lo.int": {
+  "value": 34.2651,
+  "tex": "34",
+  "txt": "34"
+ },
+ "decomp.enrolled.era.all.op.hi": {
+  "value": 38.8071,
+  "tex": "38.8",
+  "txt": "38.8"
+ },
+ "decomp.enrolled.era.all.op.hi.int": {
+  "value": 38.8071,
+  "tex": "39",
+  "txt": "39"
+ },
+ "decomp.enrolled.era.all.com.n": {
+  "value": 387,
+  "tex": "387",
+  "txt": "387"
+ },
+ "decomp.enrolled.era.all.com.pct": {
+  "value": 22.4608,
+  "tex": "22.5",
+  "txt": "22.5"
+ },
+ "decomp.enrolled.era.all.com.pct.int": {
+  "value": 22.4608,
+  "tex": "22",
+  "txt": "22"
+ },
+ "decomp.enrolled.era.all.com.lo": {
+  "value": 20.5528,
+  "tex": "20.6",
+  "txt": "20.6"
+ },
+ "decomp.enrolled.era.all.com.lo.int": {
+  "value": 20.5528,
+  "tex": "21",
+  "txt": "21"
+ },
+ "decomp.enrolled.era.all.com.hi": {
+  "value": 24.4914,
+  "tex": "24.5",
+  "txt": "24.5"
+ },
+ "decomp.enrolled.era.all.com.hi.int": {
+  "value": 24.4914,
+  "tex": "24",
+  "txt": "24"
+ },
+ "decomp.enrolled.era.all.saf.n": {
+  "value": 43,
+  "tex": "43",
+  "txt": "43"
+ },
+ "decomp.enrolled.era.all.saf.pct": {
+  "value": 2.4956,
+  "tex": "2.5",
+  "txt": "2.5"
+ },
+ "decomp.enrolled.era.all.saf.pct.int": {
+  "value": 2.4956,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.era.all.saf.lo": {
+  "value": 1.858,
+  "tex": "1.9",
+  "txt": "1.9"
+ },
+ "decomp.enrolled.era.all.saf.lo.int": {
+  "value": 1.858,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.era.all.saf.hi": {
+  "value": 3.3446,
+  "tex": "3.3",
+  "txt": "3.3"
+ },
+ "decomp.enrolled.era.all.saf.hi.int": {
+  "value": 3.3446,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.era.all.unk.n": {
+  "value": 24,
+  "tex": "24",
+  "txt": "24"
+ },
+ "decomp.enrolled.era.all.unk.pct": {
+  "value": 1.3929,
+  "tex": "1.4",
+  "txt": "1.4"
+ },
+ "decomp.enrolled.era.all.unk.pct.int": {
+  "value": 1.3929,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.enrolled.era.all.unk.lo": {
+  "value": 0.9378,
+  "tex": "0.9",
+  "txt": "0.9"
+ },
+ "decomp.enrolled.era.all.unk.lo.int": {
+  "value": 0.9378,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.enrolled.era.all.unk.hi": {
+  "value": 2.0643,
+  "tex": "2.1",
+  "txt": "2.1"
+ },
+ "decomp.enrolled.era.all.unk.hi.int": {
+  "value": 2.0643,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.era.big.n": {
+  "value": 382,
+  "tex": "382",
+  "txt": "382"
+ },
+ "decomp.enrolled.era.big.completedMiss": {
+  "value": 138,
+  "tex": "138",
+  "txt": "138"
+ },
+ "decomp.enrolled.era.big.futility": {
+  "value": 67,
+  "tex": "67",
+  "txt": "67"
+ },
+ "decomp.enrolled.era.big.completedMissOfEff.pct": {
+  "value": 67.3171,
+  "tex": "67.3",
+  "txt": "67.3"
+ },
+ "decomp.enrolled.era.big.completedMissOfEff.pct.int": {
+  "value": 67.3171,
+  "tex": "67",
+  "txt": "67"
+ },
+ "decomp.enrolled.era.big.benefit": {
+  "value": 3,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.era.big.eff.n": {
+  "value": 205,
+  "tex": "205",
+  "txt": "205"
+ },
+ "decomp.enrolled.era.big.eff.pct": {
+  "value": 53.6649,
+  "tex": "53.7",
+  "txt": "53.7"
+ },
+ "decomp.enrolled.era.big.eff.pct.int": {
+  "value": 53.6649,
+  "tex": "54",
+  "txt": "54"
+ },
+ "decomp.enrolled.era.big.eff.lo": {
+  "value": 48.6526,
+  "tex": "48.7",
+  "txt": "48.7"
+ },
+ "decomp.enrolled.era.big.eff.lo.int": {
+  "value": 48.6526,
+  "tex": "49",
+  "txt": "49"
+ },
+ "decomp.enrolled.era.big.eff.hi": {
+  "value": 58.6042,
+  "tex": "58.6",
+  "txt": "58.6"
+ },
+ "decomp.enrolled.era.big.eff.hi.int": {
+  "value": 58.6042,
+  "tex": "59",
+  "txt": "59"
+ },
+ "decomp.enrolled.era.big.op.n": {
+  "value": 54,
+  "tex": "54",
+  "txt": "54"
+ },
+ "decomp.enrolled.era.big.op.pct": {
+  "value": 14.1361,
+  "tex": "14.1",
+  "txt": "14.1"
+ },
+ "decomp.enrolled.era.big.op.pct.int": {
+  "value": 14.1361,
+  "tex": "14",
+  "txt": "14"
+ },
+ "decomp.enrolled.era.big.op.lo": {
+  "value": 10.9986,
+  "tex": "11.0",
+  "txt": "11.0"
+ },
+ "decomp.enrolled.era.big.op.lo.int": {
+  "value": 10.9986,
+  "tex": "11",
+  "txt": "11"
+ },
+ "decomp.enrolled.era.big.op.hi": {
+  "value": 17.9878,
+  "tex": "18.0",
+  "txt": "18.0"
+ },
+ "decomp.enrolled.era.big.op.hi.int": {
+  "value": 17.9878,
+  "tex": "18",
+  "txt": "18"
+ },
+ "decomp.enrolled.era.big.com.n": {
+  "value": 105,
+  "tex": "105",
+  "txt": "105"
+ },
+ "decomp.enrolled.era.big.com.pct": {
+  "value": 27.4869,
+  "tex": "27.5",
+  "txt": "27.5"
+ },
+ "decomp.enrolled.era.big.com.pct.int": {
+  "value": 27.4869,
+  "tex": "27",
+  "txt": "27"
+ },
+ "decomp.enrolled.era.big.com.lo": {
+  "value": 23.2507,
+  "tex": "23.3",
+  "txt": "23.3"
+ },
+ "decomp.enrolled.era.big.com.lo.int": {
+  "value": 23.2507,
+  "tex": "23",
+  "txt": "23"
+ },
+ "decomp.enrolled.era.big.com.hi": {
+  "value": 32.1714,
+  "tex": "32.2",
+  "txt": "32.2"
+ },
+ "decomp.enrolled.era.big.com.hi.int": {
+  "value": 32.1714,
+  "tex": "32",
+  "txt": "32"
+ },
+ "decomp.enrolled.era.big.saf.n": {
+  "value": 12,
+  "tex": "12",
+  "txt": "12"
+ },
+ "decomp.enrolled.era.big.saf.pct": {
+  "value": 3.1414,
+  "tex": "3.1",
+  "txt": "3.1"
+ },
+ "decomp.enrolled.era.big.saf.pct.int": {
+  "value": 3.1414,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.era.big.saf.lo": {
+  "value": 1.8059,
+  "tex": "1.8",
+  "txt": "1.8"
+ },
+ "decomp.enrolled.era.big.saf.lo.int": {
+  "value": 1.8059,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.era.big.saf.hi": {
+  "value": 5.4099,
+  "tex": "5.4",
+  "txt": "5.4"
+ },
+ "decomp.enrolled.era.big.saf.hi.int": {
+  "value": 5.4099,
+  "tex": "5",
+  "txt": "5"
+ },
+ "decomp.enrolled.era.big.unk.n": {
+  "value": 6,
+  "tex": "6",
+  "txt": "6"
+ },
+ "decomp.enrolled.era.big.unk.pct": {
+  "value": 1.5707,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "decomp.enrolled.era.big.unk.pct.int": {
+  "value": 1.5707,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.era.big.unk.lo": {
+  "value": 0.7218,
+  "tex": "0.7",
+  "txt": "0.7"
+ },
+ "decomp.enrolled.era.big.unk.lo.int": {
+  "value": 0.7218,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.enrolled.era.big.unk.hi": {
+  "value": 3.3839,
+  "tex": "3.4",
+  "txt": "3.4"
+ },
+ "decomp.enrolled.era.big.unk.hi.int": {
+  "value": 3.3839,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.era.rest.n": {
+  "value": 1341,
+  "tex": "1{,}341",
+  "txt": "1,341"
+ },
+ "decomp.enrolled.era.rest.completedMiss": {
+  "value": 244,
+  "tex": "244",
+  "txt": "244"
+ },
+ "decomp.enrolled.era.rest.futility": {
+  "value": 191,
+  "tex": "191",
+  "txt": "191"
+ },
+ "decomp.enrolled.era.rest.completedMissOfEff.pct": {
+  "value": 56.092,
+  "tex": "56.1",
+  "txt": "56.1"
+ },
+ "decomp.enrolled.era.rest.completedMissOfEff.pct.int": {
+  "value": 56.092,
+  "tex": "56",
+  "txt": "56"
+ },
+ "decomp.enrolled.era.rest.benefit": {
+  "value": 27,
+  "tex": "27",
+  "txt": "27"
+ },
+ "decomp.enrolled.era.rest.eff.n": {
+  "value": 435,
+  "tex": "435",
+  "txt": "435"
+ },
+ "decomp.enrolled.era.rest.eff.pct": {
+  "value": 32.4385,
+  "tex": "32.4",
+  "txt": "32.4"
+ },
+ "decomp.enrolled.era.rest.eff.pct.int": {
+  "value": 32.4385,
+  "tex": "32",
+  "txt": "32"
+ },
+ "decomp.enrolled.era.rest.eff.lo": {
+  "value": 29.9861,
+  "tex": "30.0",
+  "txt": "30.0"
+ },
+ "decomp.enrolled.era.rest.eff.lo.int": {
+  "value": 29.9861,
+  "tex": "30",
+  "txt": "30"
+ },
+ "decomp.enrolled.era.rest.eff.hi": {
+  "value": 34.9912,
+  "tex": "35.0",
+  "txt": "35.0"
+ },
+ "decomp.enrolled.era.rest.eff.hi.int": {
+  "value": 34.9912,
+  "tex": "35",
+  "txt": "35"
+ },
+ "decomp.enrolled.era.rest.op.n": {
+  "value": 575,
+  "tex": "575",
+  "txt": "575"
+ },
+ "decomp.enrolled.era.rest.op.pct": {
+  "value": 42.8784,
+  "tex": "42.9",
+  "txt": "42.9"
+ },
+ "decomp.enrolled.era.rest.op.pct.int": {
+  "value": 42.8784,
+  "tex": "43",
+  "txt": "43"
+ },
+ "decomp.enrolled.era.rest.op.lo": {
+  "value": 40.2536,
+  "tex": "40.3",
+  "txt": "40.3"
+ },
+ "decomp.enrolled.era.rest.op.lo.int": {
+  "value": 40.2536,
+  "tex": "40",
+  "txt": "40"
+ },
+ "decomp.enrolled.era.rest.op.hi": {
+  "value": 45.544,
+  "tex": "45.5",
+  "txt": "45.5"
+ },
+ "decomp.enrolled.era.rest.op.hi.int": {
+  "value": 45.544,
+  "tex": "46",
+  "txt": "46"
+ },
+ "decomp.enrolled.era.rest.com.n": {
+  "value": 282,
+  "tex": "282",
+  "txt": "282"
+ },
+ "decomp.enrolled.era.rest.com.pct": {
+  "value": 21.0291,
+  "tex": "21.0",
+  "txt": "21.0"
+ },
+ "decomp.enrolled.era.rest.com.pct.int": {
+  "value": 21.0291,
+  "tex": "21",
+  "txt": "21"
+ },
+ "decomp.enrolled.era.rest.com.lo": {
+  "value": 18.9322,
+  "tex": "18.9",
+  "txt": "18.9"
+ },
+ "decomp.enrolled.era.rest.com.lo.int": {
+  "value": 18.9322,
+  "tex": "19",
+  "txt": "19"
+ },
+ "decomp.enrolled.era.rest.com.hi": {
+  "value": 23.2914,
+  "tex": "23.3",
+  "txt": "23.3"
+ },
+ "decomp.enrolled.era.rest.com.hi.int": {
+  "value": 23.2914,
+  "tex": "23",
+  "txt": "23"
+ },
+ "decomp.enrolled.era.rest.saf.n": {
+  "value": 31,
+  "tex": "31",
+  "txt": "31"
+ },
+ "decomp.enrolled.era.rest.saf.pct": {
+  "value": 2.3117,
+  "tex": "2.3",
+  "txt": "2.3"
+ },
+ "decomp.enrolled.era.rest.saf.pct.int": {
+  "value": 2.3117,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.era.rest.saf.lo": {
+  "value": 1.6333,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "decomp.enrolled.era.rest.saf.lo.int": {
+  "value": 1.6333,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.era.rest.saf.hi": {
+  "value": 3.2626,
+  "tex": "3.3",
+  "txt": "3.3"
+ },
+ "decomp.enrolled.era.rest.saf.hi.int": {
+  "value": 3.2626,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.era.rest.unk.n": {
+  "value": 18,
+  "tex": "18",
+  "txt": "18"
+ },
+ "decomp.enrolled.era.rest.unk.pct": {
+  "value": 1.3423,
+  "tex": "1.3",
+  "txt": "1.3"
+ },
+ "decomp.enrolled.era.rest.unk.pct.int": {
+  "value": 1.3423,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.enrolled.era.rest.unk.lo": {
+  "value": 0.8507,
+  "tex": "0.9",
+  "txt": "0.9"
+ },
+ "decomp.enrolled.era.rest.unk.lo.int": {
+  "value": 0.8507,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.enrolled.era.rest.unk.hi": {
+  "value": 2.1118,
+  "tex": "2.1",
+  "txt": "2.1"
+ },
+ "decomp.enrolled.era.rest.unk.hi.int": {
+  "value": 2.1118,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.complete.all.n": {
+  "value": 1590,
+  "tex": "1{,}590",
+  "txt": "1,590"
+ },
+ "decomp.enrolled.complete.all.completedMiss": {
+  "value": 376,
+  "tex": "376",
+  "txt": "376"
+ },
+ "decomp.enrolled.complete.all.futility": {
+  "value": 240,
+  "tex": "240",
+  "txt": "240"
+ },
+ "decomp.enrolled.complete.all.completedMissOfEff.pct": {
+  "value": 61.039,
+  "tex": "61.0",
+  "txt": "61.0"
+ },
+ "decomp.enrolled.complete.all.completedMissOfEff.pct.int": {
+  "value": 61.039,
+  "tex": "61",
+  "txt": "61"
+ },
+ "decomp.enrolled.complete.all.benefit": {
+  "value": 28,
+  "tex": "28",
+  "txt": "28"
+ },
+ "decomp.enrolled.complete.all.eff.n": {
+  "value": 616,
+  "tex": "616",
+  "txt": "616"
+ },
+ "decomp.enrolled.complete.all.eff.pct": {
+  "value": 38.7421,
+  "tex": "38.7",
+  "txt": "38.7"
+ },
+ "decomp.enrolled.complete.all.eff.pct.int": {
+  "value": 38.7421,
+  "tex": "39",
+  "txt": "39"
+ },
+ "decomp.enrolled.complete.all.eff.lo": {
+  "value": 36.3774,
+  "tex": "36.4",
+  "txt": "36.4"
+ },
+ "decomp.enrolled.complete.all.eff.lo.int": {
+  "value": 36.3774,
+  "tex": "36",
+  "txt": "36"
+ },
+ "decomp.enrolled.complete.all.eff.hi": {
+  "value": 41.1611,
+  "tex": "41.2",
+  "txt": "41.2"
+ },
+ "decomp.enrolled.complete.all.eff.hi.int": {
+  "value": 41.1611,
+  "tex": "41",
+  "txt": "41"
+ },
+ "decomp.enrolled.complete.all.op.n": {
+  "value": 578,
+  "tex": "578",
+  "txt": "578"
+ },
+ "decomp.enrolled.complete.all.op.pct": {
+  "value": 36.3522,
+  "tex": "36.4",
+  "txt": "36.4"
+ },
+ "decomp.enrolled.complete.all.op.pct.int": {
+  "value": 36.3522,
+  "tex": "36",
+  "txt": "36"
+ },
+ "decomp.enrolled.complete.all.op.lo": {
+  "value": 34.0234,
+  "tex": "34.0",
+  "txt": "34.0"
+ },
+ "decomp.enrolled.complete.all.op.lo.int": {
+  "value": 34.0234,
+  "tex": "34",
+  "txt": "34"
+ },
+ "decomp.enrolled.complete.all.op.hi": {
+  "value": 38.7468,
+  "tex": "38.7",
+  "txt": "38.7"
+ },
+ "decomp.enrolled.complete.all.op.hi.int": {
+  "value": 38.7468,
+  "tex": "39",
+  "txt": "39"
+ },
+ "decomp.enrolled.complete.all.com.n": {
+  "value": 339,
+  "tex": "339",
+  "txt": "339"
+ },
+ "decomp.enrolled.complete.all.com.pct": {
+  "value": 21.3208,
+  "tex": "21.3",
+  "txt": "21.3"
+ },
+ "decomp.enrolled.complete.all.com.pct.int": {
+  "value": 21.3208,
+  "tex": "21",
+  "txt": "21"
+ },
+ "decomp.enrolled.complete.all.com.lo": {
+  "value": 19.3779,
+  "tex": "19.4",
+  "txt": "19.4"
+ },
+ "decomp.enrolled.complete.all.com.lo.int": {
+  "value": 19.3779,
+  "tex": "19",
+  "txt": "19"
+ },
+ "decomp.enrolled.complete.all.com.hi": {
+  "value": 23.4018,
+  "tex": "23.4",
+  "txt": "23.4"
+ },
+ "decomp.enrolled.complete.all.com.hi.int": {
+  "value": 23.4018,
+  "tex": "23",
+  "txt": "23"
+ },
+ "decomp.enrolled.complete.all.saf.n": {
+  "value": 38,
+  "tex": "38",
+  "txt": "38"
+ },
+ "decomp.enrolled.complete.all.saf.pct": {
+  "value": 2.3899,
+  "tex": "2.4",
+  "txt": "2.4"
+ },
+ "decomp.enrolled.complete.all.saf.pct.int": {
+  "value": 2.3899,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.complete.all.saf.lo": {
+  "value": 1.7461,
+  "tex": "1.7",
+  "txt": "1.7"
+ },
+ "decomp.enrolled.complete.all.saf.lo.int": {
+  "value": 1.7461,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.complete.all.saf.hi": {
+  "value": 3.2633,
+  "tex": "3.3",
+  "txt": "3.3"
+ },
+ "decomp.enrolled.complete.all.saf.hi.int": {
+  "value": 3.2633,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.complete.all.unk.n": {
+  "value": 19,
+  "tex": "19",
+  "txt": "19"
+ },
+ "decomp.enrolled.complete.all.unk.pct": {
+  "value": 1.195,
+  "tex": "1.2",
+  "txt": "1.2"
+ },
+ "decomp.enrolled.complete.all.unk.pct.int": {
+  "value": 1.195,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.enrolled.complete.all.unk.lo": {
+  "value": 0.7663,
+  "tex": "0.8",
+  "txt": "0.8"
+ },
+ "decomp.enrolled.complete.all.unk.lo.int": {
+  "value": 0.7663,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.enrolled.complete.all.unk.hi": {
+  "value": 1.8589,
+  "tex": "1.9",
+  "txt": "1.9"
+ },
+ "decomp.enrolled.complete.all.unk.hi.int": {
+  "value": 1.8589,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.complete.big.n": {
+  "value": 356,
+  "tex": "356",
+  "txt": "356"
+ },
+ "decomp.enrolled.complete.big.completedMiss": {
+  "value": 135,
+  "tex": "135",
+  "txt": "135"
+ },
+ "decomp.enrolled.complete.big.futility": {
+  "value": 64,
+  "tex": "64",
+  "txt": "64"
+ },
+ "decomp.enrolled.complete.big.completedMissOfEff.pct": {
+  "value": 67.8392,
+  "tex": "67.8",
+  "txt": "67.8"
+ },
+ "decomp.enrolled.complete.big.completedMissOfEff.pct.int": {
+  "value": 67.8392,
+  "tex": "68",
+  "txt": "68"
+ },
+ "decomp.enrolled.complete.big.benefit": {
+  "value": 3,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.complete.big.eff.n": {
+  "value": 199,
+  "tex": "199",
+  "txt": "199"
+ },
+ "decomp.enrolled.complete.big.eff.pct": {
+  "value": 55.8989,
+  "tex": "55.9",
+  "txt": "55.9"
+ },
+ "decomp.enrolled.complete.big.eff.pct.int": {
+  "value": 55.8989,
+  "tex": "56",
+  "txt": "56"
+ },
+ "decomp.enrolled.complete.big.eff.lo": {
+  "value": 50.7054,
+  "tex": "50.7",
+  "txt": "50.7"
+ },
+ "decomp.enrolled.complete.big.eff.lo.int": {
+  "value": 50.7054,
+  "tex": "51",
+  "txt": "51"
+ },
+ "decomp.enrolled.complete.big.eff.hi": {
+  "value": 60.9664,
+  "tex": "61.0",
+  "txt": "61.0"
+ },
+ "decomp.enrolled.complete.big.eff.hi.int": {
+  "value": 60.9664,
+  "tex": "61",
+  "txt": "61"
+ },
+ "decomp.enrolled.complete.big.op.n": {
+  "value": 51,
+  "tex": "51",
+  "txt": "51"
+ },
+ "decomp.enrolled.complete.big.op.pct": {
+  "value": 14.3258,
+  "tex": "14.3",
+  "txt": "14.3"
+ },
+ "decomp.enrolled.complete.big.op.pct.int": {
+  "value": 14.3258,
+  "tex": "14",
+  "txt": "14"
+ },
+ "decomp.enrolled.complete.big.op.lo": {
+  "value": 11.0669,
+  "tex": "11.1",
+  "txt": "11.1"
+ },
+ "decomp.enrolled.complete.big.op.lo.int": {
+  "value": 11.0669,
+  "tex": "11",
+  "txt": "11"
+ },
+ "decomp.enrolled.complete.big.op.hi": {
+  "value": 18.3465,
+  "tex": "18.3",
+  "txt": "18.3"
+ },
+ "decomp.enrolled.complete.big.op.hi.int": {
+  "value": 18.3465,
+  "tex": "18",
+  "txt": "18"
+ },
+ "decomp.enrolled.complete.big.com.n": {
+  "value": 90,
+  "tex": "90",
+  "txt": "90"
+ },
+ "decomp.enrolled.complete.big.com.pct": {
+  "value": 25.2809,
+  "tex": "25.3",
+  "txt": "25.3"
+ },
+ "decomp.enrolled.complete.big.com.pct.int": {
+  "value": 25.2809,
+  "tex": "25",
+  "txt": "25"
+ },
+ "decomp.enrolled.complete.big.com.lo": {
+  "value": 21.0464,
+  "tex": "21.0",
+  "txt": "21.0"
+ },
+ "decomp.enrolled.complete.big.com.lo.int": {
+  "value": 21.0464,
+  "tex": "21",
+  "txt": "21"
+ },
+ "decomp.enrolled.complete.big.com.hi": {
+  "value": 30.0432,
+  "tex": "30.0",
+  "txt": "30.0"
+ },
+ "decomp.enrolled.complete.big.com.hi.int": {
+  "value": 30.0432,
+  "tex": "30",
+  "txt": "30"
+ },
+ "decomp.enrolled.complete.big.saf.n": {
+  "value": 12,
+  "tex": "12",
+  "txt": "12"
+ },
+ "decomp.enrolled.complete.big.saf.pct": {
+  "value": 3.3708,
+  "tex": "3.4",
+  "txt": "3.4"
+ },
+ "decomp.enrolled.complete.big.saf.pct.int": {
+  "value": 3.3708,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.complete.big.saf.lo": {
+  "value": 1.9385,
+  "tex": "1.9",
+  "txt": "1.9"
+ },
+ "decomp.enrolled.complete.big.saf.lo.int": {
+  "value": 1.9385,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.complete.big.saf.hi": {
+  "value": 5.7986,
+  "tex": "5.8",
+  "txt": "5.8"
+ },
+ "decomp.enrolled.complete.big.saf.hi.int": {
+  "value": 5.7986,
+  "tex": "6",
+  "txt": "6"
+ },
+ "decomp.enrolled.complete.big.unk.n": {
+  "value": 4,
+  "tex": "4",
+  "txt": "4"
+ },
+ "decomp.enrolled.complete.big.unk.pct": {
+  "value": 1.1236,
+  "tex": "1.1",
+  "txt": "1.1"
+ },
+ "decomp.enrolled.complete.big.unk.pct.int": {
+  "value": 1.1236,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.enrolled.complete.big.unk.lo": {
+  "value": 0.4378,
+  "tex": "0.4",
+  "txt": "0.4"
+ },
+ "decomp.enrolled.complete.big.unk.lo.int": {
+  "value": 0.4378,
+  "tex": "0",
+  "txt": "0"
+ },
+ "decomp.enrolled.complete.big.unk.hi": {
+  "value": 2.853,
+  "tex": "2.9",
+  "txt": "2.9"
+ },
+ "decomp.enrolled.complete.big.unk.hi.int": {
+  "value": 2.853,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.complete.rest.n": {
+  "value": 1234,
+  "tex": "1{,}234",
+  "txt": "1,234"
+ },
+ "decomp.enrolled.complete.rest.completedMiss": {
+  "value": 241,
+  "tex": "241",
+  "txt": "241"
+ },
+ "decomp.enrolled.complete.rest.futility": {
+  "value": 176,
+  "tex": "176",
+  "txt": "176"
+ },
+ "decomp.enrolled.complete.rest.completedMissOfEff.pct": {
+  "value": 57.7938,
+  "tex": "57.8",
+  "txt": "57.8"
+ },
+ "decomp.enrolled.complete.rest.completedMissOfEff.pct.int": {
+  "value": 57.7938,
+  "tex": "58",
+  "txt": "58"
+ },
+ "decomp.enrolled.complete.rest.benefit": {
+  "value": 25,
+  "tex": "25",
+  "txt": "25"
+ },
+ "decomp.enrolled.complete.rest.eff.n": {
+  "value": 417,
+  "tex": "417",
+  "txt": "417"
+ },
+ "decomp.enrolled.complete.rest.eff.pct": {
+  "value": 33.7925,
+  "tex": "33.8",
+  "txt": "33.8"
+ },
+ "decomp.enrolled.complete.rest.eff.pct.int": {
+  "value": 33.7925,
+  "tex": "34",
+  "txt": "34"
+ },
+ "decomp.enrolled.complete.rest.eff.lo": {
+  "value": 31.2073,
+  "tex": "31.2",
+  "txt": "31.2"
+ },
+ "decomp.enrolled.complete.rest.eff.lo.int": {
+  "value": 31.2073,
+  "tex": "31",
+  "txt": "31"
+ },
+ "decomp.enrolled.complete.rest.eff.hi": {
+  "value": 36.4784,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "decomp.enrolled.complete.rest.eff.hi.int": {
+  "value": 36.4784,
+  "tex": "36",
+  "txt": "36"
+ },
+ "decomp.enrolled.complete.rest.op.n": {
+  "value": 527,
+  "tex": "527",
+  "txt": "527"
+ },
+ "decomp.enrolled.complete.rest.op.pct": {
+  "value": 42.7066,
+  "tex": "42.7",
+  "txt": "42.7"
+ },
+ "decomp.enrolled.complete.rest.op.pct.int": {
+  "value": 42.7066,
+  "tex": "43",
+  "txt": "43"
+ },
+ "decomp.enrolled.complete.rest.op.lo": {
+  "value": 39.9735,
+  "tex": "40.0",
+  "txt": "40.0"
+ },
+ "decomp.enrolled.complete.rest.op.lo.int": {
+  "value": 39.9735,
+  "tex": "40",
+  "txt": "40"
+ },
+ "decomp.enrolled.complete.rest.op.hi": {
+  "value": 45.485,
+  "tex": "45.5",
+  "txt": "45.5"
+ },
+ "decomp.enrolled.complete.rest.op.hi.int": {
+  "value": 45.485,
+  "tex": "45",
+  "txt": "45"
+ },
+ "decomp.enrolled.complete.rest.com.n": {
+  "value": 249,
+  "tex": "249",
+  "txt": "249"
+ },
+ "decomp.enrolled.complete.rest.com.pct": {
+  "value": 20.1783,
+  "tex": "20.2",
+  "txt": "20.2"
+ },
+ "decomp.enrolled.complete.rest.com.pct.int": {
+  "value": 20.1783,
+  "tex": "20",
+  "txt": "20"
+ },
+ "decomp.enrolled.complete.rest.com.lo": {
+  "value": 18.0332,
+  "tex": "18.0",
+  "txt": "18.0"
+ },
+ "decomp.enrolled.complete.rest.com.lo.int": {
+  "value": 18.0332,
+  "tex": "18",
+  "txt": "18"
+ },
+ "decomp.enrolled.complete.rest.com.hi": {
+  "value": 22.5085,
+  "tex": "22.5",
+  "txt": "22.5"
+ },
+ "decomp.enrolled.complete.rest.com.hi.int": {
+  "value": 22.5085,
+  "tex": "23",
+  "txt": "23"
+ },
+ "decomp.enrolled.complete.rest.saf.n": {
+  "value": 26,
+  "tex": "26",
+  "txt": "26"
+ },
+ "decomp.enrolled.complete.rest.saf.pct": {
+  "value": 2.107,
+  "tex": "2.1",
+  "txt": "2.1"
+ },
+ "decomp.enrolled.complete.rest.saf.pct.int": {
+  "value": 2.107,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.complete.rest.saf.lo": {
+  "value": 1.4418,
+  "tex": "1.4",
+  "txt": "1.4"
+ },
+ "decomp.enrolled.complete.rest.saf.lo.int": {
+  "value": 1.4418,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.enrolled.complete.rest.saf.hi": {
+  "value": 3.0694,
+  "tex": "3.1",
+  "txt": "3.1"
+ },
+ "decomp.enrolled.complete.rest.saf.hi.int": {
+  "value": 3.0694,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.complete.rest.unk.n": {
+  "value": 15,
+  "tex": "15",
+  "txt": "15"
+ },
+ "decomp.enrolled.complete.rest.unk.pct": {
+  "value": 1.2156,
+  "tex": "1.2",
+  "txt": "1.2"
+ },
+ "decomp.enrolled.complete.rest.unk.pct.int": {
+  "value": 1.2156,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.enrolled.complete.rest.unk.lo": {
+  "value": 0.738,
+  "tex": "0.7",
+  "txt": "0.7"
+ },
+ "decomp.enrolled.complete.rest.unk.lo.int": {
+  "value": 0.738,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.enrolled.complete.rest.unk.hi": {
+  "value": 1.9959,
+  "tex": "2.0",
+  "txt": "2.0"
+ },
+ "decomp.enrolled.complete.rest.unk.hi.int": {
+  "value": 1.9959,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.all.all.n": {
+  "value": 5826,
+  "tex": "5{,}826",
+  "txt": "5,826"
+ },
+ "decomp.enrolled.all.all.completedMiss": {
+  "value": 1668,
+  "tex": "1{,}668",
+  "txt": "1,668"
+ },
+ "decomp.enrolled.all.all.futility": {
+  "value": 612,
+  "tex": "612",
+  "txt": "612"
+ },
+ "decomp.enrolled.all.all.completedMissOfEff.pct": {
+  "value": 73.1579,
+  "tex": "73.2",
+  "txt": "73.2"
+ },
+ "decomp.enrolled.all.all.completedMissOfEff.pct.int": {
+  "value": 73.1579,
+  "tex": "73",
+  "txt": "73"
+ },
+ "decomp.enrolled.all.all.benefit": {
+  "value": 100,
+  "tex": "100",
+  "txt": "100"
+ },
+ "decomp.enrolled.all.all.eff.n": {
+  "value": 2280,
+  "tex": "2{,}280",
+  "txt": "2,280"
+ },
+ "decomp.enrolled.all.all.eff.pct": {
+  "value": 39.1349,
+  "tex": "39.1",
+  "txt": "39.1"
+ },
+ "decomp.enrolled.all.all.eff.pct.int": {
+  "value": 39.1349,
+  "tex": "39",
+  "txt": "39"
+ },
+ "decomp.enrolled.all.all.eff.lo": {
+  "value": 37.8892,
+  "tex": "37.9",
+  "txt": "37.9"
+ },
+ "decomp.enrolled.all.all.eff.lo.int": {
+  "value": 37.8892,
+  "tex": "38",
+  "txt": "38"
+ },
+ "decomp.enrolled.all.all.eff.hi": {
+  "value": 40.3949,
+  "tex": "40.4",
+  "txt": "40.4"
+ },
+ "decomp.enrolled.all.all.eff.hi.int": {
+  "value": 40.3949,
+  "tex": "40",
+  "txt": "40"
+ },
+ "decomp.enrolled.all.all.op.n": {
+  "value": 2057,
+  "tex": "2{,}057",
+  "txt": "2,057"
+ },
+ "decomp.enrolled.all.all.op.pct": {
+  "value": 35.3072,
+  "tex": "35.3",
+  "txt": "35.3"
+ },
+ "decomp.enrolled.all.all.op.pct.int": {
+  "value": 35.3072,
+  "tex": "35",
+  "txt": "35"
+ },
+ "decomp.enrolled.all.all.op.lo": {
+  "value": 34.09,
+  "tex": "34.1",
+  "txt": "34.1"
+ },
+ "decomp.enrolled.all.all.op.lo.int": {
+  "value": 34.09,
+  "tex": "34",
+  "txt": "34"
+ },
+ "decomp.enrolled.all.all.op.hi": {
+  "value": 36.5438,
+  "tex": "36.5",
+  "txt": "36.5"
+ },
+ "decomp.enrolled.all.all.op.hi.int": {
+  "value": 36.5438,
+  "tex": "37",
+  "txt": "37"
+ },
+ "decomp.enrolled.all.all.com.n": {
+  "value": 756,
+  "tex": "756",
+  "txt": "756"
+ },
+ "decomp.enrolled.all.all.com.pct": {
+  "value": 12.9763,
+  "tex": "13.0",
+  "txt": "13.0"
+ },
+ "decomp.enrolled.all.all.com.pct.int": {
+  "value": 12.9763,
+  "tex": "13",
+  "txt": "13"
+ },
+ "decomp.enrolled.all.all.com.lo": {
+  "value": 12.1377,
+  "tex": "12.1",
+  "txt": "12.1"
+ },
+ "decomp.enrolled.all.all.com.lo.int": {
+  "value": 12.1377,
+  "tex": "12",
+  "txt": "12"
+ },
+ "decomp.enrolled.all.all.com.hi": {
+  "value": 13.8637,
+  "tex": "13.9",
+  "txt": "13.9"
+ },
+ "decomp.enrolled.all.all.com.hi.int": {
+  "value": 13.8637,
+  "tex": "14",
+  "txt": "14"
+ },
+ "decomp.enrolled.all.all.saf.n": {
+  "value": 175,
+  "tex": "175",
+  "txt": "175"
+ },
+ "decomp.enrolled.all.all.saf.pct": {
+  "value": 3.0038,
+  "tex": "3.0",
+  "txt": "3.0"
+ },
+ "decomp.enrolled.all.all.saf.pct.int": {
+  "value": 3.0038,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.all.all.saf.lo": {
+  "value": 2.5955,
+  "tex": "2.6",
+  "txt": "2.6"
+ },
+ "decomp.enrolled.all.all.saf.lo.int": {
+  "value": 2.5955,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.all.all.saf.hi": {
+  "value": 3.474,
+  "tex": "3.5",
+  "txt": "3.5"
+ },
+ "decomp.enrolled.all.all.saf.hi.int": {
+  "value": 3.474,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.all.all.unk.n": {
+  "value": 558,
+  "tex": "558",
+  "txt": "558"
+ },
+ "decomp.enrolled.all.all.unk.pct": {
+  "value": 9.5778,
+  "tex": "9.6",
+  "txt": "9.6"
+ },
+ "decomp.enrolled.all.all.unk.pct.int": {
+  "value": 9.5778,
+  "tex": "10",
+  "txt": "10"
+ },
+ "decomp.enrolled.all.all.unk.lo": {
+  "value": 8.8485,
+  "tex": "8.8",
+  "txt": "8.8"
+ },
+ "decomp.enrolled.all.all.unk.lo.int": {
+  "value": 8.8485,
+  "tex": "9",
+  "txt": "9"
+ },
+ "decomp.enrolled.all.all.unk.hi": {
+  "value": 10.3603,
+  "tex": "10.4",
+  "txt": "10.4"
+ },
+ "decomp.enrolled.all.all.unk.hi.int": {
+  "value": 10.3603,
+  "tex": "10",
+  "txt": "10"
+ },
+ "decomp.enrolled.all.big.n": {
+  "value": 1607,
+  "tex": "1{,}607",
+  "txt": "1,607"
+ },
+ "decomp.enrolled.all.big.completedMiss": {
+  "value": 671,
+  "tex": "671",
+  "txt": "671"
+ },
+ "decomp.enrolled.all.big.futility": {
+  "value": 182,
+  "tex": "182",
+  "txt": "182"
+ },
+ "decomp.enrolled.all.big.completedMissOfEff.pct": {
+  "value": 78.6635,
+  "tex": "78.7",
+  "txt": "78.7"
+ },
+ "decomp.enrolled.all.big.completedMissOfEff.pct.int": {
+  "value": 78.6635,
+  "tex": "79",
+  "txt": "79"
+ },
+ "decomp.enrolled.all.big.benefit": {
+  "value": 21,
+  "tex": "21",
+  "txt": "21"
+ },
+ "decomp.enrolled.all.big.eff.n": {
+  "value": 853,
+  "tex": "853",
+  "txt": "853"
+ },
+ "decomp.enrolled.all.big.eff.pct": {
+  "value": 53.0803,
+  "tex": "53.1",
+  "txt": "53.1"
+ },
+ "decomp.enrolled.all.big.eff.pct.int": {
+  "value": 53.0803,
+  "tex": "53",
+  "txt": "53"
+ },
+ "decomp.enrolled.all.big.eff.lo": {
+  "value": 50.6358,
+  "tex": "50.6",
+  "txt": "50.6"
+ },
+ "decomp.enrolled.all.big.eff.lo.int": {
+  "value": 50.6358,
+  "tex": "51",
+  "txt": "51"
+ },
+ "decomp.enrolled.all.big.eff.hi": {
+  "value": 55.51,
+  "tex": "55.5",
+  "txt": "55.5"
+ },
+ "decomp.enrolled.all.big.eff.hi.int": {
+  "value": 55.51,
+  "tex": "56",
+  "txt": "56"
+ },
+ "decomp.enrolled.all.big.op.n": {
+  "value": 295,
+  "tex": "295",
+  "txt": "295"
+ },
+ "decomp.enrolled.all.big.op.pct": {
+  "value": 18.3572,
+  "tex": "18.4",
+  "txt": "18.4"
+ },
+ "decomp.enrolled.all.big.op.pct.int": {
+  "value": 18.3572,
+  "tex": "18",
+  "txt": "18"
+ },
+ "decomp.enrolled.all.big.op.lo": {
+  "value": 16.5406,
+  "tex": "16.5",
+  "txt": "16.5"
+ },
+ "decomp.enrolled.all.big.op.lo.int": {
+  "value": 16.5406,
+  "tex": "17",
+  "txt": "17"
+ },
+ "decomp.enrolled.all.big.op.hi": {
+  "value": 20.3247,
+  "tex": "20.3",
+  "txt": "20.3"
+ },
+ "decomp.enrolled.all.big.op.hi.int": {
+  "value": 20.3247,
+  "tex": "20",
+  "txt": "20"
+ },
+ "decomp.enrolled.all.big.com.n": {
+  "value": 228,
+  "tex": "228",
+  "txt": "228"
+ },
+ "decomp.enrolled.all.big.com.pct": {
+  "value": 14.1879,
+  "tex": "14.2",
+  "txt": "14.2"
+ },
+ "decomp.enrolled.all.big.com.pct.int": {
+  "value": 14.1879,
+  "tex": "14",
+  "txt": "14"
+ },
+ "decomp.enrolled.all.big.com.lo": {
+  "value": 12.5672,
+  "tex": "12.6",
+  "txt": "12.6"
+ },
+ "decomp.enrolled.all.big.com.lo.int": {
+  "value": 12.5672,
+  "tex": "13",
+  "txt": "13"
+ },
+ "decomp.enrolled.all.big.com.hi": {
+  "value": 15.9794,
+  "tex": "16.0",
+  "txt": "16.0"
+ },
+ "decomp.enrolled.all.big.com.hi.int": {
+  "value": 15.9794,
+  "tex": "16",
+  "txt": "16"
+ },
+ "decomp.enrolled.all.big.saf.n": {
+  "value": 73,
+  "tex": "73",
+  "txt": "73"
+ },
+ "decomp.enrolled.all.big.saf.pct": {
+  "value": 4.5426,
+  "tex": "4.5",
+  "txt": "4.5"
+ },
+ "decomp.enrolled.all.big.saf.pct.int": {
+  "value": 4.5426,
+  "tex": "5",
+  "txt": "5"
+ },
+ "decomp.enrolled.all.big.saf.lo": {
+  "value": 3.6283,
+  "tex": "3.6",
+  "txt": "3.6"
+ },
+ "decomp.enrolled.all.big.saf.lo.int": {
+  "value": 3.6283,
+  "tex": "4",
+  "txt": "4"
+ },
+ "decomp.enrolled.all.big.saf.hi": {
+  "value": 5.6737,
+  "tex": "5.7",
+  "txt": "5.7"
+ },
+ "decomp.enrolled.all.big.saf.hi.int": {
+  "value": 5.6737,
+  "tex": "6",
+  "txt": "6"
+ },
+ "decomp.enrolled.all.big.unk.n": {
+  "value": 158,
+  "tex": "158",
+  "txt": "158"
+ },
+ "decomp.enrolled.all.big.unk.pct": {
+  "value": 9.832,
+  "tex": "9.8",
+  "txt": "9.8"
+ },
+ "decomp.enrolled.all.big.unk.pct.int": {
+  "value": 9.832,
+  "tex": "10",
+  "txt": "10"
+ },
+ "decomp.enrolled.all.big.unk.lo": {
+  "value": 8.4706,
+  "tex": "8.5",
+  "txt": "8.5"
+ },
+ "decomp.enrolled.all.big.unk.lo.int": {
+  "value": 8.4706,
+  "tex": "8",
+  "txt": "8"
+ },
+ "decomp.enrolled.all.big.unk.hi": {
+  "value": 11.385,
+  "tex": "11.4",
+  "txt": "11.4"
+ },
+ "decomp.enrolled.all.big.unk.hi.int": {
+  "value": 11.385,
+  "tex": "11",
+  "txt": "11"
+ },
+ "decomp.enrolled.all.rest.n": {
+  "value": 4219,
+  "tex": "4{,}219",
+  "txt": "4,219"
+ },
+ "decomp.enrolled.all.rest.completedMiss": {
+  "value": 997,
+  "tex": "997",
+  "txt": "997"
+ },
+ "decomp.enrolled.all.rest.futility": {
+  "value": 430,
+  "tex": "430",
+  "txt": "430"
+ },
+ "decomp.enrolled.all.rest.completedMissOfEff.pct": {
+  "value": 69.8669,
+  "tex": "69.9",
+  "txt": "69.9"
+ },
+ "decomp.enrolled.all.rest.completedMissOfEff.pct.int": {
+  "value": 69.8669,
+  "tex": "70",
+  "txt": "70"
+ },
+ "decomp.enrolled.all.rest.benefit": {
+  "value": 79,
+  "tex": "79",
+  "txt": "79"
+ },
+ "decomp.enrolled.all.rest.eff.n": {
+  "value": 1427,
+  "tex": "1{,}427",
+  "txt": "1,427"
+ },
+ "decomp.enrolled.all.rest.eff.pct": {
+  "value": 33.8232,
+  "tex": "33.8",
+  "txt": "33.8"
+ },
+ "decomp.enrolled.all.rest.eff.pct.int": {
+  "value": 33.8232,
+  "tex": "34",
+  "txt": "34"
+ },
+ "decomp.enrolled.all.rest.eff.lo": {
+  "value": 32.4109,
+  "tex": "32.4",
+  "txt": "32.4"
+ },
+ "decomp.enrolled.all.rest.eff.lo.int": {
+  "value": 32.4109,
+  "tex": "32",
+  "txt": "32"
+ },
+ "decomp.enrolled.all.rest.eff.hi": {
+  "value": 35.2649,
+  "tex": "35.3",
+  "txt": "35.3"
+ },
+ "decomp.enrolled.all.rest.eff.hi.int": {
+  "value": 35.2649,
+  "tex": "35",
+  "txt": "35"
+ },
+ "decomp.enrolled.all.rest.op.n": {
+  "value": 1762,
+  "tex": "1{,}762",
+  "txt": "1,762"
+ },
+ "decomp.enrolled.all.rest.op.pct": {
+  "value": 41.7635,
+  "tex": "41.8",
+  "txt": "41.8"
+ },
+ "decomp.enrolled.all.rest.op.pct.int": {
+  "value": 41.7635,
+  "tex": "42",
+  "txt": "42"
+ },
+ "decomp.enrolled.all.rest.op.lo": {
+  "value": 40.2835,
+  "tex": "40.3",
+  "txt": "40.3"
+ },
+ "decomp.enrolled.all.rest.op.lo.int": {
+  "value": 40.2835,
+  "tex": "40",
+  "txt": "40"
+ },
+ "decomp.enrolled.all.rest.op.hi": {
+  "value": 43.2584,
+  "tex": "43.3",
+  "txt": "43.3"
+ },
+ "decomp.enrolled.all.rest.op.hi.int": {
+  "value": 43.2584,
+  "tex": "43",
+  "txt": "43"
+ },
+ "decomp.enrolled.all.rest.com.n": {
+  "value": 528,
+  "tex": "528",
+  "txt": "528"
+ },
+ "decomp.enrolled.all.rest.com.pct": {
+  "value": 12.5148,
+  "tex": "12.5",
+  "txt": "12.5"
+ },
+ "decomp.enrolled.all.rest.com.pct.int": {
+  "value": 12.5148,
+  "tex": "13",
+  "txt": "13"
+ },
+ "decomp.enrolled.all.rest.com.lo": {
+  "value": 11.5503,
+  "tex": "11.6",
+  "txt": "11.6"
+ },
+ "decomp.enrolled.all.rest.com.lo.int": {
+  "value": 11.5503,
+  "tex": "12",
+  "txt": "12"
+ },
+ "decomp.enrolled.all.rest.com.hi": {
+  "value": 13.5475,
+  "tex": "13.5",
+  "txt": "13.5"
+ },
+ "decomp.enrolled.all.rest.com.hi.int": {
+  "value": 13.5475,
+  "tex": "14",
+  "txt": "14"
+ },
+ "decomp.enrolled.all.rest.saf.n": {
+  "value": 102,
+  "tex": "102",
+  "txt": "102"
+ },
+ "decomp.enrolled.all.rest.saf.pct": {
+  "value": 2.4176,
+  "tex": "2.4",
+  "txt": "2.4"
+ },
+ "decomp.enrolled.all.rest.saf.pct.int": {
+  "value": 2.4176,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.all.rest.saf.lo": {
+  "value": 1.9956,
+  "tex": "2.0",
+  "txt": "2.0"
+ },
+ "decomp.enrolled.all.rest.saf.lo.int": {
+  "value": 1.9956,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.enrolled.all.rest.saf.hi": {
+  "value": 2.9262,
+  "tex": "2.9",
+  "txt": "2.9"
+ },
+ "decomp.enrolled.all.rest.saf.hi.int": {
+  "value": 2.9262,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.enrolled.all.rest.unk.n": {
+  "value": 400,
+  "tex": "400",
+  "txt": "400"
+ },
+ "decomp.enrolled.all.rest.unk.pct": {
+  "value": 9.4809,
+  "tex": "9.5",
+  "txt": "9.5"
+ },
+ "decomp.enrolled.all.rest.unk.pct.int": {
+  "value": 9.4809,
+  "tex": "9",
+  "txt": "9"
+ },
+ "decomp.enrolled.all.rest.unk.lo": {
+  "value": 8.6334,
+  "tex": "8.6",
+  "txt": "8.6"
+ },
+ "decomp.enrolled.all.rest.unk.lo.int": {
+  "value": 8.6334,
+  "tex": "9",
+  "txt": "9"
+ },
+ "decomp.enrolled.all.rest.unk.hi": {
+  "value": 10.4021,
+  "tex": "10.4",
+  "txt": "10.4"
+ },
+ "decomp.enrolled.all.rest.unk.hi.int": {
+  "value": 10.4021,
+  "tex": "10",
+  "txt": "10"
+ },
+ "decomp.registered.era.all.n": {
+  "value": 2372,
+  "tex": "2{,}372",
+  "txt": "2,372"
+ },
+ "decomp.registered.era.all.completedMiss": {
+  "value": 382,
+  "tex": "382",
+  "txt": "382"
+ },
+ "decomp.registered.era.all.futility": {
+  "value": 264,
+  "tex": "264",
+  "txt": "264"
+ },
+ "decomp.registered.era.all.completedMissOfEff.pct": {
+  "value": 59.1331,
+  "tex": "59.1",
+  "txt": "59.1"
+ },
+ "decomp.registered.era.all.completedMissOfEff.pct.int": {
+  "value": 59.1331,
+  "tex": "59",
+  "txt": "59"
+ },
+ "decomp.registered.era.all.benefit": {
+  "value": 33,
+  "tex": "33",
+  "txt": "33"
+ },
+ "decomp.registered.era.all.eff.n": {
+  "value": 646,
+  "tex": "646",
+  "txt": "646"
+ },
+ "decomp.registered.era.all.eff.pct": {
+  "value": 27.2344,
+  "tex": "27.2",
+  "txt": "27.2"
+ },
+ "decomp.registered.era.all.eff.pct.int": {
+  "value": 27.2344,
+  "tex": "27",
+  "txt": "27"
+ },
+ "decomp.registered.era.all.eff.lo": {
+  "value": 25.4808,
+  "tex": "25.5",
+  "txt": "25.5"
+ },
+ "decomp.registered.era.all.eff.lo.int": {
+  "value": 25.4808,
+  "tex": "25",
+  "txt": "25"
+ },
+ "decomp.registered.era.all.eff.hi": {
+  "value": 29.0617,
+  "tex": "29.1",
+  "txt": "29.1"
+ },
+ "decomp.registered.era.all.eff.hi.int": {
+  "value": 29.0617,
+  "tex": "29",
+  "txt": "29"
+ },
+ "decomp.registered.era.all.op.n": {
+  "value": 954,
+  "tex": "954",
+  "txt": "954"
+ },
+ "decomp.registered.era.all.op.pct": {
+  "value": 40.2192,
+  "tex": "40.2",
+  "txt": "40.2"
+ },
+ "decomp.registered.era.all.op.pct.int": {
+  "value": 40.2192,
+  "tex": "40",
+  "txt": "40"
+ },
+ "decomp.registered.era.all.op.lo": {
+  "value": 38.2633,
+  "tex": "38.3",
+  "txt": "38.3"
+ },
+ "decomp.registered.era.all.op.lo.int": {
+  "value": 38.2633,
+  "tex": "38",
+  "txt": "38"
+ },
+ "decomp.registered.era.all.op.hi": {
+  "value": 42.2068,
+  "tex": "42.2",
+  "txt": "42.2"
+ },
+ "decomp.registered.era.all.op.hi.int": {
+  "value": 42.2068,
+  "tex": "42",
+  "txt": "42"
+ },
+ "decomp.registered.era.all.com.n": {
+  "value": 702,
+  "tex": "702",
+  "txt": "702"
+ },
+ "decomp.registered.era.all.com.pct": {
+  "value": 29.5953,
+  "tex": "29.6",
+  "txt": "29.6"
+ },
+ "decomp.registered.era.all.com.pct.int": {
+  "value": 29.5953,
+  "tex": "30",
+  "txt": "30"
+ },
+ "decomp.registered.era.all.com.lo": {
+  "value": 27.7925,
+  "tex": "27.8",
+  "txt": "27.8"
+ },
+ "decomp.registered.era.all.com.lo.int": {
+  "value": 27.7925,
+  "tex": "28",
+  "txt": "28"
+ },
+ "decomp.registered.era.all.com.hi": {
+  "value": 31.4641,
+  "tex": "31.5",
+  "txt": "31.5"
+ },
+ "decomp.registered.era.all.com.hi.int": {
+  "value": 31.4641,
+  "tex": "31",
+  "txt": "31"
+ },
+ "decomp.registered.era.all.saf.n": {
+  "value": 46,
+  "tex": "46",
+  "txt": "46"
+ },
+ "decomp.registered.era.all.saf.pct": {
+  "value": 1.9393,
+  "tex": "1.9",
+  "txt": "1.9"
+ },
+ "decomp.registered.era.all.saf.pct.int": {
+  "value": 1.9393,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.era.all.saf.lo": {
+  "value": 1.4571,
+  "tex": "1.5",
+  "txt": "1.5"
+ },
+ "decomp.registered.era.all.saf.lo.int": {
+  "value": 1.4571,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.era.all.saf.hi": {
+  "value": 2.5769,
+  "tex": "2.6",
+  "txt": "2.6"
+ },
+ "decomp.registered.era.all.saf.hi.int": {
+  "value": 2.5769,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.registered.era.all.unk.n": {
+  "value": 24,
+  "tex": "24",
+  "txt": "24"
+ },
+ "decomp.registered.era.all.unk.pct": {
+  "value": 1.0118,
+  "tex": "1.0",
+  "txt": "1.0"
+ },
+ "decomp.registered.era.all.unk.pct.int": {
+  "value": 1.0118,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.era.all.unk.lo": {
+  "value": 0.6809,
+  "tex": "0.7",
+  "txt": "0.7"
+ },
+ "decomp.registered.era.all.unk.lo.int": {
+  "value": 0.6809,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.era.all.unk.hi": {
+  "value": 1.5012,
+  "tex": "1.5",
+  "txt": "1.5"
+ },
+ "decomp.registered.era.all.unk.hi.int": {
+  "value": 1.5012,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.era.big.n": {
+  "value": 452,
+  "tex": "452",
+  "txt": "452"
+ },
+ "decomp.registered.era.big.completedMiss": {
+  "value": 138,
+  "tex": "138",
+  "txt": "138"
+ },
+ "decomp.registered.era.big.futility": {
+  "value": 69,
+  "tex": "69",
+  "txt": "69"
+ },
+ "decomp.registered.era.big.completedMissOfEff.pct": {
+  "value": 66.6667,
+  "tex": "66.7",
+  "txt": "66.7"
+ },
+ "decomp.registered.era.big.completedMissOfEff.pct.int": {
+  "value": 66.6667,
+  "tex": "67",
+  "txt": "67"
+ },
+ "decomp.registered.era.big.benefit": {
+  "value": 3,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.registered.era.big.eff.n": {
+  "value": 207,
+  "tex": "207",
+  "txt": "207"
+ },
+ "decomp.registered.era.big.eff.pct": {
+  "value": 45.7965,
+  "tex": "45.8",
+  "txt": "45.8"
+ },
+ "decomp.registered.era.big.eff.pct.int": {
+  "value": 45.7965,
+  "tex": "46",
+  "txt": "46"
+ },
+ "decomp.registered.era.big.eff.lo": {
+  "value": 41.2579,
+  "tex": "41.3",
+  "txt": "41.3"
+ },
+ "decomp.registered.era.big.eff.lo.int": {
+  "value": 41.2579,
+  "tex": "41",
+  "txt": "41"
+ },
+ "decomp.registered.era.big.eff.hi": {
+  "value": 50.4058,
+  "tex": "50.4",
+  "txt": "50.4"
+ },
+ "decomp.registered.era.big.eff.hi.int": {
+  "value": 50.4058,
+  "tex": "50",
+  "txt": "50"
+ },
+ "decomp.registered.era.big.op.n": {
+  "value": 68,
+  "tex": "68",
+  "txt": "68"
+ },
+ "decomp.registered.era.big.op.pct": {
+  "value": 15.0442,
+  "tex": "15.0",
+  "txt": "15.0"
+ },
+ "decomp.registered.era.big.op.pct.int": {
+  "value": 15.0442,
+  "tex": "15",
+  "txt": "15"
+ },
+ "decomp.registered.era.big.op.lo": {
+  "value": 12.0437,
+  "tex": "12.0",
+  "txt": "12.0"
+ },
+ "decomp.registered.era.big.op.lo.int": {
+  "value": 12.0437,
+  "tex": "12",
+  "txt": "12"
+ },
+ "decomp.registered.era.big.op.hi": {
+  "value": 18.634,
+  "tex": "18.6",
+  "txt": "18.6"
+ },
+ "decomp.registered.era.big.op.hi.int": {
+  "value": 18.634,
+  "tex": "19",
+  "txt": "19"
+ },
+ "decomp.registered.era.big.com.n": {
+  "value": 157,
+  "tex": "157",
+  "txt": "157"
+ },
+ "decomp.registered.era.big.com.pct": {
+  "value": 34.7345,
+  "tex": "34.7",
+  "txt": "34.7"
+ },
+ "decomp.registered.era.big.com.pct.int": {
+  "value": 34.7345,
+  "tex": "35",
+  "txt": "35"
+ },
+ "decomp.registered.era.big.com.lo": {
+  "value": 30.4904,
+  "tex": "30.5",
+  "txt": "30.5"
+ },
+ "decomp.registered.era.big.com.lo.int": {
+  "value": 30.4904,
+  "tex": "30",
+  "txt": "30"
+ },
+ "decomp.registered.era.big.com.hi": {
+  "value": 39.236,
+  "tex": "39.2",
+  "txt": "39.2"
+ },
+ "decomp.registered.era.big.com.hi.int": {
+  "value": 39.236,
+  "tex": "39",
+  "txt": "39"
+ },
+ "decomp.registered.era.big.saf.n": {
+  "value": 14,
+  "tex": "14",
+  "txt": "14"
+ },
+ "decomp.registered.era.big.saf.pct": {
+  "value": 3.0973,
+  "tex": "3.1",
+  "txt": "3.1"
+ },
+ "decomp.registered.era.big.saf.pct.int": {
+  "value": 3.0973,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.registered.era.big.saf.lo": {
+  "value": 1.8538,
+  "tex": "1.9",
+  "txt": "1.9"
+ },
+ "decomp.registered.era.big.saf.lo.int": {
+  "value": 1.8538,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.era.big.saf.hi": {
+  "value": 5.1314,
+  "tex": "5.1",
+  "txt": "5.1"
+ },
+ "decomp.registered.era.big.saf.hi.int": {
+  "value": 5.1314,
+  "tex": "5",
+  "txt": "5"
+ },
+ "decomp.registered.era.big.unk.n": {
+  "value": 6,
+  "tex": "6",
+  "txt": "6"
+ },
+ "decomp.registered.era.big.unk.pct": {
+  "value": 1.3274,
+  "tex": "1.3",
+  "txt": "1.3"
+ },
+ "decomp.registered.era.big.unk.pct.int": {
+  "value": 1.3274,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.era.big.unk.lo": {
+  "value": 0.6097,
+  "tex": "0.6",
+  "txt": "0.6"
+ },
+ "decomp.registered.era.big.unk.lo.int": {
+  "value": 0.6097,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.era.big.unk.hi": {
+  "value": 2.8655,
+  "tex": "2.9",
+  "txt": "2.9"
+ },
+ "decomp.registered.era.big.unk.hi.int": {
+  "value": 2.8655,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.registered.era.rest.n": {
+  "value": 1920,
+  "tex": "1{,}920",
+  "txt": "1,920"
+ },
+ "decomp.registered.era.rest.completedMiss": {
+  "value": 244,
+  "tex": "244",
+  "txt": "244"
+ },
+ "decomp.registered.era.rest.futility": {
+  "value": 195,
+  "tex": "195",
+  "txt": "195"
+ },
+ "decomp.registered.era.rest.completedMissOfEff.pct": {
+  "value": 55.5809,
+  "tex": "55.6",
+  "txt": "55.6"
+ },
+ "decomp.registered.era.rest.completedMissOfEff.pct.int": {
+  "value": 55.5809,
+  "tex": "56",
+  "txt": "56"
+ },
+ "decomp.registered.era.rest.benefit": {
+  "value": 30,
+  "tex": "30",
+  "txt": "30"
+ },
+ "decomp.registered.era.rest.eff.n": {
+  "value": 439,
+  "tex": "439",
+  "txt": "439"
+ },
+ "decomp.registered.era.rest.eff.pct": {
+  "value": 22.8646,
+  "tex": "22.9",
+  "txt": "22.9"
+ },
+ "decomp.registered.era.rest.eff.pct.int": {
+  "value": 22.8646,
+  "tex": "23",
+  "txt": "23"
+ },
+ "decomp.registered.era.rest.eff.lo": {
+  "value": 21.0414,
+  "tex": "21.0",
+  "txt": "21.0"
+ },
+ "decomp.registered.era.rest.eff.lo.int": {
+  "value": 21.0414,
+  "tex": "21",
+  "txt": "21"
+ },
+ "decomp.registered.era.rest.eff.hi": {
+  "value": 24.7962,
+  "tex": "24.8",
+  "txt": "24.8"
+ },
+ "decomp.registered.era.rest.eff.hi.int": {
+  "value": 24.7962,
+  "tex": "25",
+  "txt": "25"
+ },
+ "decomp.registered.era.rest.op.n": {
+  "value": 886,
+  "tex": "886",
+  "txt": "886"
+ },
+ "decomp.registered.era.rest.op.pct": {
+  "value": 46.1458,
+  "tex": "46.1",
+  "txt": "46.1"
+ },
+ "decomp.registered.era.rest.op.pct.int": {
+  "value": 46.1458,
+  "tex": "46",
+  "txt": "46"
+ },
+ "decomp.registered.era.rest.op.lo": {
+  "value": 43.9259,
+  "tex": "43.9",
+  "txt": "43.9"
+ },
+ "decomp.registered.era.rest.op.lo.int": {
+  "value": 43.9259,
+  "tex": "44",
+  "txt": "44"
+ },
+ "decomp.registered.era.rest.op.hi": {
+  "value": 48.3812,
+  "tex": "48.4",
+  "txt": "48.4"
+ },
+ "decomp.registered.era.rest.op.hi.int": {
+  "value": 48.3812,
+  "tex": "48",
+  "txt": "48"
+ },
+ "decomp.registered.era.rest.com.n": {
+  "value": 545,
+  "tex": "545",
+  "txt": "545"
+ },
+ "decomp.registered.era.rest.com.pct": {
+  "value": 28.3854,
+  "tex": "28.4",
+  "txt": "28.4"
+ },
+ "decomp.registered.era.rest.com.pct.int": {
+  "value": 28.3854,
+  "tex": "28",
+  "txt": "28"
+ },
+ "decomp.registered.era.rest.com.lo": {
+  "value": 26.4134,
+  "tex": "26.4",
+  "txt": "26.4"
+ },
+ "decomp.registered.era.rest.com.lo.int": {
+  "value": 26.4134,
+  "tex": "26",
+  "txt": "26"
+ },
+ "decomp.registered.era.rest.com.hi": {
+  "value": 30.4438,
+  "tex": "30.4",
+  "txt": "30.4"
+ },
+ "decomp.registered.era.rest.com.hi.int": {
+  "value": 30.4438,
+  "tex": "30",
+  "txt": "30"
+ },
+ "decomp.registered.era.rest.saf.n": {
+  "value": 32,
+  "tex": "32",
+  "txt": "32"
+ },
+ "decomp.registered.era.rest.saf.pct": {
+  "value": 1.6667,
+  "tex": "1.7",
+  "txt": "1.7"
+ },
+ "decomp.registered.era.rest.saf.pct.int": {
+  "value": 1.6667,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.era.rest.saf.lo": {
+  "value": 1.183,
+  "tex": "1.2",
+  "txt": "1.2"
+ },
+ "decomp.registered.era.rest.saf.lo.int": {
+  "value": 1.183,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.era.rest.saf.hi": {
+  "value": 2.3433,
+  "tex": "2.3",
+  "txt": "2.3"
+ },
+ "decomp.registered.era.rest.saf.hi.int": {
+  "value": 2.3433,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.era.rest.unk.n": {
+  "value": 18,
+  "tex": "18",
+  "txt": "18"
+ },
+ "decomp.registered.era.rest.unk.pct": {
+  "value": 0.9375,
+  "tex": "0.9",
+  "txt": "0.9"
+ },
+ "decomp.registered.era.rest.unk.pct.int": {
+  "value": 0.9375,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.era.rest.unk.lo": {
+  "value": 0.5938,
+  "tex": "0.6",
+  "txt": "0.6"
+ },
+ "decomp.registered.era.rest.unk.lo.int": {
+  "value": 0.5938,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.era.rest.unk.hi": {
+  "value": 1.4771,
+  "tex": "1.5",
+  "txt": "1.5"
+ },
+ "decomp.registered.era.rest.unk.hi.int": {
+  "value": 1.4771,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.complete.all.n": {
+  "value": 2077,
+  "tex": "2{,}077",
+  "txt": "2,077"
+ },
+ "decomp.registered.complete.all.completedMiss": {
+  "value": 376,
+  "tex": "376",
+  "txt": "376"
+ },
+ "decomp.registered.complete.all.futility": {
+  "value": 246,
+  "tex": "246",
+  "txt": "246"
+ },
+ "decomp.registered.complete.all.completedMissOfEff.pct": {
+  "value": 60.4502,
+  "tex": "60.5",
+  "txt": "60.5"
+ },
+ "decomp.registered.complete.all.completedMissOfEff.pct.int": {
+  "value": 60.4502,
+  "tex": "60",
+  "txt": "60"
+ },
+ "decomp.registered.complete.all.benefit": {
+  "value": 31,
+  "tex": "31",
+  "txt": "31"
+ },
+ "decomp.registered.complete.all.eff.n": {
+  "value": 622,
+  "tex": "622",
+  "txt": "622"
+ },
+ "decomp.registered.complete.all.eff.pct": {
+  "value": 29.947,
+  "tex": "29.9",
+  "txt": "29.9"
+ },
+ "decomp.registered.complete.all.eff.pct.int": {
+  "value": 29.947,
+  "tex": "30",
+  "txt": "30"
+ },
+ "decomp.registered.complete.all.eff.lo": {
+  "value": 28.0157,
+  "tex": "28.0",
+  "txt": "28.0"
+ },
+ "decomp.registered.complete.all.eff.lo.int": {
+  "value": 28.0157,
+  "tex": "28",
+  "txt": "28"
+ },
+ "decomp.registered.complete.all.eff.hi": {
+  "value": 31.9524,
+  "tex": "32.0",
+  "txt": "32.0"
+ },
+ "decomp.registered.complete.all.eff.hi.int": {
+  "value": 31.9524,
+  "tex": "32",
+  "txt": "32"
+ },
+ "decomp.registered.complete.all.op.n": {
+  "value": 841,
+  "tex": "841",
+  "txt": "841"
+ },
+ "decomp.registered.complete.all.op.pct": {
+  "value": 40.4911,
+  "tex": "40.5",
+  "txt": "40.5"
+ },
+ "decomp.registered.complete.all.op.pct.int": {
+  "value": 40.4911,
+  "tex": "40",
+  "txt": "40"
+ },
+ "decomp.registered.complete.all.op.lo": {
+  "value": 38.3994,
+  "tex": "38.4",
+  "txt": "38.4"
+ },
+ "decomp.registered.complete.all.op.lo.int": {
+  "value": 38.3994,
+  "tex": "38",
+  "txt": "38"
+ },
+ "decomp.registered.complete.all.op.hi": {
+  "value": 42.6179,
+  "tex": "42.6",
+  "txt": "42.6"
+ },
+ "decomp.registered.complete.all.op.hi.int": {
+  "value": 42.6179,
+  "tex": "43",
+  "txt": "43"
+ },
+ "decomp.registered.complete.all.com.n": {
+  "value": 554,
+  "tex": "554",
+  "txt": "554"
+ },
+ "decomp.registered.complete.all.com.pct": {
+  "value": 26.6731,
+  "tex": "26.7",
+  "txt": "26.7"
+ },
+ "decomp.registered.complete.all.com.pct.int": {
+  "value": 26.6731,
+  "tex": "27",
+  "txt": "27"
+ },
+ "decomp.registered.complete.all.com.lo": {
+  "value": 24.8154,
+  "tex": "24.8",
+  "txt": "24.8"
+ },
+ "decomp.registered.complete.all.com.lo.int": {
+  "value": 24.8154,
+  "tex": "25",
+  "txt": "25"
+ },
+ "decomp.registered.complete.all.com.hi": {
+  "value": 28.6169,
+  "tex": "28.6",
+  "txt": "28.6"
+ },
+ "decomp.registered.complete.all.com.hi.int": {
+  "value": 28.6169,
+  "tex": "29",
+  "txt": "29"
+ },
+ "decomp.registered.complete.all.saf.n": {
+  "value": 41,
+  "tex": "41",
+  "txt": "41"
+ },
+ "decomp.registered.complete.all.saf.pct": {
+  "value": 1.974,
+  "tex": "2.0",
+  "txt": "2.0"
+ },
+ "decomp.registered.complete.all.saf.pct.int": {
+  "value": 1.974,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.complete.all.saf.lo": {
+  "value": 1.4584,
+  "tex": "1.5",
+  "txt": "1.5"
+ },
+ "decomp.registered.complete.all.saf.lo.int": {
+  "value": 1.4584,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.complete.all.saf.hi": {
+  "value": 2.6669,
+  "tex": "2.7",
+  "txt": "2.7"
+ },
+ "decomp.registered.complete.all.saf.hi.int": {
+  "value": 2.6669,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.registered.complete.all.unk.n": {
+  "value": 19,
+  "tex": "19",
+  "txt": "19"
+ },
+ "decomp.registered.complete.all.unk.pct": {
+  "value": 0.9148,
+  "tex": "0.9",
+  "txt": "0.9"
+ },
+ "decomp.registered.complete.all.unk.pct.int": {
+  "value": 0.9148,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.complete.all.unk.lo": {
+  "value": 0.5864,
+  "tex": "0.6",
+  "txt": "0.6"
+ },
+ "decomp.registered.complete.all.unk.lo.int": {
+  "value": 0.5864,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.complete.all.unk.hi": {
+  "value": 1.4244,
+  "tex": "1.4",
+  "txt": "1.4"
+ },
+ "decomp.registered.complete.all.unk.hi.int": {
+  "value": 1.4244,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.complete.big.n": {
+  "value": 410,
+  "tex": "410",
+  "txt": "410"
+ },
+ "decomp.registered.complete.big.completedMiss": {
+  "value": 135,
+  "tex": "135",
+  "txt": "135"
+ },
+ "decomp.registered.complete.big.futility": {
+  "value": 66,
+  "tex": "66",
+  "txt": "66"
+ },
+ "decomp.registered.complete.big.completedMissOfEff.pct": {
+  "value": 67.1642,
+  "tex": "67.2",
+  "txt": "67.2"
+ },
+ "decomp.registered.complete.big.completedMissOfEff.pct.int": {
+  "value": 67.1642,
+  "tex": "67",
+  "txt": "67"
+ },
+ "decomp.registered.complete.big.benefit": {
+  "value": 3,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.registered.complete.big.eff.n": {
+  "value": 201,
+  "tex": "201",
+  "txt": "201"
+ },
+ "decomp.registered.complete.big.eff.pct": {
+  "value": 49.0244,
+  "tex": "49.0",
+  "txt": "49.0"
+ },
+ "decomp.registered.complete.big.eff.pct.int": {
+  "value": 49.0244,
+  "tex": "49",
+  "txt": "49"
+ },
+ "decomp.registered.complete.big.eff.lo": {
+  "value": 44.217,
+  "tex": "44.2",
+  "txt": "44.2"
+ },
+ "decomp.registered.complete.big.eff.lo.int": {
+  "value": 44.217,
+  "tex": "44",
+  "txt": "44"
+ },
+ "decomp.registered.complete.big.eff.hi": {
+  "value": 53.8499,
+  "tex": "53.8",
+  "txt": "53.8"
+ },
+ "decomp.registered.complete.big.eff.hi.int": {
+  "value": 53.8499,
+  "tex": "54",
+  "txt": "54"
+ },
+ "decomp.registered.complete.big.op.n": {
+  "value": 62,
+  "tex": "62",
+  "txt": "62"
+ },
+ "decomp.registered.complete.big.op.pct": {
+  "value": 15.122,
+  "tex": "15.1",
+  "txt": "15.1"
+ },
+ "decomp.registered.complete.big.op.pct.int": {
+  "value": 15.122,
+  "tex": "15",
+  "txt": "15"
+ },
+ "decomp.registered.complete.big.op.lo": {
+  "value": 11.9788,
+  "tex": "12.0",
+  "txt": "12.0"
+ },
+ "decomp.registered.complete.big.op.lo.int": {
+  "value": 11.9788,
+  "tex": "12",
+  "txt": "12"
+ },
+ "decomp.registered.complete.big.op.hi": {
+  "value": 18.9126,
+  "tex": "18.9",
+  "txt": "18.9"
+ },
+ "decomp.registered.complete.big.op.hi.int": {
+  "value": 18.9126,
+  "tex": "19",
+  "txt": "19"
+ },
+ "decomp.registered.complete.big.com.n": {
+  "value": 129,
+  "tex": "129",
+  "txt": "129"
+ },
+ "decomp.registered.complete.big.com.pct": {
+  "value": 31.4634,
+  "tex": "31.5",
+  "txt": "31.5"
+ },
+ "decomp.registered.complete.big.com.pct.int": {
+  "value": 31.4634,
+  "tex": "31",
+  "txt": "31"
+ },
+ "decomp.registered.complete.big.com.lo": {
+  "value": 27.1581,
+  "tex": "27.2",
+  "txt": "27.2"
+ },
+ "decomp.registered.complete.big.com.lo.int": {
+  "value": 27.1581,
+  "tex": "27",
+  "txt": "27"
+ },
+ "decomp.registered.complete.big.com.hi": {
+  "value": 36.1129,
+  "tex": "36.1",
+  "txt": "36.1"
+ },
+ "decomp.registered.complete.big.com.hi.int": {
+  "value": 36.1129,
+  "tex": "36",
+  "txt": "36"
+ },
+ "decomp.registered.complete.big.saf.n": {
+  "value": 14,
+  "tex": "14",
+  "txt": "14"
+ },
+ "decomp.registered.complete.big.saf.pct": {
+  "value": 3.4146,
+  "tex": "3.4",
+  "txt": "3.4"
+ },
+ "decomp.registered.complete.big.saf.pct.int": {
+  "value": 3.4146,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.registered.complete.big.saf.lo": {
+  "value": 2.0447,
+  "tex": "2.0",
+  "txt": "2.0"
+ },
+ "decomp.registered.complete.big.saf.lo.int": {
+  "value": 2.0447,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.complete.big.saf.hi": {
+  "value": 5.6494,
+  "tex": "5.6",
+  "txt": "5.6"
+ },
+ "decomp.registered.complete.big.saf.hi.int": {
+  "value": 5.6494,
+  "tex": "6",
+  "txt": "6"
+ },
+ "decomp.registered.complete.big.unk.n": {
+  "value": 4,
+  "tex": "4",
+  "txt": "4"
+ },
+ "decomp.registered.complete.big.unk.pct": {
+  "value": 0.9756,
+  "tex": "1.0",
+  "txt": "1.0"
+ },
+ "decomp.registered.complete.big.unk.pct.int": {
+  "value": 0.9756,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.complete.big.unk.lo": {
+  "value": 0.38,
+  "tex": "0.4",
+  "txt": "0.4"
+ },
+ "decomp.registered.complete.big.unk.lo.int": {
+  "value": 0.38,
+  "tex": "0",
+  "txt": "0"
+ },
+ "decomp.registered.complete.big.unk.hi": {
+  "value": 2.4814,
+  "tex": "2.5",
+  "txt": "2.5"
+ },
+ "decomp.registered.complete.big.unk.hi.int": {
+  "value": 2.4814,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.complete.rest.n": {
+  "value": 1667,
+  "tex": "1{,}667",
+  "txt": "1,667"
+ },
+ "decomp.registered.complete.rest.completedMiss": {
+  "value": 241,
+  "tex": "241",
+  "txt": "241"
+ },
+ "decomp.registered.complete.rest.futility": {
+  "value": 180,
+  "tex": "180",
+  "txt": "180"
+ },
+ "decomp.registered.complete.rest.completedMissOfEff.pct": {
+  "value": 57.2447,
+  "tex": "57.2",
+  "txt": "57.2"
+ },
+ "decomp.registered.complete.rest.completedMissOfEff.pct.int": {
+  "value": 57.2447,
+  "tex": "57",
+  "txt": "57"
+ },
+ "decomp.registered.complete.rest.benefit": {
+  "value": 28,
+  "tex": "28",
+  "txt": "28"
+ },
+ "decomp.registered.complete.rest.eff.n": {
+  "value": 421,
+  "tex": "421",
+  "txt": "421"
+ },
+ "decomp.registered.complete.rest.eff.pct": {
+  "value": 25.2549,
+  "tex": "25.3",
+  "txt": "25.3"
+ },
+ "decomp.registered.complete.rest.eff.pct.int": {
+  "value": 25.2549,
+  "tex": "25",
+  "txt": "25"
+ },
+ "decomp.registered.complete.rest.eff.lo": {
+  "value": 23.2278,
+  "tex": "23.2",
+  "txt": "23.2"
+ },
+ "decomp.registered.complete.rest.eff.lo.int": {
+  "value": 23.2278,
+  "tex": "23",
+  "txt": "23"
+ },
+ "decomp.registered.complete.rest.eff.hi": {
+  "value": 27.3959,
+  "tex": "27.4",
+  "txt": "27.4"
+ },
+ "decomp.registered.complete.rest.eff.hi.int": {
+  "value": 27.3959,
+  "tex": "27",
+  "txt": "27"
+ },
+ "decomp.registered.complete.rest.op.n": {
+  "value": 779,
+  "tex": "779",
+  "txt": "779"
+ },
+ "decomp.registered.complete.rest.op.pct": {
+  "value": 46.7307,
+  "tex": "46.7",
+  "txt": "46.7"
+ },
+ "decomp.registered.complete.rest.op.pct.int": {
+  "value": 46.7307,
+  "tex": "47",
+  "txt": "47"
+ },
+ "decomp.registered.complete.rest.op.lo": {
+  "value": 44.3458,
+  "tex": "44.3",
+  "txt": "44.3"
+ },
+ "decomp.registered.complete.rest.op.lo.int": {
+  "value": 44.3458,
+  "tex": "44",
+  "txt": "44"
+ },
+ "decomp.registered.complete.rest.op.hi": {
+  "value": 49.1306,
+  "tex": "49.1",
+  "txt": "49.1"
+ },
+ "decomp.registered.complete.rest.op.hi.int": {
+  "value": 49.1306,
+  "tex": "49",
+  "txt": "49"
+ },
+ "decomp.registered.complete.rest.com.n": {
+  "value": 425,
+  "tex": "425",
+  "txt": "425"
+ },
+ "decomp.registered.complete.rest.com.pct": {
+  "value": 25.4949,
+  "tex": "25.5",
+  "txt": "25.5"
+ },
+ "decomp.registered.complete.rest.com.pct.int": {
+  "value": 25.4949,
+  "tex": "25",
+  "txt": "25"
+ },
+ "decomp.registered.complete.rest.com.lo": {
+  "value": 23.4607,
+  "tex": "23.5",
+  "txt": "23.5"
+ },
+ "decomp.registered.complete.rest.com.lo.int": {
+  "value": 23.4607,
+  "tex": "23",
+  "txt": "23"
+ },
+ "decomp.registered.complete.rest.com.hi": {
+  "value": 27.6418,
+  "tex": "27.6",
+  "txt": "27.6"
+ },
+ "decomp.registered.complete.rest.com.hi.int": {
+  "value": 27.6418,
+  "tex": "28",
+  "txt": "28"
+ },
+ "decomp.registered.complete.rest.saf.n": {
+  "value": 27,
+  "tex": "27",
+  "txt": "27"
+ },
+ "decomp.registered.complete.rest.saf.pct": {
+  "value": 1.6197,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "decomp.registered.complete.rest.saf.pct.int": {
+  "value": 1.6197,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.complete.rest.saf.lo": {
+  "value": 1.1155,
+  "tex": "1.1",
+  "txt": "1.1"
+ },
+ "decomp.registered.complete.rest.saf.lo.int": {
+  "value": 1.1155,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.complete.rest.saf.hi": {
+  "value": 2.3463,
+  "tex": "2.3",
+  "txt": "2.3"
+ },
+ "decomp.registered.complete.rest.saf.hi.int": {
+  "value": 2.3463,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.complete.rest.unk.n": {
+  "value": 15,
+  "tex": "15",
+  "txt": "15"
+ },
+ "decomp.registered.complete.rest.unk.pct": {
+  "value": 0.8998,
+  "tex": "0.9",
+  "txt": "0.9"
+ },
+ "decomp.registered.complete.rest.unk.pct.int": {
+  "value": 0.8998,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.complete.rest.unk.lo": {
+  "value": 0.5461,
+  "tex": "0.5",
+  "txt": "0.5"
+ },
+ "decomp.registered.complete.rest.unk.lo.int": {
+  "value": 0.5461,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.complete.rest.unk.hi": {
+  "value": 1.4794,
+  "tex": "1.5",
+  "txt": "1.5"
+ },
+ "decomp.registered.complete.rest.unk.hi.int": {
+  "value": 1.4794,
+  "tex": "1",
+  "txt": "1"
+ },
+ "decomp.registered.all.all.n": {
+  "value": 7142,
+  "tex": "7{,}142",
+  "txt": "7,142"
+ },
+ "decomp.registered.all.all.completedMiss": {
+  "value": 1668,
+  "tex": "1{,}668",
+  "txt": "1,668"
+ },
+ "decomp.registered.all.all.futility": {
+  "value": 622,
+  "tex": "622",
+  "txt": "622"
+ },
+ "decomp.registered.all.all.completedMissOfEff.pct": {
+  "value": 72.8384,
+  "tex": "72.8",
+  "txt": "72.8"
+ },
+ "decomp.registered.all.all.completedMissOfEff.pct.int": {
+  "value": 72.8384,
+  "tex": "73",
+  "txt": "73"
+ },
+ "decomp.registered.all.all.benefit": {
+  "value": 104,
+  "tex": "104",
+  "txt": "104"
+ },
+ "decomp.registered.all.all.eff.n": {
+  "value": 2290,
+  "tex": "2{,}290",
+  "txt": "2,290"
+ },
+ "decomp.registered.all.all.eff.pct": {
+  "value": 32.0638,
+  "tex": "32.1",
+  "txt": "32.1"
+ },
+ "decomp.registered.all.all.eff.pct.int": {
+  "value": 32.0638,
+  "tex": "32",
+  "txt": "32"
+ },
+ "decomp.registered.all.all.eff.lo": {
+  "value": 30.9913,
+  "tex": "31.0",
+  "txt": "31.0"
+ },
+ "decomp.registered.all.all.eff.lo.int": {
+  "value": 30.9913,
+  "tex": "31",
+  "txt": "31"
+ },
+ "decomp.registered.all.all.eff.hi": {
+  "value": 33.1557,
+  "tex": "33.2",
+  "txt": "33.2"
+ },
+ "decomp.registered.all.all.eff.hi.int": {
+  "value": 33.1557,
+  "tex": "33",
+  "txt": "33"
+ },
+ "decomp.registered.all.all.op.n": {
+  "value": 2664,
+  "tex": "2{,}664",
+  "txt": "2,664"
+ },
+ "decomp.registered.all.all.op.pct": {
+  "value": 37.3005,
+  "tex": "37.3",
+  "txt": "37.3"
+ },
+ "decomp.registered.all.all.op.pct.int": {
+  "value": 37.3005,
+  "tex": "37",
+  "txt": "37"
+ },
+ "decomp.registered.all.all.op.lo": {
+  "value": 36.186,
+  "tex": "36.2",
+  "txt": "36.2"
+ },
+ "decomp.registered.all.all.op.lo.int": {
+  "value": 36.186,
+  "tex": "36",
+  "txt": "36"
+ },
+ "decomp.registered.all.all.op.hi": {
+  "value": 38.4286,
+  "tex": "38.4",
+  "txt": "38.4"
+ },
+ "decomp.registered.all.all.op.hi.int": {
+  "value": 38.4286,
+  "tex": "38",
+  "txt": "38"
+ },
+ "decomp.registered.all.all.com.n": {
+  "value": 1441,
+  "tex": "1{,}441",
+  "txt": "1,441"
+ },
+ "decomp.registered.all.all.com.pct": {
+  "value": 20.1764,
+  "tex": "20.2",
+  "txt": "20.2"
+ },
+ "decomp.registered.all.all.com.pct.int": {
+  "value": 20.1764,
+  "tex": "20",
+  "txt": "20"
+ },
+ "decomp.registered.all.all.com.lo": {
+  "value": 19.2618,
+  "tex": "19.3",
+  "txt": "19.3"
+ },
+ "decomp.registered.all.all.com.lo.int": {
+  "value": 19.2618,
+  "tex": "19",
+  "txt": "19"
+ },
+ "decomp.registered.all.all.com.hi": {
+  "value": 21.1231,
+  "tex": "21.1",
+  "txt": "21.1"
+ },
+ "decomp.registered.all.all.com.hi.int": {
+  "value": 21.1231,
+  "tex": "21",
+  "txt": "21"
+ },
+ "decomp.registered.all.all.saf.n": {
+  "value": 182,
+  "tex": "182",
+  "txt": "182"
+ },
+ "decomp.registered.all.all.saf.pct": {
+  "value": 2.5483,
+  "tex": "2.5",
+  "txt": "2.5"
+ },
+ "decomp.registered.all.all.saf.pct.int": {
+  "value": 2.5483,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.registered.all.all.saf.lo": {
+  "value": 2.2075,
+  "tex": "2.2",
+  "txt": "2.2"
+ },
+ "decomp.registered.all.all.saf.lo.int": {
+  "value": 2.2075,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.all.all.saf.hi": {
+  "value": 2.9401,
+  "tex": "2.9",
+  "txt": "2.9"
+ },
+ "decomp.registered.all.all.saf.hi.int": {
+  "value": 2.9401,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.registered.all.all.unk.n": {
+  "value": 565,
+  "tex": "565",
+  "txt": "565"
+ },
+ "decomp.registered.all.all.unk.pct": {
+  "value": 7.9109,
+  "tex": "7.9",
+  "txt": "7.9"
+ },
+ "decomp.registered.all.all.unk.pct.int": {
+  "value": 7.9109,
+  "tex": "8",
+  "txt": "8"
+ },
+ "decomp.registered.all.all.unk.lo": {
+  "value": 7.3073,
+  "tex": "7.3",
+  "txt": "7.3"
+ },
+ "decomp.registered.all.all.unk.lo.int": {
+  "value": 7.3073,
+  "tex": "7",
+  "txt": "7"
+ },
+ "decomp.registered.all.all.unk.hi": {
+  "value": 8.5598,
+  "tex": "8.6",
+  "txt": "8.6"
+ },
+ "decomp.registered.all.all.unk.hi.int": {
+  "value": 8.5598,
+  "tex": "9",
+  "txt": "9"
+ },
+ "decomp.registered.all.big.n": {
+  "value": 1792,
+  "tex": "1{,}792",
+  "txt": "1,792"
+ },
+ "decomp.registered.all.big.completedMiss": {
+  "value": 671,
+  "tex": "671",
+  "txt": "671"
+ },
+ "decomp.registered.all.big.futility": {
+  "value": 184,
+  "tex": "184",
+  "txt": "184"
+ },
+ "decomp.registered.all.big.completedMissOfEff.pct": {
+  "value": 78.4795,
+  "tex": "78.5",
+  "txt": "78.5"
+ },
+ "decomp.registered.all.big.completedMissOfEff.pct.int": {
+  "value": 78.4795,
+  "tex": "78",
+  "txt": "78"
+ },
+ "decomp.registered.all.big.benefit": {
+  "value": 21,
+  "tex": "21",
+  "txt": "21"
+ },
+ "decomp.registered.all.big.eff.n": {
+  "value": 855,
+  "tex": "855",
+  "txt": "855"
+ },
+ "decomp.registered.all.big.eff.pct": {
+  "value": 47.7121,
+  "tex": "47.7",
+  "txt": "47.7"
+ },
+ "decomp.registered.all.big.eff.pct.int": {
+  "value": 47.7121,
+  "tex": "48",
+  "txt": "48"
+ },
+ "decomp.registered.all.big.eff.lo": {
+  "value": 45.4068,
+  "tex": "45.4",
+  "txt": "45.4"
+ },
+ "decomp.registered.all.big.eff.lo.int": {
+  "value": 45.4068,
+  "tex": "45",
+  "txt": "45"
+ },
+ "decomp.registered.all.big.eff.hi": {
+  "value": 50.0271,
+  "tex": "50.0",
+  "txt": "50.0"
+ },
+ "decomp.registered.all.big.eff.hi.int": {
+  "value": 50.0271,
+  "tex": "50",
+  "txt": "50"
+ },
+ "decomp.registered.all.big.op.n": {
+  "value": 338,
+  "tex": "338",
+  "txt": "338"
+ },
+ "decomp.registered.all.big.op.pct": {
+  "value": 18.8616,
+  "tex": "18.9",
+  "txt": "18.9"
+ },
+ "decomp.registered.all.big.op.pct.int": {
+  "value": 18.8616,
+  "tex": "19",
+  "txt": "19"
+ },
+ "decomp.registered.all.big.op.lo": {
+  "value": 17.1176,
+  "tex": "17.1",
+  "txt": "17.1"
+ },
+ "decomp.registered.all.big.op.lo.int": {
+  "value": 17.1176,
+  "tex": "17",
+  "txt": "17"
+ },
+ "decomp.registered.all.big.op.hi": {
+  "value": 20.7388,
+  "tex": "20.7",
+  "txt": "20.7"
+ },
+ "decomp.registered.all.big.op.hi.int": {
+  "value": 20.7388,
+  "tex": "21",
+  "txt": "21"
+ },
+ "decomp.registered.all.big.com.n": {
+  "value": 362,
+  "tex": "362",
+  "txt": "362"
+ },
+ "decomp.registered.all.big.com.pct": {
+  "value": 20.2009,
+  "tex": "20.2",
+  "txt": "20.2"
+ },
+ "decomp.registered.all.big.com.pct.int": {
+  "value": 20.2009,
+  "tex": "20",
+  "txt": "20"
+ },
+ "decomp.registered.all.big.com.lo": {
+  "value": 18.4066,
+  "tex": "18.4",
+  "txt": "18.4"
+ },
+ "decomp.registered.all.big.com.lo.int": {
+  "value": 18.4066,
+  "tex": "18",
+  "txt": "18"
+ },
+ "decomp.registered.all.big.com.hi": {
+  "value": 22.1227,
+  "tex": "22.1",
+  "txt": "22.1"
+ },
+ "decomp.registered.all.big.com.hi.int": {
+  "value": 22.1227,
+  "tex": "22",
+  "txt": "22"
+ },
+ "decomp.registered.all.big.saf.n": {
+  "value": 77,
+  "tex": "77",
+  "txt": "77"
+ },
+ "decomp.registered.all.big.saf.pct": {
+  "value": 4.2969,
+  "tex": "4.3",
+  "txt": "4.3"
+ },
+ "decomp.registered.all.big.saf.pct.int": {
+  "value": 4.2969,
+  "tex": "4",
+  "txt": "4"
+ },
+ "decomp.registered.all.big.saf.lo": {
+  "value": 3.4516,
+  "tex": "3.5",
+  "txt": "3.5"
+ },
+ "decomp.registered.all.big.saf.lo.int": {
+  "value": 3.4516,
+  "tex": "3",
+  "txt": "3"
+ },
+ "decomp.registered.all.big.saf.hi": {
+  "value": 5.3376,
+  "tex": "5.3",
+  "txt": "5.3"
+ },
+ "decomp.registered.all.big.saf.hi.int": {
+  "value": 5.3376,
+  "tex": "5",
+  "txt": "5"
+ },
+ "decomp.registered.all.big.unk.n": {
+  "value": 160,
+  "tex": "160",
+  "txt": "160"
+ },
+ "decomp.registered.all.big.unk.pct": {
+  "value": 8.9286,
+  "tex": "8.9",
+  "txt": "8.9"
+ },
+ "decomp.registered.all.big.unk.pct.int": {
+  "value": 8.9286,
+  "tex": "9",
+  "txt": "9"
+ },
+ "decomp.registered.all.big.unk.lo": {
+  "value": 7.6946,
+  "tex": "7.7",
+  "txt": "7.7"
+ },
+ "decomp.registered.all.big.unk.lo.int": {
+  "value": 7.6946,
+  "tex": "8",
+  "txt": "8"
+ },
+ "decomp.registered.all.big.unk.hi": {
+  "value": 10.3382,
+  "tex": "10.3",
+  "txt": "10.3"
+ },
+ "decomp.registered.all.big.unk.hi.int": {
+  "value": 10.3382,
+  "tex": "10",
+  "txt": "10"
+ },
+ "decomp.registered.all.rest.n": {
+  "value": 5350,
+  "tex": "5{,}350",
+  "txt": "5,350"
+ },
+ "decomp.registered.all.rest.completedMiss": {
+  "value": 997,
+  "tex": "997",
+  "txt": "997"
+ },
+ "decomp.registered.all.rest.futility": {
+  "value": 438,
+  "tex": "438",
+  "txt": "438"
+ },
+ "decomp.registered.all.rest.completedMissOfEff.pct": {
+  "value": 69.4774,
+  "tex": "69.5",
+  "txt": "69.5"
+ },
+ "decomp.registered.all.rest.completedMissOfEff.pct.int": {
+  "value": 69.4774,
+  "tex": "69",
+  "txt": "69"
+ },
+ "decomp.registered.all.rest.benefit": {
+  "value": 83,
+  "tex": "83",
+  "txt": "83"
+ },
+ "decomp.registered.all.rest.eff.n": {
+  "value": 1435,
+  "tex": "1{,}435",
+  "txt": "1,435"
+ },
+ "decomp.registered.all.rest.eff.pct": {
+  "value": 26.8224,
+  "tex": "26.8",
+  "txt": "26.8"
+ },
+ "decomp.registered.all.rest.eff.pct.int": {
+  "value": 26.8224,
+  "tex": "27",
+  "txt": "27"
+ },
+ "decomp.registered.all.rest.eff.lo": {
+  "value": 25.6522,
+  "tex": "25.7",
+  "txt": "25.7"
+ },
+ "decomp.registered.all.rest.eff.lo.int": {
+  "value": 25.6522,
+  "tex": "26",
+  "txt": "26"
+ },
+ "decomp.registered.all.rest.eff.hi": {
+  "value": 28.0259,
+  "tex": "28.0",
+  "txt": "28.0"
+ },
+ "decomp.registered.all.rest.eff.hi.int": {
+  "value": 28.0259,
+  "tex": "28",
+  "txt": "28"
+ },
+ "decomp.registered.all.rest.op.n": {
+  "value": 2326,
+  "tex": "2{,}326",
+  "txt": "2,326"
+ },
+ "decomp.registered.all.rest.op.pct": {
+  "value": 43.4766,
+  "tex": "43.5",
+  "txt": "43.5"
+ },
+ "decomp.registered.all.rest.op.pct.int": {
+  "value": 43.4766,
+  "tex": "43",
+  "txt": "43"
+ },
+ "decomp.registered.all.rest.op.lo": {
+  "value": 42.1534,
+  "tex": "42.2",
+  "txt": "42.2"
+ },
+ "decomp.registered.all.rest.op.lo.int": {
+  "value": 42.1534,
+  "tex": "42",
+  "txt": "42"
+ },
+ "decomp.registered.all.rest.op.hi": {
+  "value": 44.8092,
+  "tex": "44.8",
+  "txt": "44.8"
+ },
+ "decomp.registered.all.rest.op.hi.int": {
+  "value": 44.8092,
+  "tex": "45",
+  "txt": "45"
+ },
+ "decomp.registered.all.rest.com.n": {
+  "value": 1079,
+  "tex": "1{,}079",
+  "txt": "1,079"
+ },
+ "decomp.registered.all.rest.com.pct": {
+  "value": 20.1682,
+  "tex": "20.2",
+  "txt": "20.2"
+ },
+ "decomp.registered.all.rest.com.pct.int": {
+  "value": 20.1682,
+  "tex": "20",
+  "txt": "20"
+ },
+ "decomp.registered.all.rest.com.lo": {
+  "value": 19.1146,
+  "tex": "19.1",
+  "txt": "19.1"
+ },
+ "decomp.registered.all.rest.com.lo.int": {
+  "value": 19.1146,
+  "tex": "19",
+  "txt": "19"
+ },
+ "decomp.registered.all.rest.com.hi": {
+  "value": 21.2647,
+  "tex": "21.3",
+  "txt": "21.3"
+ },
+ "decomp.registered.all.rest.com.hi.int": {
+  "value": 21.2647,
+  "tex": "21",
+  "txt": "21"
+ },
+ "decomp.registered.all.rest.saf.n": {
+  "value": 105,
+  "tex": "105",
+  "txt": "105"
+ },
+ "decomp.registered.all.rest.saf.pct": {
+  "value": 1.9626,
+  "tex": "2.0",
+  "txt": "2.0"
+ },
+ "decomp.registered.all.rest.saf.pct.int": {
+  "value": 1.9626,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.all.rest.saf.lo": {
+  "value": 1.6239,
+  "tex": "1.6",
+  "txt": "1.6"
+ },
+ "decomp.registered.all.rest.saf.lo.int": {
+  "value": 1.6239,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.all.rest.saf.hi": {
+  "value": 2.3702,
+  "tex": "2.4",
+  "txt": "2.4"
+ },
+ "decomp.registered.all.rest.saf.hi.int": {
+  "value": 2.3702,
+  "tex": "2",
+  "txt": "2"
+ },
+ "decomp.registered.all.rest.unk.n": {
+  "value": 405,
+  "tex": "405",
+  "txt": "405"
+ },
+ "decomp.registered.all.rest.unk.pct": {
+  "value": 7.5701,
+  "tex": "7.6",
+  "txt": "7.6"
+ },
+ "decomp.registered.all.rest.unk.pct.int": {
+  "value": 7.5701,
+  "tex": "8",
+  "txt": "8"
+ },
+ "decomp.registered.all.rest.unk.lo": {
+  "value": 6.8913,
+  "tex": "6.9",
+  "txt": "6.9"
+ },
+ "decomp.registered.all.rest.unk.lo.int": {
+  "value": 6.8913,
+  "tex": "7",
+  "txt": "7"
+ },
+ "decomp.registered.all.rest.unk.hi": {
+  "value": 8.3098,
+  "tex": "8.3",
+  "txt": "8.3"
+ },
+ "decomp.registered.all.rest.unk.hi.int": {
+  "value": 8.3098,
+  "tex": "8",
+  "txt": "8"
+ },
+ "withdrawn.era.n": {
+  "value": 649,
+  "tex": "649",
+  "txt": "649"
+ },
+ "withdrawn.era.notStated.n": {
+  "value": 91,
+  "tex": "91",
+  "txt": "91"
+ },
+ "withdrawn.era.eff.n": {
+  "value": 6,
+  "tex": "6",
+  "txt": "6"
+ },
+ "withdrawn.era.eff.pct": {
+  "value": 0.9245,
+  "tex": "0.9",
+  "txt": "0.9"
+ },
+ "withdrawn.era.eff.pct.int": {
+  "value": 0.9245,
+  "tex": "1",
+  "txt": "1"
+ },
+ "withdrawn.era.op.n": {
+  "value": 325,
+  "tex": "325",
+  "txt": "325"
+ },
+ "withdrawn.era.op.pct": {
+  "value": 50.077,
+  "tex": "50.1",
+  "txt": "50.1"
+ },
+ "withdrawn.era.op.pct.int": {
+  "value": 50.077,
+  "tex": "50",
+  "txt": "50"
+ },
+ "withdrawn.era.com.n": {
+  "value": 315,
+  "tex": "315",
+  "txt": "315"
+ },
+ "withdrawn.era.com.pct": {
+  "value": 48.5362,
+  "tex": "48.5",
+  "txt": "48.5"
+ },
+ "withdrawn.era.com.pct.int": {
+  "value": 48.5362,
+  "tex": "49",
+  "txt": "49"
+ },
+ "withdrawn.era.saf.n": {
+  "value": 3,
+  "tex": "3",
+  "txt": "3"
+ },
+ "withdrawn.era.saf.pct": {
+  "value": 0.4622,
+  "tex": "0.5",
+  "txt": "0.5"
+ },
+ "withdrawn.era.saf.pct.int": {
+  "value": 0.4622,
+  "tex": "0",
+  "txt": "0"
+ },
+ "withdrawn.era.unk.n": {
+  "value": 0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "withdrawn.era.unk.pct": {
+  "value": 0.0,
+  "tex": "0.0",
+  "txt": "0.0"
+ },
+ "withdrawn.era.unk.pct.int": {
+  "value": 0.0,
+  "tex": "0",
+  "txt": "0"
+ },
+ "miss.era.trials": {
+  "value": 1804,
+  "tex": "1{,}804",
+  "txt": "1,804"
+ },
+ "miss.era.n": {
+  "value": 550,
+  "tex": "550",
+  "txt": "550"
+ },
+ "miss.era.pct": {
+  "value": 30.4878,
+  "tex": "30.5",
+  "txt": "30.5"
+ },
+ "miss.era.pct.int": {
+  "value": 30.4878,
+  "tex": "30",
+  "txt": "30"
+ },
+ "miss.era.lo": {
+  "value": 28.4067,
+  "tex": "28.4",
+  "txt": "28.4"
+ },
+ "miss.era.lo.int": {
+  "value": 28.4067,
+  "tex": "28",
+  "txt": "28"
+ },
+ "miss.era.hi": {
+  "value": 32.6518,
+  "tex": "32.7",
+  "txt": "32.7"
+ },
+ "miss.era.hi.int": {
+  "value": 32.6518,
+  "tex": "33",
+  "txt": "33"
+ },
+ "miss.era.completed.trials": {
+  "value": 1419,
+  "tex": "1{,}419",
+  "txt": "1,419"
+ },
+ "miss.era.completed.n": {
+  "value": 382,
+  "tex": "382",
+  "txt": "382"
+ },
+ "miss.era.completed.pct": {
+  "value": 26.9204,
+  "tex": "26.9",
+  "txt": "26.9"
+ },
+ "miss.era.completed.pct.int": {
+  "value": 26.9204,
+  "tex": "27",
+  "txt": "27"
+ },
+ "miss.complete.trials": {
+  "value": 1735,
+  "tex": "1{,}735",
+  "txt": "1,735"
+ },
+ "miss.complete.n": {
+  "value": 541,
+  "tex": "541",
+  "txt": "541"
+ },
+ "miss.complete.pct": {
+  "value": 31.1816,
+  "tex": "31.2",
+  "txt": "31.2"
+ },
+ "miss.complete.pct.int": {
+  "value": 31.1816,
+  "tex": "31",
+  "txt": "31"
+ },
+ "miss.complete.lo": {
+  "value": 29.0454,
+  "tex": "29.0",
+  "txt": "29.0"
+ },
+ "miss.complete.lo.int": {
+  "value": 29.0454,
+  "tex": "29",
+  "txt": "29"
+ },
+ "miss.complete.hi": {
+  "value": 33.4009,
+  "tex": "33.4",
+  "txt": "33.4"
+ },
+ "miss.complete.hi.int": {
+  "value": 33.4009,
+  "tex": "33",
+  "txt": "33"
+ },
+ "miss.complete.completed.trials": {
+  "value": 1365,
+  "tex": "1{,}365",
+  "txt": "1,365"
+ },
+ "miss.complete.completed.n": {
+  "value": 376,
+  "tex": "376",
+  "txt": "376"
+ },
+ "miss.complete.completed.pct": {
+  "value": 27.5458,
+  "tex": "27.5",
+  "txt": "27.5"
+ },
+ "miss.complete.completed.pct.int": {
+  "value": 27.5458,
+  "tex": "28",
+  "txt": "28"
+ },
+ "miss.all.trials": {
+  "value": 6598,
+  "tex": "6{,}598",
+  "txt": "6,598"
+ },
+ "miss.all.n": {
+  "value": 2079,
+  "tex": "2{,}079",
+  "txt": "2,079"
+ },
+ "miss.all.pct": {
+  "value": 31.5095,
+  "tex": "31.5",
+  "txt": "31.5"
+ },
+ "miss.all.pct.int": {
+  "value": 31.5095,
+  "tex": "32",
+  "txt": "32"
+ },
+ "miss.all.lo": {
+  "value": 30.3996,
+  "tex": "30.4",
+  "txt": "30.4"
+ },
+ "miss.all.lo.int": {
+  "value": 30.3996,
+  "tex": "30",
+  "txt": "30"
+ },
+ "miss.all.hi": {
+  "value": 32.641,
+  "tex": "32.6",
+  "txt": "32.6"
+ },
+ "miss.all.hi.int": {
+  "value": 32.641,
+  "tex": "33",
+  "txt": "33"
+ },
+ "miss.all.completed.trials": {
+  "value": 5809,
+  "tex": "5{,}809",
+  "txt": "5,809"
+ },
+ "miss.all.completed.n": {
+  "value": 1668,
+  "tex": "1{,}668",
+  "txt": "1,668"
+ },
+ "miss.all.completed.pct": {
+  "value": 28.7141,
+  "tex": "28.7",
+  "txt": "28.7"
+ },
+ "miss.all.completed.pct.int": {
+  "value": 28.7141,
+  "tex": "29",
+  "txt": "29"
+ }
+}

@@ -1,0 +1,296 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{parskip}
+\usepackage{xr}
+\externaldocument[main-]{manuscript}
+\emergencystretch=3em
+% never break a line or a page inside inline math, so that "p =" keeps its value
+\relpenalty=10000
+\binoppenalty=10000
+% the captions stand above the tables: keep them clear of the top rule
+\setlength{\belowcaptionskip}{4pt}
+% long headings are set ragged right, not stretched: the article class's \section with \raggedright added
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}{-3.5ex \@plus -1ex \@minus -.2ex}{2.3ex \@plus.2ex}{\normalfont\Large\bfseries\raggedright}}
+\makeatother
+
+% Every number in this supplement is written by the analysis scripts: numbers.tex defines \num{name}, and the table bodies are in tables/.
+\input{numbers}
+\newcommand{\code}[1]{\texttt{\small #1}}
+\newcommand{\era}{\num{era.first}--\num{era.last}}
+\newcommand{\eracomplete}{\num{era.first}--\num{era.completeLast}}
+\newcommand{\trendyears}{\num{trend.firstYear}--\num{trend.lastYear}}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\newcounter{strobe}
+\newcommand{\strobeitem}{\stepcounter{strobe}\arabic{strobe}}
+
+\title{\textbf{Supplement to: Structured-data reporting shapes the apparent causes of phase-3 trial failure}}
+\author{Tommy Carstensen}
+\date{}
+\makeatletter
+\hypersetup{pdftitle={\@title}, pdfauthor={Tommy Carstensen}, pdfsubject={medRxiv preprint, supplement}, pdflang={en}, pdfdisplaydoctitle=true}
+\makeatother
+
+\begin{document}
+\maketitle
+
+All numbers and table bodies are written by the scripts named in each section heading; \code{reproduce.sh} regenerates them. Unless stated otherwise the population is trials that enrolled and the window is trials starting in \era. Shares are percentages of failures.
+
+\section{Subject drugs and programs (\code{subjects.py}, \code{dedup\_arms.py})}\label{supp:subjects}
+Intervention lists mix the investigational drug with comparators and background therapy. Each trial's subject drug is the experimental-arm drug that is rarest across the results cohort, after setting aside \num{dedup.backbones} drugs that are an active comparator in at least \num{dedup.backboneMinTrials} trials and at least as often as they are experimental. Of the \num{cohort.results} trials with posted results, \num{dedup.withArms.pct}\% have arm groups recorded and \num{dedup.withExperimental.pct}\% have an arm of type experimental. \num{dedup.withSubject} trials have an identifiable subject drug, \num{dedup.subjects} distinct drugs in all. The most frequent subjects (Table~\ref{tab:subjects}) are experimental-arm drugs and not comparators or chemotherapy backbones, which is what the rule is meant to achieve; the rule was not audited beyond this.
+
+\begin{table}[H]
+\centering
+\caption{The most frequent subject drugs in the results cohort.}
+\label{tab:subjects}
+\begin{tabular}{rlp{1em}rl}
+\toprule
+trials & subject drug & & trials & subject drug \\
+\midrule
+\tablebody{subjects}
+\bottomrule
+\end{tabular}
+\end{table}
+
+Trials sharing a subject drug form a program. Of \num{dedup.programs.judged} programs with at least one verdict, \num{dedup.programs.win.n} (\num{dedup.programs.win.pct.int}\%) recorded at least one phase-3 win and \num{dedup.programs.noWin.n} (\num{dedup.programs.noWin.pct.int}\%) none. This program-level rate is descriptive. It is not part of the trial-level decomposition. The programs serve as clusters for robust standard errors and as the basis of the novel-versus-lifecycle flag (\S\ref{sec:novelty}).
+
+\section{Therapeutic areas (\code{areas.py}, \code{stratify.py}, \code{inference.py})}\label{supp:areas}
+Condition terms were mapped to six areas by an ordered keyword match; a trial with terms in two areas goes to the first that matches. The keywords were checked against the condition terms they capture among the trials of the main window, but the assignment of individual trials was not audited, and the areas are coarse. Asthma and chronic obstructive pulmonary disease are counted under Immunology/Inflammation. Other/rare is not only rare disease: it holds what the five named areas do not, among them ophthalmology, pain and anesthesia, hematology, renal disease, women's health and bone disease.
+
+\begin{table}[H]
+\centering
+\caption{Failure decomposition and miss rate by therapeutic area. The miss rate is over trials with a verdict, whose number differs from the number of failures.}
+\label{tab:areas}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+ & & \multicolumn{2}{c}{miss rate} & \multicolumn{5}{c}{share of failures (\%)} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-9}
+area & failures & trials & \% & efficacy & operational & commercial & safety & unknown \\
+\midrule
+\tablebody{areas}
+\bottomrule
+\end{tabular}
+\end{table}
+
+Miss rates differ between areas ($\chi^2=\num{area.het.chi2}$, \num{area.het.dof} degrees of freedom, $p=\num{area.het.p}$). Within Infectious/Vaccine the miss rate was \num{area.infectious.before.miss.pct}\% for starts before \num{area.infectious.split} ($n=\num{area.infectious.before.trials}$) and \num{area.infectious.from.miss.pct}\% for starts from \num{area.infectious.split} ($n=\num{area.infectious.from.trials}$; $z=\num{area.infectious.z}$, $p=\num{area.infectious.p}$). This split is exploratory: the area was chosen for its high rate, the cutoff was not specified in advance, and the test is not adjusted for multiplicity.
+
+\section{Miss rate by start year (\code{inference.py})}
+Table~\ref{tab:yearly} gives the yearly rates drawn in Figure~\ref{main-fig:missrate} of the main text, which adds their Wilson intervals.
+
+\begin{table}[H]
+\centering
+\caption{Trials with a verdict and the share that missed their primary endpoint, by start year.}
+\label{tab:yearly}
+\begin{tabular}{rrrr}
+\toprule
+start year & trials with a verdict & misses & miss rate (\%) \\
+\midrule
+\tablebody{yearly}
+\bottomrule
+\end{tabular}
+\end{table}
+
+There is no linear trend across \trendyears\ (Cochran--Armitage $z=\num{trend.ca.z}$, $p=\num{trend.ca.p}$; odds ratio per year \num{trend.or}, 95\% CI \num{trend.or.lo} to \num{trend.or.hi}, $p=\num{trend.or.p}$ with sponsor-clustered standard errors). A chi-square test of homogeneity across the years gives $\chi^2=\num{trend.het.chi2}$ with \num{trend.het.dof} degrees of freedom, $p=\num{trend.het.p}$. The table and the tests cover \num{trend.overall.trials} of the \num{miss.all.trials} trials with a verdict and a start year; trials that started before or after \trendyears\ enter only the all-years rate of Table~\ref{tab:missrate}.
+
+\section{Which completed trials report a usable primary \texorpdfstring{$p$}{p}-value (\code{inference.py})}
+Table~\ref{tab:covmodel} is the model behind the odds ratios quoted in the main text. A completed trial is less likely to carry a verdict if it is a single-arm study, started later or has more primary outcomes, and more likely if its sponsor is in the big-pharma stratum.
+
+\begin{table}[H]
+\centering
+\caption{Logistic regression of having a verdict, among \num{covmodel.trials} completed, non-stopped trials with posted results. Odds ratios with 95\% intervals from sponsor-clustered standard errors. The reference therapeutic area is \num{covmodel.reference}.}
+\label{tab:covmodel}
+\small
+\begin{tabular}{lrrr}
+\toprule
+covariate & odds ratio & 95\% CI & $p$ \\
+\midrule
+\tablebody{covmodel}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Validation by category (\code{validation\_metrics.py})}
+Raw agreement is \num{valid.agree.pct}\% (\num{valid.agree.lo} to \num{valid.agree.hi}) with Cohen's $\kappa=\num{valid.kappa}$. Weighted to the prevalence of the \num{valid.firstPass.labels} first-pass labels it is \num{valid.weighted.pct}\% (stratified bootstrap \num{valid.weighted.lo} to \num{valid.weighted.hi}) with $\kappa=\num{valid.weighted.kappa}$, and weighted to the first-pass labels of trials that enrolled and started in \era\ it is \num{valid.weightedEra.pct}\% (\num{valid.weightedEra.lo} to \num{valid.weightedEra.hi}). Of the \num{valid.era.stopped} stopped trials that enrolled and started in \era\ (stops for benefit included), \num{valid.era.laterPass.n} (\num{valid.era.laterPass.pct}\%) had a blank or unclear first-pass label and went to the later passes and the rules, which the sample does not cover. Table~\ref{tab:validation} gives the agreement for each first-pass label.
+
+\begin{table}[H]
+\centering
+\caption{Agreement between the first-pass label and the blind adjudication, \num{valid.perCategory} sampled items per category, ordered by how often the first-pass label occurs. The interval is a Wilson 95\% interval for the agreement, in percent. Prevalence is the share of all first-pass labels, over all years, that carry the label. The last column names the label the adjudication gave most often where it differed, with the number of items; where several labels tie, it gives how many. The categories are those of \S\ref{main-sec:classification} of the main text.}
+\label{tab:validation}
+\small
+\begin{tabular}{lrrrl}
+\toprule
+first-pass label & agreement & 95\% CI (\%) & prevalence (\%) & most often adjudicated instead \\
+\midrule
+\tablebody{validation}
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Miss-rate definitions (\code{decomposition.py}, \code{endpoint\_design.py}, \code{sensitivity.py})}
+Table~\ref{tab:missrate} gives the miss rate under the verdict used in the main text and under the other rules considered.
+
+\begin{table}[H]
+\centering
+\caption{Share of trials that miss the primary endpoint under different rules (\%).}
+\label{tab:missrate}
+\begin{tabular}{lrr}
+\toprule
+rule & all years & \era \\
+\midrule
+any primary analysis significant is a win (the verdict) & \num{miss.all.pct} & \num{miss.era.pct} \\
+the same, completed trials only & \num{miss.all.completed.pct} & \num{miss.era.completed.pct} \\
+the same, non-inferiority and equivalence designs excluded & \num{ni.all.superiority.miss.pct} & \num{ni.era.superiority.miss.pct} \\
+every primary outcome with a usable $p$-value significant & \num{combine.all.and.pct} & \num{combine.era.and.pct} \\
+every primary outcome significant & \num{combine.all.strict.pct} & \num{combine.era.strict.pct} \\
+minimum $p$ below \num{alpha}, operator stripped & \num{diag.all.naive.pct} & \num{diag.era.naive.pct} \\
+minimum $p$ below a \v{S}id\'ak threshold & \num{diag.all.sidak.pct} & \num{diag.era.sidak.pct} \\
+minimum $p$ below \num{alpha}, among trials with one primary outcome & \num{diag.all.single.pct} & \num{diag.era.single.pct} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Of trials with a verdict, \num{ni.all.pct}\% over all years and \num{ni.era.pct}\% in \era\ declare a non-inferiority or equivalence design. In \era, \num{combine.era.incomplete.n} trials (\num{combine.era.incomplete.pct}\%) have at least one primary outcome with no usable $p$-value. Of \num{direction.wins} wins in \era, \num{direction.ratioOnly.n} (\num{direction.ratioOnly.pct}\%) have only ratio parameters above 1 among their significant analyses, and \num{direction.hazardOnly.n} of those (\num{direction.hazardOnly.pct}\% of wins) only hazard ratios above 1. For a response odds ratio a value above 1 is benefit and for a hazard ratio of an adverse event it is harm, and the registry does not say which applies.
+
+Over all years, the operator-aware reading changes \num{verdict.flips.n} verdicts (\num{verdict.flips.pct}\% of trials with one) relative to the reading with the operator stripped, and \num{verdict.ambiguous} trials remain undetermined by their operators and fall back to the numeric threshold. Under the stripped reading the trend test across \trendyears\ gives $p=\num{trend.naive.p}$.
+
+\section{Taxonomy sensitivity (\code{sensitivity.py})}\label{supp:taxonomy}
+Table~\ref{tab:taxonomy} changes one assignment at a time. Its first rows vary the \num{tax.assignments} assignments that are open to argument. Efficacy stays ahead of operational causes under each, for all sponsors and for the big-pharma stratum, although the last of them leaves the two level among all sponsors. That row counts as unknown the \num{audit.eff.n} second-pass model labels of efficacy or futility in the main window, which the registry text does not support (main text, \S\ref{main-sec:limitations}, limitation~\ref{main-lim:validation}); they belong to the registrations \num{audit.eff.ncts}. The last \num{tax.scenarios} rows are scenarios, not sensitivity analyses: they show how large the safety share would be if every bare sponsor decision, or every sponsor and business decision, concealed a safety stop.
+
+\begin{table}[H]
+\centering
+\caption{Failure shares (\%) when one category-to-bucket assignment is changed. The shares moved for external evidence and for business or strategic are those the adjudication assigned to the other label in the validation sample. The last two rows of each sponsor group are scenarios for the safety share.}
+\label{tab:taxonomy}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}
+\toprule
+assignment & sponsors & efficacy & operational & commercial & safety & unknown \\
+\midrule
+\tablebody{taxonomy}
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Novel and lifecycle subjects in the big-pharma stratum (\code{novelty\_flag.py})}\label{sec:novelty}
+Table~\ref{tab:novelty} splits the big-pharma failures by the novelty flag.
+
+\begin{table}[H]
+\centering
+\caption{Big-pharma failures by whether the trial's subject drug had an earlier phase-3 win in the cohort (lifecycle) or not (novel).}
+\label{tab:novelty}
+\small\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+ & failures & miss rate (\%) & efficacy & operational & commercial & safety & unknown \\
+\midrule
+\tablebody{novelty}
+\bottomrule
+\end{tabular}
+\end{table}
+
+The flag sees only wins inside the cohort. A drug validated before the registry's results era, or in trials without a usable $p$-value, is called novel, so the novel group contains lifecycle trials and the contrast between the two rows is understated. \num{novelty.unflagged.n} big-pharma failures have no identifiable subject drug and are in neither row.
+
+\section{The comparison with Hwang et al.\ under each counting choice (\code{inference.py})}
+Hwang et al.\ attributed \num{hwang.eff.n} of \num{hwang.failed} failures (\num{hwang.eff.pct}\%) to efficacy. Table~\ref{tab:hwang} sets the big-pharma efficacy share of this work against that share under each counting choice; Figure~\ref{main-fig:hwang} of the main text draws these rows and, in addition, the imputed share. Table~\ref{main-tab:decomposition} of the main text gives the full decomposition in each population and window.
+
+\begin{table}[H]
+\centering
+\caption{The big-pharma efficacy share against that of Hwang et al. The interval of the share uses a program-clustered standard error (on the logit scale, back-transformed). The first $p$-value is from a two-sample test of proportions that treats trials as independent. The difference is this work minus theirs in percentage points; its interval and the clustered $p$-value are Wald, from a delta-method standard error for this work combined with the binomial error of Hwang et al. The first three rows are rows of the big-pharma block of Table~\ref{main-tab:decomposition} of the main text; the last adds \num{bigpharma.mid} mid-size companies.}
+\label{tab:hwang}
+\footnotesize\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+population and window & failures & efficacy (\%) & 95\% CI & $p$ & clustered $p$ & difference, 95\% CI \\
+\midrule
+enrolled, \era & \num{hwang.enrolled.n} & \num{hwang.enrolled.eff.pct} & \num{hwang.enrolled.clustered.lo} to \num{hwang.enrolled.clustered.hi} & $\num{hwang.enrolled.p}$ & $\num{hwang.enrolled.clustered.p}$ & $\num{hwang.enrolled.diff.lo}$ to $\num{hwang.enrolled.diff.hi}$ \\
+enrolled, \eracomplete & \num{hwang.complete.n} & \num{hwang.complete.eff.pct} & \num{hwang.complete.clustered.lo} to \num{hwang.complete.clustered.hi} & $\num{hwang.complete.p}$ & $\num{hwang.complete.clustered.p}$ & $\num{hwang.complete.diff.lo}$ to $\num{hwang.complete.diff.hi}$ \\
+withdrawn counted, \era & \num{hwang.registered.n} & \num{hwang.registered.eff.pct} & \num{hwang.registered.clustered.lo} to \num{hwang.registered.clustered.hi} & $\num{hwang.registered.p}$ & $\num{hwang.registered.clustered.p}$ & $\num{hwang.registered.diff.lo}$ to $\num{hwang.registered.diff.hi}$ \\
+mid-size added, \era & \num{hwang.wide.n} & \num{hwang.wide.eff.pct} & \num{hwang.wide.clustered.lo} to \num{hwang.wide.clustered.hi} & $\num{hwang.wide.p}$ & $\num{hwang.wide.clustered.p}$ & $\num{hwang.wide.diff.lo}$ to $\num{hwang.wide.diff.hi}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Coverage imputation (\code{coverage.py})}
+Among all sponsors, \num{coverage.enrolled.all.comparator.reported} completed trials with a comparator arm have a verdict and \num{coverage.enrolled.all.comparator.unreported} do not; \num{coverage.enrolled.all.comparator.miss.n} of the former missed (\num{coverage.enrolled.all.comparator.miss.pct}\%). The pooled imputation therefore adds about \num{coverage.enrolled.all.pooled.extra} misses, the adjusted one about \num{coverage.enrolled.all.adjusted.extra}, and the bound all \num{coverage.enrolled.all.upper.extra}. The interval quoted in the main text for the pooled efficacy share, \num{coverage.enrolled.all.pooled.eff.lo}\% to \num{coverage.enrolled.all.pooled.eff.hi}\%, reflects only the sampling error of the miss rate. Table~\ref{tab:coverage} gives the shares under each imputation.
+
+\begin{table}[H]
+\centering
+\caption{Failure shares (\%) after imputing misses for completed trials without a verdict. ``Pooled'' applies the miss rate of reporting trials with a comparator arm to unreported trials with a comparator arm; ``adjusted'' predicts each trial's miss probability from sponsor class, start year, number of primary outcomes and therapeutic area; ``every one missed'' is the bound; the last row of the first block also imputes for single-arm studies, at the miss rate of all reporting trials.}
+\label{tab:coverage}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}
+\toprule
+sponsors & imputation & efficacy & operational & commercial & safety & unknown \\
+\midrule
+all sponsors & none (as observed) & \num{coverage.enrolled.all.raw.eff} & \num{coverage.enrolled.all.raw.op} & \num{coverage.enrolled.all.raw.com} & \num{coverage.enrolled.all.raw.saf} & \num{coverage.enrolled.all.raw.unk} \\
+ & pooled & \num{coverage.enrolled.all.pooled.eff} & \num{coverage.enrolled.all.pooled.op} & \num{coverage.enrolled.all.pooled.com} & \num{coverage.enrolled.all.pooled.saf} & \num{coverage.enrolled.all.pooled.unk} \\
+ & adjusted & \num{coverage.enrolled.all.adjusted.eff} & \num{coverage.enrolled.all.adjusted.op} & \num{coverage.enrolled.all.adjusted.com} & \num{coverage.enrolled.all.adjusted.saf} & \num{coverage.enrolled.all.adjusted.unk} \\
+ & every one missed & \num{coverage.enrolled.all.upper.eff} & \num{coverage.enrolled.all.upper.op} & \num{coverage.enrolled.all.upper.com} & \num{coverage.enrolled.all.upper.saf} & \num{coverage.enrolled.all.upper.unk} \\
+ & pooled, single-arm included & \num{coverage.enrolled.all.withSingleArm.eff} & \num{coverage.enrolled.all.withSingleArm.op} & \num{coverage.enrolled.all.withSingleArm.com} & \num{coverage.enrolled.all.withSingleArm.saf} & \num{coverage.enrolled.all.withSingleArm.unk} \\
+\midrule
+big pharma & none (as observed) & \num{coverage.enrolled.big.raw.eff} & \num{coverage.enrolled.big.raw.op} & \num{coverage.enrolled.big.raw.com} & \num{coverage.enrolled.big.raw.saf} & \num{coverage.enrolled.big.raw.unk} \\
+ & pooled & \num{coverage.enrolled.big.pooled.eff} & \num{coverage.enrolled.big.pooled.op} & \num{coverage.enrolled.big.pooled.com} & \num{coverage.enrolled.big.pooled.saf} & \num{coverage.enrolled.big.pooled.unk} \\
+ & adjusted & \num{coverage.enrolled.big.adjusted.eff} & \num{coverage.enrolled.big.adjusted.op} & \num{coverage.enrolled.big.adjusted.com} & \num{coverage.enrolled.big.adjusted.saf} & \num{coverage.enrolled.big.adjusted.unk} \\
+ & every one missed & \num{coverage.enrolled.big.upper.eff} & \num{coverage.enrolled.big.upper.op} & \num{coverage.enrolled.big.upper.com} & \num{coverage.enrolled.big.upper.saf} & \num{coverage.enrolled.big.upper.unk} \\
+\midrule
+other sponsors & none (as observed) & \num{coverage.enrolled.rest.raw.eff} & \num{coverage.enrolled.rest.raw.op} & \num{coverage.enrolled.rest.raw.com} & \num{coverage.enrolled.rest.raw.saf} & \num{coverage.enrolled.rest.raw.unk} \\
+ & pooled & \num{coverage.enrolled.rest.pooled.eff} & \num{coverage.enrolled.rest.pooled.op} & \num{coverage.enrolled.rest.pooled.com} & \num{coverage.enrolled.rest.pooled.saf} & \num{coverage.enrolled.rest.pooled.unk} \\
+ & adjusted & \num{coverage.enrolled.rest.adjusted.eff} & \num{coverage.enrolled.rest.adjusted.op} & \num{coverage.enrolled.rest.adjusted.com} & \num{coverage.enrolled.rest.adjusted.saf} & \num{coverage.enrolled.rest.adjusted.unk} \\
+ & every one missed & \num{coverage.enrolled.rest.upper.eff} & \num{coverage.enrolled.rest.upper.op} & \num{coverage.enrolled.rest.upper.com} & \num{coverage.enrolled.rest.upper.saf} & \num{coverage.enrolled.rest.upper.unk} \\
+\midrule
+all sponsors, & none (as observed) & \num{coverage.registered.all.raw.eff} & \num{coverage.registered.all.raw.op} & \num{coverage.registered.all.raw.com} & \num{coverage.registered.all.raw.saf} & \num{coverage.registered.all.raw.unk} \\
+withdrawn counted & pooled & \num{coverage.registered.all.pooled.eff} & \num{coverage.registered.all.pooled.op} & \num{coverage.registered.all.pooled.com} & \num{coverage.registered.all.pooled.saf} & \num{coverage.registered.all.pooled.unk} \\
+ & adjusted & \num{coverage.registered.all.adjusted.eff} & \num{coverage.registered.all.adjusted.op} & \num{coverage.registered.all.adjusted.com} & \num{coverage.registered.all.adjusted.saf} & \num{coverage.registered.all.adjusted.unk} \\
+ & every one missed & \num{coverage.registered.all.upper.eff} & \num{coverage.registered.all.upper.op} & \num{coverage.registered.all.upper.com} & \num{coverage.registered.all.upper.saf} & \num{coverage.registered.all.upper.unk} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\clearpage
+\section{STROBE checklist}\label{supp:strobe}
+Table~\ref{tab:strobe} lists the items of the STROBE statement for cross-sectional studies in its order.
+
+\begin{table}[H]
+\centering
+\caption{The STROBE items and where the main text or this supplement addresses each. Section numbers without an S are those of the main text.}
+\label{tab:strobe}
+\footnotesize
+\begin{tabular}{r>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.66\textwidth}}
+\toprule
+item & recommendation & addressed in \\
+\midrule
+\strobeitem & Title and abstract & The abstract names the design (a cross-sectional study of registry records) and is structured; the title says what was done (an automated decomposition of registry records). \\
+\strobeitem & Background and rationale & \S\ref{main-sec:intro}. \\
+\strobeitem & Objectives & \S\ref{main-sec:intro}, last paragraph. No hypothesis was pre-specified and no protocol registered (\S\ref{main-sec:limitations}, limitation~\ref{main-lim:plan}). \\
+\strobeitem & Study design & \S\ref{main-sec:data}: a cross-sectional analysis of every phase-3 registration returned by two registry filters. \\
+\strobeitem & Setting & \S\ref{main-sec:data}: the registry, the retrieval dates and the start-year windows. \\
+\strobeitem & Participants & \S\ref{main-sec:data}: the two filters are the eligibility criteria; the primary population is trials that enrolled. \\
+\strobeitem & Variables & \S\ref{main-sec:verdict} (primary-endpoint verdict), \S\ref{main-sec:classification} (termination categories and failure buckets), \S\ref{main-sec:strata} (sponsor class, programs, novelty), \S\ref{supp:areas} (therapeutic area). \\
+\strobeitem & Data sources and measurement & \S\ref{main-sec:data} to \S\ref{main-sec:classification}; validation of the labels in \S\ref{main-sec:validation-methods}. The category definitions are in the archived prompts. The $p$-value extraction was not checked against source documents (\S\ref{main-sec:validation}). \\
+\strobeitem & Bias & \S\ref{main-sec:coverage-methods} and \S\ref{main-sec:coverage} (endpoint-reporting coverage), \S\ref{main-sec:population} (which registrations count), \S\ref{main-sec:safety} (taxonomy), \S\ref{main-sec:limitations}. \\
+\strobeitem & Study size & \S\ref{main-sec:data}: every registration that met the filters; no sample size was calculated. \\
+\strobeitem & Quantitative variables & \S\ref{main-sec:verdict} (win rule), \S\ref{main-sec:classification} (pooling of categories into buckets), \S\ref{main-sec:data} (windows). \\
+\strobeitem & Statistical methods & \S\ref{main-sec:stats}. Missing verdicts: \S\ref{main-sec:coverage-methods}. Subgroups: \S\ref{main-sec:sponsor} (sponsor class, therapeutic area) and \S\ref{main-sec:hwang} (novel and lifecycle subjects). Sensitivity analyses: \S\ref{main-sec:population} to \S\ref{main-sec:missrate}. No sampling: every registration that met the filters was analyzed. Standard errors are clustered in the regressions, the sponsor contrast and the comparison with Hwang et al.; the other intervals and tests treat trials as independent (\S\ref{main-sec:limitations}, limitation~\ref{main-lim:unit}). \\
+\strobeitem & Participants & \S\ref{main-sec:data} (registrations under each filter, their overlap, the withdrawn ones) and \S\ref{main-sec:verdict} (trials with a verdict). Figure~\ref{main-fig:flow} is the flow diagram. \\
+\strobeitem & Descriptive data & Figure~\ref{main-fig:flow} (registrations at each stage), \S\ref{main-sec:coverage} (single-arm studies and trials without a verdict), Table~\ref{tab:yearly} (trials with a verdict by start year) and Table~\ref{tab:areas} (failures and verdicts by therapeutic area). No table of the characteristics of every trial in the cohort is given. Missing data: \S\ref{main-sec:recover} (termination reason), \S\ref{main-sec:coverage} (verdict), \S\ref{main-sec:data} (start date), \S\ref{supp:subjects} (subject drug). \\
+\strobeitem & Outcome data & Table~\ref{main-tab:decomposition} of the main text; \S\ref{main-sec:population} and \S\ref{main-sec:missrate}. \\
+\strobeitem & Main results & \S\ref{main-sec:population} to \S\ref{main-sec:sponsor}, with 95\% intervals. Shares are unadjusted. Adjusted: Table~\ref{tab:covmodel} (which trials report) and the adjusted imputation (Table~\ref{tab:coverage}; covariates in \S\ref{main-sec:coverage-methods}). The odds ratio of \S\ref{main-sec:sponsor} is unadjusted, clustered by program. Windows: \S\ref{main-sec:data}. \\
+\strobeitem & Other analyses & \S\ref{main-sec:hwang} (novelty), \S\ref{main-sec:safety} (taxonomy), \S\ref{main-sec:missrate} (win rules), \S\ref{main-sec:sponsor} (sponsor class and area), and this supplement. \\
+\strobeitem & Key results & \S\ref{main-sec:discussion}. \\
+\strobeitem & Limitations & \S\ref{main-sec:limitations}. \\
+\strobeitem & Interpretation & \S\ref{main-sec:discussion}. \\
+\strobeitem & Generalizability & \S\ref{main-sec:discussion}, last paragraph, and \S\ref{main-sec:limitations} on the unposted trials and on the comparison by proxy. \\
+\strobeitem & Funding & \S\ref{main-sec:declarations}. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
