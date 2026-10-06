@@ -118,7 +118,7 @@ Carstensen T. Structured-data reporting shapes the apparent causes of phase-3 tr
 
 ## Contact
 
-Tommy Carstensen. Correspondence: `medrxiv@tommycarstensen.com`. ORCID [0000-0002-3672-9931](https://orcid.org/0000-0002-3672-9931).
+Tommy Carstensen, Capital Region of Denmark (Region Hovedstaden), Denmark. Correspondence: `tommy.carstensen@regionh.dk`. ORCID [0000-0002-3672-9931](https://orcid.org/0000-0002-3672-9931).
 
 ## Licence
 
