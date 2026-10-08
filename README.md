@@ -4,7 +4,7 @@ Code, labels and data for the paper "Structured-data reporting shapes the appare
 
 The paper classifies why phase-3 trials fail, using only ClinicalTrials.gov and linked PubMed abstracts, and asks where a registry-only answer is misleading. Its reference point is the manual study of Hwang et al. (JAMA Intern Med 2016). Every number in the manuscript and the supplement is written by the scripts in this repository.
 
-To read the paper: the preprint is on medRxiv (the link is added here when it is posted), and `bash build_pdf.sh` builds `paper/manuscript.pdf` and `paper/supplement.pdf` from the sources in `paper/`.
+To read the paper: `bash build_pdf.sh` builds `paper/manuscript.pdf` and `paper/supplement.pdf` from the sources in `paper/`; the link to the posted preprint is added here when there is one.
 
 ## Findings
 
@@ -114,11 +114,11 @@ The manuscript's Limitations section is the full list.
 
 ## Cite
 
-Carstensen T. Structured-data reporting shapes the apparent causes of phase-3 trial failure: an automated decomposition of ClinicalTrials.gov records. *medRxiv* preprint, 2026 (not peer reviewed; DOI to follow on posting). Repository: <https://github.com/tommycarstensen/phase3-failure-decomposition>. See [`CITATION.cff`](CITATION.cff) for the structured form that GitHub reads.
+Carstensen T. Structured-data reporting shapes the apparent causes of phase-3 trial failure: an automated decomposition of ClinicalTrials.gov records. Preprint, 2026 (not peer reviewed; DOI to follow on posting). Repository: <https://github.com/tommycarstensen/phase3-failure-decomposition>. See [`CITATION.cff`](CITATION.cff) for the structured form that GitHub reads.
 
 ## Contact
 
-Tommy Carstensen, Capital Region of Denmark (Region Hovedstaden), Denmark. Correspondence: `tommy.carstensen@regionh.dk`. ORCID [0000-0002-3672-9931](https://orcid.org/0000-0002-3672-9931).
+Tommy Carstensen, independent researcher. Correspondence: `medrxiv@tommycarstensen.com`. ORCID [0000-0002-3672-9931](https://orcid.org/0000-0002-3672-9931).
 
 ## Licence
 
