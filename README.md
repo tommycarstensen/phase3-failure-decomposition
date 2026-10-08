@@ -118,7 +118,7 @@ Carstensen T. Structured-data reporting shapes the apparent causes of phase-3 tr
 
 ## Contact
 
-Tommy Carstensen, independent researcher. Correspondence: `metaarxiv@tommycarstensen.com`. ORCID [0000-0002-3672-9931](https://orcid.org/0000-0002-3672-9931).
+Tommy Carstensen, independent researcher. About this repository: `github@tommycarstensen.com`. About the paper: `metaarxiv@tommycarstensen.com`. ORCID [0000-0002-3672-9931](https://orcid.org/0000-0002-3672-9931).
 
 ## Licence
 

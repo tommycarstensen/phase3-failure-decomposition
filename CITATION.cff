@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Carstensen
     given-names: Tommy
-    email: metaarxiv@tommycarstensen.com
+    email: github@tommycarstensen.com
     orcid: "https://orcid.org/0000-0002-3672-9931"
 repository-code: "https://github.com/tommycarstensen/phase3-failure-decomposition"
 abstract: "Code, labels, data and manuscript of the preprint. The paper classifies why phase-3 trials fail, using only ClinicalTrials.gov and linked PubMed abstracts, and asks where a registry-only answer is misleading. Every number in the manuscript and the supplement is written by a script in this repository; bash reproduce.sh regenerates them from the archived retrievals (9 July 2026 and 20 August 2026) and bash build_pdf.sh builds the two PDFs."
