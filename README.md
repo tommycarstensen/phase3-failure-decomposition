@@ -4,7 +4,7 @@ Code, labels and data for the paper "Structured-data reporting shapes the appare
 
 The paper classifies why phase-3 trials fail, using only ClinicalTrials.gov and linked PubMed abstracts, and asks where a registry-only answer is misleading. Its reference point is the manual study of Hwang et al. (JAMA Intern Med 2016). Every number in the manuscript and the supplement is written by the scripts in this repository.
 
-To read the paper: `bash build_pdf.sh` builds `paper/manuscript.pdf` and `paper/supplement.pdf` from the sources in `paper/`; the link to the posted preprint is added here when there is one.
+To read the paper: the preprint is on MetaArXiv, <https://doi.org/10.31222/osf.io/szuh5_v1>, and `bash build_pdf.sh` builds `paper/manuscript.pdf` and `paper/supplement.pdf` from the sources in `paper/`. Version 1 of the preprint was built from commit `dd604d2` of this repository.
 
 ## Findings
 
@@ -114,7 +114,7 @@ The manuscript's Limitations section is the full list.
 
 ## Cite
 
-Carstensen T. Structured-data reporting shapes the apparent causes of phase-3 trial failure: an automated decomposition of ClinicalTrials.gov records. Preprint, 2026 (not peer reviewed; DOI to follow on posting). Repository: <https://github.com/tommycarstensen/phase3-failure-decomposition>. See [`CITATION.cff`](CITATION.cff) for the structured form that GitHub reads.
+Carstensen T. Structured-data reporting shapes the apparent causes of phase-3 trial failure: an automated decomposition of ClinicalTrials.gov records. *MetaArXiv* preprint, 2026 (not peer reviewed). <https://doi.org/10.31222/osf.io/szuh5_v1>. Repository: <https://github.com/tommycarstensen/phase3-failure-decomposition>. See [`CITATION.cff`](CITATION.cff) for the structured form that GitHub reads.
 
 ## Contact
 
