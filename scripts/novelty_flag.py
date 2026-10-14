@@ -14,14 +14,9 @@ novel. The novel group is therefore contaminated with lifecycle trials, which
 works against finding a difference between the groups.
 """
 
-import math
-
-import statsmodels.api as sm
-
 import subjects
 from failure_decomp import (
     ERA,
-    HWANG,
     decompose,
     is_bigpharma,
     load,
@@ -38,22 +33,9 @@ arms = read_json(REGISTRY + 'ph3_arms.json')
 subject_of, _, _ = subjects.build(arms, results)
 nums = Numbers('novelty_flag')
 
-# earliest winning start year per subject drug
-win_year = {}
-for r in results:
-    drug = subject_of(r['nct'])
-    y = year_of(meta, r['nct'])
-    if r['win'] and drug and y is not None:
-        win_year[drug] = min(win_year.get(drug, 9999), y)
-
-
-def is_lifecycle(nct):
-    """True, False, or None when the trial has no identifiable subject."""
-    drug = subject_of(nct)
-    y = year_of(meta, nct)
-    if drug is None or y is None:
-        return None
-    return win_year.get(drug, 9999) < y
+is_lifecycle = subjects.lifecycle_flag(
+    results, subject_of, lambda nct: year_of(meta, nct)
+)
 
 
 def big(n):
@@ -100,27 +82,16 @@ for key, label, cut in CUTS:
     )
 write_table('novelty', table[:3])
 
-# The novel subset against Hwang et al., who studied novel therapeutics: a
-# Wilson interval, a two-sample test of proportions and a Wald interval for
-# the difference, all with trials treated as independent.
-h_k, h_n = HWANG['efficacy'], HWANG['failed']
+# The Wilson interval of the novel subset's efficacy share. Its comparison
+# with Hwang et al., who studied novel therapeutics, is in inference.py with
+# the other comparisons, so that it is clustered by program in the same way.
 cuts = {key: cut for key, _, cut in CUTS}
 novel = decompose(results, meta, stopcat, ERA, subset=cuts['novel'])
-k, n = novel['eff'], novel['den']
-share, h_share = k / n, h_k / h_n
-lo, hi = wilson(k, n)
-_, p = sm.stats.proportions_ztest([k, h_k], [n, h_n])
-se = math.sqrt(share * (1 - share) / n + h_share * (1 - h_share) / h_n)
-d_lo = 100 * (share - h_share) - 1.96 * 100 * se
-d_hi = 100 * (share - h_share) + 1.96 * 100 * se
+lo, hi = wilson(novel['eff'], novel['den'])
 print(
-    f'  novel vs Hwang: {k}/{n} = {100 * share:.1f}% '
-    f'[{lo:.1f}, {hi:.1f}]; difference {100 * (share - h_share):+.1f} points '
-    f'[{d_lo:+.1f}, {d_hi:+.1f}], p = {p:.3f}'
+    f"  novel: {novel['eff']}/{novel['den']} = "
+    f"{100 * novel['eff'] / novel['den']:.1f}% [{lo:.1f}, {hi:.1f}]"
 )
 nums.pct('novelty.novel.eff.lo', lo)
 nums.pct('novelty.novel.eff.hi', hi)
-nums.fixed('novelty.novel.hwang.diff.lo', d_lo, 1)
-nums.fixed('novelty.novel.hwang.diff.hi', d_hi, 1)
-nums.p('novelty.novel.hwang.p', p)
 nums.save()

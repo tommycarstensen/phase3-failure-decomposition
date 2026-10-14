@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-\usepackage[margin=1in]{geometry}
+\usepackage[a4paper,margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs}
 \usepackage{array}
@@ -123,7 +123,7 @@ Raw agreement is \num{valid.agree.pct}\% (\num{valid.agree.lo} to \num{valid.agr
 \centering
 \caption{Agreement between the first-pass label and the blind adjudication, \num{valid.perCategory} sampled items per category, ordered by how often the first-pass label occurs. The interval is a Wilson 95\% interval for the agreement, in percent. Prevalence is the share of all first-pass labels, over all years, that carry the label. The last column names the label the adjudication gave most often where it differed, with the number of items; where several labels tie, it gives how many. The categories are those of \S\ref{main-sec:classification} of the main text.}
 \label{tab:validation}
-\small
+\small\setlength{\tabcolsep}{4pt}
 \begin{tabular}{lrrrl}
 \toprule
 first-pass label & agreement & 95\% CI (\%) & prevalence (\%) & most often adjudicated instead \\
@@ -159,7 +159,7 @@ minimum $p$ below \num{alpha}, among trials with one primary outcome & \num{diag
 
 Of trials with a verdict, \num{ni.all.pct}\% over all years and \num{ni.era.pct}\% in \era\ declare a non-inferiority or equivalence design. In \era, \num{combine.era.incomplete.n} trials (\num{combine.era.incomplete.pct}\%) have at least one primary outcome with no usable $p$-value. Of \num{direction.wins} wins in \era, \num{direction.ratioOnly.n} (\num{direction.ratioOnly.pct}\%) have only ratio parameters above 1 among their significant analyses, and \num{direction.hazardOnly.n} of those (\num{direction.hazardOnly.pct}\% of wins) only hazard ratios above 1. For a response odds ratio a value above 1 is benefit and for a hazard ratio of an adverse event it is harm, and the registry does not say which applies.
 
-Over all years, the operator-aware reading changes \num{verdict.flips.n} verdicts (\num{verdict.flips.pct}\% of trials with one) relative to the reading with the operator stripped, and \num{verdict.ambiguous} trials remain undetermined by their operators and fall back to the numeric threshold. Under the stripped reading the trend test across \trendyears\ gives $p=\num{trend.naive.p}$.
+Over all years, the operator-aware reading changes \num{verdict.flips.n} verdicts (\num{verdict.flips.pct}\% of trials with one) relative to the reading with the operator stripped, and \num{verdict.ambiguous} trials have a verdict that their operators leave undetermined and are scored by their smallest reported number with the operator ignored (\S\ref{main-sec:verdict} of the main text gives the rule). Under the stripped reading the trend test across \trendyears\ gives $p=\num{trend.naive.p}$.
 
 \section{Taxonomy sensitivity (\code{sensitivity.py})}\label{supp:taxonomy}
 Table~\ref{tab:taxonomy} changes one assignment at a time. Its first rows vary the \num{tax.assignments} assignments that are open to argument. Efficacy stays ahead of operational causes under each, for all sponsors and for the big-pharma stratum, although the last of them narrows the gap among all sponsors to \num{tax.all.modelEfficacyToUnknown.eff}\% against \num{tax.all.modelEfficacyToUnknown.op}\%. That row counts as unknown the \num{audit.eff.n} second-pass model labels of efficacy or futility in the main window, which the registry text does not support (main text, \S\ref{main-sec:limitations}, limitation~\ref{main-lim:validation}); they belong to the registrations \num{audit.eff.ncts}. The last \num{tax.scenarios} rows of each sponsor group are scenarios, not sensitivity analyses: they show how large the safety share would be if every bare sponsor decision, or every sponsor and business decision, concealed a safety stop.
@@ -195,16 +195,16 @@ Table~\ref{tab:novelty} splits the big-pharma failures by the novelty flag.
 \end{tabular}
 \end{table}
 
-The flag sees only wins inside the cohort. A drug validated before the registry's results era, or in trials without a usable $p$-value, is called novel, so the novel group contains lifecycle trials and the contrast between the two rows is understated. \num{novelty.unflagged.n} big-pharma failures have no identifiable subject drug and are in neither row.
+The flag sees only wins inside the cohort. A drug validated before the registry's results era, or in trials without a usable $p$-value, is called novel, so the novel group contains lifecycle trials and the contrast between the two rows is understated. \num{novelty.unflagged.n} big-pharma failures have no identifiable subject drug and are in neither row. The novel subset is compared with Hwang et al.\ in the last row of Table~\ref{tab:hwang}.
 
 \section{The comparison with Hwang et al.\ under each counting choice (\code{inference.py})}
-Hwang et al.\ attributed \num{hwang.eff.n} of \num{hwang.failed} failures (\num{hwang.eff.pct}\%) to efficacy. Table~\ref{tab:hwang} sets the big-pharma efficacy share of this work against that share under each counting choice; Figure~\ref{main-fig:hwang} of the main text draws these rows and, in addition, the imputed share. Table~\ref{main-tab:decomposition} of the main text gives the full decomposition in each population and window.
+Hwang et al.\ attributed \num{hwang.eff.n} of \num{hwang.failed} failures (\num{hwang.eff.pct}\%) to efficacy. Table~\ref{tab:hwang} sets the big-pharma efficacy share of this work against that share under each counting choice; Figure~\ref{main-fig:hwang} of the main text draws its first four rows and, in addition, the imputed share. Table~\ref{main-tab:decomposition} of the main text gives the full decomposition in each population and window.
 
 \begin{table}[H]
 \centering
-\caption{The big-pharma efficacy share against that of Hwang et al. The interval of the share uses a program-clustered standard error (on the logit scale, back-transformed). The first $p$-value is from a two-sample test of proportions that treats trials as independent. The difference is this work minus theirs in percentage points; its interval and the clustered $p$-value are Wald, from a delta-method standard error for this work combined with the binomial error of Hwang et al. The first three rows are rows of the big-pharma block of Table~\ref{main-tab:decomposition} of the main text; the last adds \num{bigpharma.mid} mid-size companies.}
+\caption{The big-pharma efficacy share against that of Hwang et al. The interval of the share uses a program-clustered standard error (on the logit scale, back-transformed). The first $p$-value is from a two-sample test of proportions that treats trials as independent. The difference is this work minus theirs in percentage points; its interval and the clustered $p$-value are Wald, from a delta-method standard error for this work combined with the binomial error of Hwang et al. The first three rows are rows of the big-pharma block of Table~\ref{main-tab:decomposition} of the main text; the fourth adds \num{bigpharma.mid} mid-size companies, and the last keeps only the trials whose subject drug is flagged novel (\S\ref{sec:novelty}).}
 \label{tab:hwang}
-\footnotesize\setlength{\tabcolsep}{5pt}
+\footnotesize\setlength{\tabcolsep}{4pt}
 \begin{tabular}{lrrrrrr}
 \toprule
 population and window & failures & efficacy (\%) & 95\% CI & $p$ & clustered $p$ & difference, 95\% CI \\
@@ -213,6 +213,7 @@ enrolled, \era & \num{hwang.enrolled.n} & \num{hwang.enrolled.eff.pct} & \num{hw
 enrolled, \eracomplete & \num{hwang.complete.n} & \num{hwang.complete.eff.pct} & \num{hwang.complete.clustered.lo} to \num{hwang.complete.clustered.hi} & $\num{hwang.complete.p}$ & $\num{hwang.complete.clustered.p}$ & $\num{hwang.complete.diff.lo}$ to $\num{hwang.complete.diff.hi}$ \\
 withdrawn counted, \era & \num{hwang.registered.n} & \num{hwang.registered.eff.pct} & \num{hwang.registered.clustered.lo} to \num{hwang.registered.clustered.hi} & $\num{hwang.registered.p}$ & $\num{hwang.registered.clustered.p}$ & $\num{hwang.registered.diff.lo}$ to $\num{hwang.registered.diff.hi}$ \\
 mid-size added, \era & \num{hwang.wide.n} & \num{hwang.wide.eff.pct} & \num{hwang.wide.clustered.lo} to \num{hwang.wide.clustered.hi} & $\num{hwang.wide.p}$ & $\num{hwang.wide.clustered.p}$ & $\num{hwang.wide.diff.lo}$ to $\num{hwang.wide.diff.hi}$ \\
+novel subset, \era & \num{hwang.novel.n} & \num{hwang.novel.eff.pct} & \num{hwang.novel.clustered.lo} to \num{hwang.novel.clustered.hi} & $\num{hwang.novel.p}$ & $\num{hwang.novel.clustered.p}$ & $\num{hwang.novel.diff.lo}$ to $\num{hwang.novel.diff.hi}$ \\
 \bottomrule
 \end{tabular}
 \end{table}

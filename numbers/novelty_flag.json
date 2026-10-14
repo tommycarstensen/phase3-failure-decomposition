@@ -418,20 +418,5 @@
   "value": 55.118,
   "tex": "55",
   "txt": "55"
- },
- "novelty.novel.hwang.diff.lo": {
-  "value": -17.051566,
-  "tex": "-17.1",
-  "txt": "-17.1"
- },
- "novelty.novel.hwang.diff.hi": {
-  "value": 0.231197,
-  "tex": "0.2",
-  "txt": "0.2"
- },
- "novelty.novel.hwang.p": {
-  "value": 0.05673402528692464,
-  "tex": "0.057",
-  "txt": "0.057"
  }
 }

@@ -1,12 +1,16 @@
-"""Check that the manuscript and the supplement say what the numbers say.
+"""Check that the manuscripts and the supplements say what the numbers say.
 
-Four checks. reproduce.sh stops if any of them fails.
+The documents come in pairs, a manuscript and its supplement: the preprint
+(manuscript.tex, supplement.tex) and, where it exists, the version for the
+Journal of Clinical Epidemiology (jce.tex, jce_supplement.tex). A file a
+document reads with \\input, such as flow.tex, is checked as part of it.
+
+Five checks. reproduce.sh stops if any of them fails.
 
   1. No result is typed by hand. Outside the reference list, every digit in
-     the title and body of manuscript.tex and supplement.tex, and in
-     readme_findings.md, must come from a recorded number (\\num{name} or
-     {{name}}). The exceptions are in ALLOWED: names and conventions, not
-     results.
+     the title and body of each document, and in readme_findings.md, must
+     come from a recorded number (\\num{name} or {{name}}). The exceptions
+     are in ALLOWED: names and conventions, not results.
   2. References. Every \\cite has a \\bibitem, every \\bibitem is cited, and
      the reference list is in the order of first citation.
   3. Cross-references. Every \\ref points at a label that exists, every table
@@ -15,6 +19,8 @@ Four checks. reproduce.sh stops if any of them fails.
   4. Claims. The sentences that state an order, a size or the outcome of a
      test are restated in claims() as conditions on the recorded numbers, so
      a change in the data that makes a sentence false fails the check.
+  5. Length. The main text of jce.tex stays within the journal's limit of
+     JCE_WORD_LIMIT words (see jce_words).
 
 Run after write_numbers.py.
 """
@@ -25,10 +31,18 @@ import re
 import sys
 from pathlib import Path
 
+from failure_decomp import record_sig
 from paper_numbers import read_numbers
 from repo_files import PAPER, D, read_text
 
 MANUSCRIPT, SUPPLEMENT = PAPER + 'manuscript.tex', PAPER + 'supplement.tex'
+JCE, JCE_SUPPLEMENT = PAPER + 'jce.tex', PAPER + 'jce_supplement.tex'
+# each manuscript with its supplement; the JCE pair only where it exists
+PAIRS = [(MANUSCRIPT, SUPPLEMENT)] + (
+    [(JCE, JCE_SUPPLEMENT)] if os.path.exists(D + JCE) else []
+)
+# Original Research in the Journal of Clinical Epidemiology
+JCE_WORD_LIMIT = 3000
 README_TEMPLATE = PAPER + 'readme_findings.md'
 # the supplement sees the manuscript's labels under this prefix
 MAIN_PREFIX = 'main-'
@@ -55,15 +69,30 @@ NOT_TEXT = [
     r'\\setlength\{[^}]*\}\{[^}]*\}',
     r'\\multicolumn\{\d+\}\{[^}]*\}',
     r'\\cmidrule(?:\([^)]*\))?\{[^}]*\}',
-    # a tabular's column specification, braces nested up to three deep
-    r'\\begin\{tabular\}\{(?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})*\}',
+    # a table's column specification, braces nested up to three deep
+    (
+        r'\\begin\{(?:tabular|longtable)\}'
+        r'\{(?:[^{}]|\{(?:[^{}]|\{[^{}]*\})*\})*\}'
+    ),
     r'\\begin\{[a-z]+\}\[[^\]]*\]',
+    # a TeX length in a drawing's style is layout, never a result
+    r'\b\d+(?:\.\d+)?(?:pt|mm|cm)\b',
 ]
 
 
 def uncommented(name):
-    """The lines of a LaTeX file with their comments removed."""
-    return [re.sub(r'(?<!\\)%.*', '', x) for x in read_text(name).split('\n')]
+    """The lines of a LaTeX file with their comments removed, and with each
+    file it reads by \\input (other than the generated numbers.tex) put in
+    place of the line that reads it."""
+    lines = []
+    for line in read_text(name).split('\n'):
+        line = re.sub(r'(?<!\\)%.*', '', line)
+        m = re.fullmatch(r'\\input\{([A-Za-z_]+)\}\s*', line)
+        if m and m.group(1) != 'numbers':
+            lines += uncommented(PAPER + m.group(1) + '.tex')
+        else:
+            lines.append(line)
+    return lines
 
 
 def reader_lines(name):
@@ -137,7 +166,12 @@ def references(text):
     return problems, len(listed)
 
 
-def cross_references(main, supp, numbers):
+def cross_references(main_name, supp_name, numbers):
+    """Problems with the labels, references, numbers and figure files of one
+    manuscript and its supplement; also the generated tables they use."""
+    main = '\n'.join(uncommented(main_name))
+    supp = '\n'.join(uncommented(supp_name))
+
     def found(command, text):
         return re.findall(
             r'\\' + command + r'(?:\[[^\]]*\])?\{([^}]*)\}', text
@@ -150,11 +184,11 @@ def cross_references(main, supp, numbers):
         if (main_labels + supp_labels).count(k) > 1
     ]
     targets = {
-        MANUSCRIPT: set(main_labels + supp_labels),
-        SUPPLEMENT: set(supp_labels) | {MAIN_PREFIX + k for k in main_labels},
+        main_name: set(main_labels + supp_labels),
+        supp_name: set(supp_labels) | {MAIN_PREFIX + k for k in main_labels},
     }
     used = set()
-    for name, text in ((MANUSCRIPT, main), (SUPPLEMENT, supp)):
+    for name, text in ((main_name, main), (supp_name, supp)):
         for ref in found('ref', text):
             used.add(ref.removeprefix(MAIN_PREFIX))
             if ref not in targets[name]:
@@ -166,19 +200,69 @@ def cross_references(main, supp, numbers):
             if not os.path.exists(D + PAPER + path):
                 problems.append(f'{name}: missing figure file: {path}')
     problems += [
-        f'{k} is a table or figure that the text never refers to'
+        f'{main_name}: {k} is a table or figure that the text never refers to'
         for k in main_labels + supp_labels
         if k.startswith(('tab:', 'fig:')) and k not in used
     ]
+    return problems, len(used), set(found('tablebody', main + supp))
+
+
+def generated_tables(bodies):
+    """Every table body that a document reads exists, and every generated one
+    is read by some document."""
     tables = {Path(p).stem for p in glob.glob(D + PAPER + 'tables/*.tex')}
-    bodies = set(found('tablebody', main + supp))
-    problems += [
+    problems = [
         f'{PAPER}tables/{k}.tex is missing' for k in sorted(bodies - tables)
     ]
     problems += [
         f'{PAPER}tables/{k}.tex is not used' for k in sorted(tables - bodies)
     ]
-    return problems, len(used)
+    return problems
+
+
+def jce_words():
+    """The number of words in the main text of jce.tex, counted as a word
+    processor would: from the Introduction to the end of the Discussion,
+    without the abstract, the box after it, figures, tables, captions,
+    references and declarations. A recorded number, a reference to a section,
+    table or figure and a citation each count as one word."""
+    text = '\n'.join(uncommented(JCE))
+    start = text.index('\\section{Introduction}')
+    end = text.index('\\section{Data and code availability}')
+    text = text[start:end]
+    text = re.sub(
+        r'\\begin\{(figure|table)\}.*?\\end\{\1\}', ' ', text, flags=re.DOTALL
+    )
+    text = re.sub(r'\\(?:num|ref|cite)\{[^}]*\}', ' X ', text)
+    text = re.sub(r'\\(?:sub)?section\*?\{([^}]*)\}', r' \1 ', text)
+    text = re.sub(r'\\label\{[^}]*\}', ' ', text)
+    text = re.sub(r'\\[A-Za-z]+\*?', ' ', text)
+    text = re.sub(r'[{}$~\\]', ' ', text)
+    return len([w for w in text.split() if re.search(r'[A-Za-z0-9]', w)])
+
+
+def operator_rule_holds(alpha):
+    """Whether record_sig scores each kind of p-value string as the section
+    on the primary-endpoint verdict describes it."""
+    below, above = alpha / 2, alpha * 2
+    described = [
+        (f'{below}', True),  # an exact value below the threshold
+        (f'<{alpha}', True),
+        (f'<{below}', True),
+        (f'<={below}', True),
+        (f'{alpha}', False),  # an exact value of the threshold or more
+        (f'={above}', False),
+        (f'>{alpha}', False),
+        (f'>{above}', False),
+        (f'>{below}', 'AMB'),  # either side of the threshold
+        (f'<{above}', 'AMB'),
+        (f'<={alpha}', 'AMB'),
+        (f'<={above}', 'AMB'),
+    ]
+    return all(
+        record_sig(raw, float(raw.lstrip('<>='))) == outcome
+        for raw, outcome in described
+    )
 
 
 def claims(numbers):
@@ -251,6 +335,10 @@ def claims(numbers):
             'one cohort trial is absent from the second retrieval, no verdict',
             v('analyses.absent') == 1
             and v('analyses.absent.withVerdict') == 0,
+        ),
+        (
+            'the operator rule in the text is the rule of record_sig',
+            operator_rule_holds(v('alpha')),
         ),
         (
             'every changed verdict goes from miss to win',
@@ -390,6 +478,10 @@ def claims(numbers):
             0.5 < correction / population < 2,
         ),
         (
+            'JCE box and highlights: fewer than half carry a usable p-value',
+            v('coverage.enrolled.all.reported.pct') < 50,
+        ),
+        (
             'with withdrawn registrations counted, imputation gives a tie',
             abs(tie['eff'] - tie['op']) < 1,
         ),
@@ -428,11 +520,15 @@ def claims(numbers):
         (
             'the novel subset is lower, not significantly; lifecycle higher',
             v('novelty.novel.eff.pct') < v('hwang.enrolled.eff.pct') < hw
-            and v('novelty.novel.hwang.p') > v('alpha')
-            and v('novelty.novel.hwang.diff.lo')
-            < 0
-            < v('novelty.novel.hwang.diff.hi')
+            and min(v('hwang.novel.p'), v('hwang.novel.clustered.p'))
+            > v('alpha')
+            and v('hwang.novel.diff.lo') < 0 < v('hwang.novel.diff.hi')
             and v('novelty.lifecycle.eff.pct') > v('novelty.novel.eff.pct'),
+        ),
+        (
+            'the two scripts count the same novel subset',
+            v('hwang.novel.n') == v('novelty.novel.n')
+            and v('hwang.novel.eff.n') == v('novelty.novel.eff.n'),
         ),
         (
             'novel and lifecycle miss equally often; novel has more business',
@@ -451,6 +547,16 @@ def claims(numbers):
             < v('alpha')
             and v('hwang.registered.diff.hi') < 0
             and v('hwang.registered.eff.pct') < big['eff'],
+        ),
+        (
+            'without suspended registrations efficacy is further ahead',
+            v('suspended.all.n') + v('suspended.all.without.n')
+            == v('decomp.enrolled.era.all.n')
+            and v('suspended.big.n') == 0
+            and v('suspended.all.without.eff')
+            > v('decomp.enrolled.era.all.eff.pct')
+            and v('suspended.all.without.op')
+            < v('decomp.enrolled.era.all.op.pct'),
         ),
         (
             'a stricter win rule puts efficacy ahead and raises its share',
@@ -751,26 +857,40 @@ def claims(numbers):
 
 def main():
     numbers = read_numbers()
-    main_text = '\n'.join(uncommented(MANUSCRIPT))
-    supp_text = '\n'.join(uncommented(SUPPLEMENT))
-    typed = typed_numbers(MANUSCRIPT, reader_lines(MANUSCRIPT))
-    typed += typed_numbers(SUPPLEMENT, reader_lines(SUPPLEMENT))
-    typed += typed_numbers(
+    typed = typed_numbers(
         README_TEMPLATE,
         enumerate(read_text(README_TEMPLATE).split('\n'), 1),
     )
-    typed += p_values_outside_math(MANUSCRIPT, reader_lines(MANUSCRIPT))
-    typed += p_values_outside_math(SUPPLEMENT, reader_lines(SUPPLEMENT))
-    cited, n_references = references(main_text)
-    if re.search(r'\\cite\{', supp_text):
-        cited.append(f'{SUPPLEMENT} cites, but has no reference list')
-    crossed, n_labels = cross_references(main_text, supp_text, numbers)
+    cited, crossed, bodies = [], [], set()
+    n_references, n_labels = [], 0
+    for main_name, supp_name in PAIRS:
+        for name in (main_name, supp_name):
+            typed += typed_numbers(name, reader_lines(name))
+            typed += p_values_outside_math(name, reader_lines(name))
+        problems, n = references('\n'.join(uncommented(main_name)))
+        cited += [f'{main_name}: {problem}' for problem in problems]
+        n_references.append(str(n))
+        if re.search(r'\\cite\{', '\n'.join(uncommented(supp_name))):
+            cited.append(f'{supp_name} cites, but has no reference list')
+        problems, n, used = cross_references(main_name, supp_name, numbers)
+        crossed += problems
+        n_labels += n
+        bodies |= used
+    crossed += generated_tables(bodies)
     stated = claims(numbers)
     false = [
         f'not borne out: {sentence}' for sentence, holds in stated if not holds
     ]
+    length = []
+    if os.path.exists(D + JCE):
+        words = jce_words()
+        if words > JCE_WORD_LIMIT:
+            length.append(
+                f'{JCE}: {words} words in the main text, over the limit of '
+                f'{JCE_WORD_LIMIT}'
+            )
 
-    problems = typed + cited + crossed + false
+    problems = typed + cited + crossed + false + length
     for problem in problems:
         print('  ' + problem)
     if problems:
@@ -778,8 +898,13 @@ def main():
         sys.exit(1)
     print(
         'check_documents: no number typed by hand; '
-        f'{n_references} references cited in order; '
+        f'{" and ".join(n_references)} references cited in order; '
         f'{n_labels} labels resolved; {len(stated)} claims hold'
+        + (
+            f'; {jce_words()} words in the JCE main text'
+            if length == [] and os.path.exists(D + JCE)
+            else ''
+        )
     )
 
 

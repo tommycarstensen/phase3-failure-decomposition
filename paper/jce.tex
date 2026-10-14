@@ -1,0 +1,229 @@
+\documentclass[preprint,11pt]{elsarticle}
+% The version of the paper for the Journal of Clinical Epidemiology (Original Research: at most 3,000 words of main text, 5 figures and 5 tables). It reports the same analysis as manuscript.tex, the preprint, cut to the journal's length; what it leaves out is in jce_supplement.tex. check_documents.py checks it like the preprint and counts its words.
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[hyphens]{url}
+\usepackage{lineno}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{xr}
+\externaldocument{jce_supplement}
+\graphicspath{{./}}
+\renewcommand{\floatpagefraction}{0.65}
+\emergencystretch=3em
+\relpenalty=10000
+\binoppenalty=10000
+\linenumbers
+\journal{Journal of Clinical Epidemiology}
+
+% Every number in this paper is written by the analysis scripts: numbers.tex defines \num{name}.
+\input{numbers}
+\newcommand{\code}[1]{\texttt{\small #1}}
+\newcommand{\era}{\num{era.first}--\num{era.last}}
+\newcommand{\eracomplete}{\num{era.first}--\num{era.completeLast}}
+% the "What is new?" box that the journal asks for after the abstract
+\newenvironment{whatisnew}{\par\noindent\begin{minipage}{\linewidth}\hrule\smallskip\textbf{What is new?}\par\smallskip}{\smallskip\hrule\end{minipage}\par}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Two choices in reading ClinicalTrials.gov change the apparent causes of phase-3 trial failure: a registry-based decomposition with language-model labels}
+
+\author{Tommy Carstensen\texorpdfstring{\corref{cor}}{}}
+\ead{metaarxiv@tommycarstensen.com}
+\cortext[cor]{Corresponding author. ORCID 0000-0002-3672-9931.}
+\address{Independent researcher, Copenhagen, Denmark}
+
+\begin{abstract}
+\noindent\textbf{Introduction:} We asked how two choices in reading ClinicalTrials.gov change the apparent causes of phase-3 trial failure, and how the result compares with a manual review.
+
+\noindent\textbf{Methods:} Cross-sectional study of every phase-3 registration with posted results or a terminated, withdrawn or suspended status (\num{cohort.unique} registrations). A failure is a trial stopped early for a reason other than benefit, or a completed trial that missed its primary endpoint. Language-model agents classified the stated reasons for stopping, and a stronger model of the same family adjudicated a sample blind; no human did. We varied whether registrations withdrawn before enrollment count as failures, and imputed misses for completed trials without a usable primary $p$-value. A stratum of \num{bigpharma.companies} large companies, defined after results for a wider list had been seen, was compared with Hwang et al.\ (\num{lit.hwang.year}).
+
+\noindent\textbf{Results:} Among \num{decomp.enrolled.era.all.n} failures of trials that enrolled and started in \era, efficacy accounted for \num{decomp.enrolled.era.all.eff.pct}\% (95\% CI \num{decomp.enrolled.era.all.eff.lo} to \num{decomp.enrolled.era.all.eff.hi}) and operational causes for \num{decomp.enrolled.era.all.op.pct}\% (\num{decomp.enrolled.era.all.op.lo} to \num{decomp.enrolled.era.all.op.hi}). Counting withdrawn registrations as failures put operational causes first (\num{decomp.registered.era.all.op.pct}\% against \num{decomp.registered.era.all.eff.pct}\%). Only \num{coverage.enrolled.all.reported.pct}\% of completed trials with posted results carried a usable primary $p$-value; imputing misses for those with a comparator arm raised the efficacy share to \num{coverage.enrolled.all.pooled.eff}\% and lowered the operational share to \num{coverage.enrolled.all.pooled.op}\%. In big pharma the efficacy share, \num{hwang.enrolled.eff.pct}\% (program-clustered 95\% CI \num{hwang.enrolled.clustered.lo} to \num{hwang.enrolled.clustered.hi}), was not distinguishable from the \num{hwang.eff.pct}\% of Hwang et al.\ (clustered $p=\num{hwang.enrolled.clustered.p}$; 95\% CI of the difference $\num{hwang.enrolled.diff.lo}$ to $\num{hwang.enrolled.diff.hi}$ points), and with withdrawn registrations counted it was lower (\num{hwang.registered.eff.pct}\%, clustered $p=\num{hwang.registered.clustered.p}$). Safety accounted for \num{decomp.enrolled.era.big.saf.pct}\% of big-pharma failures (\num{decomp.enrolled.era.all.saf.pct}\% for all sponsors) against \num{hwang.saf.pct}\% in Hwang et al. First-pass labels agreed with the adjudication for \num{valid.agree.pct}\% of a balanced sample (95\% CI \num{valid.agree.lo} to \num{valid.agree.hi}).
+
+\noindent\textbf{Discussion:} The apparent leading cause of phase-3 failure depends on which registrations count as failures and on how completed trials without a usable primary result are treated. Registry studies of failure should report both choices and their estimate under each. The labels were validated against a model only.
+\end{abstract}
+
+\begin{highlights}
+\item Two choices in reading the registry change the apparent causes of trial failure
+\item Counting never-enrolled registrations puts operational causes ahead of efficacy
+\item Under half of completed trials with posted results report a usable primary p-value
+\item The big-pharma efficacy share is compatible with a manual review, by proxy
+\item The language-model labels were validated against a model, not by humans
+\end{highlights}
+
+\begin{keyword}
+ClinicalTrials.gov \sep trial registries \sep phase 3 \sep trial failure \sep meta-research \sep missing outcome data \sep large language models
+\end{keyword}
+
+\end{frontmatter}
+
+\newpage
+\noindent\textbf{Plain language summary.} Researchers increasingly use the public register of clinical trials, ClinicalTrials.gov, to study why new drugs fail in their last stage of testing. We show that two choices made when reading the register, often without saying so, change the answer. The first is whether plans for trials that were withdrawn before anyone took part count as failed trials. The second is what to do with finished trials that do not report whether they met their main goal. Counting the withdrawn plans makes practical problems, such as slow recruitment, look like the main cause of failure; allowing for the unreported results makes a lack of effect look more important. Studies that use the register should say which choices they made. The reasons why trials stopped were sorted by artificial intelligence and checked by another artificial intelligence, not by people.
+
+\begin{whatisnew}
+\textit{Key findings.} Counting registrations withdrawn before enrollment as failures moves the efficacy share of phase-3 failures from \num{decomp.enrolled.era.all.eff.pct}\% to \num{decomp.registered.era.all.eff.pct}\% and puts operational causes first. Fewer than half of completed trials with posted results report a usable primary $p$-value, and a completed trial enters the efficacy share only through a reported miss, so the observed efficacy share can only be too low.
+
+\textit{What this adds to what is known.} Choices about which registrations count were known to change the reported proportion of failed trials. They also change the apparent causes of failure.
+
+\textit{What is the implication, and what should change now?} A registry study of trial failure should state whether never-enrolled registrations count, report the share of completed trials with a usable primary result, and show its estimate under each choice. Language-model labels of stop reasons need validation by human readers, which this study lacks.
+\end{whatisnew}
+
+\section{Introduction}\label{sec:intro}
+Trial registries are increasingly mined to study why drugs fail \cite{teodoro2025}. Williams et al.\ \cite{williams2015} classified the stated reasons of terminated trials with posted results, and Razuvayevskaya et al.\ \cite{razuv2024} used a fine-tuned language model to classify the stopping reasons of \num{lit.razuv.trials} trials. A scoping review of \num{lit.jovanovic.studies} studies of trial failure, most of them based on ClinicalTrials.gov, found reported failure proportions between \num{lit.jovanovic.min.pct}\% and \num{lit.jovanovic.max.pct.int}\%, and showed that methodological choices, chiefly whether ongoing trials count as non-failures and which study types are included, account for part of that spread \cite{jovanovic2026}. These studies count or classify failures under one reading of the registry. We asked whether choices of this kind also change the apparent causes of failure.
+
+The reference point for why late-stage drugs fail remains the manual review of Hwang et al.\ \cite{hwang2016}. Of \num{hwang.programs} novel therapeutics that entered pivotal trials, \num{hwang.failed} failed, and the failures were attributed to inadequate efficacy (\num{hwang.eff.pct.int}\%), commercial reasons (\num{hwang.com.pct.int}\%) and safety (\num{hwang.saf.pct.int}\%).
+
+We decomposed the causes of phase-3 failure from ClinicalTrials.gov and varied two choices that any such study makes, often without stating them: whether registrations withdrawn before enrolling anyone count as failures, and how completed trials that report no usable primary $p$-value are treated. We then compared the result for large companies with the estimate of Hwang et al.
+
+\section{Methods}
+\subsection{Data, population and failure}\label{sec:data}
+In this cross-sectional study, all phase-3 registrations were retrieved from the ClinicalTrials.gov v2 API on \num{retrieval.cohort} under two filters: posted results ($n=\num{cohort.results}$) and status terminated, withdrawn or suspended ($n=\num{cohort.stopped}$), \num{cohort.unique} unique registrations in all (Figure~\ref{fig:flow}). Registrations designated Phase 2/Phase~3 are included, and no filter on the type of intervention was applied. A registration with status withdrawn stopped before enrolling its first participant. The primary population is the \num{cohort.analysed} registrations that were not withdrawn, called here trials that enrolled (recorded enrollment counts were not used); counting the \num{cohort.withdrawn} withdrawn registrations as failures is the first choice we varied. The main window is trials starting in \era, after the Final Rule on results reporting took effect \cite{fda2017}. Start dates are as registered, so those of withdrawn and recent registrations can be anticipated dates. A completed trial enters the cohort only when its results are posted, so the latest start years are short of completed misses. The API serves only the current version of each record, so the retrievals are archived with the code.
+
+A failure is a trial that was terminated or suspended for a reason other than demonstrated benefit, or a completed trial that missed its primary endpoint. Causes were pooled into five buckets: efficacy (completed misses and stops for efficacy or futility), safety, operational (enrollment, regulatory, external evidence, \mbox{COVID-19}, supply and other operational reasons), commercial (business or strategic, funding, a bare sponsor decision, and not-started) and unknown (supplement, Table~\ref{tab:buckets}).
+
+\begin{figure}[htbp]
+\centering
+% set in Helvetica, as Elsevier's artwork instructions prefer; make_jce_submission.py draws the same as Figure_1.pdf
+{\fontfamily{phv}\selectfont\resizebox{\linewidth}{!}{\input{flow}}}
+\caption{Flow of the registrations into the failure decomposition of the main window. Dashed boxes do not enter the count of failures. Registrations withdrawn before enrollment are counted as failures only in the analysis of \S\ref{sec:population}. The completed trials without a verdict are the subject of \S\ref{sec:coverage}, where misses are imputed for those with a comparator arm. Trials that are neither stopped nor completed are still active or of unknown status.}
+\label{fig:flow}
+\end{figure}
+
+\subsection{Primary-endpoint verdict and reporting coverage}\label{sec:verdict}
+For trials with posted results we retrieved the primary-outcome statistical-analysis records on \num{retrieval.analyses}. A trial won if at least one primary analysis was significant at \num{alpha} once the comparison operator of its $p$-value string was read, and missed if every usable analysis was non-significant. Reading the operator matters: stripping it scores the common `$<$\num{alpha}' style as a miss and changes the verdict of \num{verdict.flips.n} trials (supplement, \S\ref{supp:verdict}, gives the full rule).
+
+Completed trials without a usable primary $p$-value have no verdict and cannot enter the efficacy bucket; their treatment is the second choice we varied. Single-arm studies have no between-group test to miss and received no imputation. For trials with a comparator arm we imputed misses at the miss rate of reporting trials with a comparator arm; as variants, we imputed them from a logistic model of sponsor class, start year, number of primary outcomes and therapeutic area, and as the bound in which every one missed. Which completed trials report was modeled by logistic regression with sponsor-clustered standard errors.
+
+\subsection{Classification and validation}\label{sec:classification}
+Stopped trials were classified by large-language-model agents with fixed prompts (Claude Sonnet, Anthropic, run in \num{classification.month}; the exact version identifiers were not recorded). In the first pass the \code{whyStopped} string was assigned one of \num{valid.categories} categories; a string that gave more than one reason received the category of the primary or first-stated cause. Registrations with a blank or unclear string went to a second pass, in which a model read the detailed description, and rules labeled bare sponsor decisions, withdrawals without participants and stops after few participants. A third pass read linked PubMed abstracts (supplement, \S\ref{supp:classification}). The prompts and every label are archived, but the batches were assembled interactively, the strings of a batch were labeled together, and the classification cannot be re-run from the archive.
+
+A sample of \num{valid.sample} first-pass labels, \num{valid.perCategory} per category and so balanced across categories rather than representative of them, was labeled again, blind, by a stronger model of the same family (Claude Opus) that saw only the string. No human adjudicated any label, so agreement measures consistency between two models, not accuracy. We report raw agreement with a Wilson interval \cite{brown2001}, Cohen's $\kappa$ \cite{cohen1960}, agreement weighted to label prevalence, and agreement on the bucket. The later passes and the rules were not validated.
+
+\subsection{Big-pharma stratum, comparison and statistics}\label{sec:strata}
+The big-pharma stratum is \num{bigpharma.companies} large pharmaceutical companies, matched by name patterns on the lead sponsor together with their subsidiaries and acquisitions (supplement, \S\ref{supp:stratum}). It was narrowed to these companies after results for a wider list with \num{bigpharma.mid} mid-size companies had been seen, which moved the observed efficacy share from \num{hwang.wide.eff.pct}\% to \num{hwang.enrolled.eff.pct}\%, toward the estimate of Hwang et al. The big-pharma efficacy share was compared with theirs by a two-sample test of proportions, and again with a program-clustered standard error for this work, a program being the trials that share a subject drug (supplement, \S\ref{supp:subjects}). Shares carry Wilson 95\% intervals, which treat trials as independent; the big-pharma efficacy share also carries a program-clustered one. Tests are two-sided and descriptive, none is adjusted for multiplicity, and no protocol was registered. Reporting follows STROBE \cite{vonelm2007} (supplement, \S\ref{supp:strobe}). Every number in the text is written by the archived code.
+
+\section{Results}
+\subsection{Counting withdrawn registrations}\label{sec:population}
+Among trials that enrolled and started in \era\ there were \num{decomp.enrolled.era.all.n} failures. Efficacy accounted for \num{decomp.enrolled.era.all.eff.pct}\% (95\% CI \num{decomp.enrolled.era.all.eff.lo} to \num{decomp.enrolled.era.all.eff.hi}) and operational causes for \num{decomp.enrolled.era.all.op.pct}\% (\num{decomp.enrolled.era.all.op.lo} to \num{decomp.enrolled.era.all.op.hi}); the intervals overlap. Commercial reasons accounted for \num{decomp.enrolled.era.all.com.pct}\%, safety for \num{decomp.enrolled.era.all.saf.pct}\% and unknown reasons for \num{decomp.enrolled.era.all.unk.pct}\% (Table~\ref{tab:decomposition}).
+
+Withdrawn registrations are \num{cohort.era.withdrawn.pct}\% of the stopped registrations of the window, and they rarely stop for efficacy: operational causes account for \num{withdrawn.era.op.pct}\% of them and efficacy for \num{withdrawn.era.eff.pct}\%. Counted as failures, they bring the denominator to \num{decomp.registered.era.all.n} and put operational causes first, at \num{decomp.registered.era.all.op.pct}\% against \num{decomp.registered.era.all.eff.pct}\% for efficacy (Figure~\ref{fig:coverage}B, gray markers). A registration that never enrolled a participant is closer to a trial that was planned than to one that failed, which is why the primary analysis sets it aside.
+
+\begin{table}[htb]
+\centering
+\caption{Causes of failure by sponsor class and counting choice, trials starting in \era}
+\label{tab:decomposition}
+\footnotesize\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+counting choice & failures & efficacy & operational & commercial & safety & unknown \\
+\midrule
+\multicolumn{7}{l}{\textit{All sponsors}} \\
+trials that enrolled & \num{decomp.enrolled.era.all.n} & \num{decomp.enrolled.era.all.eff.pct} & \num{decomp.enrolled.era.all.op.pct} & \num{decomp.enrolled.era.all.com.pct} & \num{decomp.enrolled.era.all.saf.pct} & \num{decomp.enrolled.era.all.unk.pct} \\
+withdrawn counted & \num{decomp.registered.era.all.n} & \num{decomp.registered.era.all.eff.pct} & \num{decomp.registered.era.all.op.pct} & \num{decomp.registered.era.all.com.pct} & \num{decomp.registered.era.all.saf.pct} & \num{decomp.registered.era.all.unk.pct} \\
+misses imputed & \num{decomp.enrolled.era.all.n} $+$ \num{coverage.enrolled.all.pooled.extra} & \num{coverage.enrolled.all.pooled.eff} & \num{coverage.enrolled.all.pooled.op} & \num{coverage.enrolled.all.pooled.com} & \num{coverage.enrolled.all.pooled.saf} & \num{coverage.enrolled.all.pooled.unk} \\
+\addlinespace
+\multicolumn{7}{l}{\textit{Big pharma}} \\
+trials that enrolled & \num{decomp.enrolled.era.big.n} & \num{decomp.enrolled.era.big.eff.pct} & \num{decomp.enrolled.era.big.op.pct} & \num{decomp.enrolled.era.big.com.pct} & \num{decomp.enrolled.era.big.saf.pct} & \num{decomp.enrolled.era.big.unk.pct} \\
+withdrawn counted & \num{decomp.registered.era.big.n} & \num{decomp.registered.era.big.eff.pct} & \num{decomp.registered.era.big.op.pct} & \num{decomp.registered.era.big.com.pct} & \num{decomp.registered.era.big.saf.pct} & \num{decomp.registered.era.big.unk.pct} \\
+misses imputed & \num{decomp.enrolled.era.big.n} $+$ \num{coverage.enrolled.big.pooled.extra} & \num{coverage.enrolled.big.pooled.eff} & \num{coverage.enrolled.big.pooled.op} & \num{coverage.enrolled.big.pooled.com} & \num{coverage.enrolled.big.pooled.saf} & \num{coverage.enrolled.big.pooled.unk} \\
+\addlinespace
+\multicolumn{7}{l}{\textit{Hwang et al., programs that entered pivotal trials in \num{lit.hwang.firstYear}--\num{lit.hwang.lastYear}}} \\
+failed programs & \num{hwang.failed} & \num{hwang.eff.pct} & --- & \num{hwang.com.pct} & \num{hwang.saf.pct} & \num{hwang.other.pct} \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{\linewidth}\footnotesize
+Shares are percentages of the failures in each row. The first row of each block is the primary analysis, trials that enrolled. The second adds the registrations withdrawn before enrollment. In the third, misses are imputed for unreported completed trials with a comparator arm at the miss rate of the reporting ones; the number after the plus sign is the misses added. Hwang et al.\ report no operational category; their failures with none of the three stated reasons are given as unknown. Other windows and other sponsors: supplement, Table~\ref{tab:decompfull}.
+\end{minipage}
+\end{table}
+
+\subsection{Completed trials without a usable primary result}\label{sec:coverage}
+Of \num{coverage.enrolled.all.completed} completed, non-stopped trials with posted results in the window, \num{coverage.enrolled.all.reported.n} (\num{coverage.enrolled.all.reported.pct}\%) had a verdict. A verdict was less likely for single-arm studies and for later start years, and more likely for big-pharma sponsors (supplement, Table~\ref{tab:covmodel}). Stopped trials enter the decomposition whether or not they report a $p$-value, and completed trials enter it only through a reported miss, so the efficacy bucket is under-filled. Among trials with a comparator arm, \num{coverage.enrolled.all.comparator.miss.pct}\% of those with a verdict missed. Applying that rate to the \num{coverage.enrolled.all.comparator.unreported} completed trials with a comparator arm and no verdict adds about \num{coverage.enrolled.all.pooled.extra} misses and gives efficacy \num{coverage.enrolled.all.pooled.eff}\% and operational causes \num{coverage.enrolled.all.pooled.op}\%. The covariate-adjusted imputation gives an efficacy share of \num{coverage.enrolled.all.adjusted.eff}\%, and the bound in which every one of those trials missed gives \num{coverage.enrolled.all.upper.eff}\% (Figure~\ref{fig:coverage}A; supplement, Table~\ref{tab:coverage}).
+
+Unposted tests are significant less often than posted ones \cite{dechartres2016}, which is likely to make the imputed shares too low; some trials with two or more arm groups have no between-group test, which may make them too high. The net direction is uncertain. The two choices interact: with withdrawn registrations counted, the imputation leaves efficacy and operational causes level, at \num{coverage.registered.all.pooled.eff}\% and \num{coverage.registered.all.pooled.op}\% (Figure~\ref{fig:coverage}B). A stricter win rule also raises the efficacy share: if every primary outcome with a usable $p$-value must be significant, efficacy accounts for \num{winrule.and.all.eff.pct}\% of failures (supplement, \S\ref{supp:verdict}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/ph3_coverage_correction.pdf}
+\caption{The efficacy and operational shares of failures, all sponsors, starts \era, (A) among trials that enrolled and (B) with registrations withdrawn before enrollment counted as failures. Gray markers are the shares as observed. Navy markers are the shares after imputing misses for unreported completed trials with a comparator arm at the miss rate of the reporting ones, and the tick beside each is the covariate-adjusted imputation. The pale band runs from the observed share to the share if every such trial had missed; it is the range of an assumption, not a confidence interval. In B the imputed efficacy and operational shares are level.}
+\label{fig:coverage}
+\end{figure}
+
+\subsection{The labels behind the shares}\label{sec:labels}
+The \code{whyStopped} string alone left \num{recover.enrolled.era.first.noReason.pct}\% of the stopped trials of the window that were not stopped for benefit without a reason. After the three passes \num{recover.enrolled.era.final.unclear.pct}\% were unclear, and a label that states a reason was available for \num{recover.enrolled.era.final.reason.pct}\% (supplement, \S\ref{supp:classification}). The first-pass label agreed with the adjudication for \num{valid.agree.n} of \num{valid.sample} sampled items (\num{valid.agree.pct}\%, 95\% CI \num{valid.agree.lo} to \num{valid.agree.hi}; $\kappa=\num{valid.kappa}$), and for \num{valid.weighted.pct}\% when weighted to label prevalence (\num{valid.weighted.lo} to \num{valid.weighted.hi}). The two labels fell in the same bucket for \num{valid.bucket.agree.pct}\% of items. Agreement was lowest for external evidence and for business or strategic reasons (supplement, Table~\ref{tab:validation}). The later passes labeled \num{valid.era.laterPass.pct}\% of all stopped trials of the window, stops for benefit included, and were not validated. Of the \num{audit.model.n} second-pass model labels among the stops of the window, \num{audit.eff.n} are efficacy or futility; a reading of them by language-model agents, not by a human, found none supported by the registry text, found unsupported labels among the operational ones as well, and did not cover other start years. Varying five contestable assignments of categories to buckets, one of them counting those \num{audit.eff.n} labels as unknown, did not reverse the order of efficacy and operational causes, although that one left them almost level, at \num{tax.all.modelEfficacyToUnknown.eff}\% against \num{tax.all.modelEfficacyToUnknown.op}\% (supplement, Table~\ref{tab:taxonomy}).
+
+\subsection{Big pharma against Hwang et al.}\label{sec:hwang}
+In the big-pharma stratum there were \num{hwang.enrolled.n} failures among trials that enrolled. Efficacy accounted for \num{hwang.enrolled.eff.pct}\% (program-clustered 95\% CI \num{hwang.enrolled.clustered.lo} to \num{hwang.enrolled.clustered.hi}, \num{hwang.enrolled.clusters} clusters), against \num{hwang.eff.pct}\% in Hwang et al. The difference was not significant (two-sample $p=\num{hwang.enrolled.p}$; with program-clustered standard errors $p=\num{hwang.enrolled.clustered.p}$), and the clustered 95\% interval for the difference, this work minus theirs, runs from $\num{hwang.enrolled.diff.lo}$ to $\num{hwang.enrolled.diff.hi}$ percentage points, so the data do not exclude a difference of several points in either direction (Figure~\ref{fig:hwang}).
+
+The comparison moves with the same two choices. With withdrawn registrations counted, the share falls to \num{hwang.registered.eff.pct}\%, lower than theirs (clustered $p=\num{hwang.registered.clustered.p}$; clustered 95\% interval for the difference $\num{hwang.registered.diff.lo}$ to $\num{hwang.registered.diff.hi}$ points). With unreported misses imputed it rises to \num{coverage.enrolled.big.pooled.eff}\%, above their estimate, a share that carries no interval; unreported completed trials can only add efficacy failures, so they cannot lower the observed share. With the mid-size companies added, the share is \num{hwang.wide.eff.pct}\% (clustered $p=\num{hwang.wide.clustered.p}$), and among trials of drugs with no earlier phase-3 win in the cohort it is \num{hwang.novel.eff.pct}\% (clustered $p=\num{hwang.novel.clustered.p}$; supplement, Tables~\ref{tab:hwang} and~\ref{tab:novelty}). The closeness of the observed share to their estimate is therefore not evidence of agreement.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/ph3_bigpharma_vs_hwang.pdf}
+\caption{The efficacy share of failures in the big-pharma stratum under each counting choice, against the estimate of Hwang et al.\ (ochre line, with its Wilson 95\% interval as a band). Gray markers are observed shares with their program-clustered 95\% intervals: among trials that enrolled in the main window, among those of the window \eracomplete, which has read out, with registrations withdrawn before enrollment counted as failures, and with \num{bigpharma.mid} mid-size companies added to the stratum. The navy marker is the share after imputing misses for unreported completed trials with a comparator arm. It has no such interval; the pale band is the range from none of those trials having missed, which is the observed share, to all of them. The numbers at the right are the shares with their intervals or range.}
+\label{fig:hwang}
+\end{figure}
+
+\subsection{Safety}\label{sec:safety}
+Safety accounted for \num{decomp.enrolled.era.all.saf.pct}\% of failures among all sponsors and \num{decomp.enrolled.era.big.saf.pct}\% in big pharma, against \num{hwang.saf.pct}\% in Hwang et al. A safety-driven decision can be registered as a sponsor, business or strategic decision. If every bare sponsor decision concealed a safety stop, safety would account for \num{tax.all.sponsorToSafety.saf}\% of failures; if every business or strategic stop did so as well, for \num{tax.all.decisionsToSafety.saf}\% (supplement, Table~\ref{tab:taxonomy}). These are scenarios, not bounds, and the registry cannot show where the truth lies.
+
+\section{Discussion}\label{sec:discussion}
+A registry-only decomposition of phase-3 failure is sensitive to two choices that are easy to make without noticing. Counting registrations that never enrolled lowers the efficacy share from \num{decomp.enrolled.era.all.eff.pct}\% to \num{decomp.registered.era.all.eff.pct}\% and puts operational causes first. Completed trials without a usable primary $p$-value, \num{coverage.enrolled.all.unreported.pct.int}\% of completed trials with posted results, cannot enter the efficacy bucket, and imputing misses for those with a comparator arm moves the efficacy share by a similar amount in the other direction, to \num{coverage.enrolled.all.pooled.eff}\%. Neither choice is visible in the output of a decomposition, and the simplest reading of each, counting every withdrawn registration and ignoring the trials without a verdict, makes efficacy look smaller. All these shares describe what the registry records, not why the drugs failed. For all sponsors efficacy is only slightly ahead of operational causes as observed, and further ahead under the imputation or a stricter win rule, each of which rests on assumptions.
+
+Jovanovic et al.\ showed that the statuses counted as non-failures and the study types included change the reported proportion of failed trials \cite{jovanovic2026}. Our results carry that finding from the proportion of failures to their causes. Counting registrations withdrawn before enrollment is a choice of the kind they examined, the statuses counted; the treatment of completed trials without a usable primary result is a further one. Both can be checked from fields the registry provides. Our definition departs from the one they recommend, which counts terminated and withdrawn studies as failed and completed ones as not failed. Ours adds completed trials that missed their primary endpoint, because the comparison is with drugs that failed, and for the same reason sets aside registrations that never enrolled; the analysis with withdrawn registrations counted is the closest to their definition.
+
+For large companies the observed efficacy share is not distinguishable from the manual estimate of Hwang et al., but the comparison is by proxy and does not establish agreement. Safety is recorded far less often than in that estimate, and the registry fields cannot show how many safety-driven stops are registered as sponsor or business decisions.
+
+A registry study of trial failure should state whether registrations that never enrolled count as failures, report the share of completed trials with a usable primary result, and show its main estimate under each choice. A language-model classification of stop reasons should be validated against human readers, which this study could not do. These results describe phase-3 registrations at ClinicalTrials.gov that posted results or stopped early. They do not extend to earlier phases, to trials registered only elsewhere, or to completed trials that never posted results.
+
+\subsection{Limitations}\label{sec:limitations}
+\begin{enumerate}
+\item\label{lim:validation} \textbf{The validation is model-based.} The adjudicator is a stronger model of the same family, so shared blind spots cannot be ruled out, and the per-category samples are small. The later passes and the rules were not validated. The \num{audit.eff.n} second-pass labels of efficacy or futility that a reading by language-model agents found unsupported were left as the model gave them; counted as unknown, they would lower the efficacy share to \num{tax.all.modelEfficacyToUnknown.eff}\%. The unsupported labels that the same reading found among the operational ones were not adjusted for. The model versions were not recorded, and the classification cannot be re-run.
+\item\label{lim:imputation} \textbf{The imputation rests on assumptions.} It treats every unreported trial with a comparator arm as able to miss, although two or more arm groups do not guarantee a between-group test, and its model does not use the size of the trial. Completed trials that never posted results are not in the cohort \cite{devito2020}.
+\item\label{lim:population} \textbf{The population is defined by registry status.} Suspended trials are counted as failures although some may resume: \num{suspended.all.n} of the failures (\num{suspended.all.pct}\%), none in big pharma. Without them efficacy would account for \num{suspended.all.without.eff}\% and operational causes for \num{suspended.all.without.op}\%.
+\item\label{lim:winrule} \textbf{The verdict is lenient.} Any significant primary analysis scores a win, and the direction of effect is not recorded.
+\item\label{lim:hwang} \textbf{The comparison with Hwang et al.\ is by proxy.} Their unit is a drug program and ours a trial, their programs entered pivotal trials in \num{lit.hwang.firstYear}--\num{lit.hwang.lastYear}, their sources went beyond the registry, and their cohort included smaller companies. Our shares weight a program by its number of failed trials, whereas they counted each program once.
+\item\label{lim:plan} \textbf{The analysis was not pre-specified.} The windows, the stratum and the sensitivity analyses were defined during the work, and the stratum was narrowed after results for a wider list had been seen.
+\end{enumerate}
+Further limitations are in the supplement, Table~\ref{tab:limitations}.
+
+\section{Data and code availability}\label{sec:availability}
+All analysis code, the classification prompts, every label, the recorded numbers and the registry retrievals of \num{retrieval.cohort} and \num{retrieval.analyses} are public at \url{https://github.com/tommycarstensen/phase3-failure-decomposition} and archived at Zenodo \cite{zenodo2026}. The archived retrievals, not a fresh pull, are the data of record. \code{reproduce.sh} regenerates every number, table and figure from them and checks that the text contains no number typed by hand. A preprint of this work is at \url{https://doi.org/10.31222/osf.io/szuh5_v1}.
+
+\section*{CRediT authorship contribution statement}
+\noindent\textbf{Tommy Carstensen:} Conceptualization, Methodology, Software, Formal analysis, Data curation, Visualization, Writing -- original draft, Writing -- review and editing.
+
+\section*{Declaration of competing interest}
+The author declares no competing interests. The author is employed by the Capital Region of Denmark (Region Hovedstaden); this work was done independently of that employment, in the author's own time and without its resources.
+
+\section*{Funding}
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+\section*{Ethics}
+The study used only publicly available registry records and published abstracts. It involved no human participants and no individual-level data, so ethics approval was not required. The unit of analysis is the trial, and sex and gender were not analyzed.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+Large language models are part of the method: Claude Sonnet classified the termination reasons, Claude Opus labeled the validation sample (\S\ref{sec:classification}), and language-model agents read the second-pass labels of \S\ref{sec:labels}. During the preparation of this work the author used the Claude Code assistant (Anthropic) to write and review the analysis code, to review drafts and to draft and edit the text; the model versions were not recorded. After using this tool, the author reviewed and edited the content as needed and takes full responsibility for the content of the published article.
+
+\begin{thebibliography}{99}
+\bibitem{teodoro2025} Teodoro D, Naderi N, Yazdani A, Zhang B, Bornet A. A scoping review of artificial intelligence applications in clinical trial risk assessment. \emph{npj Digit Med.} 2025;8:486. \href{https://doi.org/10.1038/s41746-025-01886-7}{doi:10.1038/s41746-025-01886-7}
+\bibitem{williams2015} Williams RJ, Tse T, DiPiazza K, Zarin DA. Terminated trials in the ClinicalTrials.gov results database: evaluation of availability of primary outcome data and reasons for termination. \emph{PLoS ONE.} 2015;10(5):e0127242. \href{https://doi.org/10.1371/journal.pone.0127242}{doi:10.1371/journal.pone.0127242}
+\bibitem{razuv2024} Razuvayevskaya O, Lopez I, Dunham I, Ochoa D. Genetic factors associated with reasons for clinical trial stoppage. \emph{Nat Genet.} 2024;56(9):1862--1867. \href{https://doi.org/10.1038/s41588-024-01854-z}{doi:10.1038/s41588-024-01854-z}
+\bibitem{jovanovic2026} Jovanovic A, Gavric S, Dennst\"adt F, Cihoric N. Approaches in analyzing predictors of trial failure: a scoping review and meta-epidemiological study. \emph{BMC Med Res Methodol.} 2026;26:35. \href{https://doi.org/10.1186/s12874-026-02774-8}{doi:10.1186/s12874-026-02774-8}
+\bibitem{hwang2016} Hwang TJ, Carpenter D, Lauffenburger JC, Wang B, Franklin JM, Kesselheim AS. Failure of investigational drugs in late-stage clinical development and publication of trial results. \emph{JAMA Intern Med.} 2016;176(12):1826--1833. \href{https://doi.org/10.1001/jamainternmed.2016.6008}{doi:10.1001/jamainternmed.2016.6008}
+\bibitem{fda2017} U.S. Department of Health and Human Services. Clinical Trials Registration and Results Information Submission; Final Rule. 42 CFR Part 11. \emph{Fed Regist.} 2016;81(183):64982--65157.
+\bibitem{brown2001} Brown LD, Cai TT, DasGupta A. Interval estimation for a binomial proportion. \emph{Statist Sci.} 2001;16(2):101--133. \href{https://doi.org/10.1214/ss/1009213286}{doi:10.1214/ss/1009213286}
+\bibitem{cohen1960} Cohen J. A coefficient of agreement for nominal scales. \emph{Educ Psychol Meas.} 1960;20(1):37--46. \href{https://doi.org/10.1177/001316446002000104}{doi:10.1177/001316446002000104}
+\bibitem{vonelm2007} von Elm E, Altman DG, Egger M, Pocock SJ, G{\o}tzsche PC, Vandenbroucke JP. The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) statement: guidelines for reporting observational studies. \emph{Lancet.} 2007;370(9596):1453--1457. \href{https://doi.org/10.1016/S0140-6736(07)61602-X}{doi:10.1016/S0140-6736(07)61602-X}
+\bibitem{dechartres2016} Dechartres A, Bond EG, Scheer J, Riveros C, Atal I, Ravaud P. Reporting of statistically significant results at ClinicalTrials.gov for completed superiority randomized controlled trials. \emph{BMC Med.} 2016;14:192. \href{https://doi.org/10.1186/s12916-016-0740-1}{doi:10.1186/s12916-016-0740-1}
+\bibitem{devito2020} DeVito NJ, Bacon S, Goldacre B. Compliance with legal requirement to report clinical trial results on ClinicalTrials.gov: a cohort study. \emph{Lancet.} 2020;395(10221):361--369. \href{https://doi.org/10.1016/S0140-6736(19)33220-9}{doi:10.1016/S0140-6736(19)33220-9}
+\bibitem{zenodo2026} Carstensen T. Code, labels and data for a registry-based decomposition of the causes of phase-3 trial failure [Data set]. \emph{Zenodo.} 2026. \href{https://doi.org/10.5281/zenodo.23352527}{doi:10.5281/zenodo.23352527}
+\end{thebibliography}
+
+\end{document}

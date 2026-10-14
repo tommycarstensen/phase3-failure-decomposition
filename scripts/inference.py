@@ -5,7 +5,8 @@
 2. Sponsor-class contrast in the miss rate, plain and clustered by program.
 3. The big-pharma efficacy share against Hwang et al.: a two-sample test that
    carries Hwang's sampling error, plain and with program-clustered standard
-   errors, in three variants of the population.
+   errors, in three variants of the population, with the mid-size companies
+   added, and in the subset of trials whose subject drug is flagged novel.
 4. Therapeutic-area heterogeneity in the miss rate.
 5. Which completed trials report a usable primary p-value: a logistic model
    on sponsor class, start year, number of primary outcomes, single-arm design
@@ -57,6 +58,16 @@ def big(n):
 
 def big_wide(n):
     return is_bigpharma(sponsor_of(meta, n), with_midsize=True)
+
+
+is_lifecycle = subjects.lifecycle_flag(
+    results, subject_of, lambda nct: year_of(meta, nct)
+)
+
+
+def big_novel(n):
+    """Big pharma, and the subject drug has no earlier phase-3 win."""
+    return big(n) and is_lifecycle(n) is False
 
 
 def cluster_of(nct):
@@ -291,6 +302,7 @@ against_hwang('enrolled', 'enrolled, 2017-2026', ERA, False)
 against_hwang('complete', 'enrolled, 2017-2022', ERA_COMPLETE, False)
 against_hwang('registered', 'withdrawn counted, 2017-2026', ERA, True)
 against_hwang('wide', 'with the mid-size companies', ERA, False, big=big_wide)
+against_hwang('novel', 'novel subset, 2017-2026', ERA, False, big=big_novel)
 
 # ---- 4. therapeutic-area heterogeneity ----
 print('\n=== 4. miss rate by therapeutic area, 2017-2026 ===')

@@ -16,6 +16,9 @@
     sample. Two scenarios then ask how large the safety share could be if
     sponsor decisions, or sponsor and business decisions, concealed safety
     stops.
+
+(C) Suspended registrations. A suspended trial may resume, and it is counted
+    as a failure. The decomposition is repeated without them.
 """
 
 import re
@@ -233,4 +236,26 @@ for skey, slabel, subset in (
             nums.pct(f'tax.{skey}.{vkey}.{b}', pct[b])
         table.append([vlabel, slabel] + [f'{pct[b]:.1f}' for b in BUCKETS])
 write_table('taxonomy', table)
+
+print(
+    '\n=== (C) without suspended registrations, failure shares 2017-2026 ==='
+)
+_, _, not_suspended = load(include_suspended=False)
+for skey, slabel, subset in (
+    ('all', 'all sponsors', None),
+    ('big', 'big pharma', big),
+):
+    d = decompose(results, meta, stopcat, ERA, subset=subset)
+    w = decompose(results, meta, not_suspended, ERA, subset=subset)
+    suspended = d['den'] - w['den']
+    pct = {b: 100 * w[b] / w['den'] for b in BUCKETS}
+    print(
+        f'  {slabel:12s} {suspended} of {d["den"]} failures are suspended '
+        f'({100 * suspended / d["den"]:.1f}%); without them '
+        + '  '.join(f'{b} {pct[b]:4.1f}' for b in BUCKETS)
+    )
+    nums.share(f'suspended.{skey}', suspended, d['den'])
+    nums.count(f'suspended.{skey}.without.n', w['den'])
+    for b in BUCKETS:
+        nums.pct(f'suspended.{skey}.without.{b}', pct[b])
 nums.save()

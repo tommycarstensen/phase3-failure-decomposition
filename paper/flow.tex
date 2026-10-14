@@ -1,0 +1,39 @@
+% The flow diagram of the main window, read by manuscript.tex and jce.tex with \input{flow} inside their figure environment. Its counts are \num{...} like every other number, and \era is defined by the document that reads it.
+\newlength{\flowwidth}\setlength{\flowwidth}{4.5cm}
+\newlength{\flowgap}\setlength{\flowgap}{6mm}
+\tikzset{
+  flowpic/.style={node distance=\flowgap and \flowgap, >=latex},
+  flow/.style={draw, rounded corners=1pt, align=flush center, font=\footnotesize, inner sep=4pt, text width=\flowwidth, minimum height=1cm},
+  flowwide/.style={flow, text width=\dimexpr\flowwidth+\flowwidth+\flowgap+8pt\relax},
+  flowaside/.style={flow, dashed},
+}
+\begin{tikzpicture}[flowpic]
+\node[flowwide] (unique) {\num{cohort.unique} phase-3 registrations; \num{cohort.both} are under both filters and are counted once};
+\node[flow, above=of unique.north west, anchor=south west] (results) {\num{cohort.results} with posted results};
+\node[flow, above=of unique.north east, anchor=south east] (stops) {\num{cohort.stopped} terminated, withdrawn or suspended};
+\node[flowaside, right=of unique] (withdrawn) {\num{cohort.withdrawn} withdrawn\\before enrollment:\\sensitivity analysis only};
+\node[flowwide, below=of unique] (enrolled) {\num{cohort.analysed} trials that enrolled};
+\node[flowaside, right=of enrolled] (outside) {\num{flow.outsideWindow} started outside \era\ or have no start date};
+\node[flowwide, below=of enrolled] (window) {\num{flow.era.enrolled} trials that enrolled and started in \era, the main window};
+\node[flowaside, right=of window] (active) {\num{flow.era.other} neither stopped nor completed: not counted};
+\node[flow, below=of window.south west, anchor=north west] (stopped) {\num{flow.era.stopped} stopped: terminated or suspended};
+\node[flow, below=of window.south east, anchor=north east] (completed) {\num{coverage.enrolled.all.completed} completed and not stopped};
+\node[flow, below=of stopped] (stopfail) {\num{recover.enrolled.era.final.n} failures by early stop; the other \num{decomp.enrolled.era.all.benefit} stopped for benefit};
+\node[flow, below=of completed] (verdict) {\num{coverage.enrolled.all.reported.n} with a verdict: \num{flow.era.completed.win} won and \num{decomp.enrolled.era.all.completedMiss} missed};
+\node[flowaside, right=of verdict] (noverdict) {\num{coverage.enrolled.all.unreported.n} without a verdict:\\\num{coverage.enrolled.all.singleArm.unreported.n} single-arm,\\\num{coverage.enrolled.all.comparator.unreported} with a comparator arm};
+\node[flowwide, below=of stopfail.south west, anchor=north west] (failures) {\num{decomp.enrolled.era.all.n} failures: \num{recover.enrolled.era.final.n} trials stopped early and \num{decomp.enrolled.era.all.completedMiss} completed trials that missed their primary endpoint};
+\draw[->] (results) -- (results |- unique.north);
+\draw[->] (stops) -- (stops |- unique.north);
+\draw[->] (unique) -- (withdrawn);
+\draw[->] (unique) -- (enrolled);
+\draw[->] (enrolled) -- (outside);
+\draw[->] (enrolled) -- (window);
+\draw[->] (window) -- (active);
+\draw[->] (stopped |- window.south) -- (stopped);
+\draw[->] (completed |- window.south) -- (completed);
+\draw[->] (stopped) -- (stopfail);
+\draw[->] (completed) -- (verdict);
+\draw[->] (completed.east) -| (noverdict.north);
+\draw[->] (stopfail) -- node[midway, right, font=\scriptsize] {\num{recover.enrolled.era.final.n}} (stopfail |- failures.north);
+\draw[->] (verdict) -- node[midway, left, font=\scriptsize] {\num{decomp.enrolled.era.all.completedMiss}} (verdict |- failures.north);
+\end{tikzpicture}%

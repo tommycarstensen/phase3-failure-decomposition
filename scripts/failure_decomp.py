@@ -130,13 +130,14 @@ def trial_verdict(analyses):
     return 'AMB' if amb else False
 
 
-def load(include_withdrawn=False):
+def load(include_withdrawn=False, include_suspended=True):
     """Return (results, meta, stopcat).
 
     stopcat maps each stopped NCT to its final category (the reclassified
     label where one exists, else the first-pass whyStopped label). By default
     it holds terminated and suspended trials only; include_withdrawn=True adds
-    the registrations withdrawn before enrollment.
+    the registrations withdrawn before enrollment, and include_suspended=False
+    leaves the suspended ones out (a sensitivity analysis).
 
     Each results record carries r['win']: True, False or None, the
     operator-aware primary-endpoint verdict from the raw p-value strings in
@@ -157,7 +158,8 @@ def load(include_withdrawn=False):
     stopcat = {
         s['nct']: (reclass.get(s['nct']) or whyout.get(s['nct']) or 'unclear')
         for s in read_json(REGISTRY + 'ph3_stopped.json')
-        if include_withdrawn or s['status'] != 'WITHDRAWN'
+        if (include_withdrawn or s['status'] != 'WITHDRAWN')
+        and (include_suspended or s['status'] != 'SUSPENDED')
     }
     unknown = set(stopcat.values()) - _ALL
     if unknown:  # fail loudly if a new label appears

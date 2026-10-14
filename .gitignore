@@ -7,6 +7,8 @@ __pycache__/
 *.log
 *.out
 *.pdf
+# elsarticle, the class of jce.tex, writes one more
+*.spl
 # the figures are PDF as well, and they are committed
 !paper/figures/*.pdf
 

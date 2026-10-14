@@ -17,7 +17,7 @@ import math
 import matplotlib.pyplot as plt
 
 from figure_palette import BOUNDS, GRID, HWANG, INK, RAW, THIS_WORK
-from figure_style import SMALL, WIDTH, save, start
+from figure_style import LINE_MAX, SMALL, WIDTH, save, start
 
 numbers = start()
 
@@ -63,7 +63,7 @@ across = ax.get_yaxis_transform()  # x in axes fractions, y in data units
 ax.axvspan(
     value('hwang.eff.lo'), value('hwang.eff.hi'), color=HWANG, alpha=0.2, lw=0
 )
-ax.axvline(value('hwang.eff.pct'), color=HWANG, lw=1.6)
+ax.axvline(value('hwang.eff.pct'), color=HWANG, lw=LINE_MAX)
 ax.text(
     value('hwang.eff.pct'),
     1.02,

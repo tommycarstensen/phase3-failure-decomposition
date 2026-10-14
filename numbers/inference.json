@@ -1314,6 +1314,76 @@
   "tex": "0.14",
   "txt": "0.14"
  },
+ "hwang.novel.n": {
+  "value": 203,
+  "tex": "203",
+  "txt": "203"
+ },
+ "hwang.novel.eff.n": {
+  "value": 98,
+  "tex": "98",
+  "txt": "98"
+ },
+ "hwang.novel.eff.pct": {
+  "value": 48.2759,
+  "tex": "48.3",
+  "txt": "48.3"
+ },
+ "hwang.novel.eff.pct.int": {
+  "value": 48.2759,
+  "tex": "48",
+  "txt": "48"
+ },
+ "hwang.novel.clusters": {
+  "value": 160,
+  "tex": "160",
+  "txt": "160"
+ },
+ "hwang.novel.clustered.lo": {
+  "value": 40.4205,
+  "tex": "40.4",
+  "txt": "40.4"
+ },
+ "hwang.novel.clustered.lo.int": {
+  "value": 40.4205,
+  "tex": "40",
+  "txt": "40"
+ },
+ "hwang.novel.clustered.hi": {
+  "value": 56.2174,
+  "tex": "56.2",
+  "txt": "56.2"
+ },
+ "hwang.novel.clustered.hi.int": {
+  "value": 56.2174,
+  "tex": "56",
+  "txt": "56"
+ },
+ "hwang.novel.diff": {
+  "value": 8.410184,
+  "tex": "8.4",
+  "txt": "8.4"
+ },
+ "hwang.novel.diff.lo": {
+  "value": -17.942301,
+  "tex": "-17.9",
+  "txt": "-17.9"
+ },
+ "hwang.novel.diff.hi": {
+  "value": 1.121933,
+  "tex": "1.1",
+  "txt": "1.1"
+ },
+ "hwang.novel.p": {
+  "value": 0.05673402528692464,
+  "tex": "0.057",
+  "txt": "0.057"
+ },
+ "hwang.novel.clustered.p": {
+  "value": 0.08375407245871803,
+  "tex": "0.084",
+  "txt": "0.084"
+ },
  "area.Oncology.trials": {
   "value": 330,
   "tex": "330",

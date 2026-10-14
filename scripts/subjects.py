@@ -1,5 +1,6 @@
-"""Investigational-subject-drug identification, shared by dedup_arms.py and
-novelty_flag.py so the heuristic lives in one place.
+"""Investigational-subject-drug identification and the novelty flag, shared by
+dedup_arms.py, novelty_flag.py and inference.py so each heuristic lives in one
+place.
 
 Each trial's *subject* is the experimental-arm drug that is rarest across the
 results cohort (a backbone/comparator is common by construction; the novel
@@ -122,3 +123,25 @@ def build(arms, results):
         return min(ds, key=lambda d: (freq[d], d))
 
     return subject_of, freq, backbone
+
+
+def lifecycle_flag(results, subject_of, year):
+    """Return is_lifecycle(nct): True when the trial's subject drug has a
+    phase-3 win in the cohort with a start year strictly before the trial's
+    own, False when it has none, None when the trial has no identifiable
+    subject or no start year. `year` maps an NCT number to its start year."""
+    win_year = {}  # earliest winning start year per subject drug
+    for r in results:
+        drug = subject_of(r['nct'])
+        y = year(r['nct'])
+        if r['win'] and drug and y is not None:
+            win_year[drug] = min(win_year.get(drug, 9999), y)
+
+    def is_lifecycle(nct):
+        drug = subject_of(nct)
+        y = year(nct)
+        if drug is None or y is None:
+            return None
+        return win_year.get(drug, 9999) < y
+
+    return is_lifecycle

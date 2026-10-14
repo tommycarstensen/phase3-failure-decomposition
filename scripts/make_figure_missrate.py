@@ -11,7 +11,7 @@ import math
 import matplotlib.pyplot as plt
 
 from figure_palette import GRID, INK_SECONDARY, THIS_WORK
-from figure_style import SMALL, WIDTH, save, start
+from figure_style import LINE_MAX, SMALL, WIDTH, save, start
 
 numbers = start()
 
@@ -56,7 +56,7 @@ ax.plot(
     rate,
     '-o',
     color=THIS_WORK,
-    lw=1.6,
+    lw=LINE_MAX,
     markersize=4.5,
     markeredgecolor='white',
     markeredgewidth=0.8,

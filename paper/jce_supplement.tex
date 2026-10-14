@@ -1,0 +1,463 @@
+% The supplementary material of jce.tex, the version for the Journal of Clinical Epidemiology. Most of it is the preprint's supplement (supplement.tex) and the parts of the preprint's main text that the journal version leaves out; the references point at the sections of jce.tex.
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{parskip}
+\usepackage{xr}
+\externaldocument[main-]{jce}
+\graphicspath{{./}}
+\emergencystretch=3em
+% never break a line or a page inside inline math, so that "p =" keeps its value
+\relpenalty=10000
+\binoppenalty=10000
+% the captions stand above the tables: keep them clear of the top rule
+\setlength{\belowcaptionskip}{4pt}
+% long headings are set ragged right, not stretched: the article class's \section with \raggedright added
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}{-3.5ex \@plus -1ex \@minus -.2ex}{2.3ex \@plus.2ex}{\normalfont\Large\bfseries\raggedright}}
+\makeatother
+
+% Every number in this supplement is written by the analysis scripts: numbers.tex defines \num{name}, and the table bodies are in tables/.
+\input{numbers}
+\newcommand{\code}[1]{\texttt{\small #1}}
+\newcommand{\era}{\num{era.first}--\num{era.last}}
+\newcommand{\eracomplete}{\num{era.first}--\num{era.completeLast}}
+\newcommand{\trendyears}{\num{trend.firstYear}--\num{trend.lastYear}}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\newcounter{strobe}
+\newcommand{\strobeitem}{\stepcounter{strobe}\arabic{strobe}}
+
+\title{\textbf{Supplementary material to: Two choices in reading ClinicalTrials.gov change the apparent causes of phase-3 trial failure}}
+\author{Tommy Carstensen}
+\date{}
+\makeatletter
+\hypersetup{pdftitle={\@title}, pdfauthor={Tommy Carstensen}, pdfsubject={Supplementary material, Journal of Clinical Epidemiology}, pdflang={en}, pdfdisplaydoctitle=true}
+\makeatother
+
+\begin{document}
+\maketitle
+
+All numbers and table bodies are written by the scripts named in each section heading; \code{reproduce.sh} regenerates them. Unless stated otherwise the population is trials that enrolled and the window is trials starting in \era. Shares are percentages of failures.
+
+\section{Classification of termination reasons}\label{supp:classification}
+Stopped trials were classified in three passes by large-language-model agents with fixed prompts. In the first pass the \code{whyStopped} string, present for \num{recover.firstPassLabels} registrations, was assigned one of \num{valid.categories} categories: efficacy or futility, efficacy positive, safety, enrollment, business or strategic, funding, \mbox{COVID-19}, regulatory, supply or manufacturing, external evidence, other operational, and unclear. A string that gave more than one reason received one category, that of the primary or first-stated cause, as the prompt instructed, so a second reason does not appear in any share. Such strings were not counted. In the second pass the \num{pass2.input} registrations with a blank string or an unclear label were re-examined. Where the registration had a substantive detailed description ($n=\num{pass2.modelRead}$), a model read it. A bare sponsor decision, a string that says only that the sponsor, the company or its management decided, was then labeled sponsor-undisclosed by rule ($n=\num{pass2.rule.sponsor}$; \num{pass2.rule.sponsor.wide} of these by a wider pattern, applied where the model named no reason, that also takes a bare business decision or a discontinued program). The rule also applied where the model had answered business or strategic to a bare sponsor decision (\num{pass2.rule.sponsor.overModel} registrations), because the taxonomy treats such a decision as stating no reason. Otherwise the model's label was used where it named a reason ($n=\num{pass2.byModel}$, of which \num{pass2.model.notStarted} were not-started). Of the registrations still without a reason, a registration withdrawn with no participants was labeled not-started by rule ($n=\num{pass2.rule.notStarted}$), and a registration that enrolled between one and \num{pass2.rule.enrollmentMax} participants was labeled enrollment by rule ($n=\num{pass2.rule.enrollment}$). In the third pass, the linked PubMed abstracts of \num{pass3.modelRead} registrations that had no reason were read, and they named a reason for \num{pass3.byModel}.
+
+The models were Claude Sonnet for classification and Claude Opus for the adjudication (\S\ref{supp:validation}) (Anthropic), run as agents of the Claude Code assistant in \num{classification.month}. The exact version identifiers were not recorded. The prompts and every label are archived, so the analysis does not depend on re-running the models; the input batches were assembled interactively, however, and the classification cannot be re-run from the archive as it stands. The strings of a batch were labeled together, so a label may have been influenced by the other strings of its batch. The adjudication does not measure that influence separately.
+
+For the decomposition, categories were pooled into five buckets: efficacy (completed trials that missed their primary endpoint, plus stops for efficacy or futility), safety, commercial (business or strategic, funding, sponsor-undisclosed, not-started), operational (enrollment, other operational, external evidence, regulatory, \mbox{COVID-19}, supply or manufacturing) and unknown (unclear). A stop for demonstrated efficacy is a success and is excluded. A completed miss is a trial with status completed, not stopped, whose verdict is a miss; a trial that is still active is not counted. Table~\ref{tab:buckets} lists the assignment. Several of these assignments are contestable and are varied in \S\ref{supp:taxonomy}.
+
+\begin{table}[H]
+\centering
+\caption{The categories of the classification and the bucket of the decomposition each is counted in. The first-pass categories are those of the archived prompt; sponsor-undisclosed and not-started are given in the second pass.}
+\label{tab:buckets}
+\small
+\begin{tabular}{ll}
+\toprule
+category & bucket \\
+\midrule
+completed trial that missed its primary endpoint & efficacy \\
+efficacy or futility & efficacy \\
+safety & safety \\
+enrollment & operational \\
+other operational & operational \\
+external evidence & operational \\
+regulatory & operational \\
+\mbox{COVID-19} & operational \\
+supply or manufacturing & operational \\
+business or strategic & commercial \\
+funding & commercial \\
+sponsor-undisclosed & commercial \\
+not-started & commercial \\
+unclear & unknown \\
+efficacy positive & a success, not counted as a failure \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Of the \num{recover.enrolled.era.final.n} stopped trials that enrolled, started in \era\ and were not stopped for benefit, the \code{whyStopped} string alone left \num{recover.enrolled.era.first.noReason.pct}\% without a reason. After the second pass \num{recover.enrolled.era.second.unclear.pct}\% were unclear, and after the third \num{recover.enrolled.era.final.unclear.pct}\%. A further \num{recover.enrolled.era.final.sponsorundisclosed} carried the label sponsor-undisclosed, which records that the sponsor stopped the trial but not why. Counting only labels that state a reason, a reason was available for \num{recover.enrolled.era.final.reason.pct}\% of these trials, and for \num{recover.enrolled.all.final.reason.pct}\% over all years. Counting every label other than unclear as a reason, which adds sponsor-undisclosed and not-started, gives \num{recover.enrolled.era.final.notUnclear.pct}\% and \num{recover.enrolled.all.final.notUnclear.pct}\%. With withdrawn registrations included, the figures for \era\ are \num{recover.registered.era.final.reason.pct}\% and \num{recover.registered.era.final.notUnclear.pct}\%. Razuvayevskaya et al.\ (main text) assigned a reason to \num{lit.razuv.classified.pct}\% of stopped trials; the two figures are not like for like, because phases, years and taxonomy differ.
+
+\section{Validation by category (\code{validation\_metrics.py})}\label{supp:validation}
+Raw agreement is \num{valid.agree.pct}\% (\num{valid.agree.lo} to \num{valid.agree.hi}) with Cohen's $\kappa=\num{valid.kappa}$. Weighted to the prevalence of the \num{valid.firstPass.labels} first-pass labels it is \num{valid.weighted.pct}\% (stratified bootstrap \num{valid.weighted.lo} to \num{valid.weighted.hi}) with $\kappa=\num{valid.weighted.kappa}$, and weighted to the first-pass labels of trials that enrolled and started in \era\ it is \num{valid.weightedEra.pct}\% (\num{valid.weightedEra.lo} to \num{valid.weightedEra.hi}). Of the \num{valid.era.stopped} stopped trials that enrolled and started in \era\ (stops for benefit included), \num{valid.era.laterPass.n} (\num{valid.era.laterPass.pct}\%) had a blank or unclear first-pass label and went to the later passes and the rules, which the sample does not cover. Table~\ref{tab:validation} gives the agreement for each first-pass label.
+
+\begin{table}[H]
+\centering
+\caption{Agreement between the first-pass label and the blind adjudication, \num{valid.perCategory} sampled items per category, ordered by how often the first-pass label occurs. The interval is a Wilson 95\% interval for the agreement, in percent. Prevalence is the share of all first-pass labels, over all years, that carry the label. The last column names the label the adjudication gave most often where it differed, with the number of items; where several labels tie, it gives how many. The categories are those of \S\ref{main-sec:classification} of the main text.}
+\label{tab:validation}
+\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrl}
+\toprule
+first-pass label & agreement & 95\% CI (\%) & prevalence (\%) & most often adjudicated instead \\
+\midrule
+\tablebody{validation}
+\bottomrule
+\end{tabular}
+\end{table}
+
+The first-pass label agreed with the blind adjudication for \num{valid.agree.n} of \num{valid.sample} sampled items (\num{valid.agree.pct}\%, 95\% CI \num{valid.agree.lo} to \num{valid.agree.hi}; Cohen's $\kappa=\num{valid.kappa}$). Weighted to the prevalence of the first-pass labels, agreement was \num{valid.weighted.pct}\% (bootstrap 95\% CI \num{valid.weighted.lo} to \num{valid.weighted.hi}; $\kappa=\num{valid.weighted.kappa}$). Weighted to the labels of trials that enrolled and started in \era, it was \num{valid.weightedEra.pct}\% (\num{valid.weightedEra.lo} to \num{valid.weightedEra.hi}). Agreement was complete for funding and \mbox{COVID-19} (\num{valid.cat.funding.agree} of \num{valid.perCategory} each) and lowest for external evidence (\num{valid.cat.externalevidence.agree} of \num{valid.perCategory}; where the adjudication differed, most often as efficacy or futility) and for business or strategic (\num{valid.cat.businessstrategic.agree} of \num{valid.perCategory}; most often as unclear). The per-category samples are small and their intervals wide. A disagreement between two categories of the same bucket does not move a share of the decomposition: the two labels fell in the same bucket for \num{valid.bucket.agree.n} of the \num{valid.sample} items (\num{valid.bucket.agree.pct}\%, 95\% CI \num{valid.bucket.agree.lo} to \num{valid.bucket.agree.hi}), and for \num{valid.bucket.weighted.pct}\% when weighted to label prevalence. The second and third passes and the rules were not validated. They handled the trials whose first-pass label was blank or unclear, which are \num{valid.era.laterPass.pct}\% of the \num{valid.era.stopped} stopped trials that enrolled and started in \era; that count includes the stops for benefit, which the recoverability figures of \S\ref{supp:classification} leave out.
+
+\section{The primary-endpoint verdict and the miss rate (\code{failure\_decomp.py}, \code{decomposition.py}, \code{endpoint\_design.py}, \code{sensitivity.py})}\label{supp:verdict}
+For each trial with posted results we retrieved, on \num{retrieval.analyses}, the primary-outcome statistical-analysis records: the $p$-value string, the parameter type and value, confidence limits and the declared non-inferiority type. The \num{cohort.results} trials have \num{pvalue.records} such records, of which \num{pvalue.strings} carry a $p$-value string. This retrieval did not return \num{analyses.absent} trial of the cohort, which has no verdict, and it returned \num{analyses.notInCohort} trials that were not in the results cohort of the first retrieval, which are ignored. A trial is a win if at least one primary analysis is significant at \num{alpha} once its comparison operator is read. An analysis is significant when its string guarantees a value below \num{alpha}: an exact value below \num{alpha}, a `$<$' sign before \num{alpha} or a smaller number, or a `$\le$' sign before a number below \num{alpha}. It is non-significant when the string guarantees a value of \num{alpha} or more: an exact value of \num{alpha} or more, or a `$>$' sign before such a number. Any other string leaves the analysis undetermined, because the value may lie on either side of the threshold: a `$>$' sign before a number below \num{alpha}, a `$<$' sign before a number above it, or a `$\le$' sign before \num{alpha} or a larger number. A trial without a significant analysis is a miss if every usable analysis is non-significant, and its verdict is undetermined if any of them is undetermined. Reading the operator matters. Stripping it and comparing the number with \num{alpha} scores the common `$<$\num{alpha}' style as a miss, which changes the verdict of \num{verdict.flips.n} trials (\num{verdict.flips.pct}\% of those with a verdict), all from miss to win. The \num{verdict.ambiguous} trials with an undetermined verdict were scored by their smallest reported number with the operator ignored, which is an approximation, and \num{pvalue.invalid.records} records with a $p$-value outside $[0, 1]$ are treated as missing. A verdict is available for \num{verdict.trials} trials (\num{verdict.coverage.pct}\%). The rest report no usable primary $p$-value and are excluded from miss rates; \S\ref{main-sec:coverage} of the main text examines what that does to the decomposition. Because any one significant analysis scores a win, the verdict is lenient under multiplicity, and stricter rules are reported below.
+
+The $p$-value extraction was not compared with source documents. The second retrieval returned the same minimum $p$ as the first for all \num{stability.compared} trials that had one in both, and the same number of primary outcomes for \num{stability.sameCount.pct}\% of trials, so the registry values are stable. Both retrievals use the same parsing code, so this does not test the parser.
+
+Of \num{miss.all.trials} trials with a verdict over all years (a further \num{verdict.noStartYear} have a verdict but no start date), \num{miss.all.pct}\% (95\% CI \num{miss.all.lo} to \num{miss.all.hi}) missed their primary endpoint, and \num{miss.era.pct}\% (\num{miss.era.lo} to \num{miss.era.hi}) of those starting in \era. Restricted to completed trials the rates were \num{miss.all.completed.pct}\% and \num{miss.era.completed.pct}\%.
+
+The rate depends on the win rule (Table~\ref{tab:missrate}). The verdict counts any significant primary analysis as a win. Requiring every primary outcome that has a usable $p$-value to be significant gives \num{combine.all.and.pct}\% (\num{combine.era.and.pct}\% in \era). Requiring every primary outcome to be significant, with an outcome that has no usable $p$-value counted as not significant, gives \num{combine.all.strict.pct}\% (\num{combine.era.strict.pct}\%); \num{combine.era.incomplete.pct}\% of trials in \era\ have such an outcome. A stricter rule turns wins of completed trials into misses, which are efficacy failures: under these two rules efficacy would account for \num{winrule.and.all.eff.pct}\% and \num{winrule.strict.all.eff.pct}\% of the failures of all sponsors in the main window, against \num{winrule.and.all.op.pct}\% and \num{winrule.strict.all.op.pct}\% for operational causes, and for \num{winrule.and.big.eff.pct}\% and \num{winrule.strict.big.eff.pct}\% of big-pharma failures. Numeric readings of the minimum $p$ give \num{diag.all.naive.pct}\% with the operator stripped, \num{diag.all.sidak.pct}\% with a \v{S}id\'ak threshold on the number of primary outcomes, and \num{diag.all.single.pct}\% among trials with a single primary outcome. Excluding the \num{ni.all.pct}\% of trials that declare a non-inferiority or equivalence design, for which a $p$-value against the null is not the success criterion, changes the rate little (\num{ni.all.superiority.miss.pct}\%). Among \num{direction.wins} wins in \era, \num{direction.ratioOnly.n} (\num{direction.ratioOnly.pct}\%) had only ratio parameters above 1 among their significant analyses, \num{direction.hazardOnly.n} of them only hazard ratios above 1. The registry does not record which direction is benefit, so wins in the harmful direction cannot be counted or bounded from these fields.
+
+\begin{table}[H]
+\centering
+\caption{Share of trials that miss the primary endpoint under different rules (\%).}
+\label{tab:missrate}
+\begin{tabular}{lrr}
+\toprule
+rule & all years & \era \\
+\midrule
+any primary analysis significant is a win (the verdict) & \num{miss.all.pct} & \num{miss.era.pct} \\
+the same, completed trials only & \num{miss.all.completed.pct} & \num{miss.era.completed.pct} \\
+the same, non-inferiority and equivalence designs excluded & \num{ni.all.superiority.miss.pct} & \num{ni.era.superiority.miss.pct} \\
+every primary outcome with a usable $p$-value significant & \num{combine.all.and.pct} & \num{combine.era.and.pct} \\
+every primary outcome significant & \num{combine.all.strict.pct} & \num{combine.era.strict.pct} \\
+minimum $p$ below \num{alpha}, operator stripped & \num{diag.all.naive.pct} & \num{diag.era.naive.pct} \\
+minimum $p$ below a \v{S}id\'ak threshold & \num{diag.all.sidak.pct} & \num{diag.era.sidak.pct} \\
+minimum $p$ below \num{alpha}, among trials with one primary outcome & \num{diag.all.single.pct} & \num{diag.era.single.pct} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Over all years, the operator-aware reading changes \num{verdict.flips.n} verdicts (\num{verdict.flips.pct}\% of trials with one) relative to the reading with the operator stripped, and \num{verdict.ambiguous} trials have a verdict that their operators leave undetermined and are scored by their smallest reported number with the operator ignored. Under the stripped reading the trend test across \trendyears\ gives $p=\num{trend.naive.p}$.
+
+\section{Miss rate by start year (\code{inference.py})}
+Table~\ref{tab:yearly} gives the yearly rates drawn in Figure~\ref{fig:missrate}, which adds their Wilson intervals.
+
+\begin{table}[H]
+\centering
+\caption{Trials with a verdict and the share that missed their primary endpoint, by start year.}
+\label{tab:yearly}
+\begin{tabular}{rrrr}
+\toprule
+start year & trials with a verdict & misses & miss rate (\%) \\
+\midrule
+\tablebody{yearly}
+\bottomrule
+\end{tabular}
+\end{table}
+
+There is no linear trend across \trendyears\ (Cochran--Armitage $z=\num{trend.ca.z}$, $p=\num{trend.ca.p}$; odds ratio per year \num{trend.or}, 95\% CI \num{trend.or.lo} to \num{trend.or.hi}, $p=\num{trend.or.p}$ with sponsor-clustered standard errors). A chi-square test of homogeneity across the years gives $\chi^2=\num{trend.het.chi2}$ with \num{trend.het.dof} degrees of freedom, $p=\num{trend.het.p}$. The table and the tests cover \num{trend.overall.trials} of the \num{miss.all.trials} trials with a verdict and a start year; trials that started before \num{trend.firstYear} or after \num{trend.lastYear} are not in this table or its tests.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/ph3_miss_rate_by_year.pdf}
+\caption{Share of trials with a verdict that missed their primary endpoint, by start year, with its Wilson 95\% interval (band). The number under each year is the number of trials with a verdict. The dashed line is the rate over all starts of \trendyears\ (\num{trend.overall.pct}\%). The yearly rates show no linear trend (Cochran--Armitage $p=\num{trend.ca.p}$), and a test of homogeneity does not distinguish them from a constant rate ($p=\num{trend.het.p}$). They describe the trials that report a usable primary $p$-value, a share that falls with later start years within the main window (\S\ref{supp:reporting}); start years after \num{trend.lastYear} are not drawn, because few of their trials have read out. The dotted line marks the start of \num{era.first}, the first start year of the main window of the decomposition.}
+\label{fig:missrate}
+\end{figure}
+
+Across start years \trendyears\ there was no evidence of a linear trend (Cochran--Armitage $z=\num{trend.ca.z}$, $p=\num{trend.ca.p}$; odds ratio per year \num{trend.or}, 95\% CI \num{trend.or.lo} to \num{trend.or.hi}, sponsor-clustered). Yearly rates ranged from \num{trend.max.pct}\% in \num{trend.max.year} to \num{trend.min.pct}\% in \num{trend.min.year} and stood at \num{trend.last.pct}\% in \num{trend.lastYear} (Figure~\ref{fig:missrate}; Table~\ref{tab:yearly}), a spread that a test of homogeneity does not distinguish from a constant rate ($p=\num{trend.het.p}$). The share of trials with a verdict also changes with start year (within the main window it falls, \S\ref{supp:reporting}), so these rates describe reporting trials. With the operator stripped the same trend test shows a decline ($p=\num{trend.naive.p}$), which disappears when the operator is honored.
+
+\section{Which completed trials report a usable primary \texorpdfstring{$p$}{p}-value (\code{inference.py})}\label{supp:reporting}
+Table~\ref{tab:covmodel} is the model behind the odds ratios below. A completed trial is less likely to carry a verdict if it is a single-arm study, started later or has more primary outcomes, and more likely if its sponsor is in the big-pharma stratum.
+
+\begin{table}[H]
+\centering
+\caption{Logistic regression of having a verdict, among \num{covmodel.trials} completed, non-stopped trials with posted results. Odds ratios with 95\% intervals from sponsor-clustered standard errors. The reference therapeutic area is \num{covmodel.reference}.}
+\label{tab:covmodel}
+\small
+\begin{tabular}{lrrr}
+\toprule
+covariate & odds ratio & 95\% CI & $p$ \\
+\midrule
+\tablebody{covmodel}
+\bottomrule
+\end{tabular}
+\end{table}
+
+Of \num{coverage.enrolled.all.completed} completed, non-stopped trials with posted results that started in \era, \num{coverage.enrolled.all.reported.n} (\num{coverage.enrolled.all.reported.pct}\%) had a verdict. Dechartres et al.\ (main text) found a similar share among completed phase 3 and phase 4 randomized superiority trials with posted results: \num{lit.dechartres.reported.pct.int}\% posted a treatment effect or $p$-value, and \num{lit.dechartres.reported.significant.pct.int}\% of those were significant. Among the others, only \num{lit.dechartres.calculated.significant.pct.int}\% were significant when the test could be computed from the posted data, which suggests selective posting of significant results. In our cohort a verdict was more likely for big-pharma sponsors (odds ratio \num{covmodel.bigPharma.or}, 95\% CI \num{covmodel.bigPharma.lo} to \num{covmodel.bigPharma.hi}, $p=\num{covmodel.bigPharma.p}$). It became less likely with each later start year (odds ratio \num{covmodel.year.or}) and with more primary outcomes, and was much less likely for single-arm studies (odds ratio \num{covmodel.singleArm.or}, \num{covmodel.singleArm.lo} to \num{covmodel.singleArm.hi}) (Table~\ref{tab:covmodel}). Single-arm studies were \num{coverage.enrolled.all.singleArm.unreported.pct}\% of the trials without a verdict and \num{coverage.enrolled.all.singleArm.reported.pct}\% of those with one.
+
+\section{Coverage imputation (\code{coverage.py})}
+Among all sponsors, \num{coverage.enrolled.all.comparator.reported} completed trials with a comparator arm have a verdict and \num{coverage.enrolled.all.comparator.unreported} do not; \num{coverage.enrolled.all.comparator.miss.n} of the former missed (\num{coverage.enrolled.all.comparator.miss.pct}\%). The pooled imputation therefore adds about \num{coverage.enrolled.all.pooled.extra} misses, the adjusted one about \num{coverage.enrolled.all.adjusted.extra}, and the bound all \num{coverage.enrolled.all.upper.extra}. The interval for the pooled efficacy share, \num{coverage.enrolled.all.pooled.eff.lo}\% to \num{coverage.enrolled.all.pooled.eff.hi}\%, reflects only the sampling error of the miss rate. Table~\ref{tab:coverage} gives the shares under each imputation.
+
+\begin{table}[H]
+\centering
+\caption{Failure shares (\%) after imputing misses for completed trials without a verdict. ``Pooled'' applies the miss rate of reporting trials with a comparator arm to unreported trials with a comparator arm; ``adjusted'' predicts each trial's miss probability from sponsor class, start year, number of primary outcomes and therapeutic area; ``every one missed'' is the bound; the last row of the first block also imputes for single-arm studies, at the miss rate of all reporting trials.}
+\label{tab:coverage}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}
+\toprule
+sponsors & imputation & efficacy & operational & commercial & safety & unknown \\
+\midrule
+all sponsors & none (as observed) & \num{coverage.enrolled.all.raw.eff} & \num{coverage.enrolled.all.raw.op} & \num{coverage.enrolled.all.raw.com} & \num{coverage.enrolled.all.raw.saf} & \num{coverage.enrolled.all.raw.unk} \\
+ & pooled & \num{coverage.enrolled.all.pooled.eff} & \num{coverage.enrolled.all.pooled.op} & \num{coverage.enrolled.all.pooled.com} & \num{coverage.enrolled.all.pooled.saf} & \num{coverage.enrolled.all.pooled.unk} \\
+ & adjusted & \num{coverage.enrolled.all.adjusted.eff} & \num{coverage.enrolled.all.adjusted.op} & \num{coverage.enrolled.all.adjusted.com} & \num{coverage.enrolled.all.adjusted.saf} & \num{coverage.enrolled.all.adjusted.unk} \\
+ & every one missed & \num{coverage.enrolled.all.upper.eff} & \num{coverage.enrolled.all.upper.op} & \num{coverage.enrolled.all.upper.com} & \num{coverage.enrolled.all.upper.saf} & \num{coverage.enrolled.all.upper.unk} \\
+ & pooled, single-arm included & \num{coverage.enrolled.all.withSingleArm.eff} & \num{coverage.enrolled.all.withSingleArm.op} & \num{coverage.enrolled.all.withSingleArm.com} & \num{coverage.enrolled.all.withSingleArm.saf} & \num{coverage.enrolled.all.withSingleArm.unk} \\
+\midrule
+big pharma & none (as observed) & \num{coverage.enrolled.big.raw.eff} & \num{coverage.enrolled.big.raw.op} & \num{coverage.enrolled.big.raw.com} & \num{coverage.enrolled.big.raw.saf} & \num{coverage.enrolled.big.raw.unk} \\
+ & pooled & \num{coverage.enrolled.big.pooled.eff} & \num{coverage.enrolled.big.pooled.op} & \num{coverage.enrolled.big.pooled.com} & \num{coverage.enrolled.big.pooled.saf} & \num{coverage.enrolled.big.pooled.unk} \\
+ & adjusted & \num{coverage.enrolled.big.adjusted.eff} & \num{coverage.enrolled.big.adjusted.op} & \num{coverage.enrolled.big.adjusted.com} & \num{coverage.enrolled.big.adjusted.saf} & \num{coverage.enrolled.big.adjusted.unk} \\
+ & every one missed & \num{coverage.enrolled.big.upper.eff} & \num{coverage.enrolled.big.upper.op} & \num{coverage.enrolled.big.upper.com} & \num{coverage.enrolled.big.upper.saf} & \num{coverage.enrolled.big.upper.unk} \\
+\midrule
+other sponsors & none (as observed) & \num{coverage.enrolled.rest.raw.eff} & \num{coverage.enrolled.rest.raw.op} & \num{coverage.enrolled.rest.raw.com} & \num{coverage.enrolled.rest.raw.saf} & \num{coverage.enrolled.rest.raw.unk} \\
+ & pooled & \num{coverage.enrolled.rest.pooled.eff} & \num{coverage.enrolled.rest.pooled.op} & \num{coverage.enrolled.rest.pooled.com} & \num{coverage.enrolled.rest.pooled.saf} & \num{coverage.enrolled.rest.pooled.unk} \\
+ & adjusted & \num{coverage.enrolled.rest.adjusted.eff} & \num{coverage.enrolled.rest.adjusted.op} & \num{coverage.enrolled.rest.adjusted.com} & \num{coverage.enrolled.rest.adjusted.saf} & \num{coverage.enrolled.rest.adjusted.unk} \\
+ & every one missed & \num{coverage.enrolled.rest.upper.eff} & \num{coverage.enrolled.rest.upper.op} & \num{coverage.enrolled.rest.upper.com} & \num{coverage.enrolled.rest.upper.saf} & \num{coverage.enrolled.rest.upper.unk} \\
+\midrule
+all sponsors, & none (as observed) & \num{coverage.registered.all.raw.eff} & \num{coverage.registered.all.raw.op} & \num{coverage.registered.all.raw.com} & \num{coverage.registered.all.raw.saf} & \num{coverage.registered.all.raw.unk} \\
+withdrawn counted & pooled & \num{coverage.registered.all.pooled.eff} & \num{coverage.registered.all.pooled.op} & \num{coverage.registered.all.pooled.com} & \num{coverage.registered.all.pooled.saf} & \num{coverage.registered.all.pooled.unk} \\
+ & adjusted & \num{coverage.registered.all.adjusted.eff} & \num{coverage.registered.all.adjusted.op} & \num{coverage.registered.all.adjusted.com} & \num{coverage.registered.all.adjusted.saf} & \num{coverage.registered.all.adjusted.unk} \\
+ & every one missed & \num{coverage.registered.all.upper.eff} & \num{coverage.registered.all.upper.op} & \num{coverage.registered.all.upper.com} & \num{coverage.registered.all.upper.saf} & \num{coverage.registered.all.upper.unk} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{The full decomposition (\code{decomposition.py}, \code{coverage.py})}\label{supp:decomposition}
+Table~\ref{tab:decompfull} gives the decomposition in each window and population for all sponsors, big pharma and other sponsors, and Figure~\ref{fig:causes} draws the primary analysis against Hwang et al.
+
+\begin{table}[H]
+\centering
+\caption{Causes of failure by sponsor class, population and window. Shares are percentages of the failures in each row. The first row of each block is the primary analysis: trials that enrolled and started in \era; Figure~\ref{fig:causes} draws its Wilson 95\% intervals. The next two rows change the window, and the fourth adds the registrations withdrawn before enrollment. In the last row, misses are imputed for unreported completed trials with a comparator arm at the miss rate of the reporting ones (main text, \S\ref{main-sec:coverage}); the number after the plus sign is the misses added, and each block is imputed at its own rate. Hwang et al.\ classified programs that entered pivotal trials in \num{lit.hwang.firstYear}--\num{lit.hwang.lastYear} and report no operational category; their failures with none of the three stated reasons are given as unknown.}
+\label{tab:decompfull}
+\footnotesize\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+population and window & failures & efficacy & operational & commercial & safety & unknown \\
+\midrule
+\multicolumn{7}{l}{\textit{All sponsors}} \\
+enrolled, \era & \num{decomp.enrolled.era.all.n} & \num{decomp.enrolled.era.all.eff.pct} & \num{decomp.enrolled.era.all.op.pct} & \num{decomp.enrolled.era.all.com.pct} & \num{decomp.enrolled.era.all.saf.pct} & \num{decomp.enrolled.era.all.unk.pct} \\
+enrolled, \eracomplete & \num{decomp.enrolled.complete.all.n} & \num{decomp.enrolled.complete.all.eff.pct} & \num{decomp.enrolled.complete.all.op.pct} & \num{decomp.enrolled.complete.all.com.pct} & \num{decomp.enrolled.complete.all.saf.pct} & \num{decomp.enrolled.complete.all.unk.pct} \\
+enrolled, all years & \num{decomp.enrolled.all.all.n} & \num{decomp.enrolled.all.all.eff.pct} & \num{decomp.enrolled.all.all.op.pct} & \num{decomp.enrolled.all.all.com.pct} & \num{decomp.enrolled.all.all.saf.pct} & \num{decomp.enrolled.all.all.unk.pct} \\
+withdrawn counted, \era & \num{decomp.registered.era.all.n} & \num{decomp.registered.era.all.eff.pct} & \num{decomp.registered.era.all.op.pct} & \num{decomp.registered.era.all.com.pct} & \num{decomp.registered.era.all.saf.pct} & \num{decomp.registered.era.all.unk.pct} \\
+enrolled, \era, misses imputed & \num{decomp.enrolled.era.all.n} $+$ \num{coverage.enrolled.all.pooled.extra} & \num{coverage.enrolled.all.pooled.eff} & \num{coverage.enrolled.all.pooled.op} & \num{coverage.enrolled.all.pooled.com} & \num{coverage.enrolled.all.pooled.saf} & \num{coverage.enrolled.all.pooled.unk} \\
+\addlinespace
+\multicolumn{7}{l}{\textit{Big pharma}} \\
+enrolled, \era & \num{decomp.enrolled.era.big.n} & \num{decomp.enrolled.era.big.eff.pct} & \num{decomp.enrolled.era.big.op.pct} & \num{decomp.enrolled.era.big.com.pct} & \num{decomp.enrolled.era.big.saf.pct} & \num{decomp.enrolled.era.big.unk.pct} \\
+enrolled, \eracomplete & \num{decomp.enrolled.complete.big.n} & \num{decomp.enrolled.complete.big.eff.pct} & \num{decomp.enrolled.complete.big.op.pct} & \num{decomp.enrolled.complete.big.com.pct} & \num{decomp.enrolled.complete.big.saf.pct} & \num{decomp.enrolled.complete.big.unk.pct} \\
+enrolled, all years & \num{decomp.enrolled.all.big.n} & \num{decomp.enrolled.all.big.eff.pct} & \num{decomp.enrolled.all.big.op.pct} & \num{decomp.enrolled.all.big.com.pct} & \num{decomp.enrolled.all.big.saf.pct} & \num{decomp.enrolled.all.big.unk.pct} \\
+withdrawn counted, \era & \num{decomp.registered.era.big.n} & \num{decomp.registered.era.big.eff.pct} & \num{decomp.registered.era.big.op.pct} & \num{decomp.registered.era.big.com.pct} & \num{decomp.registered.era.big.saf.pct} & \num{decomp.registered.era.big.unk.pct} \\
+enrolled, \era, misses imputed & \num{decomp.enrolled.era.big.n} $+$ \num{coverage.enrolled.big.pooled.extra} & \num{coverage.enrolled.big.pooled.eff} & \num{coverage.enrolled.big.pooled.op} & \num{coverage.enrolled.big.pooled.com} & \num{coverage.enrolled.big.pooled.saf} & \num{coverage.enrolled.big.pooled.unk} \\
+\addlinespace
+\multicolumn{7}{l}{\textit{Other sponsors}} \\
+enrolled, \era & \num{decomp.enrolled.era.rest.n} & \num{decomp.enrolled.era.rest.eff.pct} & \num{decomp.enrolled.era.rest.op.pct} & \num{decomp.enrolled.era.rest.com.pct} & \num{decomp.enrolled.era.rest.saf.pct} & \num{decomp.enrolled.era.rest.unk.pct} \\
+enrolled, \eracomplete & \num{decomp.enrolled.complete.rest.n} & \num{decomp.enrolled.complete.rest.eff.pct} & \num{decomp.enrolled.complete.rest.op.pct} & \num{decomp.enrolled.complete.rest.com.pct} & \num{decomp.enrolled.complete.rest.saf.pct} & \num{decomp.enrolled.complete.rest.unk.pct} \\
+enrolled, all years & \num{decomp.enrolled.all.rest.n} & \num{decomp.enrolled.all.rest.eff.pct} & \num{decomp.enrolled.all.rest.op.pct} & \num{decomp.enrolled.all.rest.com.pct} & \num{decomp.enrolled.all.rest.saf.pct} & \num{decomp.enrolled.all.rest.unk.pct} \\
+withdrawn counted, \era & \num{decomp.registered.era.rest.n} & \num{decomp.registered.era.rest.eff.pct} & \num{decomp.registered.era.rest.op.pct} & \num{decomp.registered.era.rest.com.pct} & \num{decomp.registered.era.rest.saf.pct} & \num{decomp.registered.era.rest.unk.pct} \\
+enrolled, \era, misses imputed & \num{decomp.enrolled.era.rest.n} $+$ \num{coverage.enrolled.rest.pooled.extra} & \num{coverage.enrolled.rest.pooled.eff} & \num{coverage.enrolled.rest.pooled.op} & \num{coverage.enrolled.rest.pooled.com} & \num{coverage.enrolled.rest.pooled.saf} & \num{coverage.enrolled.rest.pooled.unk} \\
+\addlinespace
+\multicolumn{7}{l}{\textit{Hwang et al.}} \\
+failed programs & \num{hwang.failed} & \num{hwang.eff.pct} & --- & \num{hwang.com.pct} & \num{hwang.saf.pct} & \num{hwang.other.pct} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/ph3_failure_2016_vs_2026.pdf}
+\caption{Causes of failure in Hwang et al., whose programs entered pivotal trials in \num{lit.hwang.firstYear}--\num{lit.hwang.lastYear}, and in this work, for the big-pharma stratum, for other sponsors and for all sponsors, among trials that enrolled and started in \era. Shares are of failed programs for Hwang et al.\ and of failed trials for this work. Each carries its Wilson 95\% interval, which treats the programs or the trials as independent; Figure~\ref{main-fig:hwang} of the main text gives the program-clustered interval of the big-pharma efficacy share. Hwang et al.\ report no operational category; their \num{hwang.other.n} failures with none of the three stated reasons are drawn as unknown. In this work, stops attributed to an undisclosed sponsor decision are counted as commercial.}
+\label{fig:causes}
+\end{figure}
+
+Among trials that enrolled and started in \era\ there were \num{decomp.enrolled.era.all.n} failures. Efficacy accounted for \num{decomp.enrolled.era.all.eff.pct}\% (95\% CI \num{decomp.enrolled.era.all.eff.lo} to \num{decomp.enrolled.era.all.eff.hi}), operational causes for \num{decomp.enrolled.era.all.op.pct}\% (\num{decomp.enrolled.era.all.op.lo} to \num{decomp.enrolled.era.all.op.hi}), commercial reasons for \num{decomp.enrolled.era.all.com.pct}\% (\num{decomp.enrolled.era.all.com.lo} to \num{decomp.enrolled.era.all.com.hi}), safety for \num{decomp.enrolled.era.all.saf.pct}\% (\num{decomp.enrolled.era.all.saf.lo} to \num{decomp.enrolled.era.all.saf.hi}) and unknown reasons for \num{decomp.enrolled.era.all.unk.pct}\% (\num{decomp.enrolled.era.all.unk.lo} to \num{decomp.enrolled.era.all.unk.hi}) (Figure~\ref{fig:causes}; Table~\ref{tab:decompfull}). Completed trials that missed their primary endpoint made up \num{decomp.enrolled.era.all.completedMissOfEff.pct}\% of the efficacy bucket, and stops for futility the rest. The \eracomplete\ window gave efficacy \num{decomp.enrolled.complete.all.eff.pct}\% and operational \num{decomp.enrolled.complete.all.op.pct}\%; all years gave \num{decomp.enrolled.all.all.eff.pct}\% and \num{decomp.enrolled.all.all.op.pct}\%. Efficacy and operational causes are thus close in the observed data: efficacy is slightly ahead in every window, and in the main window the two intervals overlap. Over all years the unknown share is larger (\num{decomp.enrolled.all.all.unk.pct}\% against \num{decomp.enrolled.era.all.unk.pct}\%), because more of the older stops remain without a recoverable reason (\S\ref{supp:classification}).
+
+Withdrawn registrations change this picture. They are \num{cohort.era.withdrawn.pct}\% of the stopped registrations that started in \era, and they rarely stop for efficacy: operational causes account for \num{withdrawn.era.op.pct}\% of them, the commercial bucket for \num{withdrawn.era.com.pct}\% (\num{withdrawn.era.notStated.n} of these registrations are labeled not-started or sponsor-undisclosed and state no reason) and efficacy for \num{withdrawn.era.eff.pct}\% (\num{withdrawn.era.eff.n} registrations). Counted as failures, they bring the denominator to \num{decomp.registered.era.all.n} and the shares to operational \num{decomp.registered.era.all.op.pct}\%, commercial \num{decomp.registered.era.all.com.pct}\% and efficacy \num{decomp.registered.era.all.eff.pct}\%, so that operational causes appear to outrank efficacy by a wide margin (Table~\ref{tab:decompfull}). Hwang et al.\ counted drugs that entered pivotal trials. A registration that never enrolled a participant is closer to a trial that was planned than to one that failed, and it is excluded from the primary analysis.
+
+\section{Taxonomy sensitivity and safety (\code{sensitivity.py})}\label{supp:taxonomy}
+Table~\ref{tab:taxonomy} changes one assignment at a time. Its first rows vary the \num{tax.assignments} assignments that are open to argument. Efficacy stays ahead of operational causes under each, for all sponsors and for the big-pharma stratum, although the last of them narrows the gap among all sponsors to \num{tax.all.modelEfficacyToUnknown.eff}\% against \num{tax.all.modelEfficacyToUnknown.op}\%. That row counts as unknown the \num{audit.eff.n} second-pass model labels of efficacy or futility in the main window, which the registry text does not support (main text, \S\ref{main-sec:limitations}, limitation~\ref{main-lim:validation}); they belong to the registrations \num{audit.eff.ncts}. The last \num{tax.scenarios} rows of each sponsor group are scenarios, not sensitivity analyses: they show how large the safety share would be if every bare sponsor decision, or every sponsor and business decision, concealed a safety stop.
+
+\begin{table}[H]
+\centering
+\caption{Failure shares (\%) when one category-to-bucket assignment is changed. The shares moved for external evidence and for business or strategic are those the adjudication assigned to the other label in the validation sample. The last two rows of each sponsor group are scenarios for the safety share.}
+\label{tab:taxonomy}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}
+\toprule
+assignment & sponsors & efficacy & operational & commercial & safety & unknown \\
+\midrule
+\tablebody{taxonomy}
+\bottomrule
+\end{tabular}
+\end{table}
+
+Safety accounted for \num{decomp.enrolled.era.all.saf.pct}\% of failures among all sponsors and \num{decomp.enrolled.era.big.saf.pct}\% in the big-pharma stratum, against \num{hwang.saf.pct}\% in Hwang et al., about \num{hwang.safetyFold.big} to \num{hwang.safetyFold.all} times lower. Razuvayevskaya et al.\ (main text) found a similarly small share in stopped trials of all phases, \num{lit.razuv.safety.pct}\% of which were classified as stopped for safety or side effects; that share, too, is read from stated stop reasons. We cannot say how much of the gap reflects safety decisions documented outside the fields we read, how much reflects the different unit (a drug program against a trial), and how much the different period; the registry's adverse-event module was not examined. A safety-driven decision can be registered as a sponsor, business or strategic decision, and a program ended for safety after a completed trial, or at regulatory review, leaves no stopped trial at all, so the recorded share probably understates the share of failures that are due to safety. Two scenarios give the scale (Table~\ref{tab:taxonomy}). If every bare sponsor decision concealed a safety stop, safety would account for \num{tax.all.sponsorToSafety.saf}\% of failures (\num{tax.big.sponsorToSafety.saf}\% in big pharma), still below the share of Hwang et al. If every business or strategic stop did so as well, it would account for \num{tax.all.decisionsToSafety.saf}\% (\num{tax.big.decisionsToSafety.saf}\%), above it. The registry cannot show where the truth lies: it may fall below the first scenario or, if safety hides in other categories as well, above the second.
+
+Part of the gap may be taxonomy, because stops for regulatory reasons, which we pool into operational causes, can be safety-driven. Moving half of them to safety raises the safety share to \num{tax.all.regToSafety.saf}\% for all sponsors and \num{tax.big.regToSafety.saf}\% for big pharma. Four other assignments were varied (Table~\ref{tab:taxonomy}). The adjudication (\S\ref{supp:validation}) called \num{tax.external.k} of \num{tax.external.n} sampled external-evidence stops efficacy or futility; moving that share to efficacy raises the efficacy share to \num{tax.all.extToEfficacy.eff}\%. It called \num{tax.business.k} of \num{tax.business.n} sampled business or strategic stops unclear; moving that share to unknown lowers the commercial share from \num{tax.all.asAnalysed.com}\% to \num{tax.all.busToUnknown.com}\% and raises the unknown share to \num{tax.all.busToUnknown.unk}\%. Counting bare sponsor decisions as unknown lowers the commercial share to \num{tax.all.sponsorToUnknown.com}\% and raises the unknown share to \num{tax.all.sponsorToUnknown.unk}\%. Counting as unknown the \num{audit.eff.n} second-pass labels of efficacy or futility that the registry text does not support (main text, \S\ref{main-sec:limitations}, limitation~\ref{main-lim:validation}) lowers the efficacy share to \num{tax.all.modelEfficacyToUnknown.eff}\%. None of the five changes the order of efficacy and operational causes, but the last narrows the gap to \num{tax.all.modelEfficacyToUnknown.eff}\% against \num{tax.all.modelEfficacyToUnknown.op}\%.
+
+\section{Subject drugs and programs (\code{subjects.py}, \code{dedup\_arms.py})}\label{supp:subjects}
+Intervention lists mix the investigational drug with comparators and background therapy. Each trial's subject drug is the experimental-arm drug that is rarest across the results cohort, after setting aside \num{dedup.backbones} drugs that are an active comparator in at least \num{dedup.backboneMinTrials} trials and at least as often as they are experimental. Of the \num{cohort.results} trials with posted results, \num{dedup.withArms.pct}\% have arm groups recorded and \num{dedup.withExperimental.pct}\% have an arm of type experimental. \num{dedup.withSubject} trials have an identifiable subject drug, \num{dedup.subjects} distinct drugs in all. The most frequent subjects (Table~\ref{tab:subjects}) are experimental-arm drugs and not comparators or chemotherapy backbones, which is what the rule is meant to achieve; the rule was not audited beyond this.
+
+\begin{table}[H]
+\centering
+\caption{The most frequent subject drugs in the results cohort.}
+\label{tab:subjects}
+\begin{tabular}{rlp{1em}rl}
+\toprule
+trials & subject drug & & trials & subject drug \\
+\midrule
+\tablebody{subjects}
+\bottomrule
+\end{tabular}
+\end{table}
+
+Trials sharing a subject drug form a program. Of \num{dedup.programs.judged} programs with at least one verdict, \num{dedup.programs.win.n} (\num{dedup.programs.win.pct.int}\%) recorded at least one phase-3 win and \num{dedup.programs.noWin.n} (\num{dedup.programs.noWin.pct.int}\%) none. This program-level rate is descriptive. It is not part of the trial-level decomposition. The programs serve as clusters for robust standard errors and as the basis of the novel-versus-lifecycle flag (\S\ref{sec:novelty}).
+
+Each trial's subject drug is the experimental-arm drug that is rarest across the results cohort, after setting aside drugs used mainly as comparators. Trials sharing a subject drug form a program, which is the cluster for robust standard errors. A trial is flagged lifecycle if its subject drug has a phase-3 win in the cohort with an earlier start year, and novel otherwise.
+
+\section{The big-pharma stratum and the comparison with Hwang et al.\ (\code{failure\_decomp.py}, \code{inference.py})}\label{supp:stratum}
+A trial was assigned to the big-pharma stratum if the name of its lead sponsor matched a name pattern of one of \num{bigpharma.companies} large pharmaceutical companies, the multinationals with the highest sales of medicines. The \num{bigpharma.patterns} patterns cover each company, its subsidiaries and the companies it acquired, whatever the date of the trial, so a trial that an acquired company started on its own counts as a big-pharma trial. They leave out, by name, the device, diagnostics, nutrition and consumer units that register under a name of their own; a unit registered under its parent's name cannot be told apart. A business that was later spun off (Organon, Alcon, Sandoz) is counted with its former parent, also for the few trials that started after the spin-off, unless the registry names another listed company as its present owner (the Upjohn business, now part of the mid-size company Viatris). The sponsor names left unmatched were searched for further names of these companies. In all, \num{bigpharma.sponsorNames} of \num{cohort.sponsorNames} distinct sponsor names matched. A wider stratum that adds \num{bigpharma.mid} mid-size pharmaceutical companies is reported as a sensitivity analysis (Table~\ref{tab:hwang}), because where a list of mid-size companies should end is a matter of judgment. The stratum was narrowed to the \num{bigpharma.companies} large companies after results for the wider list had been seen, and the narrowing moved the observed efficacy share from \num{hwang.wide.eff.pct}\% to \num{hwang.enrolled.eff.pct}\%, toward the estimate of Hwang et al.\ (main text, \S\ref{main-sec:limitations}, limitation~\ref{main-lim:plan}). All other sponsors form the comparison group, which contains smaller companies as well as academic and government sponsors. Hwang et al.\ studied novel therapeutics from companies of all sizes, so the big-pharma stratum is narrower than their cohort.
+
+Hwang et al.\ attributed \num{hwang.eff.n} of \num{hwang.failed} failures (\num{hwang.eff.pct}\%) to efficacy. Table~\ref{tab:hwang} sets the big-pharma efficacy share of this work against that share under each counting choice; Figure~\ref{main-fig:hwang} of the main text draws its first four rows and, in addition, the imputed share. Table~\ref{tab:decompfull} gives the full decomposition in each population and window.
+
+\begin{table}[H]
+\centering
+\caption{The big-pharma efficacy share against that of Hwang et al. The interval of the share uses a program-clustered standard error (on the logit scale, back-transformed). The first $p$-value is from a two-sample test of proportions that treats trials as independent. The difference is this work minus theirs in percentage points; its interval and the clustered $p$-value are Wald, from a delta-method standard error for this work combined with the binomial error of Hwang et al. The first three rows are rows of the big-pharma block of Table~\ref{tab:decompfull}; the fourth adds \num{bigpharma.mid} mid-size companies, and the last keeps only the trials whose subject drug is flagged novel (\S\ref{sec:novelty}).}
+\label{tab:hwang}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+population and window & failures & efficacy (\%) & 95\% CI & $p$ & clustered $p$ & difference, 95\% CI \\
+\midrule
+enrolled, \era & \num{hwang.enrolled.n} & \num{hwang.enrolled.eff.pct} & \num{hwang.enrolled.clustered.lo} to \num{hwang.enrolled.clustered.hi} & $\num{hwang.enrolled.p}$ & $\num{hwang.enrolled.clustered.p}$ & $\num{hwang.enrolled.diff.lo}$ to $\num{hwang.enrolled.diff.hi}$ \\
+enrolled, \eracomplete & \num{hwang.complete.n} & \num{hwang.complete.eff.pct} & \num{hwang.complete.clustered.lo} to \num{hwang.complete.clustered.hi} & $\num{hwang.complete.p}$ & $\num{hwang.complete.clustered.p}$ & $\num{hwang.complete.diff.lo}$ to $\num{hwang.complete.diff.hi}$ \\
+withdrawn counted, \era & \num{hwang.registered.n} & \num{hwang.registered.eff.pct} & \num{hwang.registered.clustered.lo} to \num{hwang.registered.clustered.hi} & $\num{hwang.registered.p}$ & $\num{hwang.registered.clustered.p}$ & $\num{hwang.registered.diff.lo}$ to $\num{hwang.registered.diff.hi}$ \\
+mid-size added, \era & \num{hwang.wide.n} & \num{hwang.wide.eff.pct} & \num{hwang.wide.clustered.lo} to \num{hwang.wide.clustered.hi} & $\num{hwang.wide.p}$ & $\num{hwang.wide.clustered.p}$ & $\num{hwang.wide.diff.lo}$ to $\num{hwang.wide.diff.hi}$ \\
+novel subset, \era & \num{hwang.novel.n} & \num{hwang.novel.eff.pct} & \num{hwang.novel.clustered.lo} to \num{hwang.novel.clustered.hi} & $\num{hwang.novel.p}$ & $\num{hwang.novel.clustered.p}$ & $\num{hwang.novel.diff.lo}$ to $\num{hwang.novel.diff.hi}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In the big-pharma stratum there were \num{hwang.enrolled.n} failures among trials that enrolled and started in \era, \num{decomp.enrolled.era.big.completedMiss} of them completed misses (that the total equals the number of completed misses among all sponsors in Figure~\ref{main-fig:flow} of the main text is a coincidence). Efficacy accounted for \num{hwang.enrolled.eff.pct}\% (Wilson 95\% CI \num{decomp.enrolled.era.big.eff.lo} to \num{decomp.enrolled.era.big.eff.hi}; program-clustered \num{hwang.enrolled.clustered.lo} to \num{hwang.enrolled.clustered.hi}, \num{hwang.enrolled.clusters} clusters), commercial reasons for \num{decomp.enrolled.era.big.com.pct}\%, operational causes for \num{decomp.enrolled.era.big.op.pct}\%, safety for \num{decomp.enrolled.era.big.saf.pct}\% and unknown reasons for \num{decomp.enrolled.era.big.unk.pct}\% (Table~\ref{tab:decompfull}). Hwang et al.\ attributed \num{hwang.eff.pct}\% (\num{hwang.eff.lo} to \num{hwang.eff.hi}) of \num{hwang.failed} failures to efficacy. The difference is not significant (two-sample $p=\num{hwang.enrolled.p}$; with program-clustered standard errors $p=\num{hwang.enrolled.clustered.p}$). The clustered 95\% interval for the difference, this work minus theirs, runs from $\num{hwang.enrolled.diff.lo}$ to $\num{hwang.enrolled.diff.hi}$ percentage points, so the data do not exclude a difference of several points in either direction. With \num{bigpharma.mid} mid-size companies added to the stratum the share is lower, \num{hwang.wide.eff.pct}\% of \num{hwang.wide.n} failures (clustered $p=\num{hwang.wide.clustered.p}$; clustered 95\% interval for the difference $\num{hwang.wide.diff.lo}$ to $\num{hwang.wide.diff.hi}$ points), which is compatible with no difference and with a share well below theirs. In the \eracomplete\ window the share is \num{hwang.complete.eff.pct}\% (clustered $p=\num{hwang.complete.clustered.p}$; Table~\ref{tab:hwang}). Hwang et al.\ followed each drug program for years after its pivotal trials and classified the failed ones from several sources, so neither our observed share nor our imputed share is the exact counterpart of theirs.
+
+\section{Novel and lifecycle subjects in the big-pharma stratum (\code{novelty\_flag.py})}\label{sec:novelty}
+Table~\ref{tab:novelty} splits the big-pharma failures by the novelty flag.
+
+\begin{table}[H]
+\centering
+\caption{Big-pharma failures by whether the trial's subject drug had an earlier phase-3 win in the cohort (lifecycle) or not (novel).}
+\label{tab:novelty}
+\small\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+ & failures & miss rate (\%) & efficacy & operational & commercial & safety & unknown \\
+\midrule
+\tablebody{novelty}
+\bottomrule
+\end{tabular}
+\end{table}
+
+The flag sees only wins inside the cohort. A drug validated before the registry's results era, or in trials without a usable $p$-value, is called novel, so the novel group contains lifecycle trials and the contrast between the two rows is understated. \num{novelty.unflagged.n} big-pharma failures have no identifiable subject drug and are in neither row. The novel subset is compared with Hwang et al.\ in the last row of Table~\ref{tab:hwang}.
+
+The comparison is by proxy in another respect. Hwang et al.\ studied novel therapeutics. Restricting the big-pharma stratum to trials whose subject drug had no earlier phase-3 win in the cohort left \num{novelty.novel.n} failures, of which efficacy accounted for \num{novelty.novel.eff.pct}\% (Wilson 95\% CI \num{novelty.novel.eff.lo} to \num{novelty.novel.eff.hi}; program-clustered \num{hwang.novel.clustered.lo} to \num{hwang.novel.clustered.hi}, \num{hwang.novel.clusters} clusters). That share is lower than theirs, though not significantly (two-sample $p=\num{hwang.novel.p}$; with program-clustered standard errors $p=\num{hwang.novel.clustered.p}$; clustered 95\% interval for the difference $\num{hwang.novel.diff.lo}$ to $\num{hwang.novel.diff.hi}$ percentage points). This subset is the closest counterpart of their cohort. As an estimate for novel drugs its share is in this respect if anything too high: the flag sees only wins inside the cohort, so the novel group still contains lifecycle trials, and among the \num{novelty.lifecycle.n} failures of the trials flagged lifecycle, efficacy accounted for \num{novelty.lifecycle.eff.pct}\% (Table~\ref{tab:novelty}). The two subsets missed their primary endpoint equally often (\num{novelty.novel.miss.pct}\% and \num{novelty.lifecycle.miss.pct}\% of trials with a verdict). The efficacy shares differ because commercial stops are \num{novelty.novel.com.pct}\% of the failures of the novel subset and \num{novelty.lifecycle.com.pct}\% of those of the lifecycle subset, and a commercial stop can follow disappointing data.
+
+\section{Sponsor class and therapeutic area (\code{areas.py}, \code{stratify.py}, \code{inference.py})}\label{supp:areas}
+Condition terms were mapped to six areas by an ordered keyword match; a trial with terms in two areas goes to the first that matches. The keywords were checked against the condition terms they capture among the trials of the main window, but the assignment of individual trials was not audited, and the areas are coarse. Asthma and chronic obstructive pulmonary disease are counted under Immunology/Inflammation. Other/rare is not only rare disease: it holds what the five named areas do not, among them ophthalmology, pain and anesthesia, hematology, renal disease, women's health and bone disease.
+
+\begin{table}[H]
+\centering
+\caption{Failure decomposition and miss rate by therapeutic area. The miss rate is over trials with a verdict, whose number differs from the number of failures.}
+\label{tab:areas}
+\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+ & & \multicolumn{2}{c}{miss rate} & \multicolumn{5}{c}{share of failures (\%)} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-9}
+area & failures & trials & \% & efficacy & operational & commercial & safety & unknown \\
+\midrule
+\tablebody{areas}
+\bottomrule
+\end{tabular}
+\end{table}
+
+Miss rates differ between areas ($\chi^2=\num{area.het.chi2}$, \num{area.het.dof} degrees of freedom, $p=\num{area.het.p}$). Within Infectious/Vaccine the miss rate was \num{area.infectious.before.miss.pct}\% for starts before \num{area.infectious.split} ($n=\num{area.infectious.before.trials}$) and \num{area.infectious.from.miss.pct}\% for starts from \num{area.infectious.split} ($n=\num{area.infectious.from.trials}$; $z=\num{area.infectious.z}$, $p=\num{area.infectious.p}$). This split is exploratory: the area was chosen for its high rate, the cutoff was not specified in advance, and the test is not adjusted for multiplicity.
+
+Big-pharma trials missed their primary endpoint less often than trials of other sponsors: \num{sponsor.big.miss.pct}\% (\num{sponsor.big.miss.n} of \num{sponsor.big.trials}) against \num{sponsor.rest.miss.pct}\% (\num{sponsor.rest.miss.n} of \num{sponsor.rest.trials}; two-proportion $z=\num{sponsor.z}$, $p=\num{sponsor.p}$; program-clustered odds ratio \num{sponsor.or}, $p=\num{sponsor.or.p}$). The contrast is among trials that report a usable primary $p$-value, which big-pharma trials do more often (\S\ref{supp:reporting}). Among failures, efficacy accounted for \num{decomp.enrolled.era.big.eff.pct}\% in big pharma and \num{decomp.enrolled.era.rest.eff.pct}\% for other sponsors, whose largest bucket was operational (\num{decomp.enrolled.era.rest.op.pct}\%; Figure~\ref{fig:causes}; Table~\ref{tab:decompfull}). These are shares of failures: big-pharma trials miss their endpoint less often, so a larger efficacy share does not mean more efficacy failures per trial. By therapeutic area the miss rate ranged from \num{strat.miss.min}\% (\num{strat.miss.min.area}) to \num{strat.miss.max}\% (\num{strat.miss.max.area}) ($\chi^2=\num{area.het.chi2}$, \num{area.het.dof} degrees of freedom, $p=\num{area.het.p}$; Table~\ref{tab:areas}). The cross-sectional design cannot separate sponsor class from target maturity, trial size or therapeutic area.
+
+\clearpage
+\section{The limitations in full}\label{supp:limitations}
+The main text (\S\ref{main-sec:limitations}) gives the limitations that bear most on the conclusions in short form. Table~\ref{tab:limitations} gives all of them in full.
+
+\footnotesize
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\textwidth}>{\raggedright\arraybackslash}p{0.7\textwidth}}
+\caption{The limitations of this work.}\label{tab:limitations}\\
+\toprule
+limitation & what it means \\
+\midrule
+\endfirsthead
+\toprule
+limitation & what it means \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+The cohort excludes completed trials that never posted results. & In one audit, results had been submitted for \num{lit.devito.submitted.pct.int}\% of the trials due to report (DeVito et al., main text). The imputation of \S\ref{main-sec:coverage} of the main text covers completed trials with posted results only, and its bounds are conditional on the cohort. \\
+\addlinespace
+The imputation rests on assumptions. & It treats every unreported trial with a comparator arm as able to miss and every single-arm study as unable to, and it models the miss probability from four covariates, and the size of the trial is not one of them. Two or more arm groups do not guarantee a between-group primary test: dose groups, cohorts and treatment sequences are arm groups too, and the allocation and the intervention model were not retrieved. Reporting is not random, so the imputed shares indicate direction and rough size, not a corrected estimate. \\
+\addlinespace
+The population is defined by registry status. & Setting withdrawn registrations aside is one of the two choices that matter most here: counting them moves the efficacy share from \num{decomp.enrolled.era.all.eff.pct}\% to \num{decomp.registered.era.all.eff.pct}\% (main text, \S\ref{main-sec:population}). They are excluded on the registry's definition of that status; enrollment counts were not used to define the population, so a terminated or suspended registration counts as enrolled whatever its recorded enrollment. Suspended trials are counted as failures although some may resume. There are \num{cohort.suspended} in the cohort, and \num{suspended.all.n} of the \num{decomp.enrolled.era.all.n} failures of the main window (\num{suspended.all.pct}\%) are suspended registrations, none of them in the big-pharma stratum. Without them efficacy would account for \num{suspended.all.without.eff}\% of failures and operational causes for \num{suspended.all.without.op}\%, so counting them works against efficacy. Registrations designated Phase 2/Phase~3 are kept and cannot be told apart, and \num{cohort.noDrug.pct}\% of registrations test no drug or biological product. \\
+\addlinespace
+The $p$-value extraction was not checked against source documents. & Data-entry errors inside the registry are invisible to it; \num{pvalue.invalid.records} records in \num{pvalue.invalid.trials} trials carry a $p$-value outside $[0, 1]$ and were treated as missing. \\
+\addlinespace
+The primary verdict is lenient. & Any significant primary analysis scores a win, including one of several analyses of the same outcome, and the direction of effect is not recorded. \S\ref{supp:verdict} shows how far stricter rules move the miss rate and, with it, the decomposition: under the two stricter rules efficacy would account for \num{winrule.and.all.eff.pct}\% and \num{winrule.strict.all.eff.pct}\% of failures instead of \num{decomp.enrolled.era.all.eff.pct}\%, so the lenient verdict works against efficacy. \\
+\addlinespace
+The comparison with Hwang et al.\ is by proxy. & The big-pharma stratum is defined by our list of companies and by name patterns matched on the lead sponsor only. A subsidiary or an acquired company is counted with its parent whatever the date of the trial, and a business that was later spun off is counted with its former parent, so trials that an acquired company started before its acquisition count as big-pharma trials. The stratum is narrower than their cohort, which included small and mid-size companies. Their unit is a drug program and ours a trial, their programs entered pivotal trials in \num{lit.hwang.firstYear}--\num{lit.hwang.lastYear}, and their classification had access to sources outside the registry. A trial that missed its primary endpoint counts as a failure here even if the same drug succeeded in another trial or was later approved, and a trial stopped for slow enrollment counts as one even if the program went on. \\
+\addlinespace
+Safety is read from two free-text fields and is probably understated. & Only the \code{whyStopped} string and the detailed description were examined; the adverse-event module was not. A safety-driven decision can be registered as a sponsor, business or strategic decision, and the fields we read cannot show how often (\S\ref{supp:taxonomy}), so the gap to Hwang et al.\ cannot be attributed. \\
+\addlinespace
+The validation is model-based, small per category and limited to the first pass. & The adjudicator is a stronger model of the same family, so shared blind spots cannot be ruled out. Labels from the later passes and from the rules were not validated. Of the \num{audit.model.n} second-pass model labels among the stops of the main window, \num{audit.eff.n} are efficacy or futility, and a reading of them by language-model agents during the preparation of this manuscript found none supported: neither the string nor the detailed description states such a reason (\num{audit.eff.monitoring} strings name a data monitoring committee, \num{audit.eff.interim} an interim analysis and \num{audit.eff.other} a sponsor decision, none with a reason). None is a big-pharma trial. Counted as unknown, these labels would lower the efficacy share of all sponsors from \num{decomp.enrolled.era.all.eff.pct}\% to \num{tax.all.modelEfficacyToUnknown.eff}\%, against \num{tax.all.modelEfficacyToUnknown.op}\% for operational causes (\S\ref{supp:taxonomy}, where the registrations are listed). The labels were left as the model gave them. The same reading found unsupported labels in the operational bucket as well, and the labels of other start years were not read. The model versions were not recorded, and the classification cannot be re-run from the archive. \\
+\addlinespace
+Category boundaries are contestable. & The assignments varied in \S\ref{supp:taxonomy} move the commercial and unknown shares by several points and the safety share by less. The enrollment label that a rule gives to stops after few participants (\S\ref{supp:classification}) is inferred from the count, not stated by the sponsor; it adds only to the operational bucket, so dropping it would widen the lead of efficacy. \\
+\addlinespace
+Subject drugs and therapeutic areas are assigned by heuristics. & The subject drug is the rarest experimental-arm drug, which is unreliable for combination and platform regimens, and the area comes from a keyword match on condition terms. Neither was audited trial by trial. They affect the program-clustered intervals and tests, the novelty flag and the results by therapeutic area. \\
+\addlinespace
+Recent starts are right-censored. & A stopped trial enters the cohort at once and a completed trial only when its results are posted, so the latest start years are short of completed misses and the efficacy share of the main window is understated. The \eracomplete\ window, where the share is higher, addresses this only in part. \\
+\addlinespace
+The trial is the unit of analysis. & Trials of the same drug program are not independent, so intervals and tests that are not clustered by program are too narrow: for the big-pharma efficacy share the Wilson interval runs from \num{decomp.enrolled.era.big.eff.lo}\% to \num{decomp.enrolled.era.big.eff.hi}\% and the program-clustered one from \num{hwang.enrolled.clustered.lo}\% to \num{hwang.enrolled.clustered.hi}\%. The shares also weight a program by its number of failed trials, whereas Hwang et al.\ counted each program once. \\
+\addlinespace
+The analysis was not pre-specified. & No protocol was registered. The windows, the big-pharma stratum and the sensitivity analyses were defined during the work, and the stratum was narrowed to the \num{bigpharma.companies} large companies after results for a list that included mid-size companies had been seen; that wider list is reported as a sensitivity analysis (Table~\ref{tab:hwang}). The $p$-values are descriptive and none is adjusted for multiplicity. \\
+\end{longtable}
+\normalsize
+
+\clearpage
+\section{STROBE checklist}\label{supp:strobe}
+Table~\ref{tab:strobe} lists the items of the STROBE statement for cross-sectional studies in its order.
+
+\begin{table}[H]
+\centering
+\caption{The STROBE items and where the main text or this supplementary material addresses each. Section numbers without an S are those of the main text.}
+\label{tab:strobe}
+\footnotesize
+\begin{tabular}{r>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.66\textwidth}}
+\toprule
+item & recommendation & addressed in \\
+\midrule
+\strobeitem & Title and abstract & The abstract names the design (a cross-sectional study of registry records) and is structured. \\
+\strobeitem & Background and rationale & \S\ref{main-sec:intro}. \\
+\strobeitem & Objectives & \S\ref{main-sec:intro}, last paragraph. No hypothesis was pre-specified and no protocol registered (\S\ref{main-sec:strata}; \S\ref{main-sec:limitations}, limitation~\ref{main-lim:plan}). \\
+\strobeitem & Study design & \S\ref{main-sec:data}: a cross-sectional analysis of every phase-3 registration returned by two registry filters. \\
+\strobeitem & Setting & \S\ref{main-sec:data} and \S\ref{main-sec:verdict}: the registry, the retrieval dates and the start-year window. \\
+\strobeitem & Participants & \S\ref{main-sec:data}: the two filters are the eligibility criteria; the primary population is trials that enrolled. \\
+\strobeitem & Variables & \S\ref{main-sec:data} (failure and its buckets), \S\ref{main-sec:verdict} (primary-endpoint verdict), \S\ref{main-sec:classification} (termination categories), \S\ref{main-sec:strata} (sponsor class and programs), \S\ref{supp:areas} (therapeutic area). \\
+\strobeitem & Data sources and measurement & \S\ref{main-sec:data} to \S\ref{main-sec:classification}, \S\ref{supp:classification} and \S\ref{supp:verdict}; validation of the labels in \S\ref{main-sec:labels} and \S\ref{supp:validation}. The category definitions are in the archived prompts. The $p$-value extraction was not checked against source documents (Table~\ref{tab:limitations}). \\
+\strobeitem & Bias & \S\ref{main-sec:population} (which registrations count), \S\ref{main-sec:coverage} (endpoint-reporting coverage), \S\ref{supp:taxonomy} (taxonomy), \S\ref{main-sec:limitations}. \\
+\strobeitem & Study size & \S\ref{main-sec:data}: every registration that met the filters was analyzed; no sample size was calculated. \\
+\strobeitem & Quantitative variables & \S\ref{main-sec:verdict} (win rule), \S\ref{main-sec:data} (pooling of categories into buckets, window). \\
+\strobeitem & Statistical methods & \S\ref{main-sec:strata}. Missing verdicts: \S\ref{main-sec:verdict} and \S\ref{main-sec:coverage}. Subgroups: \S\ref{supp:areas} (sponsor class, therapeutic area), \S\ref{supp:stratum} and \S\ref{sec:novelty} (novel and lifecycle subjects). Sensitivity analyses: \S\ref{main-sec:population} to \S\ref{main-sec:safety} and \S\ref{supp:verdict}. Standard errors are clustered in the regressions, the sponsor contrast and the comparison with Hwang et al.; the other intervals and tests treat trials as independent (Table~\ref{tab:limitations}). \\
+\strobeitem & Participants & \S\ref{main-sec:data} and Figure~\ref{main-fig:flow}, the flow diagram. \\
+\strobeitem & Descriptive data & Figure~\ref{main-fig:flow} (registrations at each stage), \S\ref{supp:reporting} (trials without a verdict), Table~\ref{tab:yearly} (trials with a verdict by start year) and Table~\ref{tab:areas} (failures and verdicts by therapeutic area). No table of the characteristics of every trial in the cohort is given. Missing data: \S\ref{supp:classification} (termination reason), \S\ref{main-sec:coverage} (verdict), \S\ref{supp:subjects} (subject drug). \\
+\strobeitem & Outcome data & Table~\ref{main-tab:decomposition} of the main text and Table~\ref{tab:decompfull}. \\
+\strobeitem & Main results & \S\ref{main-sec:population} to \S\ref{main-sec:safety}, with 95\% intervals. Shares are unadjusted. Adjusted: Table~\ref{tab:covmodel} (which trials report) and the adjusted imputation (Table~\ref{tab:coverage}). \\
+\strobeitem & Other analyses & \S\ref{supp:taxonomy} (taxonomy), \S\ref{supp:verdict} (win rules), \S\ref{supp:stratum} (mid-size companies), \S\ref{sec:novelty} (novelty), \S\ref{supp:areas} (sponsor class and area). \\
+\strobeitem & Key results & \S\ref{main-sec:discussion}. \\
+\strobeitem & Limitations & \S\ref{main-sec:limitations} and Table~\ref{tab:limitations}. \\
+\strobeitem & Interpretation & \S\ref{main-sec:discussion}. \\
+\strobeitem & Generalizability & \S\ref{main-sec:discussion}, last paragraph. \\
+\strobeitem & Funding & The funding statement of the main text. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
