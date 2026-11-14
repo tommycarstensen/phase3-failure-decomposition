@@ -25,7 +25,7 @@ from repo_files import LABELS, REGISTRY, read_json, read_labels
 
 results, meta, final = load(include_withdrawn=True)
 first = read_labels('why_out')  # first pass: the whyStopped string
-second = read_json(LABELS + 'unclear_reclassified.json')  # second pass
+second = read_json(LABELS + 'merged/unclear_reclassified.json')  # second pass
 stopped = read_json(REGISTRY + 'ph3_stopped.json')
 nums = Numbers('recoverability')
 

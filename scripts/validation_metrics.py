@@ -127,7 +127,7 @@ def main():
     kappa_w = (w_all[0] - pe_w) / (1 - pe_w)
 
     # final labels the sample does not cover (enrolled trials, 2017-2026)
-    later = set(read_json(LABELS + 'unclear_reclassified_v2.json'))
+    later = set(read_json(LABELS + 'merged/unclear_reclassified_v2.json'))
     era = [n for n in final if in_window(meta, n, ERA)]
     era_later = [n for n in era if n in later]
 

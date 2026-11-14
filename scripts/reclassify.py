@@ -84,7 +84,7 @@ def final_label(nct):
 
 labelled = {n: final_label(n) for n in enr}
 final = {n: lab for n, (lab, _) in labelled.items()}
-write_json(final, LABELS + 'unclear_reclassified.json')
+write_json(final, LABELS + 'merged/unclear_reclassified.json')
 
 tot = len(final)
 c = Counter(final.values())

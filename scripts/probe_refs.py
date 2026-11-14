@@ -18,7 +18,7 @@ F = (
 
 def main():
     refuse_overwrite(REGISTRY + 'residual_refs.json')
-    reclass = read_json(LABELS + 'unclear_reclassified.json')
+    reclass = read_json(LABELS + 'merged/unclear_reclassified.json')
     resid = [n for n, label in reclass.items() if label == 'unclear']
     print('residual unknown NCTs:', len(resid), file=sys.stderr)
 

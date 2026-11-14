@@ -10,7 +10,11 @@
 4. Therapeutic-area heterogeneity in the miss rate.
 5. Which completed trials report a usable primary p-value: a logistic model
    on sponsor class, start year, number of primary outcomes, single-arm design
-   and therapeutic area.
+   and therapeutic area; and the share with a verdict by start year, which the
+   supplement draws (make_figure_reporting.py).
+6. The order of the efficacy and operational shares of all failures: their
+   difference with a program-clustered interval, among trials that enrolled
+   and with withdrawn registrations counted.
 """
 
 import math
@@ -27,6 +31,7 @@ from failure_decomp import (
     ERA,
     ERA_COMPLETE,
     HWANG,
+    OPERATIONAL,
     SUCCESS,
     TREND,
     decompose,
@@ -50,6 +55,12 @@ nums = Numbers('inference')
 binomial = sm.families.Binomial()
 # exploratory split of the Infectious/Vaccine miss rate (supplement)
 INFECTIOUS_SPLIT = 2020
+# the share of completed trials with a verdict is drawn for every start year
+# from TREND[0] that has at least this many completed trials with results
+REPORTING_MIN_TRIALS = 40
+# descriptive split of that share, chosen after the yearly shares were seen:
+# the start years from which it is lower (supplement)
+REPORTING_SPLIT = 2022
 
 
 def big(n):
@@ -406,7 +417,7 @@ labels = [
     'start year (per year)',
     'number of primary outcomes (natural log)',
     'single-arm design',
-] + [f'area: {a}' for a in areas]
+] + [f'{a} (therapeutic area)' for a in areas]
 print(f'  n = {len(rows)}; reporting {100 * reported.mean():.1f}%')
 nums.count('covmodel.trials', len(rows))
 table = []
@@ -433,4 +444,99 @@ for name, label, b, se, pv in zip(
         ]
     )
 write_table('covmodel', table)
+
+# the share of completed, non-stopped trials with posted results that carry a
+# verdict, by start year, with its Wilson interval
+by_start = {}
+for r in results:
+    y = year_of(meta, r['nct'])
+    if (
+        r['status'] != 'COMPLETED'
+        or r['nct'] in stopcat
+        or y is None
+        or y < TREND[0]
+    ):
+        continue
+    counts = by_start.setdefault(y, [0, 0])
+    counts[0] += 1
+    counts[1] += int(r['win'] is not None)
+drawn = [y for y in sorted(by_start) if by_start[y][0] >= REPORTING_MIN_TRIALS]
+if drawn != list(range(drawn[0], drawn[-1] + 1)):
+    raise SystemExit(f'the start years with enough trials have a gap: {drawn}')
+share_of = {y: 100 * by_start[y][1] / by_start[y][0] for y in drawn}
+before = [y for y in drawn if y < REPORTING_SPLIT]
+after = [y for y in drawn if y >= REPORTING_SPLIT]
+print(
+    f'  share with a verdict by start year, {drawn[0]}-{drawn[-1]}: '
+    f'{min(share_of[y] for y in before):.1f}% to '
+    f'{max(share_of[y] for y in before):.1f}% before {REPORTING_SPLIT}, '
+    f'at most {max(share_of[y] for y in after):.1f}% from it'
+)
+nums.text('reporting.firstYear', drawn[0])
+nums.text('reporting.lastYear', drawn[-1])
+nums.text('reporting.split', REPORTING_SPLIT)
+nums.text('reporting.beforeLast', REPORTING_SPLIT - 1)
+nums.count('reporting.minTrials', REPORTING_MIN_TRIALS)
+nums.pct('reporting.before.min.pct', min(share_of[y] for y in before))
+nums.pct('reporting.before.max.pct', max(share_of[y] for y in before))
+nums.pct('reporting.after.max.pct', max(share_of[y] for y in after))
+nums.count('reporting.after.trials', sum(by_start[y][0] for y in after))
+for y in drawn:
+    n_year, k_year = by_start[y]
+    lo, hi = wilson(k_year, n_year)
+    nums.count(f'reporting.year.{y}.trials', n_year)
+    nums.share(f'reporting.year.{y}.verdict', k_year, n_year)
+    nums.pct(f'reporting.year.{y}.verdict.lo', lo)
+    nums.pct(f'reporting.year.{y}.verdict.hi', hi)
+
+# ---- 6. the order of the efficacy and operational shares ----
+print('\n=== 6. efficacy against operational causes, 2017-2026 ===')
+
+
+def bucket_difference(key, label, include_withdrawn, lead):
+    """The share of the leading bucket minus that of the other, in points, with
+    a program-clustered 95% interval. Each failure scores +1 in the leading
+    bucket, -1 in the other and 0 elsewhere, so the mean of the scores is the
+    difference of the two shares and its cluster-robust standard error does
+    not treat trials of one drug as independent. `lead` is 'eff' or 'op'."""
+    _, _, stops = load(include_withdrawn=include_withdrawn)
+    score = [
+        (1, cluster_of(r['nct']))
+        for r in results
+        if r['win'] is False
+        and r['status'] == 'COMPLETED'
+        and r['nct'] not in stops
+        and in_window(meta, r['nct'], ERA)
+    ]
+    score += [
+        (int(c in EFFICACY) - int(c in OPERATIONAL), cluster_of(n))
+        for n, c in stops.items()
+        if in_window(meta, n, ERA) and c not in SUCCESS
+    ]
+    # the same failures as the decomposition, or the difference is of
+    # something else
+    den = decompose(results, meta, stops, ERA)['den']
+    if len(score) != den:
+        raise SystemExit(f'{label}: {len(score)} failures scored, {den} kept')
+    sign = 1 if lead == 'eff' else -1
+    y = sign * np.array([s[0] for s in score], float)
+    groups = np.array([s[1] for s in score])
+    fit = sm.OLS(y, np.ones((len(y), 1))).fit(
+        cov_type='cluster', cov_kwds={'groups': groups}
+    )
+    diff, se = 100 * fit.params[0], 100 * fit.bse[0]
+    lo, hi = diff - 1.96 * se, diff + 1.96 * se
+    print(
+        f'  {label}: {lead} leads by {diff:.1f} points, program-clustered CI '
+        f'[{lo:+.1f}, {hi:+.1f}] ({len(set(groups))} programs, '
+        f'{len(y)} failures)'
+    )
+    nums.count(f'order.{key}.clusters', len(set(groups)))
+    nums.fixed(f'order.{key}.diff', diff, 1)
+    nums.fixed(f'order.{key}.diff.lo', lo, 1)
+    nums.fixed(f'order.{key}.diff.hi', hi, 1)
+
+
+bucket_difference('enrolled', 'trials that enrolled', False, 'eff')
+bucket_difference('registered', 'withdrawn counted', True, 'op')
 nums.save()

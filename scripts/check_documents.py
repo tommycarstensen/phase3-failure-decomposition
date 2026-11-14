@@ -1,11 +1,11 @@
 """Check that the manuscripts and the supplements say what the numbers say.
 
 The documents come in pairs, a manuscript and its supplement: the preprint
-(manuscript.tex, supplement.tex) and, where it exists, the version for the
-Journal of Clinical Epidemiology (jce.tex, jce_supplement.tex). A file a
+(manuscript.tex, supplement.tex) and, where it exists, the version for a
+journal (jce.tex, jce_supplement.tex). A file a
 document reads with \\input, such as flow.tex, is checked as part of it.
 
-Five checks. reproduce.sh stops if any of them fails.
+Six checks. reproduce.sh stops if any of them fails.
 
   1. No result is typed by hand. Outside the reference list, every digit in
      the title and body of each document, and in readme_findings.md, must
@@ -19,8 +19,13 @@ Five checks. reproduce.sh stops if any of them fails.
   4. Claims. The sentences that state an order, a size or the outcome of a
      test are restated in claims() as conditions on the recorded numbers, so
      a change in the data that makes a sentence false fails the check.
-  5. Length. The main text of jce.tex stays within the journal's limit of
-     JCE_WORD_LIMIT words (see jce_words).
+  5. Length. The abstract of jce.tex stays within the journal's limit of
+     JCE_ABSTRACT_LIMIT words, and the abstract and main text together
+     within JCE_WORD_LIMIT (see jce_words and jce_abstract_words).
+  6. Colours. The flow diagram (flow.tex) is drawn in TikZ, not by a figure
+     script, so its colours are checked against figure_palette.py: each
+     colour it defines must be the palette's colour of the same name, and it
+     may give a colour in no other way (see flow_colours).
 
 Run after write_numbers.py.
 """
@@ -31,18 +36,22 @@ import re
 import sys
 from pathlib import Path
 
+import figure_palette
 from failure_decomp import record_sig
 from paper_numbers import read_numbers
 from repo_files import PAPER, D, read_text
 
 MANUSCRIPT, SUPPLEMENT = PAPER + 'manuscript.tex', PAPER + 'supplement.tex'
 JCE, JCE_SUPPLEMENT = PAPER + 'jce.tex', PAPER + 'jce_supplement.tex'
-# each manuscript with its supplement; the JCE pair only where it exists
+# each manuscript with its supplement; the journal pair only where it exists
 PAIRS = [(MANUSCRIPT, SUPPLEMENT)] + (
     [(JCE, JCE_SUPPLEMENT)] if os.path.exists(D + JCE) else []
 )
-# Original Research in the Journal of Clinical Epidemiology
-JCE_WORD_LIMIT = 3000
+# a research article in Therapeutic Innovation & Regulatory Science, the
+# journal jce.tex now targets: the abstract and the text together, without
+# references, figures and tables; and the abstract on its own
+JCE_WORD_LIMIT = 5000
+JCE_ABSTRACT_LIMIT = 250
 README_TEMPLATE = PAPER + 'readme_findings.md'
 # the supplement sees the manuscript's labels under this prefix
 MAIN_PREFIX = 'main-'
@@ -52,14 +61,17 @@ BUCKETS = ('eff', 'op', 'com', 'saf', 'unk')
 ALLOWED = [
     r'[Pp]hase[- ~]\d',  # phase-3, Phase 2/Phase~3
     r'COVID-19',
-    r'\b95\\% (?:CI|intervals?)\b',  # the level of every interval
+    r'\b95\\% (?:CI|(?:confidence )?intervals?)\b',  # every interval's level
     r'\$\[0, 1\]\$',  # the range of a p-value
     r'above 1\b',  # the null value of a ratio
     r'\\chi\^2',
     r'\bv2 API',  # the registry's API version
+    r'\(API, v2\)',  # the same, after the words it stands for
     r'^\d+\. ',  # a list marker in the README
     # the author's ORCID on the title page and in the Declarations
     r'(?:href\{https://orcid\.org/)?0000-0002-3672-9931\}?',
+    r'April~2024',  # the end of a past employment, in the Declarations
+    r'\bChoice [12]\b',  # the names of the two choices in the flow diagram
 ]
 # Commands whose arguments are names or layout, removed before the scan.
 NOT_TEXT = [
@@ -77,6 +89,8 @@ NOT_TEXT = [
     r'\\begin\{[a-z]+\}\[[^\]]*\]',
     # a TeX length in a drawing's style is layout, never a result
     r'\b\d+(?:\.\d+)?(?:pt|mm|cm)\b',
+    # a colour of the palette, which flow_colours checks
+    r'\\definecolor\{[^}]*\}\{HTML\}\{[0-9A-Fa-f]{6}\}',
 ]
 
 
@@ -220,20 +234,66 @@ def generated_tables(bodies):
     return problems
 
 
+def flow_colours():
+    """The ways flow.tex leaves the palette: a colour it defines that is not
+    the colour of that name in figure_palette.py, a colour it uses without
+    defining, or a colour given by value."""
+    name = PAPER + 'flow.tex'
+    text = '\n'.join(uncommented(name))
+    defined = dict(
+        re.findall(r'\\definecolor\{(\w+)\}\{HTML\}\{([0-9A-Fa-f]{6})\}', text)
+    )
+    problems = []
+    for colour, value in defined.items():
+        palette = getattr(figure_palette, colour, None)
+        if not isinstance(palette, str):
+            problems.append(
+                f'{name} defines {colour}, which figure_palette.py lacks'
+            )
+        elif palette.lstrip('#').lower() != value.lower():
+            problems.append(
+                f'{name}: {colour} is #{value}, '
+                f'figure_palette.py has {palette}'
+            )
+    rest = re.sub(r'\\definecolor\{[^}]*\}\{[^}]*\}\{[^}]*\}', '', text)
+    for colour in re.findall(r'\b(?:fill|draw|text|color)=\{?(\w+)', rest):
+        if colour not in defined:
+            problems.append(f'{name} uses {colour}, not a palette colour')
+    if re.search(r'rgb\s*,|\{HTML\}|#[0-9A-Fa-f]{6}', rest):
+        problems.append(f'{name} gives a colour by value')
+    return problems
+
+
 def jce_words():
     """The number of words in the main text of jce.tex, counted as a word
-    processor would: from the Introduction to the end of the Discussion,
-    without the abstract, the box after it, figures, tables, captions,
-    references and declarations. A recorded number, a reference to a section,
+    processor would: from the Introduction to the end of the Conclusions,
+    without the abstract, figures, tables, captions, references and
+    declarations. A recorded number, a reference to a section,
     table or figure and a citation each count as one word."""
     text = '\n'.join(uncommented(JCE))
     start = text.index('\\section{Introduction}')
-    end = text.index('\\section{Data and code availability}')
+    end = text.index('\\section*{Funding}')
     text = text[start:end]
     text = re.sub(
         r'\\begin\{(figure|table)\}.*?\\end\{\1\}', ' ', text, flags=re.DOTALL
     )
+    return latex_words(text)
+
+
+def jce_abstract_words():
+    """The number of words in the abstract of jce.tex, its headings
+    included, counted as jce_words counts them."""
+    text = '\n'.join(uncommented(JCE))
+    start = text.index('\\begin{abstract}') + len('\\begin{abstract}')
+    stop = text.index('\\end{abstract}')
+    return latex_words(text[start:stop])
+
+
+def latex_words(text):
+    """The words of a stretch of LaTeX: a recorded number, a reference, a
+    citation and the window of years each count as one word."""
     text = re.sub(r'\\(?:num|ref|cite)\{[^}]*\}', ' X ', text)
+    text = re.sub(r'\\era(?:complete)?(?![A-Za-z])', ' X ', text)
     text = re.sub(r'\\(?:sub)?section\*?\{([^}]*)\}', r' \1 ', text)
     text = re.sub(r'\\label\{[^}]*\}', ' ', text)
     text = re.sub(r'\\[A-Za-z]+\*?', ' ', text)
@@ -364,12 +424,56 @@ def claims(numbers):
             < v('decomp.enrolled.era.all.op.hi'),
         ),
         (
+            'not distinguishable: the clustered interval of the gap holds 0',
+            v('order.enrolled.diff.lo') < 0 < v('order.enrolled.diff.hi')
+            and close(
+                v('order.enrolled.diff'),
+                v('decomp.enrolled.era.all.eff.pct')
+                - v('decomp.enrolled.era.all.op.pct'),
+            ),
+        ),
+        (
+            'withdrawn counted, operational causes lead beyond the interval',
+            v('order.registered.diff.lo') > 0
+            and abs(
+                v('order.registered.diff')
+                - (registered['op'] - registered['eff'])
+            )
+            < 0.2,
+        ),
+        (
             'they are the two largest causes among trials that enrolled',
             ranked(enrolled['era'])[:2] == ['eff', 'op'],
         ),
         (
+            'the withdrawn ones counted are those not labelled as benefit',
+            v('withdrawn.era.n')
+            == v('cohort.era.withdrawn.n')
+            - v('decomp.registered.era.all.benefit')
+            + v('decomp.enrolled.era.all.benefit')
+            and v('decomp.registered.era.all.n')
+            == v('decomp.enrolled.era.all.n') + v('withdrawn.era.n'),
+        ),
+        (
             'withdrawn registrations rarely stop for efficacy',
             v('withdrawn.era.eff.pct') < 2,
+        ),
+        (
+            'after the passes the rest are bare sponsor decisions',
+            v(f'{era}.final.noReason.n')
+            == v(f'{era}.final.unclear.n')
+            + v(f'{era}.final.sponsorundisclosed')
+            and v(f'{era}.final.notstarted') == 0,
+        ),
+        (
+            'the big-pharma imputation applies the stratum own miss rate',
+            abs(
+                v('coverage.enrolled.big.pooled.extra')
+                - v('coverage.enrolled.big.comparator.unreported')
+                * v('coverage.enrolled.big.comparator.miss.n')
+                / v('coverage.enrolled.big.comparator.reported')
+            )
+            < 1,
         ),
         (
             'they stop for business reasons, funding or logistics',
@@ -420,6 +524,14 @@ def claims(numbers):
             v('covmodel.bigPharma.lo') > 1,
         ),
         ('less likely with each later start year', v('covmodel.year.hi') < 1),
+        (
+            'every start year before the split has the larger share',
+            v('reporting.before.min.pct') > v('reporting.after.max.pct'),
+        ),
+        (
+            'the split is the year after the last one before it',
+            v('reporting.split') == v('reporting.beforeLast') + 1,
+        ),
         (
             'less likely with more primary outcomes',
             v('covmodel.logPrimaries.hi') < 1,
@@ -478,7 +590,7 @@ def claims(numbers):
             0.5 < correction / population < 2,
         ),
         (
-            'JCE box and highlights: fewer than half carry a usable p-value',
+            'abstract: only a minority carry a usable primary p-value',
             v('coverage.enrolled.all.reported.pct') < 50,
         ),
         (
@@ -625,6 +737,20 @@ def claims(numbers):
             v('tax.assignments') == 5
             and v('tax.scenarios') == 2
             and len(variants) == 1 + 5 + 2,
+        ),
+        (
+            'the five assignments keep the gap positive and in its interval',
+            v('order.enrolled.diff.lo')
+            < 0
+            < v('tax.all.diff.min')
+            <= v('tax.all.diff.max')
+            < v('order.enrolled.diff.hi')
+            and abs(
+                v('tax.all.diff.min')
+                - tax['all', 'modelEfficacyToUnknown']['eff']
+                + tax['all', 'modelEfficacyToUnknown']['op']
+            )
+            < 0.11,
         ),
         (
             'second-pass efficacy labels: none big pharma; as unknown, closer',
@@ -883,14 +1009,21 @@ def main():
     ]
     length = []
     if os.path.exists(D + JCE):
-        words = jce_words()
+        abstract = jce_abstract_words()
+        if abstract > JCE_ABSTRACT_LIMIT:
+            length.append(
+                f'{JCE}: {abstract} words in the abstract, over the limit of '
+                f'{JCE_ABSTRACT_LIMIT}'
+            )
+        words = abstract + jce_words()
         if words > JCE_WORD_LIMIT:
             length.append(
-                f'{JCE}: {words} words in the main text, over the limit of '
-                f'{JCE_WORD_LIMIT}'
+                f'{JCE}: {words} words in the abstract and main text, over '
+                f'the limit of {JCE_WORD_LIMIT}'
             )
 
-    problems = typed + cited + crossed + false + length
+    colours = flow_colours()
+    problems = typed + cited + crossed + false + length + colours
     for problem in problems:
         print('  ' + problem)
     if problems:
@@ -899,9 +1032,11 @@ def main():
     print(
         'check_documents: no number typed by hand; '
         f'{" and ".join(n_references)} references cited in order; '
-        f'{n_labels} labels resolved; {len(stated)} claims hold'
+        f'{n_labels} labels resolved; {len(stated)} claims hold; '
+        'the flow diagram keeps to the palette'
         + (
-            f'; {jce_words()} words in the JCE main text'
+            f'; {jce_abstract_words()} words in the journal abstract and '
+            f'{jce_words()} in its main text'
             if length == [] and os.path.exists(D + JCE)
             else ''
         )

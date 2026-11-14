@@ -153,7 +153,7 @@ def load(include_withdrawn=False, include_suspended=True):
         if v == 'AMB' or v is None:
             v = r['min_p'] < ALPHA if valid_p(r['min_p']) else None
         r['win'] = v
-    reclass = read_json(LABELS + 'unclear_reclassified_v2.json')
+    reclass = read_json(LABELS + 'merged/unclear_reclassified_v2.json')
     whyout = read_labels('why_out')
     stopcat = {
         s['nct']: (reclass.get(s['nct']) or whyout.get(s['nct']) or 'unclear')

@@ -1763,5 +1763,905 @@
   "value": 0.06828852810421007,
   "tex": "0.068",
   "txt": "0.068"
+ },
+ "reporting.firstYear": {
+  "value": 2005,
+  "tex": "2005",
+  "txt": "2005"
+ },
+ "reporting.lastYear": {
+  "value": 2024,
+  "tex": "2024",
+  "txt": "2024"
+ },
+ "reporting.split": {
+  "value": 2022,
+  "tex": "2022",
+  "txt": "2022"
+ },
+ "reporting.beforeLast": {
+  "value": 2021,
+  "tex": "2021",
+  "txt": "2021"
+ },
+ "reporting.minTrials": {
+  "value": 40,
+  "tex": "40",
+  "txt": "40"
+ },
+ "reporting.before.min.pct": {
+  "value": 43.346,
+  "tex": "43.3",
+  "txt": "43.3"
+ },
+ "reporting.before.min.pct.int": {
+  "value": 43.346,
+  "tex": "43",
+  "txt": "43"
+ },
+ "reporting.before.max.pct": {
+  "value": 51.7829,
+  "tex": "51.8",
+  "txt": "51.8"
+ },
+ "reporting.before.max.pct.int": {
+  "value": 51.7829,
+  "tex": "52",
+  "txt": "52"
+ },
+ "reporting.after.max.pct": {
+  "value": 36.3636,
+  "tex": "36.4",
+  "txt": "36.4"
+ },
+ "reporting.after.max.pct.int": {
+  "value": 36.3636,
+  "tex": "36",
+  "txt": "36"
+ },
+ "reporting.after.trials": {
+  "value": 412,
+  "tex": "412",
+  "txt": "412"
+ },
+ "reporting.year.2005.trials": {
+  "value": 416,
+  "tex": "416",
+  "txt": "416"
+ },
+ "reporting.year.2005.verdict.n": {
+  "value": 195,
+  "tex": "195",
+  "txt": "195"
+ },
+ "reporting.year.2005.verdict.pct": {
+  "value": 46.875,
+  "tex": "46.9",
+  "txt": "46.9"
+ },
+ "reporting.year.2005.verdict.pct.int": {
+  "value": 46.875,
+  "tex": "47",
+  "txt": "47"
+ },
+ "reporting.year.2005.verdict.lo": {
+  "value": 42.13,
+  "tex": "42.1",
+  "txt": "42.1"
+ },
+ "reporting.year.2005.verdict.lo.int": {
+  "value": 42.13,
+  "tex": "42",
+  "txt": "42"
+ },
+ "reporting.year.2005.verdict.hi": {
+  "value": 51.6771,
+  "tex": "51.7",
+  "txt": "51.7"
+ },
+ "reporting.year.2005.verdict.hi.int": {
+  "value": 51.6771,
+  "tex": "52",
+  "txt": "52"
+ },
+ "reporting.year.2006.trials": {
+  "value": 687,
+  "tex": "687",
+  "txt": "687"
+ },
+ "reporting.year.2006.verdict.n": {
+  "value": 314,
+  "tex": "314",
+  "txt": "314"
+ },
+ "reporting.year.2006.verdict.pct": {
+  "value": 45.706,
+  "tex": "45.7",
+  "txt": "45.7"
+ },
+ "reporting.year.2006.verdict.pct.int": {
+  "value": 45.706,
+  "tex": "46",
+  "txt": "46"
+ },
+ "reporting.year.2006.verdict.lo": {
+  "value": 42.015,
+  "tex": "42.0",
+  "txt": "42.0"
+ },
+ "reporting.year.2006.verdict.lo.int": {
+  "value": 42.015,
+  "tex": "42",
+  "txt": "42"
+ },
+ "reporting.year.2006.verdict.hi": {
+  "value": 49.4447,
+  "tex": "49.4",
+  "txt": "49.4"
+ },
+ "reporting.year.2006.verdict.hi.int": {
+  "value": 49.4447,
+  "tex": "49",
+  "txt": "49"
+ },
+ "reporting.year.2007.trials": {
+  "value": 795,
+  "tex": "795",
+  "txt": "795"
+ },
+ "reporting.year.2007.verdict.n": {
+  "value": 354,
+  "tex": "354",
+  "txt": "354"
+ },
+ "reporting.year.2007.verdict.pct": {
+  "value": 44.5283,
+  "tex": "44.5",
+  "txt": "44.5"
+ },
+ "reporting.year.2007.verdict.pct.int": {
+  "value": 44.5283,
+  "tex": "45",
+  "txt": "45"
+ },
+ "reporting.year.2007.verdict.lo": {
+  "value": 41.108,
+  "tex": "41.1",
+  "txt": "41.1"
+ },
+ "reporting.year.2007.verdict.lo.int": {
+  "value": 41.108,
+  "tex": "41",
+  "txt": "41"
+ },
+ "reporting.year.2007.verdict.hi": {
+  "value": 48.0012,
+  "tex": "48.0",
+  "txt": "48.0"
+ },
+ "reporting.year.2007.verdict.hi.int": {
+  "value": 48.0012,
+  "tex": "48",
+  "txt": "48"
+ },
+ "reporting.year.2008.trials": {
+  "value": 851,
+  "tex": "851",
+  "txt": "851"
+ },
+ "reporting.year.2008.verdict.n": {
+  "value": 390,
+  "tex": "390",
+  "txt": "390"
+ },
+ "reporting.year.2008.verdict.pct": {
+  "value": 45.8284,
+  "tex": "45.8",
+  "txt": "45.8"
+ },
+ "reporting.year.2008.verdict.pct.int": {
+  "value": 45.8284,
+  "tex": "46",
+  "txt": "46"
+ },
+ "reporting.year.2008.verdict.lo": {
+  "value": 42.507,
+  "tex": "42.5",
+  "txt": "42.5"
+ },
+ "reporting.year.2008.verdict.lo.int": {
+  "value": 42.507,
+  "tex": "43",
+  "txt": "43"
+ },
+ "reporting.year.2008.verdict.hi": {
+  "value": 49.1874,
+  "tex": "49.2",
+  "txt": "49.2"
+ },
+ "reporting.year.2008.verdict.hi.int": {
+  "value": 49.1874,
+  "tex": "49",
+  "txt": "49"
+ },
+ "reporting.year.2009.trials": {
+  "value": 781,
+  "tex": "781",
+  "txt": "781"
+ },
+ "reporting.year.2009.verdict.n": {
+  "value": 360,
+  "tex": "360",
+  "txt": "360"
+ },
+ "reporting.year.2009.verdict.pct": {
+  "value": 46.0948,
+  "tex": "46.1",
+  "txt": "46.1"
+ },
+ "reporting.year.2009.verdict.pct.int": {
+  "value": 46.0948,
+  "tex": "46",
+  "txt": "46"
+ },
+ "reporting.year.2009.verdict.lo": {
+  "value": 42.6264,
+  "tex": "42.6",
+  "txt": "42.6"
+ },
+ "reporting.year.2009.verdict.lo.int": {
+  "value": 42.6264,
+  "tex": "43",
+  "txt": "43"
+ },
+ "reporting.year.2009.verdict.hi": {
+  "value": 49.6014,
+  "tex": "49.6",
+  "txt": "49.6"
+ },
+ "reporting.year.2009.verdict.hi.int": {
+  "value": 49.6014,
+  "tex": "50",
+  "txt": "50"
+ },
+ "reporting.year.2010.trials": {
+  "value": 733,
+  "tex": "733",
+  "txt": "733"
+ },
+ "reporting.year.2010.verdict.n": {
+  "value": 346,
+  "tex": "346",
+  "txt": "346"
+ },
+ "reporting.year.2010.verdict.pct": {
+  "value": 47.2033,
+  "tex": "47.2",
+  "txt": "47.2"
+ },
+ "reporting.year.2010.verdict.pct.int": {
+  "value": 47.2033,
+  "tex": "47",
+  "txt": "47"
+ },
+ "reporting.year.2010.verdict.lo": {
+  "value": 43.6132,
+  "tex": "43.6",
+  "txt": "43.6"
+ },
+ "reporting.year.2010.verdict.lo.int": {
+  "value": 43.6132,
+  "tex": "44",
+  "txt": "44"
+ },
+ "reporting.year.2010.verdict.hi": {
+  "value": 50.8225,
+  "tex": "50.8",
+  "txt": "50.8"
+ },
+ "reporting.year.2010.verdict.hi.int": {
+  "value": 50.8225,
+  "tex": "51",
+  "txt": "51"
+ },
+ "reporting.year.2011.trials": {
+  "value": 789,
+  "tex": "789",
+  "txt": "789"
+ },
+ "reporting.year.2011.verdict.n": {
+  "value": 342,
+  "tex": "342",
+  "txt": "342"
+ },
+ "reporting.year.2011.verdict.pct": {
+  "value": 43.346,
+  "tex": "43.3",
+  "txt": "43.3"
+ },
+ "reporting.year.2011.verdict.pct.int": {
+  "value": 43.346,
+  "tex": "43",
+  "txt": "43"
+ },
+ "reporting.year.2011.verdict.lo": {
+  "value": 39.9286,
+  "tex": "39.9",
+  "txt": "39.9"
+ },
+ "reporting.year.2011.verdict.lo.int": {
+  "value": 39.9286,
+  "tex": "40",
+  "txt": "40"
+ },
+ "reporting.year.2011.verdict.hi": {
+  "value": 46.8279,
+  "tex": "46.8",
+  "txt": "46.8"
+ },
+ "reporting.year.2011.verdict.hi.int": {
+  "value": 46.8279,
+  "tex": "47",
+  "txt": "47"
+ },
+ "reporting.year.2012.trials": {
+  "value": 751,
+  "tex": "751",
+  "txt": "751"
+ },
+ "reporting.year.2012.verdict.n": {
+  "value": 340,
+  "tex": "340",
+  "txt": "340"
+ },
+ "reporting.year.2012.verdict.pct": {
+  "value": 45.273,
+  "tex": "45.3",
+  "txt": "45.3"
+ },
+ "reporting.year.2012.verdict.pct.int": {
+  "value": 45.273,
+  "tex": "45",
+  "txt": "45"
+ },
+ "reporting.year.2012.verdict.lo": {
+  "value": 41.746,
+  "tex": "41.7",
+  "txt": "41.7"
+ },
+ "reporting.year.2012.verdict.lo.int": {
+  "value": 41.746,
+  "tex": "42",
+  "txt": "42"
+ },
+ "reporting.year.2012.verdict.hi": {
+  "value": 48.8481,
+  "tex": "48.8",
+  "txt": "48.8"
+ },
+ "reporting.year.2012.verdict.hi.int": {
+  "value": 48.8481,
+  "tex": "49",
+  "txt": "49"
+ },
+ "reporting.year.2013.trials": {
+  "value": 743,
+  "tex": "743",
+  "txt": "743"
+ },
+ "reporting.year.2013.verdict.n": {
+  "value": 361,
+  "tex": "361",
+  "txt": "361"
+ },
+ "reporting.year.2013.verdict.pct": {
+  "value": 48.5868,
+  "tex": "48.6",
+  "txt": "48.6"
+ },
+ "reporting.year.2013.verdict.pct.int": {
+  "value": 48.5868,
+  "tex": "49",
+  "txt": "49"
+ },
+ "reporting.year.2013.verdict.lo": {
+  "value": 45.0095,
+  "tex": "45.0",
+  "txt": "45.0"
+ },
+ "reporting.year.2013.verdict.lo.int": {
+  "value": 45.0095,
+  "tex": "45",
+  "txt": "45"
+ },
+ "reporting.year.2013.verdict.hi": {
+  "value": 52.1787,
+  "tex": "52.2",
+  "txt": "52.2"
+ },
+ "reporting.year.2013.verdict.hi.int": {
+  "value": 52.1787,
+  "tex": "52",
+  "txt": "52"
+ },
+ "reporting.year.2014.trials": {
+  "value": 709,
+  "tex": "709",
+  "txt": "709"
+ },
+ "reporting.year.2014.verdict.n": {
+  "value": 340,
+  "tex": "340",
+  "txt": "340"
+ },
+ "reporting.year.2014.verdict.pct": {
+  "value": 47.9549,
+  "tex": "48.0",
+  "txt": "48.0"
+ },
+ "reporting.year.2014.verdict.pct.int": {
+  "value": 47.9549,
+  "tex": "48",
+  "txt": "48"
+ },
+ "reporting.year.2014.verdict.lo": {
+  "value": 44.2984,
+  "tex": "44.3",
+  "txt": "44.3"
+ },
+ "reporting.year.2014.verdict.lo.int": {
+  "value": 44.2984,
+  "tex": "44",
+  "txt": "44"
+ },
+ "reporting.year.2014.verdict.hi": {
+  "value": 51.6334,
+  "tex": "51.6",
+  "txt": "51.6"
+ },
+ "reporting.year.2014.verdict.hi.int": {
+  "value": 51.6334,
+  "tex": "52",
+  "txt": "52"
+ },
+ "reporting.year.2015.trials": {
+  "value": 766,
+  "tex": "766",
+  "txt": "766"
+ },
+ "reporting.year.2015.verdict.n": {
+  "value": 389,
+  "tex": "389",
+  "txt": "389"
+ },
+ "reporting.year.2015.verdict.pct": {
+  "value": 50.7833,
+  "tex": "50.8",
+  "txt": "50.8"
+ },
+ "reporting.year.2015.verdict.pct.int": {
+  "value": 50.7833,
+  "tex": "51",
+  "txt": "51"
+ },
+ "reporting.year.2015.verdict.lo": {
+  "value": 47.2478,
+  "tex": "47.2",
+  "txt": "47.2"
+ },
+ "reporting.year.2015.verdict.lo.int": {
+  "value": 47.2478,
+  "tex": "47",
+  "txt": "47"
+ },
+ "reporting.year.2015.verdict.hi": {
+  "value": 54.311,
+  "tex": "54.3",
+  "txt": "54.3"
+ },
+ "reporting.year.2015.verdict.hi.int": {
+  "value": 54.311,
+  "tex": "54",
+  "txt": "54"
+ },
+ "reporting.year.2016.trials": {
+  "value": 644,
+  "tex": "644",
+  "txt": "644"
+ },
+ "reporting.year.2016.verdict.n": {
+  "value": 326,
+  "tex": "326",
+  "txt": "326"
+ },
+ "reporting.year.2016.verdict.pct": {
+  "value": 50.6211,
+  "tex": "50.6",
+  "txt": "50.6"
+ },
+ "reporting.year.2016.verdict.pct.int": {
+  "value": 50.6211,
+  "tex": "51",
+  "txt": "51"
+ },
+ "reporting.year.2016.verdict.lo": {
+  "value": 46.7675,
+  "tex": "46.8",
+  "txt": "46.8"
+ },
+ "reporting.year.2016.verdict.lo.int": {
+  "value": 46.7675,
+  "tex": "47",
+  "txt": "47"
+ },
+ "reporting.year.2016.verdict.hi": {
+  "value": 54.4674,
+  "tex": "54.5",
+  "txt": "54.5"
+ },
+ "reporting.year.2016.verdict.hi.int": {
+  "value": 54.4674,
+  "tex": "54",
+  "txt": "54"
+ },
+ "reporting.year.2017.trials": {
+  "value": 645,
+  "tex": "645",
+  "txt": "645"
+ },
+ "reporting.year.2017.verdict.n": {
+  "value": 334,
+  "tex": "334",
+  "txt": "334"
+ },
+ "reporting.year.2017.verdict.pct": {
+  "value": 51.7829,
+  "tex": "51.8",
+  "txt": "51.8"
+ },
+ "reporting.year.2017.verdict.pct.int": {
+  "value": 51.7829,
+  "tex": "52",
+  "txt": "52"
+ },
+ "reporting.year.2017.verdict.lo": {
+  "value": 47.9275,
+  "tex": "47.9",
+  "txt": "47.9"
+ },
+ "reporting.year.2017.verdict.lo.int": {
+  "value": 47.9275,
+  "tex": "48",
+  "txt": "48"
+ },
+ "reporting.year.2017.verdict.hi": {
+  "value": 55.6173,
+  "tex": "55.6",
+  "txt": "55.6"
+ },
+ "reporting.year.2017.verdict.hi.int": {
+  "value": 55.6173,
+  "tex": "56",
+  "txt": "56"
+ },
+ "reporting.year.2018.trials": {
+  "value": 592,
+  "tex": "592",
+  "txt": "592"
+ },
+ "reporting.year.2018.verdict.n": {
+  "value": 291,
+  "tex": "291",
+  "txt": "291"
+ },
+ "reporting.year.2018.verdict.pct": {
+  "value": 49.1554,
+  "tex": "49.2",
+  "txt": "49.2"
+ },
+ "reporting.year.2018.verdict.pct.int": {
+  "value": 49.1554,
+  "tex": "49",
+  "txt": "49"
+ },
+ "reporting.year.2018.verdict.lo": {
+  "value": 45.1466,
+  "tex": "45.1",
+  "txt": "45.1"
+ },
+ "reporting.year.2018.verdict.lo.int": {
+  "value": 45.1466,
+  "tex": "45",
+  "txt": "45"
+ },
+ "reporting.year.2018.verdict.hi": {
+  "value": 53.1751,
+  "tex": "53.2",
+  "txt": "53.2"
+ },
+ "reporting.year.2018.verdict.hi.int": {
+  "value": 53.1751,
+  "tex": "53",
+  "txt": "53"
+ },
+ "reporting.year.2019.trials": {
+  "value": 523,
+  "tex": "523",
+  "txt": "523"
+ },
+ "reporting.year.2019.verdict.n": {
+  "value": 252,
+  "tex": "252",
+  "txt": "252"
+ },
+ "reporting.year.2019.verdict.pct": {
+  "value": 48.1836,
+  "tex": "48.2",
+  "txt": "48.2"
+ },
+ "reporting.year.2019.verdict.pct.int": {
+  "value": 48.1836,
+  "tex": "48",
+  "txt": "48"
+ },
+ "reporting.year.2019.verdict.lo": {
+  "value": 43.93,
+  "tex": "43.9",
+  "txt": "43.9"
+ },
+ "reporting.year.2019.verdict.lo.int": {
+  "value": 43.93,
+  "tex": "44",
+  "txt": "44"
+ },
+ "reporting.year.2019.verdict.hi": {
+  "value": 52.4636,
+  "tex": "52.5",
+  "txt": "52.5"
+ },
+ "reporting.year.2019.verdict.hi.int": {
+  "value": 52.4636,
+  "tex": "52",
+  "txt": "52"
+ },
+ "reporting.year.2020.trials": {
+  "value": 468,
+  "tex": "468",
+  "txt": "468"
+ },
+ "reporting.year.2020.verdict.n": {
+  "value": 231,
+  "tex": "231",
+  "txt": "231"
+ },
+ "reporting.year.2020.verdict.pct": {
+  "value": 49.359,
+  "tex": "49.4",
+  "txt": "49.4"
+ },
+ "reporting.year.2020.verdict.pct.int": {
+  "value": 49.359,
+  "tex": "49",
+  "txt": "49"
+ },
+ "reporting.year.2020.verdict.lo": {
+  "value": 44.853,
+  "tex": "44.9",
+  "txt": "44.9"
+ },
+ "reporting.year.2020.verdict.lo.int": {
+  "value": 44.853,
+  "tex": "45",
+  "txt": "45"
+ },
+ "reporting.year.2020.verdict.hi": {
+  "value": 53.8754,
+  "tex": "53.9",
+  "txt": "53.9"
+ },
+ "reporting.year.2020.verdict.hi.int": {
+  "value": 53.8754,
+  "tex": "54",
+  "txt": "54"
+ },
+ "reporting.year.2021.trials": {
+  "value": 360,
+  "tex": "360",
+  "txt": "360"
+ },
+ "reporting.year.2021.verdict.n": {
+  "value": 169,
+  "tex": "169",
+  "txt": "169"
+ },
+ "reporting.year.2021.verdict.pct": {
+  "value": 46.9444,
+  "tex": "46.9",
+  "txt": "46.9"
+ },
+ "reporting.year.2021.verdict.pct.int": {
+  "value": 46.9444,
+  "tex": "47",
+  "txt": "47"
+ },
+ "reporting.year.2021.verdict.lo": {
+  "value": 41.8485,
+  "tex": "41.8",
+  "txt": "41.8"
+ },
+ "reporting.year.2021.verdict.lo.int": {
+  "value": 41.8485,
+  "tex": "42",
+  "txt": "42"
+ },
+ "reporting.year.2021.verdict.hi": {
+  "value": 52.1049,
+  "tex": "52.1",
+  "txt": "52.1"
+ },
+ "reporting.year.2021.verdict.hi.int": {
+  "value": 52.1049,
+  "tex": "52",
+  "txt": "52"
+ },
+ "reporting.year.2022.trials": {
+  "value": 242,
+  "tex": "242",
+  "txt": "242"
+ },
+ "reporting.year.2022.verdict.n": {
+  "value": 88,
+  "tex": "88",
+  "txt": "88"
+ },
+ "reporting.year.2022.verdict.pct": {
+  "value": 36.3636,
+  "tex": "36.4",
+  "txt": "36.4"
+ },
+ "reporting.year.2022.verdict.pct.int": {
+  "value": 36.3636,
+  "tex": "36",
+  "txt": "36"
+ },
+ "reporting.year.2022.verdict.lo": {
+  "value": 30.5596,
+  "tex": "30.6",
+  "txt": "30.6"
+ },
+ "reporting.year.2022.verdict.lo.int": {
+  "value": 30.5596,
+  "tex": "31",
+  "txt": "31"
+ },
+ "reporting.year.2022.verdict.hi": {
+  "value": 42.5938,
+  "tex": "42.6",
+  "txt": "42.6"
+ },
+ "reporting.year.2022.verdict.hi.int": {
+  "value": 42.5938,
+  "tex": "43",
+  "txt": "43"
+ },
+ "reporting.year.2023.trials": {
+  "value": 126,
+  "tex": "126",
+  "txt": "126"
+ },
+ "reporting.year.2023.verdict.n": {
+  "value": 45,
+  "tex": "45",
+  "txt": "45"
+ },
+ "reporting.year.2023.verdict.pct": {
+  "value": 35.7143,
+  "tex": "35.7",
+  "txt": "35.7"
+ },
+ "reporting.year.2023.verdict.pct.int": {
+  "value": 35.7143,
+  "tex": "36",
+  "txt": "36"
+ },
+ "reporting.year.2023.verdict.lo": {
+  "value": 27.8842,
+  "tex": "27.9",
+  "txt": "27.9"
+ },
+ "reporting.year.2023.verdict.lo.int": {
+  "value": 27.8842,
+  "tex": "28",
+  "txt": "28"
+ },
+ "reporting.year.2023.verdict.hi": {
+  "value": 44.3897,
+  "tex": "44.4",
+  "txt": "44.4"
+ },
+ "reporting.year.2023.verdict.hi.int": {
+  "value": 44.3897,
+  "tex": "44",
+  "txt": "44"
+ },
+ "reporting.year.2024.trials": {
+  "value": 44,
+  "tex": "44",
+  "txt": "44"
+ },
+ "reporting.year.2024.verdict.n": {
+  "value": 8,
+  "tex": "8",
+  "txt": "8"
+ },
+ "reporting.year.2024.verdict.pct": {
+  "value": 18.1818,
+  "tex": "18.2",
+  "txt": "18.2"
+ },
+ "reporting.year.2024.verdict.pct.int": {
+  "value": 18.1818,
+  "tex": "18",
+  "txt": "18"
+ },
+ "reporting.year.2024.verdict.lo": {
+  "value": 9.5127,
+  "tex": "9.5",
+  "txt": "9.5"
+ },
+ "reporting.year.2024.verdict.lo.int": {
+  "value": 9.5127,
+  "tex": "10",
+  "txt": "10"
+ },
+ "reporting.year.2024.verdict.hi": {
+  "value": 31.9608,
+  "tex": "32.0",
+  "txt": "32.0"
+ },
+ "reporting.year.2024.verdict.hi.int": {
+  "value": 31.9608,
+  "tex": "32",
+  "txt": "32"
+ },
+ "order.enrolled.clusters": {
+  "value": 1376,
+  "tex": "1{,}376",
+  "txt": "1,376"
+ },
+ "order.enrolled.diff": {
+  "value": 0.638421,
+  "tex": "0.6",
+  "txt": "0.6"
+ },
+ "order.enrolled.diff.lo": {
+  "value": -3.79806,
+  "tex": "-3.8",
+  "txt": "-3.8"
+ },
+ "order.enrolled.diff.hi": {
+  "value": 5.074902,
+  "tex": "5.1",
+  "txt": "5.1"
+ },
+ "order.registered.clusters": {
+  "value": 1884,
+  "tex": "1{,}884",
+  "txt": "1,884"
+ },
+ "order.registered.diff": {
+  "value": 12.984823,
+  "tex": "13.0",
+  "txt": "13.0"
+ },
+ "order.registered.diff.lo": {
+  "value": 9.261663,
+  "tex": "9.3",
+  "txt": "9.3"
+ },
+ "order.registered.diff.hi": {
+  "value": 16.707983,
+  "tex": "16.7",
+  "txt": "16.7"
  }
 }

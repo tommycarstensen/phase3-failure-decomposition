@@ -68,7 +68,7 @@ A registration with status withdrawn was stopped before enrolling its first part
 \begin{figure}[htbp]
 \centering
 \input{flow}
-\caption{Flow of the registrations into the failure decomposition of the main window. Dashed boxes do not enter the count of failures. Registrations withdrawn before enrollment are counted as failures only in the sensitivity analysis of \S\ref{sec:population}. The completed trials without a verdict are the subject of \S\ref{sec:coverage}, where misses are imputed for those with a comparator arm. Trials that are neither stopped nor completed are still active or of unknown status.}
+\caption{Flow of the registrations into the failure decomposition of the main window. Dashed boxes do not enter the count of failures, and the two shaded ones are the two choices examined. Registrations withdrawn before enrollment (Choice 1) are counted as failures only in the sensitivity analysis of \S\ref{sec:population}. Completed trials without a verdict, that is without a usable primary $p$-value (Choice 2), are the subject of \S\ref{sec:coverage}, where misses are imputed for those with a comparator arm. Trials that are neither stopped nor completed are still active or of unknown status.}
 \label{fig:flow}
 \end{figure}
 
@@ -161,7 +161,7 @@ Because unposted tests are significant less often than posted ones \cite{dechart
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/ph3_coverage_correction.pdf}
-\caption{The efficacy and operational shares of failures, all sponsors, starts \era, (A) among trials that enrolled and (B) with registrations withdrawn before enrollment counted as failures. Gray markers are the shares as observed. Navy markers are the shares after imputing misses for unreported completed trials with a comparator arm at the miss rate of the reporting ones, and the tick beside each is the covariate-adjusted imputation. The pale band runs from the observed share to the share if every such trial had missed; it is the range of an assumption, not a confidence interval. In B the imputed efficacy and operational shares are level.}
+\caption{The efficacy and operational shares of failures, all sponsors, starts \era, (A) among trials that enrolled and (B) with registrations withdrawn before enrollment counted as failures. Gray markers are the shares as observed, navy markers the shares after imputing misses for unreported completed trials with a comparator arm at the miss rate of the reporting ones, and the tick is the covariate-adjusted imputation. The pale band spans the observed share and the share if every such trial had missed. It extends the efficacy share upward and the operational share downward, because the imputed misses are efficacy failures, and it is the range of an assumption, not a confidence interval. Under the title of each panel is the difference between the two shares as observed, with its program-clustered 95\% interval. In B the imputed efficacy and operational shares are level.}
 \label{fig:coverage}
 \end{figure}
 
@@ -173,7 +173,7 @@ This result depends on the population. With withdrawn registrations counted, the
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=\textwidth]{figures/ph3_bigpharma_vs_hwang.pdf}
-\caption{The efficacy share of failures in the big-pharma stratum under each counting choice, against the estimate of Hwang et al.\ (ochre line, with its Wilson 95\% interval as a band). Gray markers are observed shares with their program-clustered 95\% intervals: among trials that enrolled in the main window, among those of the window that has read out, with registrations withdrawn before enrollment counted as failures, and with \num{bigpharma.mid} mid-size companies added to the stratum. The navy marker is the share after imputing misses for unreported completed trials with a comparator arm. It has no such interval; the pale band is the range from none of those trials having missed, which is the observed share, to all of them. The numbers at the right are the shares with their intervals or range.}
+\caption{The efficacy share of failures in the big-pharma stratum under each counting choice, against the estimate of Hwang et al.\ (dashed line, with its Wilson 95\% interval as a band), whose unit is a drug program and whose programs entered pivotal trials in \num{lit.hwang.firstYear}--\num{lit.hwang.lastYear}. Gray markers are observed shares with their program-clustered 95\% intervals, for trials that started in \era\ unless the row says otherwise: among trials that enrolled, among those of the window that has read out, with registrations withdrawn before enrollment counted as failures, and with \num{bigpharma.mid} mid-size companies added to the stratum. The navy marker, set apart below, is the share after imputing misses for unreported completed trials with a comparator arm. It has no such interval; the pale band is the range from none of those trials having missed, which is the observed share, to all of them.}
 \label{fig:hwang}
 \end{figure}
 
@@ -242,7 +242,7 @@ All analysis code, the classification prompts, every label, the recorded numbers
 
 \noindent\textbf{Funding.} This work received no funding.
 
-\noindent\textbf{Competing interests.} The author declares no competing interests.
+\noindent\textbf{Competing interests.} The author was employed by Novo Nordisk A/S until April~2024, holds shares in it, and operates a commercial website that publishes financial analysis of listed companies and clinical-trial data on drugs. Novo Nordisk is one of the \num{bigpharma.companies} companies of the big-pharma stratum, whose list mirrors one kept in the code of that website. Beyond that, these interests had no role in the analysis or conclusions, which concern how registry records are read rather than the merits of any company or product.
 
 \noindent\textbf{Employment.} The author is employed by the Capital Region of Denmark (Region Hovedstaden). This work was done independently of that employment, in the author's own time and without its resources.
 

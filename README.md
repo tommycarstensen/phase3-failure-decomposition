@@ -40,7 +40,7 @@ Python with the packages in `requirements.txt`. The code is written for Python 3
 | `scripts/` | every Python script; the Pipeline table below says what each one does |
 | `numbers/` | the recorded numbers, one JSON file per analysis script |
 | `data/registry/` | the archived ClinicalTrials.gov retrievals, which are the data of record |
-| `data/labels/` | the labels of each classification pass (`why_out/`, `detail_out/`, `pub_out/`) and the two merged label files |
+| `data/labels/` | the labels of each classification pass (`why_out/`, `detail_out/`, `pub_out/`) and, in `merged/`, the two merged label files |
 | `data/validation/` | the validation sample and its adjudication |
 | `data/pubmed/` | the PMIDs of the publications linked to the registrations that were still without a reason after the second pass |
 | `prompts/` | the classification prompts |
@@ -74,8 +74,8 @@ Every script is in `scripts/`. In the output column, the registry files are in `
 | Pull start date, sponsor, conditions, arm groups | `pull_meta.py`, `pull_conditions.py`, `pull_arms.py` | `ph3_meta.json`, `ph3_conditions.json`, `ph3_arms.json` |
 | Pull the full primary-analysis records | `pull_primary_analyses.py` | `ph3_primary_analyses.json` |
 | First pass: classify the `whyStopped` string | language-model agents with `TAXONOMY.md` | `why_out/*.tsv` |
-| Second pass: detailed description, plus three rules | `enrich_unclear.py`, agents with `DETAIL_TASK.md`, `reclassify.py` | `detail_out/*.tsv`, `unclear_reclassified.json` |
-| Third pass: linked publications | `probe_refs.py`, `fetch_pubmed.py`, agents with `PUB_TASK.md`, `merge_pub_labels.py` | `pub_out/*.tsv`, `unclear_reclassified_v2.json` |
+| Second pass: detailed description, plus three rules | `enrich_unclear.py`, agents with `DETAIL_TASK.md`, `reclassify.py` | `detail_out/*.tsv`, `merged/unclear_reclassified.json` |
+| Third pass: linked publications | `probe_refs.py`, `fetch_pubmed.py`, agents with `PUB_TASK.md`, `merge_pub_labels.py` | `pub_out/*.tsv`, `merged/unclear_reclassified_v2.json` |
 | Counting rules, shared by every script | `failure_decomp.py` | imported |
 | Cohort counts and the p-value strings | `cohort.py` | numbers |
 | Numbers quoted from other studies, with their sources | `literature.py` | numbers |
@@ -96,13 +96,13 @@ Every script is in `scripts/`. In the output column, the registry files are in `
 
 ## Classification and validation
 
-Termination reasons were classified by a large language model (Claude Sonnet, Anthropic) run as agents of the Claude Code assistant in July 2026, with the prompts in `prompts/`: `TAXONOMY.md`, `DETAIL_TASK.md` and `PUB_TASK.md`. The exact model version was not recorded. Every label is archived in `data/labels/` (`why_out/`, `detail_out/` and `pub_out/`), so the analysis does not depend on re-running the model.
+Termination reasons were classified by a large language model (Claude Sonnet, Anthropic) run as agents of the Claude Code assistant in July 2026, with the prompts in `prompts/`: `TAXONOMY.md`, `DETAIL_TASK.md` and `PUB_TASK.md`. The exact model version was not recorded. Every label is archived in `data/labels/` (`why_out/`, `detail_out/` and `pub_out/`, and the merged labels of the later passes in `merged/`), so the analysis does not depend on re-running the model.
 
 The classification cannot be re-run from this repository as it stands: the input batches were assembled interactively and no script builds them, and the same is true of the validation sample and of the adjudication prompt.
 
 The three prompts do not share one key set. `TAXONOMY.md` defines 12 categories. `DETAIL_TASK.md` adds `not_started`. `PUB_TASK.md` omits `other_operational`. A fourteenth label, `sponsor_undisclosed`, is assigned only by a rule in `reclassify.py`.
 
-**Where the final label is.** Each stopped registration in `data/registry/ph3_stopped.json`, withdrawn ones included, has one final label: its value in `data/labels/unclear_reclassified_v2.json` if it is there (the registrations that went to the second pass), and otherwise its label in `data/labels/why_out/`. `load(include_withdrawn=True)` in `scripts/failure_decomp.py` returns exactly that as `stopcat`. The `batch_*.tsv` files have no header: registration number, tab, label; the JSON files map the registration number to the label. `efficacy_positive` is a stop for benefit, not a failure, and a completed trial that missed its primary endpoint has no label: its verdict comes from `data/registry/ph3_primary_analyses.json`. By pass: `why_out/` is the first pass; `detail_out/` holds the second-pass model labels, which the rules in `reclassify.py` can override, giving `unclear_reclassified.json`; `merge_pub_labels.py` then overlays `pub_out/`, giving the `_v2` file. No file records the pass that each final label came from. Limitation 8 of the manuscript and section S7 of the supplement list second-pass labels that the registry text does not support.
+**Where the final label is.** Each stopped registration in `data/registry/ph3_stopped.json`, withdrawn ones included, has one final label: its value in `data/labels/merged/unclear_reclassified_v2.json` if it is there (the registrations that went to the second pass), and otherwise its label in `data/labels/why_out/`. `load(include_withdrawn=True)` in `scripts/failure_decomp.py` returns exactly that as `stopcat`. The `batch_*.tsv` files have no header: registration number, tab, label; the JSON files map the registration number to the label. `efficacy_positive` is a stop for benefit, not a failure, and a completed trial that missed its primary endpoint has no label: its verdict comes from `data/registry/ph3_primary_analyses.json`. By pass: `why_out/` is the first pass; `detail_out/` holds the second-pass model labels, which the rules in `reclassify.py` can override, giving `unclear_reclassified.json`; `merge_pub_labels.py` then overlays `pub_out/`, giving the `_v2` file. No file records the pass that each final label came from. Limitation 8 of the manuscript and section S7 of the supplement list second-pass labels that the registry text does not support.
 
 **To trace a number.** A number printed in the paper is `\num{name}` in the source; `paper/numbers.tex` has its value and `numbers/<script>.json` the script that recorded it. In a name such as `decomp.enrolled.era.big.eff.pct`, `enrolled` or `registered` says whether withdrawn registrations are counted, `era`, `complete` or `all` is the window (the main window, the part of it that has read out, all years), and `all`, `big` or `rest` the sponsors.
 
@@ -114,7 +114,7 @@ The manuscript's Limitations section is the full list.
 
 ## Cite
 
-Carstensen T. Structured-data reporting shapes the apparent causes of phase-3 trial failure: an automated decomposition of ClinicalTrials.gov records. *MetaArXiv* preprint, 2026 (not peer reviewed). <https://doi.org/10.31222/osf.io/szuh5_v1>. Repository: <https://github.com/tommycarstensen/phase3-failure-decomposition>; archived copy of the code, labels and data: <https://doi.org/10.5281/zenodo.23352527>. See [`CITATION.cff`](CITATION.cff) for the structured form that GitHub reads.
+Carstensen T. Structured-data reporting shapes the apparent causes of phase-3 trial failure: an automated decomposition of ClinicalTrials.gov records. *MetaArXiv* preprint, 2026 (not peer reviewed). <https://doi.org/10.31222/osf.io/szuh5_v1>. Repository: <https://github.com/tommycarstensen/phase3-failure-decomposition>; archived copy of the code, labels and data: <https://doi.org/10.5281/zenodo.24215703>. See [`CITATION.cff`](CITATION.cff) for the structured form that GitHub reads.
 
 ## Contact
 

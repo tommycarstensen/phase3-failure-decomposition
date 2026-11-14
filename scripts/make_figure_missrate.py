@@ -49,7 +49,7 @@ ax.axhline(
     ls='--',
     lw=1,
     zorder=2,
-    label=f'all starts {first}–{last}: {text("trend.overall.pct")}%',
+    label=f'all starts {first}–{last}, {text("trend.overall.pct")}% overall',
 )
 ax.plot(
     years,
@@ -68,7 +68,7 @@ ax.axvline(window - 0.5, color=INK_SECONDARY, ls=':', lw=1, zorder=2)
 ax.text(
     window - 0.4,
     top - 1,
-    f'main window:\nstarts from {window}',
+    f'main window,\nstarts from {window}',
     ha='left',
     va='top',
     fontsize=SMALL,

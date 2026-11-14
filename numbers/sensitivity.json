@@ -579,6 +579,16 @@
   "tex": "1",
   "txt": "1"
  },
+ "tax.all.diff.min": {
+  "value": 0.058038,
+  "tex": "0.1",
+  "txt": "0.1"
+ },
+ "tax.all.diff.max": {
+  "value": 3.374513,
+  "tex": "3.4",
+  "txt": "3.4"
+ },
  "tax.big.asAnalysed.eff": {
   "value": 53.6649,
   "tex": "53.7",
@@ -978,6 +988,16 @@
   "value": 1.5707,
   "tex": "2",
   "txt": "2"
+ },
+ "tax.big.diff.min": {
+  "value": 39.528796,
+  "tex": "39.5",
+  "txt": "39.5"
+ },
+ "tax.big.diff.max": {
+  "value": 41.398654,
+  "tex": "41.4",
+  "txt": "41.4"
  },
  "suspended.all.n": {
   "value": 86,

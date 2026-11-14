@@ -11,14 +11,14 @@ since). Run after reclassify.py.
 from paper_numbers import Numbers
 from repo_files import LABELS, read_json, read_labels, write_json
 
-v1 = read_json(LABELS + 'unclear_reclassified.json')
+v1 = read_json(LABELS + 'merged/unclear_reclassified.json')
 pub = read_labels('pub_out')
 
 v2 = {
     n: pub[n] if pub.get(n, 'unclear') != 'unclear' else lab
     for n, lab in v1.items()
 }
-write_json(v2, LABELS + 'unclear_reclassified_v2.json')
+write_json(v2, LABELS + 'merged/unclear_reclassified_v2.json')
 
 read = sum(1 for n in v1 if n in pub)
 named = sum(1 for n in v1 if pub.get(n, 'unclear') != 'unclear')

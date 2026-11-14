@@ -130,7 +130,7 @@ ax.legend(
             ec=INK,
             lw=0.6,
             label=(
-                f'{label}: '
+                f'{label}, '
                 f'{text(n or f"decomp.enrolled.era.{stratum}.n")} '
                 f'failed {unit}'
             ),

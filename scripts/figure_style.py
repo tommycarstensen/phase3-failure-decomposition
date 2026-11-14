@@ -5,11 +5,12 @@ manuscript, so a font size here is the size on the page. The figures are
 saved as vector PDF with embedded fonts and draw recorded numbers only, so a
 figure script runs after write_numbers.py.
 
-The type follows Elsevier's artwork instructions for the journal version:
-Arial or Helvetica where the machine has them (DejaVu Sans otherwise), no
-lettering below 8 points at this width (Elsevier asks for 7 at the printed
-size, which holds down to a printed width of 140 mm), and no line heavier
-than LINE_MAX points.
+The type follows the artwork instructions of the journals the paper went
+to (Elsevier, then Springer): Arial or Helvetica where the machine has them
+(DejaVu Sans otherwise), no lettering below 8 points at this width, and no
+line heavier than LINE_MAX points. The width, 165 mm, suits Springer's full
+width of 174 mm; at its single column of 84 mm the type would be 4 points,
+so the figures are full width only.
 """
 
 import matplotlib.pyplot as plt

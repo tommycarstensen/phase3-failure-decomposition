@@ -7,8 +7,8 @@ cd "$(dirname "$0")"
 PY="${PYTHON:-python3}"
 
 # labels: the second-pass rules, then the third-pass overrides
-"$PY" scripts/reclassify.py            # -> data/labels/unclear_reclassified.json
-"$PY" scripts/merge_pub_labels.py      # -> data/labels/unclear_reclassified_v2.json
+"$PY" scripts/reclassify.py            # -> data/labels/merged/unclear_reclassified.json
+"$PY" scripts/merge_pub_labels.py      # -> data/labels/merged/unclear_reclassified_v2.json
 
 # analysis: each script records its numbers in numbers/<script>.json
 "$PY" scripts/cohort.py
@@ -29,6 +29,7 @@ PY="${PYTHON:-python3}"
 "$PY" scripts/make_figure.py           # -> paper/figures/ph3_failure_2016_vs_2026.pdf
 "$PY" scripts/make_figure_hwang.py     # -> paper/figures/ph3_bigpharma_vs_hwang.pdf
 "$PY" scripts/make_figure_missrate.py  # -> paper/figures/ph3_miss_rate_by_year.pdf
+"$PY" scripts/make_figure_reporting.py # -> paper/figures/ph3_reporting_by_year.pdf
 "$PY" scripts/make_figure_coverage.py  # -> paper/figures/ph3_coverage_correction.pdf
 "$PY" scripts/check_documents.py
 
@@ -37,7 +38,7 @@ if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   echo "  not a git checkout, so there is no committed copy to compare with; skipped"
   exit 0
 fi
-changed="$(git status --porcelain -- numbers paper/tables paper/numbers.tex README.md data/labels/unclear_reclassified.json data/labels/unclear_reclassified_v2.json)"
+changed="$(git status --porcelain -- numbers paper/tables paper/numbers.tex README.md data/labels/merged/unclear_reclassified.json data/labels/merged/unclear_reclassified_v2.json)"
 if [ -n "$changed" ]; then
   echo "$changed"
   echo "the regenerated numbers, tables or labels differ from the committed ones"

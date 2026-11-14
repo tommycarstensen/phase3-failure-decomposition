@@ -221,7 +221,8 @@ for skey, slabel, subset in (
 ):
     d = decompose(results, meta, stopcat, ERA, subset=subset)
     print(f'  {slabel} (n={d["den"]}):')
-    for vkey, vlabel, source, target, amount in VARIANTS:
+    gaps = []  # efficacy minus operational under each of the 5 assignments
+    for row, (vkey, vlabel, source, target, amount) in enumerate(VARIANTS):
         counts = {b: d[b] for b in BUCKETS}
         if amount:
             moved = amount(d, subset)
@@ -234,7 +235,15 @@ for skey, slabel, subset in (
         )
         for b in BUCKETS:
             nums.pct(f'tax.{skey}.{vkey}.{b}', pct[b])
+        if 1 <= row <= 5:
+            gaps.append(pct['eff'] - pct['op'])
         table.append([vlabel, slabel] + [f'{pct[b]:.1f}' for b in BUCKETS])
+    print(
+        f'    efficacy minus operational under the 5 assignments: '
+        f'{min(gaps):.1f} to {max(gaps):.1f} points'
+    )
+    nums.fixed(f'tax.{skey}.diff.min', min(gaps), 1)
+    nums.fixed(f'tax.{skey}.diff.max', max(gaps), 1)
 write_table('taxonomy', table)
 
 print(
